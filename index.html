@@ -479,7 +479,7 @@
       lucide.createIcons();
     }
 
-    function renderGrid(data = null) {
+   function renderGrid(data = null) {
       if (typeof trips === 'undefined') return;
       const sourceData = data || trips;
       const grid = document.getElementById('trip-grid');
@@ -496,17 +496,23 @@
       itemsToShow.forEach(item => {
         const color = getCategoryColor(item.category);
         const imagePath = getImagePath(item.id);
+        const isSaved = Object.values(userCollections).some(l => l.includes(item.id));
+        
         const card = document.createElement('div');
-        card.className = 'attraction-card rounded-[2.5rem] p-8 cursor-pointer relative';
+        card.className = 'attraction-card rounded-[2.5rem] p-8 cursor-pointer relative group';
         card.innerHTML = `
-          <div class="h-48 rounded-2xl mb-6 flex items-center justify-center overflow-hidden bg-zinc-900">
-            <img src="${imagePath}" alt="${item.title}" class="w-full h-full object-cover" 
+          <div class="h-48 rounded-2xl mb-6 flex items-center justify-center overflow-hidden bg-zinc-900 relative">
+            <button onclick="event.stopPropagation(); openSaveMenu('${item.id}')" class="absolute top-4 right-4 z-10 p-3 bg-black/40 backdrop-blur-md rounded-xl border border-white/10 text-white hover:bg-purple-600 hover:text-white transition-all">
+              <i data-lucide="bookmark" class="w-4 h-4 ${isSaved ? 'fill-white' : ''}"></i>
+            </button>
+            
+            <img src="${imagePath}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
                  onerror="this.onerror=null; this.src='images/${item.id}.jpg'; this.addEventListener('error', function(){ this.style.display='none'; this.nextElementSibling.style.display='flex'; }, {once: true})">
             <div class="hidden w-full h-full items-center justify-center" style="background: linear-gradient(135deg, ${color}, #1e1e28)">
               <span class="text-[10px] font-bold text-white/30 uppercase tracking-widest">Photo Coming Soon</span>
             </div>
           </div>
-          <div class="text-left">
+          <div class="text-left" onclick="openModal('${item.id}')">
             <h3 class="text-2xl font-black text-white leading-tight uppercase">${item.title}</h3>
             <div class="flex items-center gap-1.5 mt-2 mb-4 text-purple-500">
                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
@@ -515,7 +521,6 @@
             <p class="text-zinc-500 text-sm line-clamp-2 leading-relaxed">${item.desc}</p>
           </div>
         `;
-        card.onclick = () => openModal(item.id);
         grid.appendChild(card);
       });
 
