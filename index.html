@@ -137,18 +137,20 @@
       renderFeatured();
     }
 
-    function renderFeatured() {
-      const featured = trips[0];
+   function renderFeatured() {
+      const featured = trips[Math.floor(new Date() / 86400000) % trips.length];
       const isLiked = likedTrips.has(featured.id);
       document.getElementById('featured-card').innerHTML = `
-        <div class="w-full md:w-2/5 min-h-[300px]"><img src="${featured.image}" class="h-full w-full object-cover"></div>
+        <div class="w-full md:w-2/5 min-h-[300px] flex items-center justify-center border-r border-white/5" style="background: linear-gradient(135deg, ${featured.color}, #12121a)">
+          <i data-lucide="image" class="w-12 h-12 text-white/10"></i>
+        </div>
         <div class="p-10 flex flex-col justify-center flex-1">
           <span class="text-purple-500 text-[10px] font-black uppercase mb-2">${featured.region}</span>
           <h3 class="text-3xl font-black mb-4">${featured.title}</h3>
           <p class="text-zinc-400 mb-8 line-clamp-2">${featured.desc}</p>
           <div class="flex gap-4">
             <button onclick="event.stopPropagation(); toggleSave('${featured.id}')" class="p-4 bg-white/5 rounded-2xl hover:bg-white/10 ${isLiked ? 'liked' : ''}"><i data-lucide="bookmark" class="w-5 h-5"></i></button>
-            <button onclick="openModal(trips.find(t=>t.id==='${featured.id}'))" class="px-8 bg-white/5 rounded-2xl text-xs font-bold uppercase tracking-widest border border-white/10 text-white">Details</button>
+            <button onclick="openModalById('${featured.id}')" class="px-8 bg-white/5 rounded-2xl text-xs font-bold uppercase tracking-widest border border-white/10 text-white">Details</button>
           </div>
         </div>
       `;
