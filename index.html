@@ -468,7 +468,6 @@ function openModal(id) {
       if (!item) return;
 
       document.getElementById('modal-title').textContent = item.title;
-      // Fixed the Google Maps link logic here
       document.getElementById('modal-map-link').href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.title + ' ' + item.region)}`;
       
       let relatedHtml = '';
@@ -492,7 +491,7 @@ function openModal(id) {
           </div>`;
       }
 
-      // This is the part that adds the badges, history, and star-bulleted facts
+      // This is the specific blueprint that pulls the History and Key Facts
       document.getElementById('modal-content').innerHTML = `
         <div class="w-full h-72 rounded-3xl mb-8 flex items-center justify-center shadow-inner" style="background: linear-gradient(135deg, ${item.color}, #1e1e28)">
           <span class="text-[10px] font-bold text-white/20 uppercase tracking-widest">Photo Coming Soon</span>
@@ -519,7 +518,7 @@ function openModal(id) {
         <h3 class="text-purple-500 font-black text-2xl mb-6 uppercase tracking-tighter">Key Facts</h3>
         <ul class="space-y-4 mb-10">
           ${item.facts ? item.facts.map(fact => `
-            <li class="flex items-start gap-3 text-zinc-300">
+            <li class="flex items-start gap-3 text-zinc-300 text-left">
               <i data-lucide="star" class="w-5 h-5 text-purple-500 mt-1 shrink-0"></i>
               <span class="text-md font-medium leading-tight">${fact}</span>
             </li>
