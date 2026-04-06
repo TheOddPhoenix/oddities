@@ -164,9 +164,11 @@
       filtered.forEach(item => {
         const isLiked = likedTrips.has(item.id);
         const card = document.createElement('div');
-        card.className = 'attraction-card rounded-[2.5rem] p-8 cursor-pointer relative';
+        card.className = 'attraction-card rounded-[2.5rem] p-8 cursor-pointer relative fade-in';
         card.innerHTML = `
-          <div class="h-40 rounded-2xl mb-6 overflow-hidden"><img src="${item.image}" class="h-full w-full object-cover"></div>
+          <div class="h-40 rounded-2xl mb-6 flex items-center justify-center" style="background: linear-gradient(135deg, ${item.color}, #1e1e28)">
+            <span class="text-[10px] font-bold text-white/30 uppercase tracking-widest">Image Coming Soon</span>
+          </div>
           <div class="flex justify-between items-start mb-4">
             <div>
               <span class="text-purple-500 text-[9px] font-black uppercase tracking-widest">${item.category}</span>
