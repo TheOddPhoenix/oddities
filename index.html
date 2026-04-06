@@ -10,7 +10,6 @@
   <style>
     html, body { height: 100%; margin: 0; background: #12121a; color: #f5f0e8; scroll-behavior: smooth; }
     .app-wrapper { font-family: 'Outfit', sans-serif; }
-    .oddity-line { width: 32px; height: 2px; background: linear-gradient(to right, #8a2be2 0%, transparent 100%); }
     .attraction-card { transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1); border: 1px solid rgba(138,43,226,0.08); background: #1e1e28; }
     .attraction-card:hover { transform: translateY(-8px); border-color: rgba(138,43,226,0.4); box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
     .skull-spin { animation: skullBounce 3s ease-in-out infinite; }
@@ -57,26 +56,25 @@
     </header>
 
     <section class="max-w-6xl mx-auto px-6 mb-20">
-      <div class="flex items-center gap-3 mb-8">
-        <div class="oddity-line"></div>
-        <div class="flex flex-col">
-          <span class="text-purple-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">THIS WEEK</span>
-          <h2 class="text-2xl font-black">Oddity of the Week</h2>
-        </div>
-      </div>
+     <div class="flex items-center gap-3 mb-8">
+  <i data-lucide="skull" class="text-purple-600 w-8 h-8 skull-spin"></i>
+  <div class="flex flex-col">
+    <span class="text-purple-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">THIS WEEK</span>
+    <h2 class="text-2xl font-black">Oddity of the Week</h2>
+  </div>
+</div>
       <div id="featured-card" class="bg-[#1e1e28] rounded-[2.5rem] border border-purple-900/30 flex flex-col md:flex-row cursor-pointer transition-all hover:bg-[#252533] overflow-hidden">
         </div>
     </section>
 
     <section id="grid-section" class="max-w-6xl mx-auto px-6 pb-40">
-      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 mb-12">
-        <div class="flex items-center gap-3">
-          <div class="oddity-line"></div>
-          <div class="flex flex-col text-left">
-            <span class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">EXPLORE</span>
-            <h2 class="text-4xl font-black leading-none">Discover Oddities</h2>
-          </div>
-        </div>
+    <div class="flex items-center gap-3">
+  <i data-lucide="skull" class="text-purple-600 w-10 h-10 skull-spin"></i>
+  <div class="flex flex-col text-left">
+    <span class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">EXPLORE</span>
+    <h2 class="text-4xl font-black leading-none">Discover Oddities</h2>
+  </div>
+</div>
         
         <div class="relative w-full lg:w-96">
           <i data-lucide="search" class="absolute left-5 top-4 w-5 h-5 text-zinc-500"></i>
@@ -87,7 +85,7 @@
       <div class="flex gap-2 overflow-x-auto scroll-container pb-8">
         <button class="filter-btn active bg-purple-600 text-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="all"><i data-lucide="sparkles" class="w-4 h-4"></i> All Oddities</button>
         <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="cemetery"><i data-lucide="cross" class="w-4 h-4"></i> Cemeteries</button>
-        <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="historic"><i data-lucide="historic" class="w-4 h-4"></i> Historic</button>
+        <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="historic"><i data-lucide="landmark" class="w-4 h-4"></i> Historic</button>
         <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="haunted"><i data-lucide="ghost" class="w-4 h-4"></i> Haunted</button>
         <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="cryptid"><i data-lucide="footprints" class="w-4 h-4"></i> Cryptid</button>
         <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="alien"><i data-lucide="ufo" class="w-4 h-4"></i> Aliens/UFO</button>
