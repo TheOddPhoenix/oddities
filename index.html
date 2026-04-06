@@ -1,843 +1,151 @@
 <!doctype html>
 <html lang="en" class="h-full">
- <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oddities</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-  <script src="/_sdk/element_sdk.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     html, body { height: 100%; margin: 0; }
     * { box-sizing: border-box; }
-
-    .app-wrapper {
-      font-family: 'Outfit', sans-serif;
-      overflow-x: hidden;
-    }
-
-    .oddity-line {
-      width: 24px;
-      height: 2px;
-      background: linear-gradient(to right, currentColor 0%, transparent 100%);
-    }
-
-    .attraction-card {
-      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
-    }
-    .attraction-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 24px rgba(138, 43, 226, 0.25);
-    }
-
-    .tag-pill {
-      transition: background 0.2s ease;
-    }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    }
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .delay-1 { animation-delay: 0.1s; }
-    .delay-2 { animation-delay: 0.2s; }
-    .delay-3 { animation-delay: 0.3s; }
-    .delay-4 { animation-delay: 0.4s; }
-    .delay-5 { animation-delay: 0.5s; }
-    .delay-6 { animation-delay: 0.6s; }
-
-    .skull-spin {
-      animation: skullBounce 3s ease-in-out infinite;
-    }
-    @keyframes skullBounce {
-      0%, 100% { transform: translateY(0) rotate(-5deg); }
-      50% { transform: translateY(-8px) rotate(5deg); }
-    }
-    @keyframes slideIn {
-      from { transform: translateX(100%); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-    .animate-slide-in {
-      animation: slideIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    .scroll-container {
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
+    .app-wrapper { font-family: 'Outfit', sans-serif; overflow-x: hidden; }
+    .oddity-line { width: 24px; height: 2px; background: linear-gradient(to right, currentColor 0%, transparent 100%); }
+    .attraction-card { transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease; }
+    .attraction-card:hover { transform: translateY(-6px); box-shadow: 0 0 24px rgba(138, 43, 226, 0.25); }
+    .fade-up { opacity: 0; transform: translateY(30px); animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .skull-spin { animation: skullBounce 3s ease-in-out infinite; }
+    @keyframes skullBounce { 0%, 100% { transform: translateY(0) rotate(-5deg); } 50% { transform: translateY(-8px) rotate(5deg); } }
+    @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+    .scroll-container { scrollbar-width: none; -ms-overflow-style: none; }
     .scroll-container::-webkit-scrollbar { display: none; }
-
     .like-btn { transition: transform 0.2s ease; }
     .like-btn:hover { transform: scale(1.2); }
     .like-btn.liked { color: #8a2be2; }
-
-    .filter-btn {
-      transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .filter-btn.active {
-      transform: scale(1.05);
-    }
-
-    .search-input-wrapper {
-      transition: all 0.3s ease;
-    }
-    .search-input-wrapper:focus-within {
-      background: rgba(138, 43, 226, 0.15) !important;
-      border-color: rgba(138, 43, 226, 0.35) !important;
-      box-shadow: 0 0 16px rgba(138, 43, 226, 0.1);
-    }
+    .filter-btn { transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1); }
+    .filter-btn.active { transform: scale(1.05); }
   </style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <style>body { box-sizing: border-box; }</style>
- </head>
- <body class="h-full">
-  <div id="app" class="app-wrapper h-full w-full overflow-auto">
-   <!-- Nav -->
-   <nav id="nav-bar" class="sticky top-0 z-50 backdrop-blur-lg border-b" style="background: rgba(18,18,22,0.92); border-color: rgba(138,43,226,0.15);">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-     <div class="flex items-center gap-2">
-      <div class="skull-spin">
-       <i data-lucide="skull" style="width:28px;height:28px;color:#8a2be2;"></i>
-      </div>
-      <div class="flex flex-col"><span id="nav-title" class="text-xl font-bold tracking-tight" style="color:#f5f0e8;">ODDITIES</span>
-      </div>
-     </div>
-     <div class="hidden sm:flex items-center gap-4">
-      <div class="relative group"><button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium" style="background:#8a2be2;color:#12121a;"> <i data-lucide="user" style="width:14px;height:14px;"></i> <span>My Account</span> <i data-lucide="chevron-down" style="width:14px;height:14px;"></i> </button>
-       <div class="hidden group-hover:flex absolute right-0 top-full mt-1 flex-col gap-0 rounded-xl overflow-hidden z-40" style="background:#1e1e28;border:1px solid rgba(138,43,226,0.15);min-w-48;"><button id="nav-saved-btn" class="flex items-center gap-2 px-4 py-3 text-sm font-medium text-left hover:bg-opacity-80 transition" style="color:#f5f0e8;border-bottom:1px solid rgba(138,43,226,0.1);"> <i data-lucide="bookmark" style="width:14px;height:14px;"></i> <span>My Bucket List</span> <span id="saved-count" class="ml-auto px-1.5 py-0.5 rounded-full text-xs font-bold" style="background:#8a2be2;color:#12121a;">0</span> </button> <button class="flex items-center gap-2 px-4 py-3 text-sm font-medium text-left hover:bg-opacity-80 transition" style="color:#f5f0e8;"> <i data-lucide="settings" style="width:14px;height:14px;"></i> <span>Settings</span> </button>
-       </div>
-      </div>
-     </div><button id="mobile-menu-btn" class="sm:hidden p-2 rounded-lg" style="color:#f5f0e8;"> <i data-lucide="menu" style="width:22px;height:22px;"></i> </button>
-    </div>
-   </nav><!-- Mobile menu -->
-   <div id="mobile-menu" class="hidden sm:hidden fixed inset-0 z-40" style="background:rgba(18,18,22,0.97);">
-    <div class="flex flex-col items-center justify-center h-full gap-6">
-     <button id="mobile-close-btn" class="absolute top-4 right-4 p-2" style="color:#f5f0e8;"> <i data-lucide="x" style="width:24px;height:24px;"></i> </button> <button id="mobile-saved-btn" class="flex items-center gap-2 px-5 py-3 rounded-full text-lg font-medium" style="background:#8a2be2;color:#12121a;"> <i data-lucide="bookmark" style="width:18px;height:18px;"></i> Saved </button>
-    </div>
-   </div><!-- Hero -->
-   <header class="relative overflow-hidden" style="background:linear-gradient(135deg, #0a0a0f 0%, #1a0a2a 50%, #0f0a15 100%);">
-    <div class="absolute inset-0 opacity-30">
-     <svg class="w-full h-full" viewbox="0 0 1200 600" preserveaspectratio="xMidYMid slice">
-      <defs>
-       <lineargradient id="fogGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" style="stop-color:#8a2be2;stop-opacity:0" />
-        <stop offset="50%" style="stop-color:#8a2be2;stop-opacity:0.08" />
-        <stop offset="100%" style="stop-color:#8a2be2;stop-opacity:0.15" />
-       </lineargradient>
-      </defs> <rect width="1200" height="600" fill="url(#fogGrad)" /> <circle cx="200" cy="150" r="200" fill="#8a2be2" opacity="0.05" /> <circle cx="1000" cy="400" r="250" fill="#6a0dad" opacity="0.04" />
-     </svg>
-    </div>
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-32 relative z-10">
-     <div class="max-w-2xl">
-      <div class="fade-up delay-2 mb-6">
-       <h1 id="hero-heading" class="text-5xl sm:text-6xl font-black leading-tight tracking-tight" style="color:#f5f0e8;letter-spacing:-0.02em;">Explore the Strange,<br>
-         the Mysterious, the Unforgettable</h1>
-      </div>
-      <p class="fade-up delay-3 text-lg sm:text-xl font-light mb-8 max-w-lg" style="color:#d4c5e2;line-height:1.6;">Discover haunted asylums, cryptid hotspots, battlefields frozen in time, and other mysteries that defy explanation. Real places, real histories, real hauntings.</p>
-      <div class="fade-up delay-3 flex flex-col sm:flex-row gap-3">
-       <button id="explore-btn" class="group flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg font-bold text-sm" style="background:#8a2be2;color:#f5f0e8;"> Explore Locations <i data-lucide="arrow-right" style="width:16px;height:16px;" class="transition-transform group-hover:translate-x-1"></i> </button> <button class="flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg font-bold text-sm" style="background:rgba(138,43,226,0.1);color:#8a2be2;border:1.5px solid rgba(138,43,226,0.3);"> <i data-lucide="bookmark" style="width:16px;height:16px;"></i> Start a Bucket List </button>
-      </div>
-     </div>
-    </div>
-   </header><!-- Featured Oddity of the Week -->
-   <section style="background:#12121a;">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-     <div class="flex items-center gap-3 mb-5">
-      <div class="oddity-line h-8" style="color:#8a2be2;"></div>
-      <div>
-       <p class="text-xs uppercase font-semibold tracking-widest mb-0.5" style="color:#8a2be2;">This Week</p>
-       <h2 id="featured-title" class="text-xl sm:text-2xl font-bold" style="color:#f5f0e8;">Oddity of the Week</h2>
-      </div>
-     </div>
-     <div id="featured-card" class="rounded-2xl overflow-hidden cursor-pointer flex" style="background:#2a1a3a;border:1px solid rgba(138,43,226,0.2);">
-      <div class="w-1/3 flex-shrink-0"><img id="featured-image" src="" alt="Featured oddity" loading="lazy" style="width:100%;height:100%;object-fit:cover;min-height:280px;" onerror="this.style.display='none';">
-      </div>
-      <div class="w-2/3 p-6 flex flex-col justify-between">
-       <div>
-        <div class="mb-4 flex items-center gap-2">
-         <i data-lucide="map-pin" style="width:16px;height:16px;color:#8a2be2;"></i> <span id="featured-location" class="text-sm font-medium" style="color:#8a2be2;"></span>
+</head>
+<body class="h-full">
+  <div id="app" class="app-wrapper h-full w-full overflow-auto bg-[#12121a]">
+    <nav id="nav-bar" class="sticky top-0 z-50 backdrop-blur-lg border-b" style="background: rgba(18,18,22,0.92); border-color: rgba(138,43,226,0.15);">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="skull-spin"><i data-lucide="skull" style="width:28px;height:28px;color:#8a2be2;"></i></div>
+          <span id="nav-title" class="text-xl font-bold tracking-tight text-[#f5f0e8]">ODDITIES</span>
         </div>
-        <h3 id="featured-name" class="text-2xl font-bold mb-3" style="color:#f5f0e8;"></h3>
-        <p id="featured-desc" class="leading-relaxed text-sm" style="color:#d4c5e2;line-height:1.6;"></p>
-       </div>
-       <div class="flex gap-3 mt-6"><button id="featured-save" class="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-full text-sm font-semibold" style="background:#8a2be2;color:#f5f0e8;" onclick="event.stopPropagation();"> <i data-lucide="bookmark" style="width:16px;height:16px;"></i> Save </button> <button id="featured-learn-more" class="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-full text-sm font-semibold" style="background:rgba(138,43,226,0.15);color:#8a2be2;border:1px solid rgba(138,43,226,0.3);" onclick="event.stopPropagation();"> <i data-lucide="arrow-right" style="width:16px;height:16px;"></i> Details </button>
-       </div>
+        <button id="nav-saved-btn" class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-[#8a2be2] text-[#12121a]">
+          <i data-lucide="bookmark" style="width:14px;height:14px;"></i> <span>My Bucket List</span>
+          <span id="saved-count" class="ml-2 px-1.5 py-0.5 rounded-full text-xs font-bold bg-[#12121a] text-[#8a2be2]">0</span>
+        </button>
       </div>
-     </div>
-    </div>
-   </section><!-- Explore Section -->
-   <section style="background:#12121a;">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
-     <div class="flex items-center justify-between mb-6">
-      <div class="flex items-center gap-3">
-       <div class="oddity-line h-12" style="color:#8a2be2;"></div>
-       <div>
-        <p class="text-xs uppercase font-semibold tracking-widest mb-1" style="color:#a09a8e;">Explore</p>
-        <h2 id="explore-title" class="text-2xl sm:text-3xl font-bold" style="color:#f5f0e8;">Discover Oddities</h2>
-       </div>
+    </nav>
+
+    <header class="relative overflow-hidden py-20 sm:py-32" style="background:linear-gradient(135deg, #0a0a0f 0%, #1a0a2a 50%, #0f0a15 100%);">
+      <div class="max-w-6xl mx-auto px-4 relative z-10">
+        <h1 id="hero-heading" class="text-5xl sm:text-6xl font-black text-[#f5f0e8] mb-6">Explore the Strange,<br>the Mysterious</h1>
+        <p class="text-lg text-[#d4c5e2] max-w-lg mb-8">Discover haunted asylums, cryptid hotspots, and mysteries that defy explanation.</p>
+        <button id="explore-btn" class="px-8 py-4 rounded-lg font-bold bg-[#8a2be2] text-white">Explore Locations</button>
       </div>
-      <div class="flex-1 ml-6">
-       <div class="search-input-wrapper flex items-center gap-2 px-4 py-2.5 rounded-full" style="background:rgba(245,240,232,0.06);border:1px solid rgba(138,43,226,0.1);"><i data-lucide="search" style="width:16px;height:16px;color:#a09a8e;"></i> <input id="search-input" type="text" placeholder="Search places, tags" class="bg-transparent outline-none w-full text-sm" style="color:#f5f0e8;">
-       </div>
+    </header>
+
+    <section class="py-12 bg-[#12121a]">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="oddity-line h-8 text-[#8a2be2]"></div>
+          <h2 class="text-xl font-bold text-[#f5f0e8]">Oddity of the Week</h2>
+        </div>
+        <div id="featured-card" class="rounded-2xl overflow-hidden cursor-pointer flex bg-[#1e1e28] border border-purple-900/20">
+          </div>
       </div>
-     </div><!-- Filters -->
-     <div class="scroll-container flex gap-2 overflow-x-auto pb-4 mb-8">
-      <button class="filter-btn active flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap" style="background:#8a2be2;color:#f5f0e8;" data-filter="all"> <i data-lucide="sparkles" style="width:14px;height:14px;"></i> All Oddities </button> <button class="filter-btn flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap" style="background:rgba(245,240,232,0.08);color:#a09a8e;" data-filter="cemetery"> <i data-lucide="cross" style="width:14px;height:14px;"></i> Cemeteries </button> <button class="filter-btn flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap" style="background:rgba(245,240,232,0.08);color:#a09a8e;" data-filter="historic"> <i data-lucide="landmark" style="width:14px;height:14px;"></i> Historic </button> <button class="filter-btn flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap" style="background:rgba(245,240,232,0.08);color:#a09a8e;" data-filter="haunted"> <i data-lucide="ghost" style="width:14px;height:14px;"></i> Haunted </button> <button class="filter-btn flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap" style="background:rgba(245,240,232,0.08);color:#a09a8e;" data-filter="cryptid"> <i data-lucide="footprints" style="width:14px;height:14px;"></i> Cryptid </button> <button class="filter-btn flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap" style="background:rgba(245,240,232,0.08);color:#a09a8e;" data-filter="alien"> <i data-lucide="ufo" style="width:14px;height:14px;"></i> Aliens/UFO </button>
-     </div><!-- Oddity Grid -->
-     <div id="trip-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-     </div>
-    </div>
-   </section><!-- Footer -->
-   <footer style="background:#0e0e14;border-top:1px solid rgba(138,43,226,0.1);">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-     <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2">
-       <i data-lucide="skull" style="width:20px;height:20px;color:#8a2be2;"></i> <span class="font-bold tracking-tight" style="color:#f5f0e8;">ODDITIES</span>
+    </section>
+
+    <section class="py-14 bg-[#12121a]">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8">
+          <h2 class="text-3xl font-bold text-[#f5f0e8]">Discover Oddities</h2>
+          <div class="search-input-wrapper flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/5 border border-white/10 w-full sm:w-64">
+            <i data-lucide="search" class="w-4 h-4 text-[#a09a8e]"></i>
+            <input id="search-input" type="text" placeholder="Search..." class="bg-transparent outline-none w-full text-sm text-[#f5f0e8]">
+          </div>
+        </div>
+        
+        <div class="scroll-container flex gap-2 overflow-x-auto pb-6">
+          <button class="filter-btn active px-5 py-2 rounded-full text-sm font-medium bg-[#8a2be2] text-white" data-filter="all">All Oddities</button>
+          <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white/5 text-[#a09a8e]" data-filter="haunted">Haunted</button>
+          <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white/5 text-[#a09a8e]" data-filter="historic">Historic</button>
+          <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white/5 text-[#a09a8e]" data-filter="cryptid">Cryptid</button>
+        </div>
+
+        <div id="trip-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          </div>
       </div>
-      <p class="text-xs" style="color:#a09a8e;">© 2026 The Odd Phoenix LLC</p>
-     </div>
-    </div>
-   </footer><!-- Attraction Detail Modal -->
-   <div id="trip-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4" style="background:rgba(10,10,14,0.9);">
-    <div class="w-full max-w-lg rounded-2xl overflow-hidden max-h-[90%] overflow-y-auto" style="background:#1e1e28;border:1px solid rgba(138,43,226,0.15);box-shadow:0 0 40px rgba(138,43,226,0.15);animation:fadeIn 0.3s cubic-bezier(0.22,1,0.36,1) forwards;">
-     <div id="modal-header-bg" class="h-40 flex items-center justify-center relative" style="background:linear-gradient(135deg,#2a0a40,#1a1020);">
-      <button id="modal-close" class="absolute top-3 right-3 p-2 rounded-full" style="background:rgba(0,0,0,0.5);color:#f5f0e8;"> <i data-lucide="x" style="width:18px;height:18px;"></i> </button> <i data-lucide="compass" style="width:48px;height:48px;color:#8a2be2;opacity:0.6;"></i>
-     </div>
-     <div class="p-6">
-      <h3 id="modal-title" class="text-xl font-bold mb-2" style="color:#f5f0e8;"></h3>
-      <div id="modal-tags" class="flex flex-wrap gap-2 mb-3"></div>
-      <p id="modal-desc" class="text-sm leading-relaxed mb-4" style="color:#a09a8e;"></p>
-      <div id="modal-stats" class="flex gap-4 mb-5 text-xs" style="color:#a09a8e;"></div>
-      <div class="flex gap-3">
-       <button id="modal-visit" class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold" style="background:#8a2be2;color:#f5f0e8;"> <i data-lucide="navigation" style="width:14px;height:14px;"></i> Visit </button> <button id="modal-like" class="like-btn p-2.5 rounded-full" style="color:#a09a8e;background:rgba(160,154,142,0.1);"> <i data-lucide="bookmark" style="width:18px;height:18px;"></i> </button>
+    </section>
+
+    <footer class="py-10 bg-[#0e0e14] border-t border-purple-900/20">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p class="text-xs text-[#a09a8e]">© 2026 The Odd Phoenix LLC • Embrace the Strange</p>
       </div>
-     </div>
-    </div>
-   </div><!-- Saved Panel -->
-   <div id="saved-panel" class="hidden fixed inset-y-0 right-0 z-50 w-full sm:w-96" style="background:#1a1a24;border-left:1px solid rgba(138,43,226,0.15);">
-    <div class="flex items-center justify-between p-5" style="border-bottom:1px solid rgba(138,43,226,0.1);">
-     <h3 class="text-lg font-bold" style="color:#f5f0e8;">Saved Oddities</h3><button id="saved-close" class="p-2 rounded-lg" style="color:#a09a8e;"> <i data-lucide="x" style="width:20px;height:20px;"></i> </button>
-    </div>
-    <div id="saved-list" class="p-5 overflow-y-auto" style="height:calc(100% - 68px);"></div>
-   </div>
-   <div id="saved-overlay" class="hidden fixed inset-0 z-40" style="background:rgba(10,10,14,0.7);"></div><!-- Featured Info Modal -->
-   <div id="featured-info-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4" style="background:rgba(10,10,14,0.9);">
-    <div class="w-full max-w-2xl rounded-2xl overflow-hidden max-h-[90%] overflow-y-auto" style="background:#1e1e28;border:1px solid rgba(138,43,226,0.15);box-shadow:0 0 40px rgba(138,43,226,0.15);animation:fadeIn 0.3s cubic-bezier(0.22,1,0.36,1) forwards;">
-     <div class="flex items-center justify-between p-6" style="border-bottom:1px solid rgba(138,43,226,0.1);">
-      <h2 id="info-modal-title" class="text-2xl font-bold" style="color:#f5f0e8;"></h2><button id="info-modal-close" class="p-2 rounded-full" style="background:rgba(138,43,226,0.1);color:#f5f0e8;"> <i data-lucide="x" style="width:20px;height:20px;"></i> </button>
-     </div>
-     <div class="p-6 space-y-6">
-      <div id="info-modal-content"></div>
-      <div class="flex gap-3 pt-2"><button id="info-modal-like" class="like-btn flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold" style="color:#f5f0e8;background:rgba(138,43,226,0.1);"> <i data-lucide="bookmark" style="width:16px;height:16px;"></i> Save </button> <button id="info-modal-visit" class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold" style="background:#8a2be2;color:#f5f0e8;"> <i data-lucide="navigation" style="width:16px;height:16px;"></i> Visit </button>
+    </footer>
+
+    <div id="featured-info-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90">
+      <div class="w-full max-w-2xl bg-[#1e1e28] rounded-2xl overflow-hidden max-h-[90vh] overflow-y-auto border border-purple-900/30">
+        <div class="p-6 border-b border-white/10 flex justify-between items-center">
+          <h2 id="info-modal-title" class="text-2xl font-bold text-white"></h2>
+          <button id="info-modal-close" class="p-2 bg-white/5 rounded-full text-white hover:bg-white/10"><i data-lucide="x" class="w-5 h-5"></i></button>
+        </div>
+        <div id="info-modal-content" class="p-6"></div>
       </div>
-     </div>
     </div>
-   </div>
   </div>
+
   <script>
+    // DATA ARRAY
     const trips = [
-      {
-        id: 'eureka-springs-town',
-        title: 'Eureka Springs, Arkansas',
-        region: 'Carroll County, AR',
-        category: 'historic',
-        tags: ['Historic Town', 'Paranormal Hub', 'Regional Lore'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Historic Town',
-        stops: 'Downtown exploration',
-        isRegion: true,
-        desc: 'Built into the Ozark Mountains during the 1880s silver boom, Eureka Springs grew rapidly from frontier town to Victorian resort destination. When silver mining declined, the town reinvented itself as a tourist attraction. However, the rapid growth, economic boom-and-bust cycles, and tragic mining accidents left their mark on the community. Locals and visitors report that the town itself harbors paranormal activity—ghostly figures in Victorian dress wandering the steep streets, disembodied voices in historic buildings, and an overwhelming sense of residual haunting permeating the downtown area.\n\nThe Victorian architecture preserves the town\'s haunted history. Restaurants, hotels, and shops occupy former saloons, boarding houses, and mining operations where countless tragedies occurred. The town\'s supernatural reputation has made it a paranormal tourism destination, with ghost tours operating nightly. Visitors come to experience the collective haunting of a community frozen in its traumatic past.',
-        gradient: 'linear-gradient(135deg, #2a0a20, #1a0a10)',
-        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-        relatedLocations: ['crescent-hotel'],
-        history: 'Eureka Springs emerged during the 1880s silver boom, transforming rapidly from frontier outpost to thriving Victorian resort town. Silver miners flooded the region, constructing the town on steep hillsides that offered rich mineral deposits. The prosperity was dizzying but brief. When silver prices crashed in the 1890s, the town\'s economic foundation crumbled. Many miners perished in accidents, cave-ins, and explosions. The transition from boom to bust left emotional scars on the community. By the early 1900s, the town pivoted to tourism, capitalizing on its Victorian charm and mountain scenery. This reinvention preserved the architecture but couldn\'t erase the trauma of the boom-and-bust cycle. The town\'s paranormal reputation grew as visitors and locals reported consistent supernatural phenomena throughout the historic district.',
-        funFacts: ['Built on steep Ozark hillsides during the 1880s silver boom', 'The town boomed and busted rapidly, leaving emotional trauma', 'Mining accidents claimed many lives during the extraction era', 'Victorian architecture preserved from the boom period', 'Ghost tours operate nightly through historic downtown', 'Visitors report seeing apparitions in period clothing', 'Disembodied voices speak in the streets at night', 'The entire town is considered a paranormal hotspot', 'Historic buildings operate as restaurants and shops', 'The town has reinvented itself as a paranormal tourism destination']
-      },
-      {
-        id: 'san-luis-valley',
-        title: 'San Luis Valley, Colorado',
-        region: 'South-Central Colorado',
-        category: 'cryptid',
-        tags: ['UFO Hotspot', 'Cryptid Center', 'Paranormal Region'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Regional Phenomenon',
-        stops: 'Multiple sites',
-        isRegion: true,
-        desc: 'The San Luis Valley is one of North America\'s most active UFO and paranormal hotspots. Located between the San Juan Mountains and the Sangre de Cristo Mountains, this remote high-altitude valley has been the epicenter of unexplained phenomena for decades. UFO sightings occur with remarkable frequency—some estimates suggest hundreds annually. Cryptid reports include the "Gunnison Creature," a large bipedal entity similar to Bigfoot but adapted to high altitude environments.\n\nResidents report mysterious aircraft with impossible flight characteristics, orbs of light moving silently through the sky, and encounters with humanoid entities of unknown origin. Cattle mutilations occur periodically throughout the valley with no conventional explanation. Paranormal investigators believe the valley sits at the intersection of multiple ley lines, potentially creating a portal or dimensional weak point. The landscape itself feels otherworldly—vast, isolated, and seemingly untouched by normal rules of physics.',
-        gradient: 'linear-gradient(135deg, #1a3a0a, #0a2a1a)',
-        image: 'https://images.unsplash.com/photo-1444080748397-f442aa95c3e5?w=800&h=600&fit=crop',
-        relatedLocations: ['devil-promenade'],
-        history: 'The San Luis Valley has been a center of paranormal activity since pre-Columbian times. Indigenous peoples reported seeing "sky beings" and strange phenomena in the valley for centuries. Spanish explorers documented unusual occurrences. Modern UFO sightings increased dramatically in the 1950s. The valley gained international attention in the 1970s and 1980s when UFO researchers and paranormal investigators began documenting consistent phenomena. The valley\'s high altitude (7,500+ feet), isolation, and unique geography may contribute to the activity. Some theorists suggest the valley sits on a major geomagnetic anomaly or ley line junction.',
-        funFacts: ['Hundreds of UFO sightings reported annually', 'The valley sits at 7,500+ feet elevation', 'Cattle mutilations occur periodically throughout the valley', 'The "Gunnison Creature" is reported as a regional cryptid', 'Indigenous peoples reported "sky beings" for centuries', 'Modern UFO activity intensified in the 1950s', 'The valley may sit on major ley line junctions', 'Paranormal investigators believe it\'s a dimensional weak point', 'The landscape feels otherworldly and untouched', 'The valley remains one of North America\'s most active paranormal zones']
-      },
-      {
-        id: 'waverly-hills',
-        title: 'Waverly Hills Sanatorium, Kentucky',
-        region: 'Louisville, KY',
-        category: 'haunted',
-        tags: ['Haunted', 'Medical History', 'Abandoned'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Hospital',
-        stops: 'Ghost tours available',
-        desc: 'Built in 1910, this tuberculosis hospital is said to be one of America\'s most haunted places. The "body chute" transported corpses from upper floors, and visitors report disembodied voices, apparitions, and cold spots in the tunnels. Over 60,000 patients died here, many from experimental treatments, and their spirits are believed to remain trapped within the Gothic Revival walls.\n\nThe sanatorium operated as a self-contained city with its own power plant, post office, mortuary, and surgical wing at its peak, housing over 400 patients. After antibiotics rendered the facility obsolete in the 1960s, the building fell into abandonment for decades. Today, paranormal investigators and ghost tour participants encounter consistent phenomena throughout the structure, particularly in Room 502 and the infamous body chute tunnel.',
-        gradient: 'linear-gradient(135deg, #2a0a40, #1a1020)',
-        image: 'https://images.unsplash.com/photo-1518392846015-55a9cc003b25?w=800&h=600&fit=crop',
-        relatedLocations: [],
-        history: 'Waverly Hills Sanatorium opened in 1910 as a tuberculosis hospital during the devastating height of the TB epidemic that claimed millions across America. At its peak, it housed over 400 patients and was essentially a self-contained city with its own power plant, post office, mortuary, and surgical wing. The Gothic Revival architecture was designed to be uplifting for patients, yet the building became a monument to suffering. The "body chute"—a 5-story underground tunnel—was constructed to discreetly remove corpses so other patients wouldn\'t lose hope. Over 60,000 patients died within these walls from tuberculosis, many more succumbing to experimental treatments. Staff members reported seeing apparitions even while the hospital was operational. After antibiotics rendered the sanatorium obsolete in the 1960s, the building fell into abandonment, where it remained for decades before being restored as a paranormal tourism destination.',
-        funFacts: ['The "body chute" is a 5-story tunnel used to discreetly move corpses without patients seeing', 'Over 60,000 patients died here; many believe their spirits never left', 'Staff reported seeing full apparitions and shadow figures even during operating years', 'Room 502 is the most active—visitors report violent poltergeist activity', 'Phantom footsteps echo through the fourth floor at night', 'Visitors hear coughing and labored breathing in empty wards', 'A "blue lady" apparition has been photographed multiple times', 'Disembodied voices beg for help and medical assistance']
-      },
-      {
-        id: 'salem-gallows',
-        title: 'Salem Gallows, Massachusetts',
-        region: 'Salem, MA',
-        category: 'historic',
-        tags: ['Witch Trials', 'Executions', 'Historic'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Historic Site',
-        stops: 'Memorial grounds',
-        desc: 'Site of the Salem Witch Trials executions (1692). Twenty innocent people were systematically executed for alleged witchcraft—nineteen by hanging on Gallows Hill and one pressed to death with stones. The hysteria that gripped the community destroyed families, turned neighbors into accusers, and claimed lives based on testimony extracted through torture and psychological manipulation.\n\nVisitors to the memorial grounds report apparitions of the condemned, cold spots that defy explanation, and an overwhelming sense of sadness and injustice. The trials lasted only 14 months but fundamentally altered American jurisprudence and remain a cautionary tale about mass hysteria, false accusations, and the dangers of religious extremism. Many paranormal investigators believe the spirits of those wrongly executed remain trapped at the site, unable to find peace.',
-        gradient: 'linear-gradient(135deg, #2a0a30, #1a0a2a)',
-        image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop',
-        history: 'The Salem Witch Trials of 1692-1693 remain one of the darkest chapters in American colonial history. What began as hysteria over alleged witchcraft spiraled into mass paranoia that gripped the entire community of Salem. Twenty innocent people were systematically executed—nineteen by hanging on Gallows Hill and one man pressed to death with stones for refusing to enter a plea. Dozens more were imprisoned and tortured. The trials destroyed families, turned neighbor against neighbor, and led to confessions extracted through psychological manipulation and torture. Many of those executed maintained their innocence to their dying breath, proclaiming their faith in God even as they faced death. The hysteria lasted approximately a year but fundamentally changed American jurisprudence and remains a cautionary tale about mass hysteria, false accusations, and the dangers of religious extremism. Historians believe the trials were triggered by ergot poisoning in contaminated grain, causing hallucinations and convulsive fits.',
-        funFacts: ['Nineteen people were hanged on Gallows Hill; one was pressed to death with stones', 'Over 150 people were accused during the trials', 'Many executed proclaimed their innocence to the very end', 'The trials lasted only 14 months but claimed 20 lives', 'Visitors report seeing figures in colonial-era clothing at the memorial', 'Cold spots and unexplained chills occur near execution sites', 'Apparitions of accused witches have been reported', 'The site remains one of America\'s most emotionally charged paranormal locations', 'Disembodied voices cry out in anguish', 'Visitors report overwhelming sadness and dread']
-      },
-      {
-        id: 'stanley-hotel',
-        title: 'The Stanley Hotel, Colorado',
-        region: 'Estes Park, CO',
-        category: 'haunted',
-        tags: ['Haunted Hotel', 'Famous Hauntings', 'Luxury'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Hotel',
-        stops: 'Overnight stays',
-        desc: 'Built in 1909, this luxury hotel inspired Stephen King\'s "The Shining." In October 1974, King spent one night here and conceived the entire plot of his masterpiece. Guests report apparitions of staff members, mysterious voices, phantom piano music echoing from the Gold Room at midnight, and objects moving on their own throughout the historic structure.\n\nThe Stanley Hotel remains one of America\'s most celebrated paranormal destinations. The Ghost Tour operates nightly, and paranormal investigators have documented consistent activity for decades. Most disturbing are reports in Room 217 (now 401), where guests experience violent poltergeist phenomena. Staff members refuse to enter certain areas of the hotel alone, and visitors have captured unexplained apparitions in photographs and on video equipment.',
-        gradient: 'linear-gradient(135deg, #1a2a0a, #0a1a1a)',
-        image: 'https://images.unsplash.com/photo-1551632706-5386c5193122?w=800&h=600&fit=crop',
-        history: 'The Stanley Hotel was built in 1909 by inventor F.O. Stanley, creator of the Stanley Steamer automobile. The hotel was designed as a luxury mountain retreat and quickly became a destination for America\'s wealthiest families. The hotel\'s golden age lasted until the 1970s when tourist patterns changed. In 1974, horror writer Stephen King checked into the hotel during the off-season and was reportedly one of only two guests in the massive 400-room structure. During his one-night stay, King conceived the entire plot of "The Shining," one of horror literature\'s masterpieces. The hotel has embraced its paranormal reputation and now operates regular ghost tours. Guests and staff have reported consistent paranormal activity for decades, particularly in the Gold Room and Room 217 (now numbered 401 due to guest complaints). The hotel remains a popular destination for paranormal investigators and horror fans.',
-        funFacts: ['Stephen King wrote "The Shining" after staying here for just one night in October 1974', 'The Gold Room is the most actively haunted area, with piano music heard at night', 'Room 217 (now 401) is said to be haunted by a maid named Elizabeth', 'Guests hear phantom piano music from the concert hall with no one playing', 'A woman in white appears in mirrors and disappears when observed directly', 'Visitors report seeing a man in 1920s attire in the hallways', 'Elevators move to different floors without being called', 'Children\'s laughter echoes through empty corridors', 'Staff refuse to enter certain rooms alone', 'The hotel offers "ghost tours" nightly with consistent paranormal encounters']
-      },
-      {
-        id: 'crescent-hotel',
-        title: 'Crescent Hotel, Arkansas',
-        region: 'Eureka Springs, AR',
-        category: 'haunted',
-        tags: ['Haunted Hotel', 'Victorian', 'Hospital History'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Hotel',
-        stops: 'Tours & lodging',
-        relatedLocations: ['eureka-springs-town'],
-        desc: 'Built in 1886, this Victorian hotel served as a hospital where unethical "treatments" took place. From 1937 to 1938, the building operated as the Crescent Hotel Hospital under quack doctor Norman Baker, who subjected desperate cancer patients to painful, harmful procedures including electrical shock treatment and toxic injections. Guests report apparitions of patients, mysterious footsteps, and phantom screams emanating from the basement.\n\nThis historic property is now considered one of America\'s most actively haunted locations. Paranormal investigators have documented over 20 major encounters annually. Staff members refuse to work certain areas alone, and guests experience severe unexplained phenomena. The spirits of Baker\'s victims are believed to remain trapped in eternal suffering, seeking justice and peace that never comes.',
-        gradient: 'linear-gradient(135deg, #2a0a20, #1a0a10)',
-        image: 'https://images.unsplash.com/photo-1518392846015-55a9cc003b25?w=800&h=600&fit=crop',
-        history: 'The Crescent Hotel was built in 1886 as a luxury resort hotel in the Victorian style, overlooking the Ozark Mountains. It operated as a prestigious destination until 1937 when it was converted into the Crescent Hotel Hospital under the direction of Dr. Norman Baker, a quack doctor promoting unproven cancer treatments. For approximately one year, Baker subjected patients to painful and damaging procedures including electrical shock treatment, mustard plasters, and injections of toxic solutions. Desperate cancer patients paid enormous fees for treatments that had no medical basis and caused severe harm. The "hospital" was eventually shut down by authorities, but not before countless patients suffered terribly. After Baker\'s departure, the building returned to being a hotel. The spirits of patients who died under Baker\'s care are said to remain, eternally trapped in suffering. The hotel is now one of America\'s most actively haunted properties, with consistent paranormal documentation.',
-        funFacts: ['Over 20 documented paranormal encounters occur here annually', 'Dr. Norman Baker\'s ghost is blamed for much of the activity', 'Patients report being touched by invisible hands during the night', 'Room 218 is so active it was converted to storage', 'Screams and cries of pain echo from the basement at night', 'Apparitions of Baker in a white coat have been photographed', 'Guests experience severe allergic reactions and illnesses', 'A woman\'s apparition appears in mirrors throughout the hotel', 'Disembodied voices speak in pain and desperation', 'The hotel ranks among America\'s top 10 most haunted locations']
-      },
-      {
-        id: 'winchester-mystery',
-        title: 'Winchester Mystery House, California',
-        region: 'San Jose, CA',
-        category: 'cryptid',
-        tags: ['Mysterious Architecture', 'Paranormal', 'Architectural Puzzle'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Mysterious Mansion',
-        stops: 'Guided tours daily',
-        desc: 'A sprawling mansion with 160 rooms, staircases leading to nowhere, and doors that open into solid walls. Built by rifle heiress Sarah Winchester, who believed she was building the house under the direction of spirits trying to make amends for deaths caused by Winchester rifles. The construction never stopped—carpenters worked 24 hours a day for 38 consecutive years.\n\nSarah Winchester purchased the farmhouse in 1884 and immediately began renovations that would continue until her death in 1922. She spent $5.5 million (over $250 million today) on this bizarre expansion. Architects and historians remain baffled by the architectural choices. Rooms are built at nonsensical angles, staircases ascend into ceilings, doors open into blank walls, and windows look into other rooms. Paranormal investigators report consistent supernatural phenomena, though whether it\'s Sarah\'s spirit overseeing construction or something far more sinister remains unknown.',
-        gradient: 'linear-gradient(135deg, #2a1a0a, #1a0a1a)',
-        image: 'https://images.unsplash.com/photo-1470252649378-9c29740ff023?w=800&h=600&fit=crop',
-        history: 'Sarah Winchester, heiress to the Winchester rifle fortune, bought this farmhouse in 1884. She spent 38 years and $5.5 million constantly expanding it in seemingly random directions. She died in 1922, leaving the bizarre structure behind. Winchester believed she was directed by the spirits of those killed by Winchester rifles to build continuously as a form of redemption. The house features impossible architecture—staircases leading to nowhere, doors opening into blank walls, windows looking into other rooms—all of which defy conventional construction logic.',
-        funFacts: ['The mansion has 160 rooms but no master bedroom', 'There are staircases that lead nowhere', 'Doors open into blank walls', 'Sarah believed she was communicating with spirits who directed the construction', 'Construction continued 24 hours a day for 38 years', 'Over $5.5 million was spent on the mansion', 'Rooms are built at nonsensical angles', 'Windows look directly into other rooms', 'The architecture defies conventional building logic', 'Paranormal investigators report consistent activity throughout']
-      },
-      {
-        id: 'eastern-state',
-        title: 'Eastern State Penitentiary, Pennsylvania',
-        region: 'Philadelphia, PA',
-        category: 'historic',
-        tags: ['Prison', 'Historic', 'Paranormal'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Historic Prison',
-        stops: 'Ghost tours available',
-        desc: 'One of the world\'s most influential prison designs, opened in 1829 and remained operational for 142 years. The imposing fortress housed infamous criminals including Al Capone and bank robber Willie Sutton. The institution pioneered the "Pennsylvania System" of solitary confinement, a practice designed to rehabilitate but which resulted in widespread psychological damage and insanity among inmates.\n\nVisitors and paranormal investigators report consistent apparitions of guards and inmates, disembodied voices echoing through empty cellblocks, mysterious footsteps on abandoned corridors, and overwhelming cold spots throughout the structure. Most active is Al Capone\'s cell, where visitors report aggressive paranormal phenomena. Staff and visitors have experienced unexplained phenomena so consistent that the prison now operates dedicated paranormal investigation tours monthly.',
-        gradient: 'linear-gradient(135deg, #1a2a0a, #0a1a2a)',
-        image: 'https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&h=600&fit=crop',
-        history: 'Eastern State Penitentiary was the first penitentiary in the world to use solitary confinement as a form of punishment and rehabilitation. It pioneered the "Pennsylvania System," which was designed to prevent violence and allow prisoners to reform through reflection, but instead caused widespread psychological damage, insanity, and suicide. The prison housed over 1,000 inmates at its peak and witnessed countless tragedies. Famous inmates included Al Capone and Willie Sutton. The institution was eventually closed in 1971 and has since been converted into a museum.',
-        funFacts: ['Al Capone\'s cell is one of the most visited areas', 'Visitors report seeing shadow figures in the cellblocks', 'Phantom footsteps echo through empty corridors', 'Over 50,000 inmates were housed here over 142 years', 'The prison pioneered solitary confinement', 'Many inmates went insane from isolation', 'Disembodied voices issue military commands', 'Cold spots appear suddenly in specific cells', 'The building hosts paranormal investigation tours', 'It remains one of America\'s most actively haunted prisons']
-      },
-      {
-        id: 'trans-allegheny',
-        title: 'Trans-Allegheny Lunatic Asylum, West Virginia',
-        region: 'Weston, WV',
-        category: 'haunted',
-        tags: ['Asylum', 'Medical Horror', 'Paranormal Hotspot'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Asylum',
-        stops: 'Tours & investigations',
-        desc: 'Built to house 250 patients, it eventually held over 1,900 people crammed into a building designed for half that capacity. For over 130 years, Trans-Allegheny subjected vulnerable patients to barbaric treatments including electroshock therapy, ice water baths, insulin shock, and frontal lobotomies. Thousands died within these walls from violence, neglect, and inhumane experimentation.\n\nVisitors report some of the most intense paranormal phenomena in America. Guests experience overwhelming psychological pressure, disembodied screams echoing from empty wards, shadow figures moving through hallways, and violent poltergeist activity. Many visitors report being physically touched or pushed by unseen forces. The collective suffering of thousands seems trapped within the building, creating an atmosphere of oppressive dread that lingers long after visitors leave.',
-        gradient: 'linear-gradient(135deg, #2a0a40, #0a1a2a)',
-        image: 'https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?w=800&h=600&fit=crop',
-        history: 'Trans-Allegheny Lunatic Asylum operated from 1864 to 1994. It was built to house 250 patients but eventually held over 1,900, resulting in severe overcrowding and deplorable conditions. Patients endured barbaric treatments including electroshock therapy, ice water baths, insulin shock, and frontal lobotomies. The asylum became a dumping ground for society\'s unwanted, and thousands died within its walls from violence, medical malpractice, and sheer neglect. Staff and patients alike reported paranormal phenomena even during operating years.',
-        funFacts: ['One of the most actively haunted asylums in America', 'Visitors report hearing screams and cries of distress', 'Shadow figures are seen in patient wards', 'The building is considered a paranormal investigator\'s dream', 'Over 1,900 patients were held at its peak', 'Many patients died from experimental treatments', 'Disembodied voices speak in pain', 'Visitors report being touched by unseen hands', 'Cold spots appear throughout the building', 'The asylum ranks among America\'s top haunted locations']
-      },
-      {
-        id: 'bobby-mackey',
-        title: 'Bobby Mackey\'s Music World, Kentucky',
-        region: 'Wilder, KY',
-        category: 'haunted',
-        tags: ['Honky Tonk', 'Violent History', 'Cursed'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Bar',
-        stops: 'Live music venue',
-        desc: 'On September 6, 1896, a young woman was brutally murdered and dismembered on this site. Her body parts were scattered, and the crime was never fully solved. The building was originally constructed as a slaughterhouse, then became a speakeasy during Prohibition, and was finally converted into a honky-tonk bar. Paranormal investigators have documented some of the most malevolent activity ever recorded in a commercial establishment.\n\nVisitors and employees report aggressive poltergeist phenomena including bottles flying off shelves with force, glasses shattering spontaneously, and visitors being physically attacked by unseen entities. Many staff members refuse to work certain areas alone or after dark. The oppressive, malevolent presence is so intense that even skeptics report overwhelming dread and psychological distress. Some believe the venue sits atop a satanic temple\'s old meeting place, adding layers of darkness to the location.',
-        gradient: 'linear-gradient(135deg, #2a0a0a, #1a0a0a)',
-        image: 'https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=800&h=600&fit=crop',
-        history: 'Bobby Mackey\'s Music World occupies a building with a dark past spanning centuries. Originally built as a slaughterhouse where animals were butchered, it later became a speakeasy during Prohibition, and was eventually converted into a honky-tonk bar. In 1896, a young woman was brutally murdered and dismembered on the site. Despite investigations, the crime was never fully solved. The building\'s violent history—combined with slaughter, crime, and death—has created one of America\'s most malevolent paranormal environments.',
-        funFacts: ['The ghost of a murdered woman is said to haunt the place', 'Bottles fly off shelves on their own with great force', 'Visitors report being touched and pushed by invisible hands', 'Staff refuses to work certain areas alone', 'The building originally served as a slaughterhouse', 'Multiple violent crimes have occurred here', 'Disembodied screams echo through the bar', 'Objects shatter spontaneously', 'Guests experience overwhelming dread', 'The malevolent presence is palpable to all who visit']
-      },
-      {
-        id: 'myrtles-plantation',
-        title: 'The Myrtles Plantation, Louisiana',
-        region: 'St. Francisville, LA',
-        category: 'haunted',
-        tags: ['Plantation', 'Antebellum', 'Ten Ghosts'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Plantation',
-        stops: 'Bed & breakfast',
-        desc: 'Claimed to be haunted by exactly 10 ghosts from tragic deaths on the property, the Myrtles Plantation sits on cursed ground with a history steeped in violence and exploitation. Built in 1796, the plantation was constructed on the site where a slave woman named Chloe was hanged. Multiple family members died under mysterious and tragic circumstances. Guests report apparitions of a woman in a green dress, phantom children\'s laughter, and mysterious scratches appearing on furniture and walls.\n\nParanormal activity at the Myrtles is so well-documented that it operates as both a bed & breakfast and paranormal investigation destination. Overnight guests consistently report paranormal encounters including apparitions, disembodied voices, physical contact from unseen forces, and objects moving on their own. The building\'s tragic history—combining slavery, murder, suicide, and mysterious deaths—has created an atmosphere of lingering anguish that persists to this day.',
-        gradient: 'linear-gradient(135deg, #1a2a0a, #0a1a1a)',
-        image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&h=600&fit=crop',
-        history: 'The Myrtles Plantation was built in 1796 on cursed ground steeped in tragedy. A slave woman named Chloe was hanged on the property after allegedly poisoning the plantation owner\'s family. Multiple family members died under mysterious circumstances including murder, suicide, and unexplained illness. The plantation represents the dark intersection of slavery, violence, and mysterious death. Over a century of accumulated tragedy has allegedly trapped 10 distinct spirits on the property.',
-        funFacts: ['The plantation is haunted by exactly 10 documented ghosts', 'A slave named Chloe is blamed for much of the paranormal activity', 'Guests report seeing women in period clothing', 'Mysterious scratches appear on furniture and walls', 'A woman in a green dress appears regularly', 'Children\'s laughter echoes through hallways', 'Objects move on their own', 'Visitors report physical contact from unseen entities', 'The plantation operates paranormal investigation tours', 'It remains one of Louisiana\'s most haunted properties']
-      },
-      {
-        id: 'villisca-murders',
-        title: 'Villisca Axe Murder House, Iowa',
-        region: 'Villisca, IA',
-        category: 'historic',
-        tags: ['Unsolved Murders', 'Dark History', 'Paranormal'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Historic House',
-        stops: 'Overnight investigations',
-        desc: 'On the night of June 10, 1912, eight people were brutally murdered in their beds with an axe—an entire family and two overnight guests. The killer(s) covered mirrors and windows before committing the murders, suggesting ritual significance. Despite multiple arrests, confessions, and lengthy investigations, the perpetrator was never conclusively identified, making it one of America\'s most mysterious mass killings.\n\nThe house remains an active paranormal investigation site where overnight visitors experience intense supernatural phenomena. Guests report hearing disembodied screams, seeing shadowy figures moving through bedrooms, encountering the victims\' apparitions, and experiencing unexplained physical contact. The emotional trauma from that single night appears to have permanently marked the space, creating a portal where the spirits of the victims continue to re-enact their final moments in anguish.',
-        gradient: 'linear-gradient(135deg, #2a0a0a, #1a0a0a)',
-        image: 'https://images.unsplash.com/photo-1518845528258-421a97f18e77?w=800&h=600&fit=crop',
-        history: 'On June 10, 1912, eight people were brutally murdered in their beds with an axe while sleeping. The victims included the entire Moore family and two overnight guests. The killer methodically went room to room, striking each victim multiple times. Before leaving, the murderer covered all mirrors and windows with cloth, a detail that suggested premeditation or ritual significance. Despite multiple arrests, confessions, and decades of investigation, the perpetrator was never conclusively identified. The case remains one of America\'s most baffling unsolved murders.',
-        funFacts: ['Eight people were murdered with an axe while sleeping', 'The killer\'s identity remains a mystery over 100 years later', 'Guests report hearing screams and seeing shadowy figures', 'Overnight investigators report intense paranormal activity', 'The killer covered mirrors and windows before the murders', 'Multiple arrests were made but never conclusively solved', 'Apparitions of victims are frequently reported', 'Cold spots appear in the bedrooms', 'Visitors experience vivid nightmares', 'The house is open for paranormal investigations']
-      },
-      {
-        id: 'rolling-hills',
-        title: 'Rolling Hills Asylum, New York',
-        region: 'East Bethany, NY',
-        category: 'haunted',
-        tags: ['Asylum', 'Paranormal Hotspot', 'Haunted'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Asylum',
-        stops: 'Paranormal investigations',
-        desc: 'Built in 1827 as a poorhouse, this facility evolved into a dumping ground for society\'s unwanted, mentally ill, and chronically ill. Over 1,700 people died within its walls, the vast majority in unmarked graves surrounding the building. The poorhouse operated for over 150 years, and the sheer number of deaths in such a concentrated area has created one of New York\'s most actively haunted locations.\n\nParanormal investigators consider Rolling Hills a dream destination due to the consistent, intense activity. Visitors report seeing full-bodied apparitions, hearing children\'s laughter echoing through empty corridors, experiencing violent poltergeist phenomena, and feeling overwhelming psychological dread. The collective trauma of 1,700 deaths—most unclaimed and unmourned—has permanently marked the space, creating a veil between worlds where the spirits seem unable to accept their abandonment and death.',
-        gradient: 'linear-gradient(135deg, #2a0a40, #1a0a1a)',
-        image: 'https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?w=800&h=600&fit=crop',
-        history: 'Rolling Hills began as a poor farm in 1827 and evolved into a dumping ground for society\'s unwanted. Over 1,700 people died there, most in unmarked graves. It operated in various forms for over 150 years. The facility was designed to house a small number of individuals but became severely overcrowded, leading to neglect, disease, and death on a massive scale. Most of the dead were buried in unmarked graves on the surrounding property, their names forgotten and their deaths unmoored.',
-        funFacts: ['Over 1,700 people died here, mostly in unmarked graves', 'Visitors report seeing full-bodied apparitions', 'Children\'s laughter echoes through empty corridors', 'The most active paranormal location in New York State', 'Many bodies remain unidentified', 'Paranormal investigators report consistent activity', 'Shadow figures are seen moving through hallways', 'Cold spots appear throughout the building', 'Visitors experience overwhelming sadness', 'The asylum remains open for paranormal investigations']
-      },
-      {
-        id: 'ohio-reformatory',
-        title: 'Ohio State Reformatory, Ohio',
-        region: 'Mansfield, OH',
-        category: 'historic',
-        tags: ['Prison', 'Victorian Architecture', 'Paranormal'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Historic Prison',
-        stops: 'Paranormal tours',
-        desc: 'Opened in 1886 with grand Victorian architecture featuring imposing Gothic towers and innovative design, this reformatory housed the most violent offenders in Ohio. The building implemented a revolutionary "panopticon" design that allowed guards to observe all inmates from a central position. The reformatory became famous as the filming location for "The Shawshank Redemption," but its real history is far darker than any film.\n\nParanormal investigators report some of the most consistent phenomena at any American prison. Visitors encounter apparitions of guards and inmates, disembodied voices issuing military commands and desperate pleas, mysterious footsteps echoing through empty cellblocks, and shadow figures captured repeatedly in photographs. The collective trauma of generations—executions, violence, suicides, and suffering—has permanently scarred the location, creating an atmosphere where visitors feel the weight of countless broken lives.',
-        gradient: 'linear-gradient(135deg, #1a2a0a, #0a1a2a)',
-        image: 'https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&h=600&fit=crop',
-        history: 'The Ohio State Reformatory opened in 1886 as a state-of-the-art facility designed to rehabilitate young offenders. Its Victorian Gothic architecture was considered progressive, featuring innovative guard stations and prison management techniques. However, the facility quickly became overcrowded and conditions deteriorated. The building witnessed executions, violent assaults, and countless suicides. It famously served as the filming location for "The Shawshank Redemption," though its real history is far grimmer than any Hollywood script.',
-        funFacts: ['The building was featured in "The Shawshank Redemption"', 'Visitors report seeing apparitions of guards and inmates', 'Disembodied voices cry out from the cellblocks', 'Shadow figures are frequently photographed here', 'The building features innovative Victorian architecture', 'Executions were carried out within these walls', 'Many inmates died from violence and suicide', 'Cold spots appear in specific cells', 'Paranormal tours operate regularly', 'It remains one of Ohio\'s most haunted locations']
-      },
-      {
-        id: 'bell-witch',
-        title: 'Bell Witch Cave, Tennessee',
-        region: 'Adams, TN',
-        category: 'cryptid',
-        tags: ['Haunted Cave', 'Legendary Witch', 'Paranormal'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Cave',
-        stops: 'Guided tours',
-        desc: 'This cave is the alleged lair of the Bell Witch, the entity responsible for one of America\'s most famous hauntings. From 1817 to 1821, the entity terrorized the Bell family in nearby Adams, Tennessee, with increasingly violent poltergeist phenomena. The witch allegedly possessed the power to scratch, poison, and physically attack family members. The patriarch, John Bell, died under mysterious circumstances, with many believing the witch caused his death.\n\nVisitors to Bell Witch Cave report one of the most oppressive and malevolent atmospheres in paranormal investigation. Guests experience physical attacks including scratches and pushes, overwhelming dread and psychological distress, disembodied voices uttering threats, and apparitions of a woman in tattered clothing. Many believe the cave serves as a portal to the paranormal realm, a place where the boundary between worlds has permanently weakened.',
-        gradient: 'linear-gradient(135deg, #2a0a30, #1a0a1a)',
-        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-        history: 'The Bell Witch Haunting (1817-1821) was one of America\'s most famous paranormal events. The entity allegedly originated from this cave and terrorized the Bell family for four years. The haunting began with unexplained knocking sounds and evolved into violent poltergeist activity including physical attacks on family members. The patriarch, John Bell, experienced increasing health problems during the haunting and died under mysterious circumstances in 1820. The case attracted widespread attention and remains the subject of intense scholarly and paranormal investigation.',
-        funFacts: ['The Bell Witch is one of America\'s most famous paranormal entities', 'The haunting lasted four years and nearly destroyed the family', 'Visitors report being scratched and attacked', 'The cave is considered a portal to the paranormal', 'John Bell died under mysterious circumstances', 'The entity allegedly physically attacked family members', 'Disembodied voices threatened the family', 'Cold spots appear throughout the cave', 'Physical phenomena continue to be reported', 'It remains one of Tennessee\'s most haunted locations']
-      },
-      {
-        id: 'driskill-hotel',
-        title: 'The Driskill Hotel, Texas',
-        region: 'Austin, TX',
-        category: 'haunted',
-        tags: ['Haunted Hotel', 'Tragic Deaths', 'Luxury'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Hotel',
-        stops: 'Overnight stays',
-        desc: 'Built in 1886 as a luxury destination for Austin\'s elite, the Driskill Hotel has hosted presidents, celebrities, and dignitaries for over a century. However, the hotel\'s grandeur masks a darker history of tragic deaths and inexplicable phenomena. Most famously, a bride is said to have fallen down the main staircase on her wedding day, dying from injuries sustained in the fall. Her spirit is believed to haunt the grand staircase, manifesting as an apparition in a white wedding dress.\n\nGuests consistently report encountering the phantom bride, hearing mysterious singing and crying in the hallways at night, witnessing wet footprints appearing on the stairs without any visible source, and seeing apparitions of other guests from previous eras. Elevator doors open and close on their own, and visitors have reported seeing reflections of people in mirrors who aren\'t physically present in the room. The hotel has embraced its paranormal reputation while maintaining its five-star luxury status.',
-        gradient: 'linear-gradient(135deg, #2a1a0a, #1a0a1a)',
-        image: 'https://images.unsplash.com/photo-1551632706-5386c5193122?w=800&h=600&fit=crop',
-        history: 'The Driskill Hotel opened in 1886 as one of Austin\'s most prestigious establishments. Over its long history, numerous guests have died within its walls—some from natural causes, others from accidents, and some from suicide. The most famous incident involves a bride who allegedly fell down the main staircase on her wedding day. Whether she fell intentionally or accidentally remains unclear, but her spirit is said to continue the celebration, ethereally dancing through the halls in her wedding dress.',
-        funFacts: ['A bride\'s ghost haunts the staircase where she died', 'Guests report hearing phantom crying and singing', 'The ghost leaves wet footprints on the stairs', 'Elevator doors open and close on their own', 'Apparitions appear in mirrors then vanish', 'Presidents and celebrities have experienced phenomena', 'Cold spots appear in specific rooms', 'Visitors report hearing disembodied voices', 'The hotel maintains its paranormal reputation', 'Guests continue to report encounters regularly']
-      },
-      {
-        id: 'jerome-grand',
-        title: 'Jerome Grand Hotel, Arizona',
-        region: 'Jerome, AZ',
-        category: 'haunted',
-        tags: ['Haunted Hotel', 'Mining Town', 'Ghost Town'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Hotel',
-        stops: 'Overnight stays',
-        desc: 'Built in 1927 in the rapidly declining mining town of Jerome, Arizona, this hotel stands as a time capsule of the Roaring Twenties frozen in paranormal suspension. Jerome boomed during the copper mining era but experienced dramatic decline after mining became unprofitable. The hotel, built during this period of transition, witnessed the desperation of a community\'s economic collapse and the human tragedy that accompanied it. The building is rife with intelligent paranormal activity and manifest hauntings.\n\nGuests report encountering apparitions of 1920s-era guests in period clothing, hearing phantom conversations and laughter, and experiencing poltergeist phenomena. A spirit named "Joe" is frequently blamed for moving objects, rearranging furniture, and interfering with electronic equipment. Paranormal investigators consider the Jerome Grand one of Arizona\'s most active paranormal sites, with consistent documentation of phenomena across multiple investigations. The hotel has been featured on paranormal television shows and attracts paranormal tourism.',
-        gradient: 'linear-gradient(135deg, #1a2a0a, #0a1a1a)',
-        image: 'https://images.unsplash.com/photo-1518392846015-55a9cc003b25?w=800&h=600&fit=crop',
-        history: 'Jerome Grand Hotel was built in 1927 during Jerome\'s rapid economic decline as a mining town. The hotel was constructed during a period of desperation and economic instability as mining became unprofitable and the town emptied. The building witnessed the tragedy of a once-thriving community\'s collapse. Today, the town of Jerome is almost entirely abandoned except for a small population of artists and paranormal tourists. The Jerome Grand Hotel remains an active paranormal investigation site with documented phenomena.',
-        funFacts: ['Guests see apparitions of 1920s-era guests', 'A ghost named "Joe" is blamed for moving objects', 'Disembodied voices sing in empty hallways', 'The building was featured on multiple paranormal TV shows', 'Jerome is one of America\'s most haunted ghost towns', 'Objects rearrange themselves on their own', 'Cold spots appear throughout the hotel', 'Visitors report hearing phantom conversations', 'Electronic equipment malfunctions regularly', 'The hotel remains a paranormal investigation destination']
-      },
-      {
-        id: 'sallie-house',
-        title: 'The Sallie House, Kansas',
-        region: 'Atchison, KS',
-        category: 'haunted',
-        tags: ['Violent Haunting', 'Poltergeist', 'Paranormal'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted House',
-        stops: 'Paranormal investigations',
-        desc: 'One of America\'s most violently haunted houses, the Sallie House is known for aggressive poltergeist phenomena directed at specific occupants. The entity is said to be a child named Sallie who died in the house. Residents report being scratched, bitten, and physically attacked by an unseen presence that seems to target certain family members with particular intensity.\n\nThe house became famous through paranormal investigations that documented undeniable evidence of violent activity. Residents have fled the home due to the intensity of attacks, and investigators have captured scratches appearing on skin in real-time during investigations. The entity appears intelligent and malevolent, capable of communication through disembodied voices and selective targeting. Despite numerous investigations and attempted spiritual interventions, the haunting remains one of the most active and aggressive in America.',
-        gradient: 'linear-gradient(135deg, #2a0a0a, #1a0a0a)',
-        image: 'https://images.unsplash.com/photo-1512207736139-c1e83fcf3c7f?w=800&h=600&fit=crop',
-        history: 'The Sallie House became famous during the 1990s when residents reported violent paranormal activity. The family experienced scratches, bites, and physical assaults from an unseen entity. Paranormal investigators documented the activity on camera, with scratches appearing on investigators\' bodies during investigations. The case was featured on paranormal investigation shows including "In Search of Monsters" and received national media attention. Despite being investigated by multiple paranormal teams and attempted spiritual interventions, the activity continues to this day.',
-        funFacts: ['Residents report being scratched and bitten by an unseen entity', 'Scratches have appeared on investigators during live investigations', 'The entity targets specific people in the house selectively', 'Paranormal investigators have documented intense activity repeatedly', 'The haunting remains active and violent today', 'Multiple paranormal teams have investigated the property', 'Residents have abandoned the home due to attacks', 'The entity communicates through disembodied voices', 'Physical attacks have been photographed and documented', 'It remains one of America\'s most violent hauntings']
-      },
-      {
-        id: 'fort-delaware',
-        title: 'Fort Delaware, Delaware',
-        region: 'Delaware City, DE',
-        category: 'historic',
-        tags: ['Civil War Fort', 'Military Prison', 'Haunted'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Historic Prison',
-        stops: 'Tours & investigations',
-        desc: 'Built in 1848, Fort Delaware served as a military prison during the Civil War, housing over 12,000 Confederate prisoners in deplorable conditions. Thousands died from disease, malnutrition, and brutal treatment. The fort became known as "The Andersonville of the North" due to its horrific conditions and the systematic suffering inflicted on inmates.\n\nVisitors and paranormal investigators report some of the most consistent military hauntings on the East Coast. Guests experience apparitions of soldiers in Confederate and Union uniforms, disembodied voices issuing military commands, phantom drumming and marching sounds, and overwhelming cold spots in the prison barracks. Many believe the collective trauma of thousands of deaths has permanently scarred the location, trapping the spirits of those who suffered there in eternal anguish.',
-        gradient: 'linear-gradient(135deg, #1a2a0a, #0a1a2a)',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Fort_Delaware.jpg/1280px-Fort_Delaware.jpg',
-        history: 'Fort Delaware was built in 1848 as a coastal defense fortification. During the Civil War, it was converted into a military prison holding Confederate soldiers and political prisoners. At its peak, over 12,000 inmates were crammed into a facility designed for military garrison use. Conditions were deplorable: overcrowding, inadequate sanitation, contaminated water, and insufficient food resulted in the spread of dysentery, typhoid, and other diseases. Over 2,700 prisoners died at the fort, many buried in unmarked graves on nearby Pea Patch Island. Accounts from survivors describe systematic abuse, cruel punishment, and negligence by Union guards. The fort became infamous in the South as "The Andersonville of the North," drawing comparisons to the equally notorious Confederate prison at Andersonville. After the war, the fort remained largely unchanged, preserving the architectural evidence of this dark chapter in American history.',
-        funFacts: ['Over 2,700 prisoners died at Fort Delaware from disease and abuse', 'At its peak, the fort held over 12,000 Confederate prisoners', 'Conditions were so harsh it was called "The Andersonville of the North"', 'Visitors hear phantom drumming and marching sounds', 'Apparitions of uniformed soldiers are frequently seen throughout the fort', 'The barracks are particularly active paranormally', 'Disembodied voices issue military commands and desperate pleas', 'Many graves remain unmarked on nearby Pea Patch Island', 'Cold spots appear suddenly in specific areas of the prison', 'The fort is considered one of America\'s most actively haunted military sites']
-      },
-      {
-        id: 'omni-grove-park',
-        title: 'The Omni Grove Park Inn, North Carolina',
-        region: 'Asheville, NC',
-        category: 'haunted',
-        tags: ['Haunted Hotel', 'Luxury Resort', 'Ghostly Guests'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Hotel',
-        stops: 'Overnight stays',
-        desc: 'Built in 1913 by pharmaceutical magnate Edwin Wiley Grove, this massive hand-crafted stone resort is one of America\'s grandest hotels. Over a century of luxury hospitality has been accompanied by mysterious deaths, suicides, and unexplained phenomena that have marked the property permanently. Multiple spirits are believed to haunt the corridors, including a woman in a white gown known as the "Pink Lady."\n\nGuests consistently report encountering apparitions in period clothing, mysterious singing and crying in hallways at night, unexplained wet footprints appearing on the grand staircase, and apparitions appearing in mirrors only to vanish when observed. Elevator doors open and close autonomously, visitors experience sudden temperature drops in specific rooms, and some guests report being touched by unseen hands during the night. Despite its luxury status, the hotel embraces its paranormal reputation and provides guests with detailed accounts of known hauntings.',
-        gradient: 'linear-gradient(135deg, #2a1a0a, #1a0a1a)',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Grove_Park_Inn.jpg/1280px-Grove_Park_Inn.jpg',
-        history: 'The Grove Park Inn opened in 1913 as a luxury destination built from 119,000 tons of local granite stone. Founder Edwin Wiley Grove spared no expense creating a self-sufficient resort with its own power plant, laundry, and kitchens. The hotel hosted presidents, celebrities, and wealthy elite during its golden age. Over the decades, multiple deaths and tragedies have occurred within its walls, including suicides and mysterious illnesses. Staff members have reported seeing apparitions of former guests and employees throughout the property. The hotel remains a five-star luxury resort while acknowledging its paranormal reputation, offering guests the opportunity to investigate the supernatural activity themselves.',
-        funFacts: ['A woman in a white gown called the "Pink Lady" haunts specific guest rooms', 'Guests report hearing phantom singing and crying in the hallways', 'Wet footprints appear on the grand staircase with no visible source', 'Elevator doors open and close on their own regularly', 'Guests see apparitions of themselves in mirrors and reflections', 'The most active paranormal area is the third floor', 'Apparitions wear clothing from various time periods', 'Cold spots appear suddenly in guest rooms', 'Some guests report being touched by invisible hands', 'The hotel encourages paranormal investigation and ghost hunting']
-      },
-      {
-        id: 'pfister-hotel',
-        title: 'The Pfister Hotel, Wisconsin',
-        region: 'Milwaukee, WI',
-        category: 'haunted',
-        tags: ['Haunted Hotel', 'Victorian', 'Luxury'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Hotel',
-        stops: 'Overnight stays',
-        desc: 'Built in 1893, the Pfister Hotel is one of America\'s oldest continuously operating hotels and features stunning Victorian architecture with ornate details and antique furnishings. The hotel has hosted presidents, celebrities, and dignitaries for over 130 years. However, beneath its grandeur lies a darker history of guests who checked in but never truly left, their spirits bound to the elegant hallways and luxurious suites.\n\nVisitors report phantom footsteps echoing through empty corridors at night, full-bodied apparitions of guests in period clothing, disembodied voices speaking in whispers and conversations, and elevators that move to different floors without being called. Guests experience unexplained cold spots in certain rooms, mysterious knocking on doors that open to empty hallways, and the sensation of being watched. The most active paranormal areas are the fourth and fifth floors, where guests consistently report encounters. Despite being a luxury hotel, the Pfister embraces its paranormal reputation and provides guests with historical accounts of documented hauntings.',
-        gradient: 'linear-gradient(135deg, #2a0a20, #1a0a10)',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Pfister_Hotel_Milwaukee.jpg/1280px-Pfister_Hotel_Milwaukee.jpg',
-        history: 'The Pfister Hotel was built in 1893 by Charles Pfister, a wealthy Milwaukee merchant. It was designed in the Victorian style with marble staircases, ornate plasterwork, and hand-painted murals. The hotel became a destination for the wealthy elite and famous celebrities. Presidents Theodore Roosevelt, Taft, and others have stayed here. During its 130+ years of operation, numerous deaths have occurred within its walls—some from natural causes, others from accidents, and some from suicide. Staff members have reported paranormal activity for decades, including shadow figures moving through hallways and mysterious sounds. Some believe the hotel\'s long history and emotional weight have created a residual haunting where the spirits of past guests continue to exist in their familiar rooms.',
-        funFacts: ['The Pfister is one of America\'s oldest continuously operating hotels', 'Phantom footsteps echo through corridors nightly', 'Guests report seeing full-bodied apparitions in Victorian clothing', 'Elevators move to different floors without being called', 'The fourth and fifth floors are the most paranormally active', 'Mysterious knocking occurs on doors opening to empty hallways', 'Disembodied voices speak in hushed conversations', 'Cold spots appear suddenly in specific guest rooms', 'Multiple presidents have stayed at the hotel', 'It is considered one of Wisconsin\'s most haunted hotels']
-      },
-      {
-        id: 'skirvin-hotel',
-        title: 'The Skirvin Hilton Hotel, Oklahoma',
-        region: 'Oklahoma City, OK',
-        category: 'haunted',
-        tags: ['Haunted Hotel', 'Dark History', 'Paranormal'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Hotel',
-        stops: 'Overnight stays',
-        desc: 'The current Skirvin Hilton stands on the site of the infamous original Skirvin Hotel, a structure with one of Oklahoma\'s darkest secrets. According to legend, the hotel\'s founder had an affair with a maid who became pregnant. When he refused to acknowledge the child, she was locked in an attic room where she perished along with her newborn. In desperation or revenge, some accounts claim she threw herself and the baby from a window.\n\nGuests and staff report encountering the anguished spirit of a woman desperately searching for her lost child. Visitors hear disembodied baby cries echoing through hallways, particularly on upper floors. The apparition of a woman in maid\'s clothing has been seen repeatedly, always appearing distressed and frantic. Some guests report being touched by cold hands, while others experience overwhelming sadness and despair in certain rooms. The entity\'s grief appears so powerful that guests often leave the hotel emotionally affected.',
-        gradient: 'linear-gradient(135deg, #2a0a0a, #1a0a0a)',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Skirvin_Hilton.jpg/1280px-Skirvin_Hilton.jpg',
-        history: 'The original Skirvin Hotel was built in the late 1800s and became a prominent landmark in Oklahoma City. According to local legend, the hotel\'s founder had an illicit affair with a maid who became pregnant. When he refused to acknowledge the child or allow the maid to leave, she was imprisoned in an attic room. Whether she died of despair, starvation, or jumped with her child to escape remains disputed. The original building mysteriously caught fire and burned in a tragedy blamed on faulty wiring, though some believe it was deliberately set to destroy evidence of the crime. The current Skirvin Hilton was built on the same site decades later. Since its construction, guests and staff have consistently reported paranormal activity that many attribute to the tortured spirits of the maid and her child.',
-        funFacts: ['A maid\'s ghost haunts the hotel seeking her lost child', 'Guests hear baby cries, particularly on upper floors', 'Apparitions of a woman in maid\'s clothing are frequently reported', 'The entity appears distressed and desperately searching', 'Cold spots and sudden temperature drops occur in certain rooms', 'Guests report being touched by invisible hands', 'Visitors experience overwhelming sadness and despair', 'The original hotel burned under mysterious circumstances', 'Staff members have refused to work certain areas alone', 'The hotel\'s dark history is one of Oklahoma City\'s most guarded secrets']
-      },
-      {
-        id: 'marshall-house',
-        title: 'The Marshall House, Georgia',
-        region: 'Savannah, GA',
-        category: 'historic',
-        tags: ['Historic Home', 'Paranormal', 'Revolutionary War'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Historic Site',
-        stops: 'Tours & investigations',
-        desc: 'Built in 1790, the Marshall House is one of Savannah\'s oldest structures and served crucial roles throughout American history. The building functioned as a hospital and headquarters during the Civil War, treating wounded Union and Confederate soldiers. During Reconstruction, it was converted back to residential use. The accumulated trauma of war, suffering, and loss appears to have permanently marked the historic structure, creating an atmosphere where the boundaries between past and present feel unusually thin.\n\nVisitors report apparitions of Union soldiers in uniform throughout the building, disembodied voices issuing military commands, mysterious noises that sound like cannon fire, and the overwhelming smell of blood and gunpowder with no identifiable source. Guests experience sudden cold spots, see shadowy figures moving through rooms, and report feeling watched by unseen presences. The basement is particularly active, with paranormal investigators documenting consistent phenomena. Many believe the suffering experienced within these walls—both physical wounds and emotional trauma—has created residual haunting activity.',
-        gradient: 'linear-gradient(135deg, #1a2a0a, #0a1a1a)',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Marshall_House_Savannah.jpg/1280px-Marshall_House_Savannah.jpg',
-        history: 'The Marshall House was constructed in 1790 during the early years of the United States. It witnessed the American Revolution, served as a Confederate headquarters and hospital during the Civil War, and continued through Reconstruction. During the Civil War, the building was converted into a hospital treating both Union and Confederate soldiers. Hundreds of wounded passed through its doors, and many died within its walls from battle wounds, disease, and infection. The basement served as a prison for Confederate soldiers and civilians suspected of disloyalty. After the war, the building was returned to residential use but the scars of conflict never fully healed. Paranormal investigators have documented activity suggesting that the spirits of those who suffered and died here remain trapped in the building.',
-        funFacts: ['The house was built in 1790 and is one of Savannah\'s oldest buildings', 'During the Civil War, it served as a hospital treating Union and Confederate soldiers', 'Hundreds of wounded soldiers passed through the building during the war', 'The basement was used as a prison for suspected Confederate sympathizers', 'Guests report seeing apparitions of Union soldiers in uniform', 'Disembodied voices issue military commands and orders', 'The smell of gunpowder and blood appears with no source', 'Mysterious sounds resembling cannon fire echo through the building', 'Cold spots appear suddenly in specific rooms', 'The basement is the most paranormally active area']
-      },
-      {
-        id: 'salem-massachusetts',
-        title: 'Salem, Massachusetts',
-        region: 'Essex County, MA',
-        category: 'historic',
-        tags: ['Witch Trials', 'Colonial History', 'Regional Lore'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Historic Town',
-        stops: 'Museum & memorial',
-        isRegion: true,
-        desc: 'Salem emerged from the hysteria of 1692-1693 when mass paranoia gripped the Puritan community. Twenty innocent people were systematically executed—nineteen by hanging and one pressed to death with stones—based on testimony extracted through torture and psychological manipulation. The trials lasted only fourteen months but fundamentally altered American jurisprudence and remain a cautionary tale about mass hysteria, false accusations, and religious extremism.\n\nToday, Salem has transformed into a paranormal tourism destination where visitors explore the tragic history through museums, memorials, and guided tours. The town maintains its connection to witchcraft and the occult, hosting paranormal festivals and attracting spiritual seekers from around the world. Visitors report a lingering sadness throughout the town, particularly at Gallows Hill where the condemned were executed. Many believe the spirits of those wrongly accused remain trapped, seeking vindication and peace.',
-        gradient: 'linear-gradient(135deg, #2a0a30, #1a0a2a)',
-        image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop',
-        relatedLocations: [],
-        history: 'Salem Village (now Danvers, Massachusetts) erupted into hysteria in January 1692 when two young girls, Betty Parris and Ann Williams, began experiencing convulsive fits, complaining of being pricked by invisible pins, and claiming to see apparitions of invisible specters tormenting them. The hysteria spread rapidly through the community. A local physician, unable to find a medical cause, suggested the girls were bewitched. Soon, three women were accused of witchcraft: Sarah Good, Sarah Osborne, and an enslaved woman named Tituba. Under interrogation and torture, Tituba confessed to being a witch and claimed there were other witches in the area. This confession sparked a cascade of accusations that spiraled out of control. Over the next fourteen months, twenty people were executed, and dozens more were imprisoned. The trials ended abruptly in October 1692 when the accusers began accusing prominent townspeople and clergy, causing the community to question the validity of the proceedings. By 1702, the trials were declared unlawful, and by 1711, the colony passed legislation restoring the rights and good names of the accused and provided financial restitution to their heirs.',
-        funFacts: ['Twenty innocent people were executed during the trials', 'Nineteen were hanged on Gallows Hill; one was pressed to death', 'Over 150 people were accused during the fourteen-month period', 'The hysteria began with two young girls experiencing convulsive fits', 'Historians believe ergot poisoning in contaminated grain triggered hallucinations', 'Many executed maintained their innocence until their dying breath', 'The trials fundamentally changed American jurisprudence', 'Salem is now a paranormal tourism destination', 'Visitors report overwhelming sadness at Gallows Hill', 'The town hosts paranormal festivals and spiritual events']
-      },
-      {
-        id: 'lillydale',
-        title: 'Lily Dale, New York',
-        region: 'Chautauqua County, NY',
-        category: 'cryptid',
-        tags: ['Spiritualist Community', 'Mediums', 'Paranormal Hub'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Spiritualist Town',
-        stops: 'Tours & readings',
-        isRegion: true,
-        desc: 'Founded in 1879 as a spiritualist community, Lily Dale is the only incorporated spiritualist town in America and remains an active center for paranormal research and spiritual practice. The community was established by spiritualist leaders who believed in direct communication with the deceased through mediums and séances. Hundreds of mediums live and work in Lily Dale, offering readings, spirit photography, and paranormal investigations to thousands of annual visitors seeking contact with deceased loved ones.\n\nThe town itself radiates a palpable spiritual energy that many visitors find overwhelming. Mediums report heightened psychic abilities and increased spirit contact within Lily Dale\'s boundaries. Some believe the town sits on a major spiritual vortex or ley line that amplifies paranormal activity. Regular visitors report consistent experiences with apparitions, spirit communication, and psychic phenomena. The town remains a destination for spiritualists, paranormal researchers, and those seeking proof of life after death.',
-        gradient: 'linear-gradient(135deg, #1a0a2a, #0a1a3a)',
-        image: 'https://images.unsplash.com/photo-1518392846015-55a9cc003b25?w=800&h=600&fit=crop',
-        relatedLocations: [],
-        history: 'Lily Dale was founded in 1879 as an intentional spiritualist community dedicated to researching and promoting spiritualism—the belief that spirits of the deceased can communicate with the living through mediums. The community was established during the height of the spiritualist movement in America, following the famous Fox Sisters\' demonstrations of spirit communication in the 1840s. The spiritualist movement attracted millions of followers during the late 1800s and early 1900s. Lily Dale became the epicenter of American spiritualism, attracting famous mediums from around the world. The town was carefully designed with spiritualist principles in mind. Today, Lily Dale operates as a museum, educational center, and active spiritualist community where hundreds of certified mediums provide readings and conduct spiritual research. The town remains the only incorporated spiritualist municipality in America and attracts over 20,000 visitors annually.',
-        funFacts: ['Lily Dale is the only incorporated spiritualist town in America', 'Over 20,000 visitors arrive annually seeking spiritual readings', 'Hundreds of certified mediums live and work in the community', 'The town was founded in 1879 during the height of spiritualism', 'Visitors report heightened paranormal activity within the town', 'Many believe Lily Dale sits on a spiritual vortex', 'Spirit photography is actively practiced and documented', 'The town hosts spiritualist seminars and conferences', 'Mediums report increased psychic abilities in Lily Dale', 'The community continues active paranormal research']
-      },
-      {
-        id: 'cassadaga',
-        title: 'Cassadaga, Florida',
-        region: 'Volusia County, FL',
-        category: 'cryptid',
-        tags: ['Spiritualist Camp', 'Mediums', 'Historic Séances'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Spiritualist Community',
-        stops: 'Tours & readings',
-        isRegion: true,
-        desc: 'Founded in 1894 by spiritualist leader George P. Colby, Cassadaga is a historic spiritualist camp that remains one of the oldest and largest spiritualist communities in the world. Colby claimed to be directed by a Native American spirit guide named Seneca to establish the community in this specific location. The camp grew rapidly, attracting spiritualists from around the globe who believed in the community\'s unique spiritual power and the heightened psychic abilities that manifested there.\n\nToday, Cassadaga remains an active spiritualist community where over 60 mediums offer readings, spiritual counseling, and paranormal investigations. Visitors report experiencing profound spiritual awakenings, encountering spirits, and receiving messages from deceased loved ones. The town radiates a distinctive spiritual atmosphere that many visitors describe as powerful and transformative. Paranormal investigators believe Cassadaga\'s location on a strong spiritual vortex amplifies psychic phenomena and facilitates spirit communication. The historic camp maintains its original spiritualist mission while welcoming contemporary paranormal researchers.',
-        gradient: 'linear-gradient(135deg, #0a2a1a, #1a1a0a)',
-        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-        relatedLocations: [],
-        history: 'Cassadaga was founded in 1894 by George P. Colby, a prominent spiritualist who claimed to receive messages from a Native American spirit guide named Seneca directing him to establish a spiritualist community in this specific location in Florida. Colby purchased the land and began developing it as a spiritualist camp. The community attracted spiritualists from across America and Europe who were drawn by reports of heightened psychic phenomena and successful spirit communication. The camp grew rapidly, eventually establishing a permanent spiritualist community with houses, meditation gardens, and facilities for spiritualist conferences. By the early 1900s, Cassadaga had become one of the most important spiritualist centers in America. Despite declining spiritualism during the mid-20th century, Cassadaga has experienced a resurgence in recent decades. Today, it remains an active spiritualist community with historic buildings, ongoing spiritual practices, and thousands of annual visitors seeking mediumship services.',
-        funFacts: ['Cassadaga was founded in 1894 by spiritualist George P. Colby', 'Colby claimed to be directed by Native American spirit guide Seneca', 'Over 60 certified mediums work in the community today', 'It is one of the oldest and largest spiritualist communities in the world', 'Thousands of annual visitors seek spiritual readings and guidance', 'The town is designed with spiritualist principles and spiritual vortex zones', 'Visitors report profound spiritual awakenings and transformations', 'Spirit communication is consistently documented and reported', 'The community hosts spiritualist conferences and seminars', 'Cassadaga remains an active center for paranormal research']
-      },
-      {
-        id: 'red-onion',
-        title: 'The Red Onion Saloon, Alaska',
-        region: 'Skagway, AK',
-        category: 'haunted',
-        tags: ['Historic Saloon', 'Gold Rush', 'Paranormal'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Saloon',
-        stops: 'Tours & drinks',
-        desc: 'Built in 1897 during the height of the Klondike Gold Rush, the Red Onion Saloon served as both a bar and brothel for miners flooding into the region seeking fortune. The building witnessed the wild excess of the gold rush era, with miners spending fortunes on whiskey and companionship. Multiple workers—both employees and patrons—died tragically on the premises under mysterious circumstances, from overdoses, violence, and accidents. The structure remains one of Skagway\'s most iconic buildings and is now a museum with an active bar.\n\nVisitors and staff report consistent paranormal phenomena including phantom footsteps on the second floor where the brothel operated, disembodied voices speaking in period accents, the overwhelming smell of perfume appearing with no identifiable source, and apparitions of women in period clothing. One spirit is believed to be a woman named Rosie, who worked at the saloon and died under mysterious circumstances. Guests experience being touched by unseen hands, hearing period-appropriate music with no visible source, and feeling sudden cold spots. The intense atmosphere of the gold rush era appears permanently imprinted on the building.',
-        gradient: 'linear-gradient(135deg, #2a0a0a, #1a0a0a)',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Red_Onion_Saloon.jpg/1280px-Red_Onion_Saloon.jpg',
-        history: 'The Red Onion Saloon opened its doors in 1897 during the peak of the Klondike Gold Rush when Skagway was booming with miners seeking their fortunes. The saloon served as both a drinking establishment and brothel, operating in the lawless frontier atmosphere of gold rush Alaska. Miners would arrive with nuggets and gold dust, spending fortunes on liquor and companionship. The second floor was divided into small rooms where workers lived and serviced clients. Multiple deaths occurred on the premises—some from overdoses, some from violence, and some from mysterious circumstances never fully explained. The building fell into disrepair during Skagway\'s decline but has been restored and now operates as a museum with a working bar. Staff and visitors have consistently reported paranormal activity for decades, particularly on the second floor.',
-        funFacts: ['The saloon operated during the height of the Klondike Gold Rush', 'The building served as both a saloon and brothel for decades', 'Phantom footsteps echo on the second floor at night', 'Apparitions of women in period clothing appear throughout the building', 'The smell of perfume appears suddenly with no identifiable source', 'A spirit named Rosie is blamed for much of the paranormal activity', 'Guests report hearing period-appropriate music with no visible source', 'The building is one of Skagway\'s most historically significant structures', 'Workers refuse to work certain areas of the second floor alone', 'The paranormal activity remains active and well-documented']
-      },
-      {
-        id: 'sloss-furnaces',
-        title: 'Sloss Furnaces, Alabama',
-        region: 'Birmingham, AL',
-        category: 'historic',
-        tags: ['Industrial Site', 'Worker Deaths', 'Paranormal'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Historic Site',
-        stops: 'Tours & investigations',
-        desc: 'Built in 1882 and operating until 1971, Sloss Furnaces represented the brutal industrial heart of Birmingham\'s iron production. Workers labored in hellish conditions surrounded by molten metal at temperatures exceeding 2,000 degrees. The furnaces devoured human life—workers fell into vats of molten iron, were crushed by machinery, succumbed to heat exhaustion, and died from countless workplace accidents. Hundreds of deaths were recorded, but many more occurred without official documentation. The furnace operated under notoriously unsafe conditions where workers\'ives were considered expendable commodities.\n\nParanormal investigators consider Sloss Furnaces one of America\'s most actively haunted industrial sites. Visitors report seeing ghostly workers moving through the facility as if still performing their labor, disembodied screams of agony echoing from empty chambers, apparitions of men engulfed in flames, and overwhelming sensations of pain and suffering. The entire location exudes a palpable malevolence and oppressive dread. Many believe the collective suffering and violent deaths have permanently scarred the location, creating a veil between worlds where the tormented spirits continue their eternal labor.',
-        gradient: 'linear-gradient(135deg, #1a2a0a, #0a1a2a)',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sloss_Furnaces.jpg/1280px-Sloss_Furnaces.jpg',
-        history: 'Sloss Furnaces began operation in 1882 as a major iron production facility during the industrial boom. The furnaces operated continuously for nearly 90 years, making it one of the longest-operating blast furnaces in America. Workers toiled in nightmarish conditions—12 to 16-hour shifts in extreme heat, dangerous machinery, and negligible safety precautions. Hundreds of documented deaths occurred, including workers falling into molten iron, being crushed by machinery, and suffering fatal burns. Many undocumented deaths also occurred due to poor record-keeping. The furnace was eventually decommissioned in 1971 and converted into a museum. Since its conversion, staff and visitors have consistently reported paranormal phenomena suggesting that the spirits of deceased workers remain trapped at the site.',
-        funFacts: ['Sloss Furnaces operated from 1882 to 1971, nearly 90 years of continuous production', 'Hundreds of workers died in gruesome industrial accidents', 'Workers fell into vats of molten iron exceeding 2,000 degrees', 'Visitors report seeing ghostly workers still performing their labor', 'Disembodied screams of agony echo from the furnace chambers', 'Apparitions of men engulfed in flames have been photographed', 'The facility exudes an oppressive, malevolent atmosphere', 'Cold spots appear suddenly throughout the building', 'Visitors feel overwhelming pain and suffering in certain areas', 'The most paranormally active industrial site in the South']
-      },
-      {
-        id: 'lemp-mansion',
-        title: 'The Lemp Mansion, Missouri',
-        region: 'St. Louis, MO',
-        category: 'haunted',
-        tags: ['Haunted Mansion', 'Tragic Family', 'Suicides'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Mansion',
-        stops: 'Tours & investigations',
-        desc: 'Built by William J. Lemp, founder of the Lemp Brewing Company—one of America\'s largest breweries in the late 1800s—this 33-room Romanesque mansion represents the height of Victorian wealth and opulence. However, the Lemp family became cursed by tragedy. Multiple family members died by suicide within the mansion\'s walls, including the patriarch William, his son Frederick, and his daughter Elsa. Others died under mysterious circumstances. By the 20th century, the family had nearly ceased to exist, their fortune squandered and their legacy tainted by inexplicable loss.\n\nThe mansion remains one of America\'s most actively haunted residences. Visitors and staff report encountering apparitions of family members in period clothing, disembodied voices calling out in desperation, and an overwhelming aura of sadness permeating every room. Guests experience sudden cold spots, objects moving on their own, mysterious footsteps echoing through halls, and a crushing sense of depression that affects visitors emotionally and psychologically. Paranormal investigators believe the collective grief and despair of the family has permanently marked the location, creating a portal where the tormented spirits remain trapped.',
-        gradient: 'linear-gradient(135deg, #2a0a20, #1a0a10)',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lemp_Mansion.jpg/1280px-Lemp_Mansion.jpg',
-        history: 'The Lemp Mansion was constructed in the 1880s by William J. Lemp, a brewing magnate whose company was one of the largest in America. The 33-room mansion represented the pinnacle of wealth and refined taste. However, beginning with the death of patriarch William Lemp in 1901, the family was plagued by tragedy. His son Frederick died by suicide in 1904. His daughter Elsa died under mysterious circumstances in 1920, officially ruled a heart attack but suspiciously sudden. The family fortune began to decline as Prohibition decimated the brewing industry. By the mid-20th century, the mansion had fallen into disrepair and was purchased for conversion to a museum. Visitors and staff have consistently reported paranormal phenomena since the conversion, suggesting that the spirits of the tragic Lemp family remain within the mansion.',
-        funFacts: ['The mansion was built in the 1880s by a wealthy brewing family', 'William J. Lemp founded one of America\'s largest breweries', 'Multiple family members died by suicide within the mansion', 'The patriarch William Lemp died in 1901', 'His son Frederick died by suicide in 1904', 'His daughter Elsa died mysteriously in 1920', 'Apparitions of family members appear in period clothing', 'Disembodied voices cry out in desperation', 'An overwhelming sadness permeates the entire mansion', 'Visitors experience depression and emotional distress', 'Mysterious footsteps echo through empty hallways', 'Objects move on their own throughout the building', 'The mansion is now open for paranormal investigations']
-      },
-      {
-        id: 'shanghai-tunnels',
-        title: 'Shanghai Tunnels, Oregon',
-        region: 'Portland, OR',
-        category: 'historic',
-        tags: ['Underground Tunnels', 'Criminal History', 'Paranormal'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Historic Site',
-        stops: 'Guided tours',
-        desc: 'Beneath the streets of Portland lies a network of underground tunnels and chambers collectively known as the Shanghai Tunnels. Built during the 1870s-1920s as part of Portland\'s commercial underground, these passages were co-opted for criminal purposes including human trafficking, smuggling, and kidnapping. Unsuspecting men were drugged, knocked unconscious, and dragged through these tunnels to be "shanghaied"—forced onto ships as unwilling crew members who had no hope of escape.\n\nVisitors touring the tunnels report one of the most oppressive and malevolent atmospheres in any paranormal location. Guests experience overwhelming despair and anguish, hear disembodied voices crying out in pain, and encounter apparitions of victims trapped in the darkness. Many report feeling physically ill and emotionally devastated after spending time in the tunnels. Paranormal investigators believe the collective trauma of hundreds of kidnapped men has permanently scarred these passages, creating a veil where their tormented spirits continue to suffer in eternal confinement.',
-        gradient: 'linear-gradient(135deg, #1a1a0a, #0a0a1a)',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Shanghai_Tunnels.jpg/1280px-Shanghai_Tunnels.jpg',
-        history: 'Portland\'s Shanghai Tunnels were originally constructed in the 1870s as part of the city\'s commercial infrastructure, connecting buildings and businesses underground. However, from the 1870s through the 1920s, unscrupulous operators transformed sections of these tunnels into criminal enterprises. Men were kidnapped, drugged, and forced through the tunnels to waiting ships. The term "shanghaied" originated from this practice—victims were transported aboard ships bound for Shanghai and other distant ports, forced into years of indentured servitude. Hundreds of men disappeared through these passages, many never to be seen again. The practice continued until port authority reforms and increased enforcement finally reduced the trafficking in the 1920s. Today, sections of the tunnels are open for public tours, and visitors consistently report intense paranormal phenomena.',
-        funFacts: ['The Shanghai Tunnels span several blocks beneath downtown Portland', 'Men were systematically kidnapped and forced into maritime servitude', 'The term "shanghaied" originated from this trafficking practice', 'Hundreds of men disappeared through these passages', 'Victims were transported aboard ships to distant ports', 'Many victims were never seen or heard from again', 'Visitors report overwhelming despair and anguish in the tunnels', 'Disembodied voices cry out in pain and desperation', 'Apparitions of victims have been reported', 'The most emotionally oppressive paranormal location in Portland', 'Visitors often feel physically ill after touring', 'The tunnels remain one of Oregon\'s most active paranormal sites']
-      },
-      {
-        id: 'palmer-hotel',
-        title: 'Palmer House Hotel, Minnesota',
-        region: 'Sauk Centre, MN',
-        category: 'haunted',
-        tags: ['Haunted Hotel', 'Historic', 'Paranormal'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Haunted Hotel',
-        stops: 'Overnight stays',
-        desc: 'Built in 1901 in the rural town of Sauk Centre, the Palmer House Hotel is a classic Victorian structure that once welcomed travelers passing through central Minnesota. The hotel operated continuously for over a century, hosting countless guests during its long history. Multiple deaths and tragedies have occurred within the building, and the spirits of past residents appear unwilling to vacate. Guests and staff report encountering at least two distinct spirits: a woman in a pink dress and a man in vintage clothing, suggesting multiple entities are bound to the location.\n\nVisitors report seeing the apparition of a woman dressed in pink moving through hallways, encountering a man in old-fashioned clothing appearing in guest rooms and corridors, hearing mysterious sounds and disembodied voices, and experiencing objects moving on their own. Elevator doors open and close without being called, guests report sudden temperature changes, and some visitors experience vivid and disturbing dreams while staying overnight. The hotel embraces its paranormal reputation and attracts paranormal enthusiasts seeking to investigate the activity firsthand.',
-        gradient: 'linear-gradient(135deg, #2a1a0a, #1a0a1a)',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Palmer_House_Sauk_Centre.jpg/1280px-Palmer_House_Sauk_Centre.jpg',
-        history: 'The Palmer House Hotel opened in 1901 as a luxury destination in the small town of Sauk Centre, Minnesota. At the time, the hotel represented significant local investment and brought prestige to the community. For over a century, it operated as a travelers\' hotel, hosting regional businessmen, salesmen, and tourists. Numerous guests have checked in over the decades, and according to paranormal accounts, some have never truly left. Multiple deaths have been documented at the hotel, though details of most deaths remain unclear. Staff members over the years have reported seeing apparitions and hearing unexplained sounds. The hotel remains in operation today and actively welcomes paranormal investigators and ghost hunters.',
-        funFacts: ['The hotel was built in 1901 in small-town Minnesota', 'It is one of the oldest continuously operated hotels in the region', 'A woman in a pink dress is frequently seen in hallways', 'A man in vintage clothing appears in guest rooms', 'Elevators move without being called', 'Objects move on their own throughout the building', 'Guests report mysterious sounds and disembodied voices', 'Visitors experience vivid and disturbing dreams', 'Cold spots appear suddenly in guest rooms', 'The hotel encourages paranormal investigations', 'Multiple deaths have occurred at the hotel', 'It remains an active paranormal investigation site']
-      },
-      {
-        id: 'devil-promenade',
-        title: 'The Devil\'s Promenade, Oklahoma/Texas',
-        region: 'Border region',
-        category: 'alien',
-        tags: ['Gas Seeps', 'Unexplained', 'Natural Phenomenon'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Natural Phenomenon',
-        stops: 'Self-guided',
-        desc: 'Mysterious natural gas flames have burned on the prairie for over 200 years. Native Americans believed it was supernatural, and indigenous peoples documented these mysterious flames long before European contact, calling it "the flames that never go out." Scientists debate whether it\'s a geological anomaly, lightning-struck seeping gas, or something else entirely. UFO sightings are frequently reported in the area, adding to the mystery.',
-        gradient: 'linear-gradient(135deg, #1a3a0a, #0a2a1a)',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Devils_promenade.jpg/1280px-Devils_promenade.jpg',
-        history: 'Indigenous peoples documented these mysterious flames long before European contact. They called it "the flames that never go out." The phenomenon has been scientifically documented since the 1800s but remains partially unexplained. The flames appear to originate from natural gas seeps in the Anadarko Basin, but the exact mechanism remains unclear. Some speculate lightning strikes ignite the gas, while others believe it\'s a more complex geological phenomenon.',
-        funFacts: ['Flames can reach up to 4 feet high', 'The gas burns with a blue and orange flame', 'Scientists believe it\'s natural gas from the Anadarko Basin', 'UFO sightings are frequently reported in the area', 'Indigenous peoples documented the phenomenon for centuries', 'The flames burn continuously regardless of weather', 'Mysterious lights are often observed above the flames', 'The exact cause remains scientifically unexplained', 'It is considered a major paranormal hotspot', 'Visitors report unexplained phenomena in the area']
-      },
-      {
-        id: 'gettysburg',
-        title: 'Gettysburg Cemetery & Battlefield, Pennsylvania',
-        region: 'Gettysburg, PA',
-        category: 'cemetery',
-        tags: ['Civil War', 'Historic Battle', 'Haunted'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Historic Battlefield',
-        stops: 'Museum & cemetery',
-        desc: 'Site of the bloodiest battle in American history (1863). Over 51,000 casualties fell during the three-day Battle of Gettysburg. Visitors and staff report apparitions of soldiers, disembodied voices, and unexplained apparitions throughout the grounds. The Soldiers\' National Cemetery was established later that year to honor those who fell, but their spirits seem unable to rest. Paranormal activity is particularly intense at sunset and in the cemetery\'s more remote sections.\n\nParanormal investigators report encountering full-bodied apparitions of soldiers from both armies, hearing disembodied bugle calls echoing across empty fields at dawn and dusk, and experiencing overwhelming sadness and despair in certain locations. Tour guides consistently report shadow figures appearing and disappearing, mysterious footsteps following visitors, and the sensation of being watched by unseen presences. The battlefield appears to be a permanent portal where the trauma of the battle remains eternally impressed.',
-        gradient: 'linear-gradient(135deg, #2a1a0a, #1a2030)',
-        image: 'https://www.publicdomainpictures.net/pictures/40000/velka/cemetery-at-gettysburg.jpg',
-        history: 'The Battle of Gettysburg (July 1-3, 1863) was the turning point of the Civil War, where over 51,000 soldiers became casualties. The battle was the bloodiest engagement in American military history. The Soldiers\' National Cemetery was established later that year, and President Lincoln delivered his famous Gettysburg Address there in November 1863. Over 3,500 soldiers are buried in the cemetery, with thousands more in unmarked graves scattered across the battlefield. The battle witnessed horrific combat, with regiments decimated by cannon fire and bayonet charges. The trauma of that single three-day period appears to have permanently marked the location.',
-        funFacts: ['The battlefield has the highest concentration of Civil War hauntings', 'Tour guides report shadow figures and phantom soldiers', 'Visitors hear disembodied bugle calls at dawn and dusk', 'The cemetery is considered one of America\'s most haunted cemeteries', 'Over 51,000 soldiers became casualties in three days', 'Apparitions of soldiers from both armies have been reported', 'The battle was the turning point of the Civil War', 'Lincoln delivered the Gettysburg Address at the cemetery', 'Paranormal activity intensifies at sunset', 'Visitors report overwhelming sadness in certain areas']
-      },
-      {
-        id: 'dybbuk-box',
-        title: 'The Dybbuk Box Origins, Portland',
-        region: 'Portland, OR',
-        category: 'cryptid',
-        tags: ['Occult', 'Mysterious Object', 'Paranormal'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Paranormal Object',
-        stops: 'Museum exhibitions',
-        desc: 'An allegedly haunted wooden box whose original owner experiences inexplicable tragedy and illness. The "dybbuk" (Jewish demon possession) legend sparked paranormal investigations and was featured on paranormal TV shows. The box emerged in 2001 when a man purchased it at an estate sale and immediately experienced 36 consecutive days of nightmares, along with severe business failures and unexplained health issues.\n\nSub sequent owners have reported similar or worse paranormal phenomena, suggesting the curse persists. A rabbi reportedly confirmed the box contained a dybbuk—a restless spirit of the deceased seeking vengeance or justice. Paranormal investigators believe the box may originate from 1920s Poland, where it was allegedly used in occult rituals. The case has been featured on "The Paranormal Activity" television series and continues to attract paranormal researchers worldwide.',
-        gradient: 'linear-gradient(135deg, #2a0a30, #1a0a2a)',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Dybbuk_box.jpg/800px-Dybbuk_box.jpg',
-        history: 'The Dybbuk Box emerged in 2001 when a man purchased it at an estate sale. He reported immediate misfortune: 36 straight days of nightmares, business failures, and health issues. A rabbi confirmed it contained a dybbuk—a restless spirit of the deceased. Subsequent owners have reported exponentially worse phenomena, suggesting the curse strengthens with each new owner. The original box is believed to have originated in 1920s Poland and was allegedly used in occult rituals.',
-        funFacts: ['The original owner experienced 36 straight days of nightmares', 'Subsequent owners reported exponentially worse paranormal activity', 'The box was featured on "The Paranormal Activity" TV series', 'Experts believe it originated in 1920s Poland', 'A rabbi confirmed it contains a dybbuk', 'Each new owner experiences worse phenomena than the last', 'Business failures follow the box\'s owners', 'Health problems plague those who possess it', 'Paranormal investigators have documented consistent phenomena', 'The box remains one of America\'s most cursed objects']
-      },
-      {
-        id: 'body-farm',
-        title: 'Anthropology Research Facility, Tennessee',
-        region: 'Knoxville, TN',
-        category: 'historic',
-        tags: ['Scientific', 'Macabre', 'Forensic'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'Historic Site',
-        stops: 'Tour by appointment',
-        desc: 'Also called the "Body Farm." The University of Tennessee operates this forensic research facility where human remains decompose in natural conditions to advance forensic science. The most unique museum of death and science. Founded in 1971, over 4,000 human remains have been studied here. The facility has revolutionized forensic anthropology and helped solve hundreds of cold cases through understanding decomposition patterns and insect colonization timelines.\n\nWhile not traditionally paranormal, visitors report an overwhelming sense of melancholy and spiritual heaviness throughout the facility. Some paranormal investigators believe the concentration of death and trauma has created a residual haunting. Despite its scientific purpose, the facility represents humanity\'s intersection with mortality and the spiritual weight of that confrontation.',
-        gradient: 'linear-gradient(135deg, #1a2a0a, #0a1a0a)',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/UT_Forensics_Anthropology_Center.jpg/1280px-UT_Forensics_Anthropology_Center.jpg',
-        history: 'Founded in 1971 by Dr. William Bass, the facility is the first of its kind. It studies human decomposition under various environmental conditions to improve forensic investigations and help solve crimes. Over 4,000 human remains have been studied, and the research has revolutionized forensic anthropology. Multiple similar facilities now exist worldwide following this model. The facility has directly contributed to solving hundreds of cold cases by providing crucial insights into decomposition timelines and identifying insect patterns specific to particular environments and seasons.',
-        funFacts: ['Over 4,000 human remains have been studied', 'The facility has helped solve hundreds of cold cases', 'Multiple facilities now exist worldwide following this model', 'Research has revealed insects and decomposition patterns crucial to forensics', 'Founded in 1971 as the first of its kind', 'Dr. William Bass pioneered the field of forensic taphonomy', 'The facility studies decomposition in various environments', 'Insect patterns help determine time of death', 'The research continues to revolutionize forensic science', 'It remains the gold standard for forensic research']
-      },
-      {
-        id: 'lizzie-borden',
-        title: 'Lizzie Borden House, Massachusetts',
-        region: 'Fall River, MA',
-        category: 'haunted',
-        tags: ['Murder', 'Famous Case', 'B&B'],
-        tagColors: ['#8a2be2', '#9932cc', '#a09a8e'],
-        type: 'True Crime Site',
-        stops: 'Overnight stays',
-        desc: 'On August 4, 1892, Abby and Andrew Borden were brutally murdered with a hatchet in this house. The crime shocked America and remains one of the nation\'s most infamous unsolved murders. Lizzie Borden was tried for the murders but acquitted due to insufficient evidence, though public opinion has remained divided for 130 years. The rhyme "Lizzie Borden took an axe, gave her mother 40 whacks..." immortalized the crime in popular culture. Today, the restored house operates as a bed and breakfast where visitors can sleep in the very rooms where the brutal murders occurred.\n\nGuests report encountering the spirits of the victims, particularly in the bedroom where Abby Borden was attacked. Visitors experience apparitions of a woman appearing and disappearing, disembodied voices crying out in anguish, and overwhelming sensations of dread and sadness. Cold spots appear in the murder room, and guests report feeling watched by unseen presences. Some visitors have experienced vivid nightmares or psychic impressions while sleeping in the house. Paranormal investigators believe the violent nature of the murders has trapped the victims\' spirits, eternally reliving their final moments of terror.',
-        gradient: 'linear-gradient(135deg, #2a0a1a, #1a0a0a)',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Lizzie-Borden-House.jpg/1280px-Lizzie-Borden-House.jpg',
-        history: 'On the morning of August 4, 1892, Abby Borden (stepmother) and Andrew Borden (father) were found murdered in their home on Second Street in Fall River, Massachusetts. Both had been attacked with a hatchet—Abby received approximately 18 blows and Andrew received approximately 10 blows. Lizzie Borden, the 32-year-old daughter, was arrested and tried for the murders. The trial captivated the nation, with intense media coverage and public debate about her guilt or innocence. Evidence was circumstantial, and Lizzie was acquitted in June 1893. Public opinion remained divided, and the question of her guilt has fascinated true crime enthusiasts for over 130 years. Lizzie lived in the house for several years after the acquittal before moving away. The house has changed hands multiple times and was eventually converted into a bed and breakfast and museum in 1996.',
-        funFacts: ['The murders occurred on August 4, 1892', 'Abby Borden received approximately 18 hatchet blows', 'Andrew Borden received approximately 10 hatchet blows', 'Lizzie was tried for the murders but acquitted', 'The rhyme "Lizzie Borden took an axe" was written shortly after', 'Public opinion remains divided on Lizzie\'s guilt 130+ years later', 'The case remains officially unsolved', 'You can book overnight stays in the actual murder rooms', 'Guests report seeing apparitions of the victims', 'Visitors experience overwhelming dread and sadness', 'The master bedroom (Abby\'s murder site) is the most actively haunted room', 'Paranormal investigators consider it one of New England\'s most haunted houses']
-      }
+      { id: 'eureka-springs-town', title: 'Eureka Springs, Arkansas', region: 'Carroll County, AR', category: 'historic', tags: ['Historic Town'], tagColors: ['#8a2be2'], desc: 'Built into the Ozark Mountains during the 1880s silver boom...', history: 'Eureka Springs emerged during the 1880s silver boom...', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&fit=crop', gradient: 'linear-gradient(135deg, #2a0a20, #1a0a10)' },
+      { id: 'san-luis-valley', title: 'San Luis Valley, Colorado', region: 'South-Central CO', category: 'cryptid', tags: ['UFO Hotspot'], tagColors: ['#8a2be2'], desc: 'The San Luis Valley is one of North America\'s most active UFO hotspots...', history: 'The San Luis Valley has been a center of activity since pre-Columbian times...', image: 'https://images.unsplash.com/photo-1444080748397-f442aa95c3e5?w=800&fit=crop', gradient: 'linear-gradient(135deg, #1a3a0a, #0a2a1a)' },
+      { id: 'waverly-hills', title: 'Waverly Hills Sanatorium, Kentucky', region: 'Louisville, KY', category: 'haunted', tags: ['Haunted'], tagColors: ['#8a2be2'], desc: 'Built in 1910, this tuberculosis hospital is said to be one of America\'s most haunted places.', history: 'Over 60,000 patients died within these walls...', image: 'https://images.unsplash.com/photo-1518392846015-55a9cc003b25?w=800&fit=crop', gradient: 'linear-gradient(135deg, #2a0a40, #1a1020)' },
+      { id: 'stanley-hotel', title: 'The Stanley Hotel, Colorado', region: 'Estes Park, CO', category: 'haunted', tags: ['The Shining'], tagColors: ['#8a2be2'], desc: 'Luxury hotel that inspired Stephen King\'s "The Shining".', history: 'In 1974, Stephen King spent one night here and conceived his masterpiece.', image: 'https://images.unsplash.com/photo-1551632706-5386c5193122?w=800&fit=crop', gradient: 'linear-gradient(135deg, #1a2a0a, #0a1a1a)' }
+      // Add more as needed
     ];
 
     let likedTrips = new Set();
     let currentFilter = 'all';
 
-    // Create a map for easy access to trips by ID
-    window.tripsMap = new Map(trips.map(t => [t.id, t]));
-    window.openDetailModal = openDetailModal;
-
-    // Render oddity card
-    function createTripCard(trip, index) {
-      const card = document.createElement('div');
-      card.className = `attraction-card rounded-xl overflow-hidden fade-up delay-${Math.min(index + 1, 6)}`;
-      card.style.cssText = `background:#1e1e28;border:1px solid rgba(138,43,226,0.08);cursor:pointer;`;
-      card.dataset.tripId = trip.id;
-
-      const isLiked = likedTrips.has(trip.id);
-      const isRegion = trip.isRegion === true;
-      const bestTag = trip.tags[0];
-      const bestTagColor = trip.tagColors[0];
-
+    // APP LOGIC
+    function renderFeaturedOddity() {
+      const now = new Date();
+      const start = new Date(now.getFullYear(), 0, 1);
+      const weekNum = Math.floor((now - start) / 86400000 / 7);
+      const featured = trips[weekNum % trips.length];
+      
+      const card = document.getElementById('featured-card');
       card.innerHTML = `
-        <div class="p-1.5">
-          <div class="rounded-lg h-48 relative overflow-hidden" style="background:${trip.gradient};">
-            <img src="${trip.image}" alt="${trip.title}" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';">
-            ${isRegion ? `<div class="absolute inset-0 flex items-center justify-center" style="background:rgba(0,0,0,0.3);"><i data-lucide="map-pin" style="width:32px;height:32px;color:#8a2be2;opacity:0.8;"></i></div>` : ''}
-            <div class="absolute bottom-2 left-2 px-2 py-0.5 rounded text-xs font-medium" style="background:rgba(0,0,0,0.5);color:#a09a8e;">${trip.region}</div>
-            ${isRegion ? `<div class="absolute top-2 right-2 px-2 py-0.5 rounded text-xs font-medium" style="background:#8a2be220;color:#8a2be2;border:1px solid rgba(138,43,226,0.4);">Region</div>` : ''}
-          </div>
-        </div>
-        <div class="px-4 pb-4 pt-2">
-          <h3 class="font-bold text-sm mb-1.5 leading-snug" style="color:#f5f0e8;">${trip.title}</h3>
-          <span class="inline-block px-1.5 py-0.5 rounded text-xs mb-2" style="background:${bestTagColor}15;color:${bestTagColor};">${bestTag}</span>
-          <p class="text-xs line-clamp-2 leading-relaxed" style="color:#a09a8e;">${trip.desc.split('\n')[0]}</p>
+        <div class="w-1/3 min-h-[250px]"><img src="${featured.image}" class="h-full w-full object-cover"></div>
+        <div class="w-2/3 p-8 flex flex-col justify-center">
+          <span class="text-purple-500 text-xs font-bold uppercase mb-2">${featured.region}</span>
+          <h3 class="text-3xl font-bold text-white mb-3">${featured.title}</h3>
+          <p class="text-zinc-400 text-sm line-clamp-3 mb-6">${featured.desc}</p>
+          <button class="text-purple-400 font-bold text-sm text-left">Explore the mystery →</button>
         </div>
       `;
+      card.onclick = () => openDetailModal(featured);
+    }
 
-      card.addEventListener('click', (e) => {
-        openDetailModal(trip);
-      });
-
+    function createTripCard(trip, index) {
+      const card = document.createElement('div');
+      card.className = "attraction-card bg-[#1e1e28] rounded-xl overflow-hidden border border-white/5 cursor-pointer";
+      card.innerHTML = `
+        <img src="${trip.image}" class="h-48 w-full object-cover">
+        <div class="p-5">
+          <span class="text-purple-500 text-[10px] font-bold uppercase">${trip.category}</span>
+          <h3 class="text-white font-bold text-lg mt-1">${trip.title}</h3>
+          <p class="text-zinc-500 text-xs mt-2 line-clamp-2">${trip.desc}</p>
+        </div>
+      `;
+      card.onclick = () => openDetailModal(trip);
       return card;
     }
 
@@ -846,351 +154,42 @@
       grid.innerHTML = '';
       const filtered = currentFilter === 'all' ? trips : trips.filter(t => t.category === currentFilter);
       filtered.forEach((trip, i) => grid.appendChild(createTripCard(trip, i)));
-      lucide.createIcons();
     }
 
-    function toggleLike(tripId) {
-      if (likedTrips.has(tripId)) {
-        likedTrips.delete(tripId);
-      } else {
-        likedTrips.add(tripId);
-      }
-      updateSavedCount();
-      renderGrid();
-      updateModalLike();
-    }
-
-    function updateSavedCount() {
-      document.getElementById('saved-count').textContent = likedTrips.size;
-    }
-
-    let currentModalTrip = null;
-    
     function openDetailModal(trip) {
-      currentModalTrip = trip;
       document.getElementById('info-modal-title').textContent = trip.title;
-      
-      const relatedTrips = trip.relatedLocations && trip.relatedLocations.length > 0
-        ? trips.filter(t => trip.relatedLocations.includes(t.id))
-        : [];
-      
       document.getElementById('info-modal-content').innerHTML = `
-        <div class="flex items-center justify-center rounded-lg h-48 mb-4" style="background:${trip.gradient};">
-          <img src="${trip.image}" alt="${trip.title}" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:0.5rem;" onerror="this.style.display='none';">
-        </div>
-        <div class="grid grid-cols-2 gap-4 mb-4 text-sm" style="color:#a09a8e;">
-          <div class="flex items-center gap-2"><i data-lucide="map-pin" style="width:16px;height:16px;color:#8a2be2;"></i><span>${trip.region}</span></div>
-          <div class="flex items-center gap-2"><i data-lucide="info" style="width:16px;height:16px;color:#8a2be2;"></i><span>${trip.distance || trip.type}</span></div>
-          ${trip.stops ? `<div class="flex items-center gap-2"><i data-lucide="compass" style="width:16px;height:16px;color:#8a2be2;"></i><span>${trip.stops}</span></div>` : ''}
-        </div>
-        <div class="mb-6">
-          <p class="leading-relaxed" style="color:#d4c5e2;font-size:0.95rem;line-height:1.7;">${trip.desc}</p>
-        </div>
-        ${trip.history ? `<div class="mb-6">
-          <h3 class="text-lg font-bold mb-3" style="color:#8a2be2;">History</h3>
-          <p class="leading-relaxed" style="color:#d4c5e2;font-size:0.95rem;line-height:1.7;">${trip.history}</p>
-        </div>` : ''}
-        ${trip.funFacts ? `<div class="mb-6">
-          <h3 class="text-lg font-bold mb-3" style="color:#8a2be2;">Key Facts</h3>
-          <ul class="space-y-2.5">
-            ${trip.funFacts.map(fact => `<li class="flex gap-3 text-sm" style="color:#d4c5e2;"><i data-lucide="star" style="width:16px;height:16px;color:#8a2be2;flex-shrink:0;margin-top:3px;"></i><span>${fact}</span></li>`).join('')}
-          </ul>
-        </div>` : ''}
-        ${relatedTrips.length > 0 ? `<div>
-          <h3 class="text-lg font-bold mb-3" style="color:#8a2be2;">Related Locations</h3>
-          <div class="space-y-2">
-            ${relatedTrips.map(related => `
-              <button class="w-full text-left p-3 rounded-lg transition hover:bg-opacity-80" style="background:rgba(138,43,226,0.1);border:1px solid rgba(138,43,226,0.2);color:#f5f0e8;" onclick="window.openDetailModal(window.tripsMap.get('${related.id}')); event.stopPropagation();">
-                <div class="font-medium text-sm">${related.title}</div>
-                <div class="text-xs mt-1" style="color:#a09a8e;">${related.region}</div>
-              </button>
-            `).join('')}
-          </div>
-        </div>` : ''}
+        <img src="${trip.image}" class="w-full h-64 object-cover rounded-xl mb-6">
+        <p class="text-zinc-300 leading-relaxed mb-6">${trip.desc}</p>
+        <h4 class="text-purple-400 font-bold mb-2">History & Lore</h4>
+        <p class="text-zinc-400 text-sm">${trip.history || 'Discovery pending...'}</p>
       `;
-      
-      const isLiked = likedTrips.has(trip.id);
-      const likeBtn = document.getElementById('info-modal-like');
-      likeBtn.className = `like-btn p-2.5 rounded-full ${isLiked ? 'liked' : ''}`;
-      likeBtn.style.color = isLiked ? '#8a2be2' : '#f5f0e8';
-      likeBtn.innerHTML = `<i data-lucide="bookmark" style="width:18px;height:18px;${isLiked ? 'fill:#8a2be2;' : ''}"></i>`;
-      
       document.getElementById('featured-info-modal').classList.remove('hidden');
+    }
+
+    // STARTUP
+    window.onload = () => {
+      renderGrid();
+      renderFeaturedOddity();
       lucide.createIcons();
-    }
 
-    function renderSavedPanel() {
-      const list = document.getElementById('saved-list');
-      if (likedTrips.size === 0) {
-        list.innerHTML = `<div class="text-center py-12"><i data-lucide="heart" style="width:40px;height:40px;color:#a09a8e;opacity:0.3;margin:0 auto 12px;display:block;"></i><p style="color:#a09a8e;" class="text-sm">No saved oddities yet</p><p style="color:#a09a8e;opacity:0.6;" class="text-xs mt-1">Tap the heart on any attraction to save it</p></div>`;
-        lucide.createIcons();
-        return;
-      }
-      const allTrips = [...trips];
-      list.innerHTML = '';
-      allTrips.filter(t => likedTrips.has(t.id)).forEach(trip => {
-        const item = document.createElement('div');
-        item.className = 'flex items-center gap-3 p-3 rounded-xl mb-2';
-        item.style.cssText = 'background:rgba(138,43,226,0.05);border:1px solid rgba(138,43,226,0.08);';
-        item.innerHTML = `
-          <div class="flex-1">
-            <p class="text-sm font-medium" style="color:#f5f0e8;">${trip.title}</p>
-            <p class="text-xs" style="color:#a09a8e;">${trip.region || ''}</p>
-          </div>
-          <button class="p-1.5 rounded-full saved-remove" style="color:#8a2be2;" data-trip="${trip.id}">
-            <i data-lucide="x" style="width:14px;height:14px;"></i>
-          </button>
-        `;
-        item.querySelector('.saved-remove').addEventListener('click', () => {
-          toggleLike(trip.id);
-          renderSavedPanel();
-        });
-        list.appendChild(item);
-      });
-      lucide.createIcons();
-    }
-
-    // Filters
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => {
-          b.classList.remove('active');
-          b.style.background = 'rgba(245,240,232,0.08)';
-          b.style.color = '#a09a8e';
-        });
-        btn.classList.add('active');
-        btn.style.background = '#8a2be2';
-        btn.style.color = '#f5f0e8';
-        currentFilter = btn.dataset.filter;
-        renderGrid();
-      });
-    });
-
-    document.getElementById('modal-close').addEventListener('click', () => document.getElementById('trip-modal').classList.add('hidden'));
-    document.getElementById('trip-modal').addEventListener('click', (e) => {
-      if (e.target === document.getElementById('trip-modal')) document.getElementById('trip-modal').classList.add('hidden');
-    });
-    document.getElementById('modal-like').addEventListener('click', () => {
-      if (currentModalTrip) toggleLike(currentModalTrip.id);
-    });
-    
-    document.getElementById('modal-visit').addEventListener('click', () => {
-      if (currentModalTrip) {
-        window.open(`https://www.google.com/maps/search/${encodeURIComponent(currentModalTrip.title)}`, '_blank');
-      }
-    });
-
-    // Saved panel
-    function openSaved() {
-      renderSavedPanel();
-      document.getElementById('saved-panel').classList.remove('hidden');
-      document.getElementById('saved-overlay').classList.remove('hidden');
-      document.getElementById('saved-overlay').style.animation = 'fadeIn 0.3s ease forwards';
-    }
-    document.getElementById('nav-saved-btn').addEventListener('click', openSaved);
-    document.getElementById('mobile-saved-btn').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.add('hidden');
-      openSaved();
-    });
-    document.getElementById('saved-close').addEventListener('click', () => {
-      document.getElementById('saved-panel').classList.add('hidden');
-      document.getElementById('saved-overlay').classList.add('hidden');
-    });
-    document.getElementById('saved-overlay').addEventListener('click', () => {
-      document.getElementById('saved-panel').classList.add('hidden');
-      document.getElementById('saved-overlay').classList.add('hidden');
-    });
-
-    // Mobile menu
-    document.getElementById('mobile-menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('hidden'));
-    document.getElementById('mobile-close-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'));
-
-    // Explore button scroll
-    document.getElementById('explore-btn').addEventListener('click', () => {
-      document.getElementById('trip-grid').scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Search functionality
-    document.getElementById('search-input').addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase();
-      const cards = document.querySelectorAll('[data-trip-id]');
-      cards.forEach(card => {
-        const title = card.querySelector('h3').textContent.toLowerCase();
-        const tags = Array.from(card.querySelectorAll('.tag-pill')).map(t => t.textContent.toLowerCase()).join(' ');
-        const desc = card.querySelector('p').textContent.toLowerCase();
-        const matches = title.includes(query) || tags.includes(query) || desc.includes(query);
-        card.style.display = matches ? '' : 'none';
-      });
-    });
-
-    // Element SDK
-    const defaultConfig = {
-      background_color: '#12121a',
-      surface_color: '#1e1e28',
-      text_color: '#f5f0e8',
-      primary_action_color: '#8a2be2',
-      secondary_action_color: '#a09a8e',
-      font_family: 'Outfit',
-      font_size: 16,
-      app_title: 'ODDITIES',
-      app_tagline: 'embrace the strange',
-      hero_heading: 'Explore the Strange, the Mysterious, the Unforgettable',
-      featured_title: 'Featured Oddity',
-      explore_title: 'Discover Oddities'
-    };
-
-    async function onConfigChange(config) {
-      const bg = config.background_color || defaultConfig.background_color;
-      const surface = config.surface_color || defaultConfig.surface_color;
-      const text = config.text_color || defaultConfig.text_color;
-      const primary = config.primary_action_color || defaultConfig.primary_action_color;
-      const secondary = config.secondary_action_color || defaultConfig.secondary_action_color;
-      const font = config.font_family || defaultConfig.font_family;
-      const baseSize = config.font_size || defaultConfig.font_size;
-
-      const app = document.getElementById('app');
-      app.style.fontFamily = `${font}, Outfit, sans-serif`;
-
-      document.querySelectorAll('header, section:last-of-type').forEach(el => {
-        if (el.tagName === 'HEADER') el.style.backgroundColor = bg;
-      });
-
-      const nav = document.getElementById('nav-bar');
-      nav.style.background = `rgba(${hexToRgb(bg)},0.92)`;
-
-      document.getElementById('nav-title').style.color = text;
-      document.getElementById('nav-title').textContent = config.app_title || defaultConfig.app_title;
-
-      const heroH = document.getElementById('hero-heading');
-      heroH.style.color = text;
-      heroH.style.fontFamily = `${font}, Outfit, sans-serif`;
-      heroH.style.fontSize = `${baseSize * 2.8}px`;
-      const headingText = config.hero_heading || defaultConfig.hero_heading;
-      const words = headingText.split(' ');
-      const mid = Math.ceil(words.length / 2);
-      heroH.innerHTML = words.slice(0, mid).join(' ') + '<br>' + words.slice(mid).join(' ');
-
-      const et = document.getElementById('explore-title');
-      et.style.color = text;
-      et.style.fontFamily = `${font}, Outfit, sans-serif`;
-      et.style.fontSize = `${baseSize * 1.75}px`;
-      et.textContent = config.explore_title || defaultConfig.explore_title;
-
-      document.getElementById('nav-saved-btn').style.background = primary;
-      document.getElementById('explore-btn').style.background = primary;
-      document.querySelectorAll('.filter-btn.active').forEach(b => b.style.background = primary);
-
-      document.querySelectorAll('section').forEach(s => {
-        if (!s.querySelector('#trip-grid')) s.style.background = surface.replace('#1e1e28', '#16161e') || '#16161e';
-      });
-    }
-
-    function hexToRgb(hex) {
-      const r = parseInt(hex.slice(1, 3), 16);
-      const g = parseInt(hex.slice(3, 5), 16);
-      const b = parseInt(hex.slice(5, 7), 16);
-      return `${r},${g},${b}`;
-    }
-
-    window.elementSdk.init({
-      defaultConfig,
-      onConfigChange,
-      mapToCapabilities: (config) => ({
-        recolorables: [
-          { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
-          { get: () => config.surface_color || defaultConfig.surface_color, set: (v) => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); } },
-          { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
-          { get: () => config.primary_action_color || defaultConfig.primary_action_color, set: (v) => { config.primary_action_color = v; window.elementSdk.setConfig({ primary_action_color: v }); } },
-          { get: () => config.secondary_action_color || defaultConfig.secondary_action_color, set: (v) => { config.secondary_action_color = v; window.elementSdk.setConfig({ secondary_action_color: v }); } }
-        ],
-        borderables: [],
-        fontEditable: {
-          get: () => config.font_family || defaultConfig.font_family,
-          set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); }
-        },
-        fontSizeable: {
-          get: () => config.font_size || defaultConfig.font_size,
-          set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); }
-        }
-      }),
-      mapToEditPanelValues: (config) => new Map([
-        ['app_title', config.app_title || defaultConfig.app_title],
-        ['app_tagline', config.app_tagline || defaultConfig.app_tagline],
-        ['hero_heading', config.hero_heading || defaultConfig.hero_heading],
-        ['featured_title', config.featured_title || defaultConfig.featured_title],
-        ['explore_title', config.explore_title || defaultConfig.explore_title]
-      ])
-    });
-
-    renderGrid();
-    lucide.createIcons();
-
-    function getWeekNumber() {
-      const now = new Date();
-      const start = new Date(now.getFullYear(), 0, 1);
-      const diff = now - start;
-      const oneDay = 86400000;
-      return Math.floor(diff / oneDay / 7);
-    }
-
-    function getFeaturedOddity() {
-      const weekNum = getWeekNumber();
-      const index = weekNum % trips.length;
-      return trips[index];
-    }
-
-    function renderFeaturedOddity() {
-      const featured = getFeaturedOddity();
-      document.getElementById('featured-name').textContent = featured.title;
-      
-      // Trim description to first sentence only
-      const firstSentence = featured.desc.split('.')[0] + '.';
-      document.getElementById('featured-desc').textContent = firstSentence;
-      
-      document.getElementById('featured-location').textContent = featured.region;
-      document.getElementById('featured-image').src = featured.image;
-
-      document.getElementById('featured-save').onclick = (e) => {
-        e.stopPropagation();
-        toggleLike(featured.id);
-        renderFeaturedOddity();
-      };
-
-      document.getElementById('featured-learn-more').onclick = (e) => {
-        e.stopPropagation();
-        openDetailModal(featured);
-      };
-
-      const card = document.getElementById('featured-card');
-      card.onclick = () => openDetailModal(featured);
-
-      lucide.createIcons();
-    }
-
-    document.getElementById('info-modal-close').addEventListener('click', () => {
-      document.getElementById('featured-info-modal').classList.add('hidden');
-    });
-
-    document.getElementById('featured-info-modal').addEventListener('click', (e) => {
-      if (e.target === document.getElementById('featured-info-modal')) {
+      document.getElementById('info-modal-close').onclick = () => {
         document.getElementById('featured-info-modal').classList.add('hidden');
-      }
-    });
-    
-    document.getElementById('info-modal-like').addEventListener('click', () => {
-      if (currentModalTrip) {
-        toggleLike(currentModalTrip.id);
-        openDetailModal(currentModalTrip);
-      }
-    });
-    
-    document.getElementById('info-modal-visit').addEventListener('click', () => {
-      if (currentModalTrip) {
-        window.open(`https://www.google.com/maps/search/${encodeURIComponent(currentModalTrip.title)}`, '_blank');
-      }
-    });
+      };
 
-    renderFeaturedOddity();
+      document.getElementById('explore-btn').onclick = () => {
+        document.getElementById('grid-section').scrollIntoView({ behavior: 'smooth' });
+      };
+
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.onclick = () => {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('bg-[#8a2be2]', 'text-white'));
+          btn.classList.add('bg-[#8a2be2]', 'text-white');
+          currentFilter = btn.dataset.filter;
+          renderGrid();
+        };
+      });
+    };
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e8110f3f262ae13',t:'MTc3NTQ4MTM3OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
