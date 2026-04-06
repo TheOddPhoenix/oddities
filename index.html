@@ -21,10 +21,10 @@
 <body class="h-full">
   <div id="app" class="app-wrapper h-full w-full overflow-auto">
     
-    <nav class="sticky top-0 z-50 backdrop-blur-xl border-b border-purple-900/20 bg-[#12121a]/90">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav class="border-b border-purple-900/20 bg-[#12121a]">
+      <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
         <div class="flex items-center gap-3">
-          <div class="skull-spin"><i data-lucide="skull" class="text-purple-600 w-7 h-7"></i></div>
+          <div class="skull-spin"><i data-lucide="skull" class="text-purple-600 w-8 h-8"></i></div>
           <span class="text-2xl font-black tracking-tighter">ODDITIES</span>
         </div>
         <div class="relative group">
@@ -33,8 +33,8 @@
             <span>My Account</span>
             <i data-lucide="chevron-down" class="w-3 h-3"></i>
           </button>
-          <div class="absolute right-0 mt-2 w-56 bg-[#1e1e28] border border-white/10 rounded-2xl shadow-2xl overflow-hidden hidden group-hover:block">
-            <button onclick="openSavedPanel()" class="w-full px-5 py-4 text-left text-sm hover:bg-white/5 flex items-center justify-between">
+          <div class="absolute right-0 mt-2 w-56 bg-[#1e1e28] border border-white/10 rounded-2xl shadow-2xl overflow-hidden hidden group-hover:block z-[60]">
+            <button onclick="alert('Bucket list feature coming soon!')" class="w-full px-5 py-4 text-left text-sm hover:bg-white/5 flex items-center justify-between">
               <span>My Bucket List</span>
               <span id="saved-count" class="bg-purple-600 text-black px-2 py-0.5 rounded-full text-[10px] font-bold">0</span>
             </button>
@@ -55,40 +55,43 @@
       </div>
     </header>
 
-    <section class="max-w-6xl mx-auto px-6 mb-20">
-     <div class="flex items-center gap-3 mb-8">
-  <i data-lucide="skull" class="text-purple-600 w-8 h-8 skull-spin"></i>
-  <div class="flex flex-col">
-    <span class="text-purple-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">THIS WEEK</span>
-    <h2 class="text-2xl font-black">Oddity of the Week</h2>
-  </div>
-</div>
+    <section class="max-w-6xl mx-auto px-6 mb-24">
+      <div class="flex items-center gap-3 mb-8">
+        <i data-lucide="skull" class="text-purple-600 w-8 h-8 skull-spin"></i>
+        <div class="flex flex-col">
+          <span class="text-purple-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">THIS WEEK</span>
+          <h2 class="text-2xl font-black">Oddity of the Week</h2>
+        </div>
+      </div>
       <div id="featured-card" class="bg-[#1e1e28] rounded-[2.5rem] border border-purple-900/30 flex flex-col md:flex-row cursor-pointer transition-all hover:bg-[#252533] overflow-hidden">
         </div>
     </section>
 
     <section id="grid-section" class="max-w-6xl mx-auto px-6 pb-40">
-    <div class="flex items-center gap-3">
-  <i data-lucide="skull" class="text-purple-600 w-10 h-10 skull-spin"></i>
-  <div class="flex flex-col text-left">
-    <span class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">EXPLORE</span>
-    <h2 class="text-4xl font-black leading-none">Discover Oddities</h2>
-  </div>
-</div>
-        
-        <div class="relative w-full lg:w-96">
-          <i data-lucide="search" class="absolute left-5 top-4 w-5 h-5 text-zinc-500"></i>
-          <input id="search-input" type="text" placeholder="Search places, tags" class="w-full bg-white/5 border border-white/10 rounded-full py-4 pl-14 pr-6 focus:outline-none focus:border-purple-500 text-white">
+      <div class="flex flex-col gap-8 mb-12">
+        <div class="flex items-center gap-3">
+          <i data-lucide="skull" class="text-purple-600 w-10 h-10 skull-spin"></i>
+          <div class="flex flex-col text-left">
+            <span class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">EXPLORE</span>
+            <h2 class="text-4xl font-black leading-none">Discover Oddities</h2>
+          </div>
         </div>
-      </div>
-      
-      <div class="flex gap-2 overflow-x-auto scroll-container pb-8">
-        <button class="filter-btn active bg-purple-600 text-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="all"><i data-lucide="sparkles" class="w-4 h-4"></i> All Oddities</button>
-        <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="cemetery"><i data-lucide="cross" class="w-4 h-4"></i> Cemeteries</button>
-        <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="historic"><i data-lucide="landmark" class="w-4 h-4"></i> Historic</button>
-        <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="haunted"><i data-lucide="ghost" class="w-4 h-4"></i> Haunted</button>
-        <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="cryptid"><i data-lucide="footprints" class="w-4 h-4"></i> Cryptid</button>
-        <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="alien"><i data-lucide="ufo" class="w-4 h-4"></i> Aliens/UFO</button>
+
+        <div class="flex flex-col lg:flex-row gap-4 items-center justify-between bg-white/5 p-4 rounded-[2rem] border border-white/5">
+          <div class="flex gap-2 overflow-x-auto scroll-container w-full lg:w-auto">
+            <button class="filter-btn active bg-purple-600 text-white px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="all"><i data-lucide="sparkles" class="w-3.5 h-3.5"></i> All</button>
+            <button class="filter-btn bg-white/5 text-zinc-500 px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="cemetery"><i data-lucide="cross" class="w-3.5 h-3.5"></i> Cemeteries</button>
+            <button class="filter-btn bg-white/5 text-zinc-500 px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="historic"><i data-lucide="landmark" class="w-3.5 h-3.5"></i> Historic</button>
+            <button class="filter-btn bg-white/5 text-zinc-500 px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="haunted"><i data-lucide="ghost" class="w-3.5 h-3.5"></i> Haunted</button>
+            <button class="filter-btn bg-white/5 text-zinc-500 px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="cryptid"><i data-lucide="footprints" class="w-3.5 h-3.5"></i> Cryptid</button>
+            <button class="filter-btn bg-white/5 text-zinc-500 px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap" data-filter="alien"><i data-lucide="ufo" class="w-3.5 h-3.5"></i> Aliens/UFO</button>
+          </div>
+          
+          <div class="relative w-full lg:w-64">
+            <i data-lucide="search" class="absolute left-4 top-3 w-4 h-4 text-zinc-500"></i>
+            <input id="search-input" type="text" placeholder="Search..." class="w-full bg-[#12121a] border border-white/10 rounded-full py-2.5 pl-10 pr-4 focus:outline-none focus:border-purple-500 text-sm">
+          </div>
+        </div>
       </div>
 
       <div id="trip-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -115,13 +118,12 @@
   </div>
 
   <script>
-    // FULL DATA ARRAY
+    // DATA
     const trips = [
-      { id: 'eureka', title: 'Eureka Springs, Arkansas', region: 'Carroll County, AR', type: 'Historic Town', category: 'historic', tags: ['Historic Town'], desc: 'Built into the Ozark Mountains during the 1880s silver boom. Locals report Victorian figures in the streets.', history: 'Emerged during the 1880s silver boom. The town pivoted to tourism to survive economic collapse.', funFacts: ['Built on steep Ozark hillsides', 'Victorian architecture preserved'], image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&fit=crop' },
-      { id: 'waverly', title: 'Waverly Hills Sanatorium', region: 'Louisville, KY', type: 'Haunted Hospital', category: 'haunted', tags: ['Medical History'], desc: 'America\'s most haunted place. The "body chute" was used for discreet corpse removals.', history: 'Opened 1910. Over 60,000 deaths. Noted for extreme activity in Room 502.', funFacts: ['Over 60k deaths', 'Shadow figures reported'], image: 'https://images.unsplash.com/photo-1518392846015-55a9cc003b25?w=800&fit=crop' },
-      { id: 'san-luis', title: 'San Luis Valley, Colorado', region: 'South-Central CO', type: 'UFO Hotspot', category: 'alien', tags: ['UFOs'], desc: 'Global UFO hotspot. Indigenous peoples reported "sky beings" for centuries.', history: 'Located on dimensional weak points. UFO activity spiked in the 1950s.', funFacts: ['Ley line intersection', 'Cattle mutilations'], image: 'https://images.unsplash.com/photo-1444080748397-f442aa95c3e5?w=800&fit=crop' },
-      { id: 'villisca', title: 'Villisca Axe Murder House', region: 'Villisca, IA', type: 'Cemetery/Site', category: 'cemetery', tags: ['Unsolved'], desc: '1912 mass murder site. The killer covered all mirrors and windows.', history: 'Eight people killed in their sleep. The perpetrator was never found.', funFacts: ['Mirrors were covered', 'Active paranormal site'], image: 'https://images.unsplash.com/photo-1518845528258-421a97f18e77?w=800&fit=crop' }
-      // ... rest of locations
+      { id: 'eureka', title: 'Eureka Springs, Arkansas', region: 'Carroll County, AR', category: 'historic', color: '#8a2be2', desc: 'Built into the Ozark Mountains during the 1880s silver boom. Locals report Victorian figures in the streets.', history: 'Emerged during the 1880s silver boom. The town pivoted to tourism to survive economic collapse.', funFacts: ['Built on steep Ozark hillsides', 'Victorian architecture preserved'] },
+      { id: 'waverly', title: 'Waverly Hills Sanatorium', region: 'Louisville, KY', category: 'haunted', color: '#4b0082', desc: 'America\'s most haunted place. The "body chute" was used for discreet corpse removals.', history: 'Opened 1910. Over 60,000 deaths. Noted for extreme activity in Room 502.', funFacts: ['Over 60k deaths', 'Shadow figures reported'] },
+      { id: 'san-luis', title: 'San Luis Valley, Colorado', region: 'South-Central CO', category: 'alien', color: '#006400', desc: 'Global UFO hotspot. Indigenous peoples reported "sky beings" for centuries.', history: 'Located on dimensional weak points. UFO activity spiked in the 1950s.', funFacts: ['Ley line intersection', 'Cattle mutilations'] },
+      { id: 'villisca', title: 'Villisca Axe Murder House', region: 'Villisca, IA', category: 'cemetery', color: '#310000', desc: '1912 mass murder site. The killer covered all mirrors and windows.', history: 'Eight people killed in their sleep. The perpetrator was never found.', funFacts: ['Mirrors were covered', 'Active paranormal site'] }
     ];
 
     let likedTrips = new Set();
@@ -135,8 +137,8 @@
       renderFeatured();
     }
 
-   function renderFeatured() {
-      const featured = trips[Math.floor(new Date() / 86400000) % trips.length];
+    function renderFeatured() {
+      const featured = trips[0];
       const isLiked = likedTrips.has(featured.id);
       document.getElementById('featured-card').innerHTML = `
         <div class="w-full md:w-2/5 min-h-[300px] flex items-center justify-center border-r border-white/5" style="background: linear-gradient(135deg, ${featured.color}, #12121a)">
@@ -147,8 +149,10 @@
           <h3 class="text-3xl font-black mb-4">${featured.title}</h3>
           <p class="text-zinc-400 mb-8 line-clamp-2">${featured.desc}</p>
           <div class="flex gap-4">
-            <button onclick="event.stopPropagation(); toggleSave('${featured.id}')" class="p-4 bg-white/5 rounded-2xl hover:bg-white/10 ${isLiked ? 'liked' : ''}"><i data-lucide="bookmark" class="w-5 h-5"></i></button>
-            <button onclick="openModalById('${featured.id}')" class="px-8 bg-white/5 rounded-2xl text-xs font-bold uppercase tracking-widest border border-white/10 text-white">Details</button>
+            <button onclick="event.stopPropagation(); toggleSave('${featured.id}')" class="p-4 bg-white/5 rounded-2xl hover:bg-white/10 ${isLiked ? 'liked' : ''} transition-all">
+              <i data-lucide="bookmark" class="w-5 h-5"></i>
+            </button>
+            <button onclick="openModal(trips.find(t=>t.id==='${featured.id}'))" class="px-8 bg-white/5 rounded-2xl text-xs font-bold uppercase tracking-widest border border-white/10 text-white">Details</button>
           </div>
         </div>
       `;
@@ -162,17 +166,19 @@
       filtered.forEach(item => {
         const isLiked = likedTrips.has(item.id);
         const card = document.createElement('div');
-        card.className = 'attraction-card rounded-[2.5rem] p-8 cursor-pointer relative fade-in';
+        card.className = 'attraction-card rounded-[2.5rem] p-8 cursor-pointer relative';
         card.innerHTML = `
           <div class="h-40 rounded-2xl mb-6 flex items-center justify-center" style="background: linear-gradient(135deg, ${item.color}, #1e1e28)">
-            <span class="text-[10px] font-bold text-white/30 uppercase tracking-widest">Image Coming Soon</span>
+            <span class="text-[10px] font-bold text-white/30 uppercase tracking-widest">Mystery Box</span>
           </div>
           <div class="flex justify-between items-start mb-4">
             <div>
               <span class="text-purple-500 text-[9px] font-black uppercase tracking-widest">${item.category}</span>
               <h3 class="text-lg font-bold mt-1 text-white">${item.title}</h3>
             </div>
-            <button onclick="event.stopPropagation(); toggleSave('${item.id}')" class="p-2 bg-white/5 rounded-full ${isLiked ? 'liked' : ''}"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
+            <button onclick="event.stopPropagation(); toggleSave('${item.id}')" class="p-2 bg-white/5 rounded-full ${isLiked ? 'liked' : ''} transition-all">
+              <i data-lucide="bookmark" class="w-4 h-4"></i>
+            </button>
           </div>
           <p class="text-zinc-500 text-xs line-clamp-2">${item.desc}</p>
         `;
@@ -182,32 +188,22 @@
       lucide.createIcons();
     }
 
-function openModal(item) {
+    function openModal(item) {
       document.getElementById('modal-title').textContent = item.title;
-      // This is the working Google Maps link
-      document.getElementById('modal-map-link').href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.title)}`;
-      
+      document.getElementById('modal-map-link').href = `http://googleusercontent.com/maps.google.com/search?q=${encodeURIComponent(item.title)}`;
       document.getElementById('modal-content').innerHTML = `
         <div class="w-full h-64 rounded-3xl mb-10 flex items-center justify-center" style="background: linear-gradient(135deg, ${item.color}, #1e1e28)">
           <i data-lucide="image" class="w-12 h-12 text-white/10"></i>
         </div>
-
-        <p class="text-zinc-300 text-lg mb-8 leading-relaxed">${item.desc}</p>
-        
+        <p class="text-zinc-300 text-lg leading-relaxed mb-8">${item.desc}</p>
         <div class="bg-black/30 p-8 rounded-[2rem] border border-white/5 mb-8">
           <h4 class="text-purple-500 font-bold uppercase text-xs mb-4 tracking-widest">History</h4>
           <p class="text-zinc-400 text-sm leading-relaxed">${item.history}</p>
         </div>
-
         <div>
           <h4 class="text-purple-500 font-bold uppercase text-xs mb-4 tracking-widest">Key Facts</h4>
           <ul class="space-y-3 text-sm text-zinc-400">
-            ${item.funFacts ? item.funFacts.map(f => `
-              <li class="flex gap-3">
-                <i data-lucide="star" class="w-4 h-4 text-purple-600 flex-shrink-0"></i>
-                ${f}
-              </li>
-            `).join('') : '<li class="italic opacity-50">Facts coming soon...</li>'}
+            ${item.funFacts ? item.funFacts.map(f => `<li class="flex gap-3"><i data-lucide="star" class="w-4 h-4 text-purple-600 flex-shrink-0"></i>${f}</li>`).join('') : '<li>Facts coming soon</li>'}
           </ul>
         </div>
       `;
@@ -237,7 +233,10 @@ function openModal(item) {
 
       document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.onclick = () => {
-          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('bg-purple-600', 'text-white'));
+          document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.remove('bg-purple-600', 'text-white');
+            b.classList.add('bg-white/5', 'text-zinc-500');
+          });
           btn.classList.add('bg-purple-600', 'text-white');
           currentFilter = btn.dataset.filter;
           renderGrid();
