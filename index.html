@@ -304,14 +304,21 @@
       lucide.createIcons();
       document.getElementById('modal-close').onclick = () => document.getElementById('detail-modal').classList.add('hidden');
       
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.onclick = () => {
-          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          currentCat = btn.dataset.filter;
-          renderGrid();
-        };
-      });
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.remove('active', 'bg-purple-600', 'text-white');
+      b.classList.add('bg-white/5', 'text-zinc-500');
+    });
+
+    btn.classList.add('active', 'bg-purple-600', 'text-white');
+    btn.classList.remove('bg-white/5', 'text-zinc-500');
+
+    currentCat = btn.dataset.filter;
+    renderGrid();
+    lucide.createIcons();
+  };
+});
 
       document.getElementById('state-filter').onchange = (e) => {
         currentState = e.target.value;
