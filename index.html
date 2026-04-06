@@ -41,7 +41,7 @@
     <header class="relative pt-24 pb-12 px-6 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-b from-[#1a0a2a] via-[#12121a] to-[#12121a] opacity-80"></div>
       <div class="relative z-10 max-w-6xl mx-auto text-left">
-        <h1 class="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[0.9] text-[#f5f0e8]">Explore the Strange,<br>the Mysterious,<br>the Unforgettable</h1>
+        <h1 class="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[0.9] text-[#f5f0e8] uppercase">Explore the Strange,<br>the Mysterious,<br>the Unforgettable</h1>
         <p class="text-xl text-zinc-400 mb-10 font-normal leading-relaxed max-w-2xl">Uncover forgotten histories, cryptid hotspots, and urban legends that defy explanation. Real records. Real mysteries.</p>
         <div class="flex flex-wrap gap-4">
           <button onclick="document.getElementById('grid-section').scrollIntoView({behavior: 'smooth'})" class="bg-purple-600 text-[#12121a] px-8 py-4 rounded-xl font-bold uppercase text-xs tracking-widest hover:scale-105 transition">Explore Locations</button>
@@ -55,7 +55,7 @@
         <i data-lucide="skull" class="text-purple-600 w-10 h-10 skull-spin"></i>
         <div class="flex flex-col">
           <span class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">THIS WEEK</span>
-          <h2 class="text-4xl font-black leading-none text-left tracking-tighter">Featured Stop</h2>
+          <h2 class="text-4xl font-black leading-none text-left tracking-tighter uppercase">Featured Stop</h2>
         </div>
       </div>
       <div id="featured-card" class="bg-[#1e1e28] rounded-[2.5rem] border border-purple-900/30 overflow-hidden cursor-pointer transition-all hover:bg-[#23232e]">
@@ -68,7 +68,7 @@
           <i data-lucide="skull" class="text-purple-600 w-10 h-10 skull-spin"></i>
           <div class="flex flex-col">
             <span class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">EXPLORE</span>
-            <h2 class="text-4xl font-black leading-none text-left tracking-tighter">Discover Odd Stops</h2>
+            <h2 class="text-4xl font-black leading-none text-left tracking-tighter uppercase">Discover OddStops</h2>
           </div>
         </div>
 
@@ -97,14 +97,23 @@
           <div class="flex gap-3 w-full lg:w-auto">
             <select id="state-filter" class="bg-[#12121a] border border-white/10 rounded-full py-3 px-6 text-[10px] font-bold text-white uppercase tracking-widest focus:outline-none focus:border-purple-500 cursor-pointer appearance-none">
                 <option value="all">All States</option>
-                <option value="AR">Arkansas</option>
-                <option value="CA">California</option>
-                <option value="CO">Colorado</option>
-                <option value="IA">Iowa</option>
-                <option value="IL">Illinois</option>
-                <option value="KY">Kentucky</option>
-                <option value="PA">Pennsylvania</option>
-                <option value="WV">West Virginia</option>
+                <option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">Dist. Columbia</option>
+                <option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option>
+                <option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option>
+                <option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option>
+                <option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option>
+                <option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option>
+                <option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option>
             </select>
             <div class="relative flex-1 lg:w-64">
               <i data-lucide="search" class="absolute left-4 top-3.5 w-4 h-4 text-zinc-500"></i>
@@ -120,18 +129,17 @@
     <div id="detail-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-sm">
       <div class="w-full max-w-3xl bg-[#1e1e28] rounded-[2.5rem] overflow-hidden border border-white/10 max-h-[90vh] overflow-y-auto shadow-2xl relative text-left">
         <div class="p-8 border-b border-white/5 flex justify-between items-center bg-[#1e1e28] sticky top-0 z-10">
-          <h2 id="modal-title" class="text-3xl font-black">Location</h2>
+          <h2 id="modal-title" class="text-3xl font-black uppercase tracking-tighter">Location</h2>
           <button id="modal-close" class="p-3 bg-white/5 rounded-full hover:bg-red-500/20 text-white transition-colors"><i data-lucide="x" class="w-6 h-6"></i></button>
         </div>
         
-        <div id="modal-content" class="p-10 space-y-10">
-          </div>
+        <div id="modal-content" class="p-10 space-y-10"></div>
 
         <div class="sticky bottom-0 bg-[#1e1e28] p-8 border-t border-white/5 flex gap-4 z-10">
           <button onclick="showToast('Coming Soon')" class="p-4 bg-white/5 rounded-2xl border border-white/5 text-white hover:bg-white/10 transition group">
              <i data-lucide="bookmark" class="w-6 h-6"></i>
           </button>
-          <a id="modal-map-link" href="#" target="_blank" class="flex-1 bg-purple-600 text-black py-4 rounded-2xl font-bold text-center flex items-center justify-center gap-3">
+          <a id="modal-map-link" href="#" target="_blank" class="flex-1 bg-purple-600 text-black py-4 rounded-2xl font-bold text-center flex items-center justify-center gap-3 uppercase text-sm tracking-widest hover:scale-[1.02] transition">
             <i data-lucide="navigation" class="w-5 h-5 fill-current"></i> Visit Location
           </a>
         </div>
@@ -141,30 +149,57 @@
 
   <script>
     const trips = [
-      { 
-        id: 'eureka', title: 'Eureka Springs', state: 'AR', region: 'Carroll County, AR', category: 'historic', color: '#8a2be2', 
-        desc: 'A Victorian-era town built on healing springs and deep lore.',
-        history: 'Founded in 1879, Eureka Springs was built around 60 natural cold-water springs believed by indigenous peoples and early settlers to have miraculous healing powers. The entire city is listed on the National Register of Historic Places, featuring a labyrinth of winding, steep streets where no two roads intersect at a 90-degree angle.',
-        facts: ['The entire downtown is built into steep Ozark limestone bluffs', 'Underground tunnels and "hidden" levels exist beneath the streets', 'Home to the massive "Christ of the Ozarks" statue', 'Known for its "Palace Hotel" and bathhouse culture'],
-        related: ['falk', 'crescent'] 
-      },
-      { 
-        id: 'waverly', title: 'Waverly Hills Sanatorium', state: 'KY', region: 'Louisville, KY', category: 'haunted', color: '#4b0082', 
-        desc: 'A Tudor Gothic monument to a dark era of American medicine.',
-        history: 'Opened in 1910 to combat a massive Tuberculosis outbreak, Waverly Hills became a self-contained city. After antibiotics made the facility obsolete in 1961, it fell into decay, gaining a reputation as one of the most haunted locations in the world.',
-        facts: ['The "Body Chute" is a 500-foot tunnel used to remove the deceased', 'Room 502 is the epicenter of reported paranormal activity', 'Over 60,000 deaths occurred within these walls'],
-        related: [] 
-      },
-      { id: 'san-luis', title: 'San Luis Valley', state: 'CO', region: 'South-Central CO', category: 'alien', color: '#006400', desc: 'North America\'s most active UFO and paranormal hotspot.', history: 'A high-altitude desert valley that has been a center of strange phenomena for centuries.', facts: ['Consistent sightings of craft', 'High concentrations of vortices'], related: ['ufo-watchtower'] },
-      { id: 'villisca', title: 'Axe Murder House', state: 'IA', region: 'Villisca, IA', category: 'cemetery', color: '#310000', desc: 'Site of a brutal 1912 unsolved mystery.', history: 'An entire family and two guests were bludgeoned to death in 1912. The house remains in its original condition.', facts: ['Axes found at scene', 'No electricity or running water'], related: [] },
-      { id: 'mothman', title: 'Mothman Site', state: 'WV', region: 'Point Pleasant, WV', category: 'cryptid', color: '#1a1a1a', desc: 'Epicenter of a 13-month reign of terror.', history: 'Dozens of residents reported a winged creature with red eyes between 1966 and 1967.', facts: ['TNT Area sightings', '12-foot chrome statue'], related: [] },
-      { id: 'mutter', title: 'Mütter Museum', state: 'PH', region: 'Philadelphia, PA', category: 'historic', color: '#5c4033', desc: 'Collection of anatomical specimens and medical oddities.', history: 'Started in 1858 by Dr. Thomas Dent Mütter to improve medical education.', facts: ['Albert Einstein’s brain pieces', '139 human skulls'], related: [] },
-      { id: 'bachelors', title: 'Bachelor\'s Grove', state: 'IL', region: 'Midlothian, IL', category: 'cemetery', color: '#2d3b2d', desc: 'Widely considered the most haunted graveyard in America.', history: 'Abandoned cemetery dating back to the 1840s.', facts: ['Famous Madonna photo', 'Phantom farmhouses'], related: [] },
-      { id: 'falk', title: 'Fouke Monster Bog', state: 'AR', region: 'Fouke, AR', category: 'cryptid', color: '#1b3022', desc: 'Home to the aggressive, three-toed Southern Sasquatch.', history: 'Inspired the 1972 film The Legend of Boggy Creek.', facts: ['Three-toed footprints found', 'Boggy Creek sightings'], related: ['eureka'] },
-      { id: 'centralia', title: 'Centralia Mine Fire', state: 'PA', region: 'Centralia, PA', category: 'historic', color: '#444444', desc: 'A town burning from the inside out.', history: 'An underground coal fire has been burning beneath the town since 1962.', facts: ['Ground heat over 1,000F', 'Zip code revoked in 2002'], related: [] },
-      { id: 'winchester', title: 'Winchester House', state: 'CA', region: 'San Jose, CA', category: 'historic', color: '#3d2b1f', desc: 'Architectural madness built to confuse spirits.', history: 'Sarah Winchester kept construction going for 38 years to appease ghosts.', facts: ['Stairs to the ceiling', '160 rooms'], related: [] },
-      { id: 'crescent', title: 'Crescent Hotel', state: 'AR', region: 'Eureka Springs, AR', category: 'haunted', color: '#2e1a47', desc: 'Known as "America\'s Most Haunted Hotel."', history: 'Once a fraudulent cancer hospital run by Norman Baker.', facts: ['Basement morgue', 'Ghost of Michael'], related: ['eureka'] },
-      { id: 'ufo-watchtower', title: 'UFO Watchtower', state: 'CO', region: 'Hooper, CO', category: 'alien', color: '#004d40', desc: 'Roadside observation deck in the high-altitude desert.', history: 'Built to provide a place for enthusiasts to scan the skies.', facts: ['Rock Garden offerings', 'Two psychic vortices'], related: ['san-luis'] }
+      { id: 'sloss', title: 'Sloss Furnaces', state: 'AL', region: 'Birmingham, AL', category: 'haunted', color: '#8b0000', desc: 'A massive iron plant where the "Graveyard Shift" never truly ended.', history: 'Operating from 1882 to 1971, this industrial giant was known for brutal working conditions. The most famous ghost is "Slag," a cruel foreman who supposedly fell into the melted iron.', facts: ['National Historic Landmark', 'Documented shadow figures in the tunnel', 'Iron-ore dust often forms strange mist patterns'], related: [] },
+      { id: 'igloo', title: 'The Igloo City', state: 'AK', region: 'Cantwell, AK', category: 'historic', color: '#f0f8ff', desc: 'A massive, abandoned concrete igloo rotting in the Alaskan wilderness.', history: 'Built in the 1970s as a hotel that never opened due to code violations. It now stands as a surreal, decaying shell against the mountains.', facts: ['Four stories tall', 'Popular stop for Aurora Borealis photographers', 'Completely hollow interior'], related: [] },
+      { id: 'birdcage', title: 'Bird Cage Theatre', state: 'AZ', region: 'Tombstone, AZ', category: 'historic', color: '#4a0e0e', desc: 'The "wickedest night spot" between New Orleans and San Francisco.', history: 'Site of 26 deaths and over 140 bullet holes in the walls. It served as a theater, saloon, and brothel during the silver boom.', facts: ['The world\'s longest poker game lasted 8 years here', 'Original stage curtains still intact', 'Frequent reports of phantom cigar smoke'], related: [] },
+      { id: 'eureka', title: 'Eureka Springs', state: 'AR', region: 'Carroll County, AR', category: 'historic', color: '#8a2be2', desc: 'A Victorian-era town built on healing springs and deep lore.', history: 'Founded in 1879, Eureka Springs was built around 60 natural cold-water springs believed to have healing powers. The entire city is listed on the National Register of Historic Places.', facts: ['No two streets intersect at a 90-degree angle', 'Underground tunnels and hidden levels', 'Victorian architecture preserved'], related: ['falk', 'crescent'] },
+      { id: 'queen-mary', title: 'The Queen Mary', state: 'CA', region: 'Long Beach, CA', category: 'haunted', color: '#002366', desc: 'A retired ocean liner with more spirits than staterooms.', history: 'Once a luxury liner and WWII troopship, the ship is now permanently docked. Stateroom B340 is so active it was once closed to the public.', facts: ['The "Grey Ghost" was its WWII nickname', 'First-class pool is a hotspot for sightings', 'Over 49 recorded deaths on board'], related: ['winchester'] },
+      { id: 'stanley', title: 'The Stanley Hotel', state: 'CO', region: 'Estes Park, CO', category: 'haunted', color: '#ffffff', desc: 'The mountain resort that gave Stephen King "The Shining."', history: 'Opened in 1909, this grand hotel is famous for its ghostly piano music and the spirit of its founder wandering the lobby.', facts: ['Room 217 is where King stayed', 'Features a real hedge maze', 'Phantom children on the 4th floor'], related: ['ufo-watchtower'] },
+      { id: 'union-cem', title: 'Union Cemetery', state: 'CT', region: 'Easton, CT', category: 'cemetery', color: '#2f4f4f', desc: 'Home to the famous "White Lady" of Easton.', history: 'One of the oldest and most haunted cemeteries in the US. The White Lady has been seen by off-duty police officers and captured on film.', facts: ['Dating back to the 1700s', 'The "Red Eyes" spirit stalks the woods', 'Documented by Ed and Lorraine Warren'], related: [] },
+      { id: 'fort-del', title: 'Fort Delaware', state: 'DE', region: 'Pea Patch Island, DE', category: 'historic', color: '#556b2f', desc: 'A Union fortress and prison for Confederate POWs.', history: 'Known as the "Andersonville of the North," thousands of prisoners died here from disease and starvation.', facts: ['Accessible only by ferry', 'Frequent EVP recordings', 'The "Dungeon" area is active'], related: [] },
+      { id: 'oct-house', title: 'The Octagon House', state: 'DC', region: 'Washington, DC', category: 'haunted', color: '#1a1a1a', desc: 'The haunted temporary White House of 1814.', history: 'After the British burned the White House, President Madison moved here. It is haunted by daughters of the original owner.', facts: ['The bells reportedly ring on their own', 'A phantom carpet is seen unrolling', 'Dolly Madison\'s spirit hosts parties'], related: [] },
+      { id: 'st-augustine', title: 'St. Augustine Lighthouse', state: 'FL', region: 'St. Augustine, FL', category: 'haunted', color: '#003366', desc: 'A historic beacon haunted by the "Girl in the Blue Velvet Dress."', history: 'Built in 1874, this lighthouse has seen shipwrecks and tragedies, including the drowning of the Pittee children.', facts: ['Pittee girls heard laughing on stairs', 'Shadowy figures in the lens room', 'Active paranormal site in the South'], related: [] },
+      { id: 'hamilton-inn', title: 'Hamilton-Turner Inn', state: 'GA', region: 'Savannah, GA', category: 'haunted', color: '#483d8b', desc: 'Savannah\'s most elegant haunted mansion.', history: 'Built in 1873, it was the first house in Savannah with electricity. Haunted by a cigar-smoking man on the roof.', facts: ['Inspired "Midnight in the Garden of Good and Evil"', 'Billiard balls heard rolling', 'Confederate soldier buried nearby'], related: [] },
+      { id: 'morgue-bar', title: 'Old Lahaina Morgue', state: 'HI', region: 'Lahaina, HI', category: 'historic', color: '#008080', desc: 'A former plantation morgue turned into a modern oddity.', history: 'Once serving the local sugar hospital, this site has been repurposed but keeps its eerie energy.', facts: ['Original cooling lockers preserved', 'Near historic banyan tree', 'Reports of cold spots in back rooms'], related: [] },
+      { id: 'old-idaho', title: 'Old Idaho Penitentiary', state: 'ID', region: 'Boise, ID', category: 'historic', color: '#333333', desc: 'A terrifying stone prison built by the inmates.', history: 'Housing criminals from 1872 to 1973, it saw riots and extreme solitary confinement.', facts: ['The "Gallows" room remains intact', 'Solitary cells called "The Coolers"', 'Execution site of Raymond Snowden'], related: [] },
+      { id: 'joliet', title: 'Old Joliet Prison', state: 'IL', region: 'Joliet, IL', category: 'historic', color: '#1c1c1c', desc: 'The limestone fortress that held the world\'s most infamous.', history: 'Opened in 1858, it held John Wayne Gacy and inspired the setting for "The Blues Brothers."', facts: ['Hand-carved limestone walls', 'Shadow figures in hospital wing', 'Massive Gothic gatehouse'], related: ['bachelors'] },
+      { id: 'story-inn', title: 'Story Inn', state: 'IN', region: 'Nashville, IN', category: 'haunted', color: '#5d4037', desc: 'A general store turned inn where the "Blue Lady" resides.', history: 'The Blue Lady (wife of the original owner) leaves the smell of gardenias in the air.', facts: ['Haunted room above the kitchen', 'Town population of 3', 'Blue lights in the rooms'], related: [] },
+      { id: 'villisca', title: 'Axe Murder House', state: 'IA', region: 'Villisca, IA', category: 'haunted', color: '#3b0000', desc: 'Site of a brutal 1912 unsolved mystery.', history: 'An entire family and guests were bludgeoned in 1912. No one was ever convicted.', facts: ['Axes found at scene', 'No electricity or running water', 'Overnight stays available'], related: [] },
+      { id: 'sallie', title: 'The Sallie House', state: 'KS', region: 'Atchison, KS', category: 'haunted', color: '#1a1a2e', desc: 'The home of a malevolent child spirit.', history: 'A young girl named Sallie died during a botched appendectomy. She is known for being aggressive toward men.', facts: ['Scratches and physical contact reported', 'Equipment often fails inside', 'Most haunted house in Kansas'], related: [] },
+      { id: 'waverly', title: 'Waverly Hills Sanatorium', state: 'KY', region: 'Louisville, KY', category: 'haunted', color: '#4b0082', desc: 'A Tudor Gothic monument with a "Body Chute."', history: 'Opened in 1910 to combat TB, this facility housed thousands. Regarded as one of the most haunted places.', facts: ['Features a 500ft Body Chute', 'Over 60,000 deaths recorded', 'Room 502 is active hotspot'], related: [] },
+      { id: 'myrtles', title: 'Myrtles Plantation', state: 'LA', region: 'St. Francisville, LA', category: 'haunted', color: '#004d00', desc: 'The "most haunted home in America."', history: 'An antebellum home with 10 recorded murders. Famous spirit Chloe reportedly poisoned the family.', facts: ['Haunted mirror holds spirits', 'Chloe seen in green turban', 'Ghostly children on veranda'], related: [] },
+      { id: 'mount-hope', title: 'Mount Hope Cemetery', state: 'ME', region: 'Bangor, ME', category: 'cemetery', color: '#4a4e4d', desc: 'The cemetery that inspired "Pet Sematary."', history: 'Second-oldest garden cemetery in the US. Stephen King filmed his cameo for the movie here.', facts: ['Civil War memorial on site', 'Victorian monuments', 'Final rest for Maine governors'], related: [] },
+      { id: 'poe-house', title: 'Edgar Allan Poe House', state: 'MD', region: 'Baltimore, MD', category: 'historic', color: '#000000', desc: 'The brick house where the master of macabre lived.', history: 'Poe lived here in the 1830s. His mysterious death in Baltimore makes this a literary center.', facts: ['Original woodwork remains', 'Near Poe\'s grave', 'Center of dark literary history'], related: [] },
+      { id: 'house-seven-gables', title: 'House of the Seven Gables', state: 'MA', region: 'Salem, MA', category: 'historic', color: '#2b2b2b', desc: 'The 1668 mansion that inspired Nathaniel Hawthorne.', history: 'Built by Captain John Turner, it features a secret staircase and a history of family misfortune.', facts: ['Hidden staircase in a closet', 'Phantom typing sounds', 'Oldest surviving timber-framed mansion'], related: [] },
+      { id: 'mackinac', title: 'Grand Hotel', state: 'MI', region: 'Mackinac Island, MI', category: 'haunted', color: '#ffffff', desc: 'The Victorian jewel with a dark side.', history: 'No cars allowed on the island. The hotel is haunted by a woman in a black Victorian dress.', facts: ['World\'s longest porch', 'The "Evil Entity" reported', 'Set for "Somewhere in Time"'], related: [] },
+      { id: 'anoka', title: 'Anoka Town Center', state: 'MN', region: 'Anoka, MN', category: 'historic', color: '#ff8c00', desc: 'The official "Halloween Capital of the World."', history: 'In 1920, Anoka hosted the first organized Halloween parade to stop pranks.', facts: ['Massive annual parades', 'Haunted downtown tours', 'Home to Ghostly Gala'], related: [] },
+      { id: 'kings-tavern', title: 'King\'s Tavern', state: 'MS', region: 'Natchez, MS', category: 'haunted', color: '#5d4037', desc: 'The oldest building in the Mississippi Territory.', history: 'Built in 1789, three skeletons were found behind a wall during renovations.', facts: ['Jeweled dagger found with skeletons', 'Madeline spirit seen in mirrors', 'Original brick and timber'], related: [] },
+      { id: 'elms-hotel', title: 'The Elms Hotel', state: 'MO', region: 'Excelsior Springs, MO', category: 'haunted', color: '#2c3e50', desc: 'A luxury spa with a history of fires and ghosts.', history: 'Twice destroyed by fire, it was a favorite of Al Capone. Haunted by a gambler.', facts: ['Capone\'s secret tunnels', 'Lap pool is hotspot', 'Featured on Ghost Hunters'], related: [] },
+      { id: 'va-city', title: 'Virginia City', state: 'MT', region: 'Virginia City, MT', category: 'historic', color: '#704214', desc: 'A perfectly preserved Victorian ghost town.', history: 'Once the capital of Montana Territory, it was a gold rush boomtown.', facts: ['Hangman\'s Building stands', 'Sightings of a black-robed nun', 'National Historic Landmark'], related: [] },
+      { id: 'ball-statue', title: 'The Weeping Statue', state: 'NE', region: 'Auburn, NE', category: 'cemetery', color: '#4b4b4b', desc: 'A bronze monument that reportedly cries blood.', history: 'A memorial for a local family. Legend says it "weeps" on the anniversary of the tragedy.', facts: ['Eyewitness reports of bloody tears', 'Unique patina over eyes', 'Central spot for local legends'], related: [] },
+      { id: 'goldfield', title: 'Goldfield Hotel', state: 'NV', region: 'Goldfield, NV', category: 'haunted', color: '#221a0f', desc: 'A desert monument to greed and tragedy.', history: 'Haunted by Elizabeth, a woman chained to a radiator by the owner.', facts: ['Room 109 Elizabeth Room', 'A "Portal to Hell"', 'Basement Stabber entity'], related: [] },
+      { id: 'chase-house', title: 'The Chase House', state: 'NH', region: 'Portsmouth, NH', category: 'haunted', color: '#1c2833', desc: 'The orphanage where a young girl never left.', history: 'Once an orphanage, it is haunted by a girl who committed suicide in the attic.', facts: ['Screams heard from attic', 'Girl seen on stairs', 'Cold spots in hallways'], related: [] },
+      { id: 'pine-barrens', title: 'The Pine Barrens', state: 'NJ', region: 'Southern NJ', category: 'cryptid', color: '#002200', desc: 'Home of the legendary Jersey Devil.', history: 'Legend says the 13th child of Mother Leeds was born a monster in 1735.', facts: ['Thousands of sightings', 'Jersey Devil legend', 'Dense forest hotspots'], related: [] },
+      { id: 'ufo-museum', title: 'UFO Museum', state: 'NM', region: 'Roswell, NM', category: 'alien', color: '#c0c0c0', desc: 'The global center for the 1947 crash mystery.', history: 'Located in an old theater, it documents the Roswell Incident and cover-up.', facts: ['Alien animatronics', 'Original 1947 affidavits', 'Famous UFO destination'], related: [] },
+      { id: 'sleepy-hollow', title: 'Sleepy Hollow', state: 'NY', region: 'Sleepy Hollow, NY', category: 'historic', color: '#2e1a47', desc: 'The home of the Headless Horseman.', history: 'Setting for Washington Irving\'s story. Old Dutch Church is a real location.', facts: ['Bronze Lady cries', 'Irving buried in cemetery', 'Horseman appearances in October'], related: [] },
+      { id: 'biltmore', title: 'Biltmore Estate', state: 'NC', region: 'Asheville, NC', category: 'historic', color: '#ffffff', desc: 'America\'s largest home, haunted by Vanderbilts.', history: 'Completed in 1895. George Vanderbilt\'s spirit is still seen in the library.', facts: ['250 rooms', 'Hidden swimming pool', 'Ghostly parties heard'], related: [] },
+      { id: 'custer-house', title: 'Custer House', state: 'ND', region: 'Fort Abraham Lincoln, ND', category: 'haunted', color: '#5d4037', desc: 'Home where Libby Custer waited for her husband.', history: 'The spirit of Libby Custer is seen in a black mourning dress, looking for the General.', facts: ['Footsteps on 2nd floor', 'Doors open on their own', 'Reconstructed 1874 mansion'], related: [] },
+      { id: 'loveland', title: 'Loveland Castle', state: 'OH', region: 'Loveland, OH', category: 'historic', color: '#708090', desc: 'A handmade medieval castle in the heart of Ohio.', history: 'Built stone-by-stone by Harry Andrews using river rocks.', facts: ['Harry\'s spirit in Knights room', 'White Lady on riverbank', 'Medieval weaponry collection'], related: [] },
+      { id: 'skirvin', title: 'Skirvin Hotel', state: 'OK', region: 'Oklahoma City, OK', category: 'haunted', color: '#ffffff', desc: 'The hotel that haunts visiting NBA teams.', history: 'Famous for Effie, a maid who reportedly jumped from the 10th floor.', facts: ['NBA stars refuse to stay', 'Crying babies heard', 'Most haunted hotel in South'], related: [] },
+      { id: 'oregon-vortex', title: 'Oregon Vortex', state: 'OR', region: 'Gold Hill, OR', category: 'historic', color: '#228b22', desc: 'A place where gravity and perspective fail.', history: 'An "Old House of Mystery" where people appear to shrink or grow.', facts: ['"Forbidden Ground"', 'Vortex 165 feet wide', 'Balls roll uphill'], related: [] },
+      { id: 'eastern-state', title: 'Eastern State Pen', state: 'PA', region: 'Philadelphia, PA', category: 'historic', color: '#1a1a1a', desc: 'The fortress of solitary confinement.', history: 'The world\'s first true penitentiary. Al Capone stayed here.', facts: ['Capone\'s cell', 'Shadow figures block 12', 'Gothic dread architecture'], related: ['mutter'] },
+      { id: 'graduate', title: 'The Graduate Hotel', state: 'RI', region: 'Providence, RI', category: 'haunted', color: '#ffffff', desc: 'A classic hotel with phantom guests.', history: 'Once the Biltmore, it was a hub for high society and mobsters.', facts: ['Elevator stops unexplained', 'Phantom top-floor parties', 'H.P. Lovecraft setting'], related: [] },
+      { id: 'old-jail', title: 'Old Charleston Jail', state: 'SC', region: 'Charleston, SC', category: 'historic', color: '#2f4f4f', desc: 'Home of America\'s first female serial killer.', history: 'Lavinia Fisher was held here. The jail saw thousands of deaths.', facts: ['Lavinia in wedding dress', 'Dungeon activity', 'Most haunted in Charleston'], related: [] },
+      { id: 'mount-rushmore', title: 'Rushmore Secret Vault', state: 'SD', region: 'Keystone, SD', category: 'historic', color: '#b2beb5', desc: 'A hidden hall of records behind the faces.', history: 'Borglum began carving a hall behind Lincoln\'s head to store documents.', facts: ['Not accessible to public', 'Porcelain panels of Constitution', '20-foot tall doorway'], related: [] },
+      { id: 'bell-witch', title: 'Bell Witch Cave', state: 'TN', region: 'Adams, TN', category: 'cryptid', color: '#221a0f', desc: 'The entity that haunted a President.', history: 'The Bell Witch is the only spirit credited with killing a person in US history.', facts: ['Cave on original farm', 'Phantom animals', 'Haunted Andrew Jackson'], related: [] },
+      { id: 'alamo', title: 'The Alamo', state: 'TX', region: 'San Antonio, TX', category: 'historic', color: '#8b4513', desc: 'A former mission stained by a famous last stand.', history: 'Site of the 1836 battle. Workers reported ghostly sentries guarding the walls.', facts: ['Alamo Sentries sightings', 'Thermal anomalies in basement', 'Footsteps in Long Barrack'], related: [] },
+      { id: 'rio-grande', title: 'Rio Grande Depot', state: 'UT', region: 'Salt Lake City, UT', category: 'haunted', color: '#4b0082', desc: 'Station where the "Purple Lady" waits.', history: 'A woman in a purple dress killed by a train while retrieving a ring.', facts: ['Singing in restrooms', 'Purple mist on camera', 'Utah Historical Society home'], related: [] },
+      { id: 'shelburne', title: 'Shelburne Museum', state: 'VT', region: 'Shelburne, VT', category: 'historic', color: '#8b4513', desc: 'A village with a haunted steamship.', history: 'Reconstructed General Store and the SS Ticonderoga steamboat.', facts: ['Unique Round Barn', 'Phantom ship crew', 'Circus oddities'], related: [] },
+      { id: 'aquia', title: 'Aquia Church', state: 'VA', region: 'Stafford, VA', category: 'cemetery', color: '#1a1a1a', desc: 'A colonial church with a "Black Flash."', history: 'Built in 1757, haunted by a woman murdered in the belfry.', facts: ['Civil War bullet holes', 'Ghost in white dress', 'Belfry activity'], related: [] },
+      { id: 'star-man', title: 'Star Man of Seattle', state: 'WA', region: 'Seattle, WA', category: 'alien', color: '#00ffff', desc: 'A futuristic monument to mystery.', history: 'Space Needle hub for local MIB legends and UFO sightings.', facts: ['First MIB report nearby', 'Needle UFO sightings', 'Underground City haunted'], related: [] },
+      { id: 'trans-allegheny', title: 'Trans-Allegheny Asylum', state: 'WV', region: 'Weston, WV', category: 'haunted', color: '#1a1a1a', desc: 'Stone fortress for the "incurably insane."', history: 'Held 2,400 people at peak. Horrific conditions left hundreds of spirits.', facts: ['Lily child spirit', 'Civil War wing soldiers', 'Hand-cut stone'], related: ['mothman'] },
+      { id: 'pfister', title: 'The Pfister Hotel', state: 'WI', region: 'Milwaukee, WI', category: 'haunted', color: '#ffffff', desc: 'The hotel that scares MLB players.', history: 'Charles Pfister is said to walk halls to ensure guest happiness.', facts: ['MLB stars check out early', 'Furniture moving reports', 'Ballroom footsteps'], related: [] },
+      { id: 'old-pen-wy', title: 'Wyoming State Pen', state: 'WY', region: 'Rawlins, WY', category: 'historic', color: '#333333', desc: 'Where justice was cold and hard.', history: 'Used from 1901 to 1981, it saw many executions in the "Death House."', facts: ['Pie-in-the-Sky gallows', 'Julius laundry room spirit', 'Inmate painted murals'], related: [] }
     ];
 
     let currentCat = 'all';
@@ -194,12 +229,12 @@
                 const rel = trips.find(t => t.id === relId);
                 if (!rel) return '';
                 return `
-                  <button onclick="openModal('${rel.id}')" class="w-full p-5 bg-white/5 border border-white/10 rounded-2xl text-left hover:bg-white/10 transition flex justify-between items-center">
+                  <button onclick="openModal('${rel.id}')" class="w-full p-5 bg-white/5 border border-white/10 rounded-2xl text-left hover:bg-white/10 transition flex justify-between items-center group">
                     <div>
-                      <p class="text-white font-bold">${rel.title}</p>
+                      <p class="text-white font-bold uppercase text-xs">${rel.title}</p>
                       <p class="text-[10px] text-zinc-500 uppercase tracking-widest">${rel.region}</p>
                     </div>
-                    <i data-lucide="arrow-right" class="w-4 h-4 text-purple-500"></i>
+                    <i data-lucide="arrow-right" class="w-4 h-4 text-purple-500 group-hover:translate-x-1 transition"></i>
                   </button>`;
               }).join('')}
             </div>
@@ -215,21 +250,21 @@
               <i data-lucide="map-pin" class="w-4 h-4"></i>
               <span class="text-xs font-bold uppercase tracking-widest">${item.region}</span>
           </div>
-          <p class="text-zinc-300 text-lg leading-relaxed border-l-2 border-purple-600/30 pl-6">${item.desc}</p>
+          <p class="text-zinc-300 text-xl leading-relaxed border-l-2 border-purple-600/30 pl-6">${item.desc}</p>
         </div>
         <div>
-          <h3 class="text-purple-500 font-bold text-2xl mb-4 uppercase tracking-tighter">History & Lore</h3>
-          <p class="text-zinc-400 leading-relaxed text-md">${item.history || 'Information pending.'}</p>
+          <h3 class="text-purple-500 font-black text-2xl mb-4 uppercase tracking-tighter">History & Lore</h3>
+          <p class="text-zinc-400 leading-relaxed text-lg">${item.history || 'Information pending.'}</p>
         </div>
-        <div>
-          <h3 class="text-purple-500 font-bold text-2xl mb-6 uppercase tracking-tighter">Key Facts</h3>
+        <div class="bg-white/[0.02] border border-white/5 p-8 rounded-[2rem]">
+          <h3 class="text-purple-500 font-black text-xs mb-6 uppercase tracking-widest">Key Facts</h3>
           <ul class="space-y-4">
-            ${item.facts ? item.facts.map(fact => `
+            ${item.facts.map(fact => `
               <li class="flex items-start gap-3 text-zinc-300">
-                <i data-lucide="star" class="w-5 h-5 text-purple-500 mt-1 shrink-0"></i>
+                <i data-lucide="star" class="w-5 h-5 text-purple-600 mt-1 shrink-0"></i>
                 <span class="text-md font-medium leading-tight">${fact}</span>
               </li>
-            `).join('') : ''}
+            `).join('')}
           </ul>
         </div>
         ${relatedHtml}
@@ -240,7 +275,7 @@
     }
 
     function renderFeatured() {
-      const featured = trips[0];
+      const featured = trips[3]; // Eureka Springs as featured
       document.getElementById('featured-card').innerHTML = `
         <div onclick="openModal('${featured.id}')" class="flex flex-col md:flex-row w-full group">
           <div class="w-full md:w-2/5 min-h-[350px] flex items-center justify-center border-r border-white/5" style="background: linear-gradient(135deg, ${featured.color}, #12121a)">
@@ -332,7 +367,7 @@
              <h3 class="text-2xl font-black text-white leading-tight uppercase">${item.title}</h3>
              <div class="flex items-center gap-1.5 mt-2 mb-4 text-purple-500">
                 <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
-                <span class="text-[11px] font-bold uppercase tracking-widest uppercase">${item.region}</span>
+                <span class="text-[11px] font-bold uppercase tracking-widest">${item.region}</span>
              </div>
            `;
            card.onclick = () => openModal(item.id);
