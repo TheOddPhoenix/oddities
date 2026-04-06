@@ -120,10 +120,50 @@
   <script>
     // DATA
     const trips = [
-      { id: 'eureka', title: 'Eureka Springs, Arkansas', region: 'Carroll County, AR', category: 'historic', color: '#8a2be2', desc: 'Built into the Ozark Mountains during the 1880s silver boom. Locals report Victorian figures in the streets.', history: 'Emerged during the 1880s silver boom. The town pivoted to tourism to survive economic collapse.', funFacts: ['Built on steep Ozark hillsides', 'Victorian architecture preserved'] },
-      { id: 'waverly', title: 'Waverly Hills Sanatorium', region: 'Louisville, KY', category: 'haunted', color: '#4b0082', desc: 'America\'s most haunted place. The "body chute" was used for discreet corpse removals.', history: 'Opened 1910. Over 60,000 deaths. Noted for extreme activity in Room 502.', funFacts: ['Over 60k deaths', 'Shadow figures reported'] },
-      { id: 'san-luis', title: 'San Luis Valley, Colorado', region: 'South-Central CO', category: 'alien', color: '#006400', desc: 'Global UFO hotspot. Indigenous peoples reported "sky beings" for centuries.', history: 'Located on dimensional weak points. UFO activity spiked in the 1950s.', funFacts: ['Ley line intersection', 'Cattle mutilations'] },
-      { id: 'villisca', title: 'Villisca Axe Murder House', region: 'Villisca, IA', category: 'cemetery', color: '#310000', desc: '1912 mass murder site. The killer covered all mirrors and windows.', history: 'Eight people killed in their sleep. The perpetrator was never found.', funFacts: ['Mirrors were covered', 'Active paranormal site'] }
+      { 
+        id: 'eureka', 
+        title: 'Eureka Springs, Arkansas', 
+        region: 'Carroll County, AR', 
+        type: 'Historic Victorian Town',
+        category: 'historic', 
+        color: '#8a2be2', 
+        desc: 'Tucked away in the Ozark Mountains, Eureka Springs is a town that time forgot—and the spirits remembered. Built entirely of local limestone and perched on steep, winding hillsides, this Victorian-era "Little Switzerland" was founded on the promise of healing spring waters, but its history is layered with silver boom-town greed, medical scandals, and enduring hauntings.', 
+        history: 'Founded in 1879, the city exploded in population as thousands flocked to its "miraculous" springs. By the early 1900s, it became a playground for the wealthy and a hideout for outlaws. Most notably, the Crescent Hotel served as a fraudulent cancer hospital in the 1930s under Norman Baker, leaving behind a legacy of pain that many believe fuels the town\'s intense paranormal activity today.', 
+        funFacts: ['No two streets intersect at a 90-degree angle', 'The entire downtown is on the National Register of Historic Places', 'Home to the "underground" city of old storefronts', 'Site of the infamous Norman Baker medical scandal']
+      },
+      { 
+        id: 'waverly', 
+        title: 'Waverly Hills Sanatorium', 
+        region: 'Louisville, KY', 
+        type: 'Abandoned Medical Site',
+        category: 'haunted', 
+        color: '#4b0082', 
+        desc: 'Regarded as one of the most haunted locations on Earth, Waverly Hills stands as a massive, Tudor Gothic monument to a dark era of American medicine. Once a world-class facility for tuberculosis patients, the sheer volume of death within these walls has left an imprint that attracts paranormal investigators from across the globe.', 
+        history: 'Opened in 1910 to combat the "White Plague" (Tuberculosis), the sanatorium saw thousands of deaths before the discovery of antibiotics. The infamous "Body Chute"—a 500-foot tunnel used to discreetly transport the deceased to the bottom of the hill—remains a focal point of shadow-person sightings. Room 502 is particularly notorious for the tragic stories of two nurses who died there.', 
+        funFacts: ['Estimated 63,000 deaths occurred on site', 'The "Body Chute" was designed to keep patient morale up', 'Shadow people are frequently caught on camera in the hallways', 'The massive building has its own distinct micro-climate']
+      },
+      { 
+        id: 'san-luis', 
+        title: 'San Luis Valley, Colorado', 
+        region: 'South-Central CO', 
+        type: 'High-Altitude Anomaly',
+        category: 'alien', 
+        color: '#006400', 
+        desc: 'The San Luis Valley is one of North America\'s most active UFO and paranormal hotspots. Located between the San Juan Mountains and the Sangre de Cristo Mountains, this remote high-altitude valley has been the epicenter of unexplained phenomena for decades. Residents report mysterious aircraft with impossible flight characteristics and orbs of light moving silently through the sky.', 
+        history: 'The valley has been a center of paranormal activity since pre-Columbian times. Indigenous peoples reported seeing "sky beings" for centuries. UFO activity intensified in the 1950s, and the valley gained international attention in the 1970s when researchers began documenting consistent phenomena, including cattle mutilations with no conventional explanation.', 
+        funFacts: ['Hundreds of UFO sightings reported annually', 'The valley sits at 7,500+ feet elevation', 'Cattle mutilations occur periodically throughout the valley', 'The "Gunnison Creature" is reported as a regional cryptid', 'Indigenous peoples reported "sky beings" for centuries', 'Modern UFO activity intensified in the 1950s', 'The valley may sit on major ley line junctions', 'Paranormal investigators believe it\'s a dimensional weak point', 'The landscape feels otherworldly and untouched', 'The valley remains one of North America\'s most active paranormal zones']
+      },
+      { 
+        id: 'villisca', 
+        title: 'Villisca Axe Murder House', 
+        region: 'Villisca, IA', 
+        type: 'Unsolved Crime Site',
+        category: 'cemetery', 
+        color: '#310000', 
+        desc: 'In a quiet Iowa town, a modest white house stands as the site of one of the most brutal unsolved mass murders in American history. On a dark night in 1912, an entire family and two guests were bludgeoned in their sleep, leaving a stain on the community that has never faded.', 
+        history: 'On June 10, 1912, Josiah and Sarah Moore, their four children, and two overnight guests were discovered dead. The killer had used Josiah\'s own axe. Despite multiple suspects and two trials, no one was ever convicted. Today, the house is preserved exactly as it was, and visitors report cold spots, moving objects, and the sound of children sobbing in the attic.', 
+        funFacts: ['The killer covered all mirrors and windows with cloth', 'A slab of bacon was found wrapped in a towel near the axe', 'No money or valuables were taken from the home', 'Voted one of the most haunted houses in the Midwest']
+      }
     ];
 
     let likedTrips = new Set();
