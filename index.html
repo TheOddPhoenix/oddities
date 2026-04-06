@@ -456,7 +456,7 @@
       lucide.createIcons();
     }
 
-    function renderGrid(data = null) {
+function renderGrid(data = null) {
       if (typeof trips === 'undefined') return;
       const sourceData = data || trips;
       const grid = document.getElementById('trip-grid');
@@ -476,6 +476,10 @@
         
         const card = document.createElement('div');
         card.className = 'attraction-card rounded-[2.5rem] p-8 cursor-pointer relative group';
+        
+        // THIS MAKES THE ENTIRE CARD CLICKABLE
+        card.onclick = () => openModal(item.id);
+        
         card.innerHTML = `
           <div class="h-48 rounded-2xl mb-6 flex items-center justify-center overflow-hidden bg-zinc-900 relative">
             <button onclick="event.stopPropagation(); openSaveMenu('${item.id}')" class="absolute top-4 right-4 z-10 p-3 bg-black/40 backdrop-blur-md rounded-xl border border-white/10 text-white hover:bg-purple-600 hover:text-white transition-all">
@@ -487,7 +491,7 @@
               <span class="text-[10px] font-bold text-white/30 uppercase tracking-widest">Photo Coming</span>
             </div>
           </div>
-          <div class="text-left" onclick="openModal('${item.id}')">
+          <div class="text-left">
             <h3 class="text-2xl font-black text-white leading-tight uppercase">${item.title}</h3>
             <div class="flex items-center gap-1.5 mt-2 mb-4 text-purple-500">
                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
