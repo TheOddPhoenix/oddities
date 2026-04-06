@@ -43,7 +43,7 @@
       </div>
     </nav>
 
-    <header class="relative py-24 px-6 overflow-hidden">
+    <header class="relative py-18 px-6 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-b from-[#1a0a2a] via-[#12121a] to-[#12121a] opacity-80"></div>
       <div class="relative z-10 max-w-6xl mx-auto text-left">
         <h1 class="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[0.9] text-[#f5f0e8]">Explore the Strange,<br>the Mysterious,<br>the Unforgettable</h1>
@@ -55,13 +55,11 @@
       </div>
     </header>
 
-    <section class="max-w-6xl mx-auto px-6 mb-24">
-      <div class="flex items-center gap-3 mb-8 text-left">
-        <i data-lucide="skull" class="text-purple-600 w-8 h-8 skull-spin"></i>
-        <div class="flex flex-col">
-          <span class="text-purple-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">THIS WEEK</span>
-          <h2 class="text-2xl font-black text-left">Oddity of the Week</h2>
-        </div>
+    <section class="max-w-6xl mx-auto px-6 mb-18">
+      <div class="flex items-center gap-4 mb-8 text-left">
+  <i data-lucide="skull" class="text-purple-600 w-10 h-10 skull-spin"></i>
+  <h2 class="text-4xl font-black text-left leading-none tracking-tighter">Oddity of the Week</h2>
+</div>
       </div>
       <div id="featured-card" class="bg-[#1e1e28] rounded-[2.5rem] border border-purple-900/30 flex flex-col md:flex-row cursor-pointer transition-all hover:bg-[#252533] overflow-hidden">
         </div>
@@ -73,7 +71,7 @@
           <i data-lucide="skull" class="text-purple-600 w-10 h-10 skull-spin"></i>
           <div class="flex flex-col">
             <span class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">EXPLORE</span>
-            <h2 class="text-4xl font-black leading-none text-left">Discover Oddities</h2>
+            <h2 class="text-4xl font-black leading-none text-left tracking-tighter">Discover Oddities</h2>
           </div>
         </div>
 
@@ -420,29 +418,36 @@ document.getElementById('search-input').oninput = (e) => {
     };
  </script>
 
-  <footer class="mt-20 py-12 border-t border-white/5 bg-black/40">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-        <div class="text-left">
-          <p class="text-purple-500 text-xs font-black uppercase tracking-[0.2em] mb-2">Odd Phoenix LLC</p>
-          <p class="text-zinc-600 text-[10px] leading-relaxed">
-            © 2026 Odd Phoenix LLC. All rights reserved.<br>
-            Designed for private field testing phase 01.
-          </p>
+<footer class="mt-20 py-12 border-t border-white/5 bg-black/40">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      
+      <div class="text-left">
+        <div class="flex items-center gap-2 mb-2">
+          <i data-lucide="skull" class="text-purple-600 w-5 h-5"></i>
+          <span class="text-xl font-black tracking-tighter text-purple-500">ODDITIES</span>
         </div>
-        <div class="flex flex-wrap gap-x-8 gap-y-4 text-zinc-500 text-[10px] font-bold uppercase tracking-widest">
-          <a href="#" class="hover:text-purple-400 transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-purple-400 transition-colors">Terms of Service</a>
-          <a href="#" class="hover:text-purple-400 transition-colors">Contact Agent</a>
-        </div>
-      </div>
-      <div class="mt-10 pt-6 border-t border-white/[0.02]">
-        <p class="text-[9px] text-zinc-800 font-bold uppercase tracking-[0.3em] text-center">
-          Unauthorized access to lore files is strictly prohibited.
+        
+        <p class="text-zinc-600 text-[10px] leading-relaxed">
+          © 2026 Odd Phoenix LLC. All rights reserved.<br>
+          Designed for private field testing phase 01.
         </p>
       </div>
+      
+      <div class="flex flex-wrap gap-x-8 gap-y-4 text-zinc-500 text-[10px] font-bold uppercase tracking-widest">
+        <a href="#" class="hover:text-purple-400 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-purple-400 transition-colors">Terms of Service</a>
+        <a href="#" class="hover:text-purple-400 transition-colors">Contact Agent</a>
+      </div>
     </div>
-  </footer>
+
+    <div class="mt-10 pt-6 border-t border-white/[0.02]">
+      <p class="text-[9px] text-zinc-800 font-bold uppercase tracking-[0.3em] text-center">
+        Unauthorized access to lore files is strictly prohibited.
+      </p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
