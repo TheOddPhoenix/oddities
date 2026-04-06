@@ -185,25 +185,61 @@ function toggleSave(id) {
       lucide.createIcons();
     }
 
-    function openModal(item) {
+function openModal(item) {
       document.getElementById('modal-title').textContent = item.title;
       document.getElementById('modal-map-link').href = `http://googleusercontent.com/maps.google.com/search?q=${encodeURIComponent(item.title)}`;
+      
       document.getElementById('modal-content').innerHTML = `
-        <div class="w-full h-64 rounded-3xl mb-10 flex items-center justify-center" style="background: linear-gradient(135deg, ${item.color}, #1e1e28)">
-          <i data-lucide="image" class="w-12 h-12 text-white/10"></i>
+        <div class="w-full h-64 rounded-3xl mb-6 flex items-center justify-center shadow-inner" style="background: linear-gradient(135deg, ${item.color}, #1e1e28)">
+          <div class="flex flex-col items-center gap-2">
+            <i data-lucide="camera-off" class="w-12 h-12 text-white/10"></i>
+            <span class="text-[10px] font-bold text-white/20 uppercase tracking-widest">Photo Coming Soon</span>
+          </div>
         </div>
-        <p class="text-zinc-300 text-lg leading-relaxed mb-8">${item.desc}</p>
-        <div class="bg-black/30 p-8 rounded-[2rem] border border-white/5 mb-8">
-          <h4 class="text-purple-500 font-bold uppercase text-xs mb-4 tracking-widest text-left">History</h4>
-          <p class="text-zinc-400 text-sm leading-relaxed text-left">${item.history}</p>
+
+        <div class="flex flex-wrap gap-6 mb-8 text-zinc-500">
+          <div class="flex items-center gap-2 text-xs">
+            <i data-lucide="map-pin" class="w-4 h-4 text-purple-600"></i>
+            <span>${item.region}</span>
+          </div>
+          <div class="flex items-center gap-2 text-xs">
+            <i data-lucide="info" class="w-4 h-4 text-purple-600"></i>
+            <span>${item.type || 'Oddity'}</span>
+          </div>
+          <div class="flex items-center gap-2 text-xs">
+            <i data-lucide="compass" class="w-4 h-4 text-purple-600"></i>
+            <span>Multiple Sites</span>
+          </div>
         </div>
-        <div>
-          <h4 class="text-purple-500 font-bold uppercase text-xs mb-4 tracking-widest text-left">Key Facts</h4>
-          <ul class="space-y-3 text-sm text-zinc-400 text-left">
-            ${item.funFacts ? item.funFacts.map(f => `<li class="flex gap-3"><i data-lucide="star" class="w-4 h-4 text-purple-600 flex-shrink-0"></i>${f}</li>`).join('') : '<li>Facts coming soon</li>'}
+
+        <p class="text-zinc-300 text-lg leading-relaxed mb-10">${item.desc}</p>
+        
+        <div class="mb-10">
+          <h4 class="text-purple-500 font-bold uppercase text-sm mb-4 tracking-widest">History</h4>
+          <p class="text-zinc-400 text-sm leading-relaxed">${item.history}</p>
+        </div>
+
+        <div class="mb-10">
+          <h4 class="text-purple-500 font-bold uppercase text-sm mb-6 tracking-widest">Key Facts</h4>
+          <ul class="space-y-4">
+            ${item.funFacts ? item.funFacts.map(fact => `
+              <li class="flex gap-4 items-start text-sm text-zinc-300">
+                <i data-lucide="star" class="w-5 h-5 text-purple-600 flex-shrink-0"></i>
+                <span>${fact}</span>
+              </li>
+            `).join('') : '<li class="italic text-zinc-600">Gathering more facts...</li>'}
           </ul>
         </div>
+
+        <div class="mt-12">
+          <h4 class="text-purple-500 font-bold uppercase text-sm mb-4 tracking-widest">Related Locations</h4>
+          <div class="bg-white/5 border border-white/10 rounded-3xl p-6">
+             <h5 class="font-bold text-white mb-1">The Devil's Promenade, Oklahoma/Texas</h5>
+             <p class="text-xs text-zinc-500">Border region</p>
+          </div>
+        </div>
       `;
+      
       document.getElementById('detail-modal').classList.remove('hidden');
       lucide.createIcons();
     }
