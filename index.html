@@ -15,17 +15,19 @@
     .skull-spin { animation: skullBounce 3s ease-in-out infinite; }
     @keyframes skullBounce { 0%, 100% { transform: translateY(0) rotate(-5deg); } 50% { transform: translateY(-8px) rotate(5deg); } }
     .scroll-container::-webkit-scrollbar { display: none; }
-    /* Active State for Buttons */
-    .filter-btn.active { background-color: #9333ea !important; color: white !important; border-color: #9333ea !important; }
+    
+    /* Fixed: Buttons stay purple when active */
+    .filter-btn.active { background-color: #9333ea !important; color: white !important; border-color: transparent !important; }
+    
     /* Custom Toast Notification */
-    #toast { visibility: hidden; min-width: 250px; background-color: #8a2be2; color: #fff; text-align: center; border-radius: 12px; padding: 16px; position: fixed; z-index: 1000; right: 30px; bottom: 30px; font-weight: bold; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+    #toast { visibility: hidden; min-width: 280px; background-color: #8a2be2; color: #fff; text-align: center; border-radius: 16px; padding: 20px; position: fixed; z-index: 1000; right: 30px; bottom: 30px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); }
     #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
     @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
     @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
   </style>
 </head>
 <body class="h-full">
-  <div id="toast">Account creation coming soon!</div>
+  <div id="toast">Coming Soon</div>
 
   <div id="app" class="app-wrapper h-full w-full overflow-auto">
     <nav class="border-b border-purple-900/20 bg-[#12121a]">
@@ -34,7 +36,7 @@
           <div class="skull-spin"><i data-lucide="skull" class="text-purple-600 w-8 h-8"></i></div>
           <span class="text-2xl font-black tracking-tighter">ODDITIES</span>
         </div>
-        <button onclick="showToast()" class="flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold bg-[#8a2be2] text-[#12121a] uppercase tracking-wider transition hover:scale-105">
+        <button onclick="showToast('Account creation coming soon')" class="flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold bg-[#8a2be2] text-[#12121a] uppercase tracking-wider transition hover:scale-105">
           <i data-lucide="user" class="w-4 h-4"></i> <span>My Account</span>
         </button>
       </div>
@@ -47,7 +49,7 @@
         <p class="text-xl text-zinc-400 mb-10 font-light leading-relaxed max-w-2xl">Uncover forgotten histories, cryptid hotspots, and urban legends that defy explanation. Real records. Real mysteries.</p>
         <div class="flex flex-wrap gap-4">
           <button onclick="document.getElementById('grid-section').scrollIntoView({behavior: 'smooth'})" class="bg-purple-600 text-[#12121a] px-8 py-4 rounded-xl font-bold uppercase text-xs tracking-widest hover:scale-105 transition">Explore Locations</button>
-          <button onclick="showToast()" class="bg-white/5 border border-white/10 text-white px-8 py-4 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-white/10 transition">Start a Bucket List</button>
+          <button onclick="showToast('Bucket list coming soon')" class="bg-white/5 border border-white/10 text-white px-8 py-4 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-white/10 transition">Start a Bucket List</button>
         </div>
       </div>
     </header>
@@ -57,51 +59,92 @@
         <i data-lucide="skull" class="text-purple-600 w-10 h-10 skull-spin"></i>
         <div class="flex flex-col">
           <span class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">THIS WEEK</span>
-          <h2 class="text-4xl font-black leading-none text-left tracking-tighter text-[#f5f0e8]">Featured Oddity</h2>
+          <h2 class="text-4xl font-black leading-none text-left tracking-tighter">Featured Oddity</h2>
         </div>
       </div>
-      <div id="featured-card" class="bg-[#1e1e28] rounded-[2.5rem] border border-purple-900/30 overflow-hidden cursor-pointer">
+      <div id="featured-card" class="bg-[#1e1e28] rounded-[2.5rem] border border-purple-900/30 overflow-hidden cursor-pointer transition-all hover:bg-[#23232e]">
       </div>
     </section>
 
-    <section id="grid-section" class="max-w-6xl mx-auto px-6 pb-32 mt-20">
+    <section id="grid-section" class="max-w-6xl mx-auto px-6 pb-20 mt-20">
       <div class="flex flex-col gap-8 mb-12">
         <div class="flex items-center gap-3 text-left">
           <i data-lucide="skull" class="text-purple-600 w-10 h-10 skull-spin"></i>
           <div class="flex flex-col">
             <span class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">EXPLORE</span>
-            <h2 class="text-4xl font-black leading-none text-left tracking-tighter text-[#f5f0e8]">Discover Oddities</h2>
+            <h2 class="text-4xl font-black leading-none text-left tracking-tighter">Discover Oddities</h2>
           </div>
         </div>
 
-        <div class="flex flex-col lg:flex-row gap-4 items-center justify-between bg-white/5 p-5 rounded-[2.5rem] border border-white/5">
-          <div class="flex gap-2 overflow-x-auto scroll-container w-full lg:w-auto">
-            <button class="filter-btn active px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap bg-white/5 text-zinc-500" data-filter="all">All</button>
-            <button class="filter-btn px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap bg-white/5 text-zinc-500" data-filter="haunted">Haunted</button>
-            <button class="filter-btn px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap bg-white/5 text-zinc-500" data-filter="cryptid">Cryptid</button>
-            <button class="filter-btn px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap bg-white/5 text-zinc-500" data-filter="historic">Historic</button>
+        <div class="flex flex-col lg:flex-row gap-4 items-center justify-between bg-white/5 p-4 rounded-[2.5rem] border border-white/5">
+          <div class="flex gap-2 overflow-x-auto scroll-container w-full lg:w-auto p-1">
+            <button class="filter-btn active bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest whitespace-nowrap transition" data-filter="all">All</button>
+            <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest whitespace-nowrap transition" data-filter="haunted">Haunted</button>
+            <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest whitespace-nowrap transition" data-filter="cryptid">Cryptid</button>
+            <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest whitespace-nowrap transition" data-filter="historic">Historic</button>
+            <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest whitespace-nowrap transition" data-filter="cemetery">Cemetery</button>
           </div>
           
-          <div class="flex gap-2 w-full lg:w-auto">
-            <select id="state-filter" class="bg-[#12121a] border border-white/10 rounded-full py-2.5 px-6 text-xs font-bold text-white uppercase tracking-widest focus:outline-none focus:border-purple-500 cursor-pointer">
+          <div class="flex gap-3 w-full lg:w-auto">
+            <select id="state-filter" class="bg-[#12121a] border border-white/10 rounded-full py-3 px-6 text-[10px] font-bold text-white uppercase tracking-widest focus:outline-none focus:border-purple-500 cursor-pointer">
                 <option value="all">All States</option>
                 <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
                 <option value="CO">Colorado</option>
+                <option value="IA">Iowa</option>
+                <option value="IL">Illinois</option>
                 <option value="KY">Kentucky</option>
                 <option value="PA">Pennsylvania</option>
+                <option value="PH">Philadelphia</option>
                 <option value="WV">West Virginia</option>
             </select>
             <div class="relative flex-1 lg:w-64">
-              <i data-lucide="search" class="absolute left-4 top-3 w-4 h-4 text-zinc-500"></i>
-              <input id="search-input" type="text" placeholder="Search..." class="w-full bg-[#12121a] border border-white/10 rounded-full py-2.5 pl-10 pr-4 focus:outline-none focus:border-purple-500 text-sm text-white">
+              <i data-lucide="search" class="absolute left-4 top-3.5 w-4 h-4 text-zinc-500"></i>
+              <input id="search-input" type="text" placeholder="Search..." class="w-full bg-[#12121a] border border-white/10 rounded-full py-3 pl-10 pr-4 focus:outline-none focus:border-purple-500 text-sm text-white">
             </div>
           </div>
         </div>
       </div>
 
-      <div id="trip-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+      <div id="trip-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left"></div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 mb-24">
+      <div class="bg-[#1e1e28] border border-purple-900/30 rounded-[3rem] p-12 text-center relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-8 opacity-5"><i data-lucide="map" class="w-32 h-32 text-purple-600"></i></div>
+        <h2 class="text-3xl font-black mb-4">Know a strange place?</h2>
+        <p class="text-zinc-400 mb-8 max-w-md mx-auto">We manually vet every location for safety and history. Send us your suggestion for review.</p>
+        <button onclick="showToast('Suggestion form coming soon')" class="bg-purple-600 text-black px-10 py-4 rounded-2xl font-bold uppercase text-xs tracking-widest transition hover:scale-105">Submit an Oddity</button>
       </div>
     </section>
+
+    <section class="max-w-6xl mx-auto px-6 mb-32">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 py-12 border-y border-white/5">
+        <div class="text-left">
+          <h3 class="text-2xl font-black mb-2 text-purple-500">Stay Informed on the Strange</h3>
+          <p class="text-zinc-500">Get notified when new vetted locations are added to the map.</p>
+        </div>
+        <div class="flex w-full md:w-auto gap-2">
+          <input type="email" placeholder="Email address" class="bg-white/5 border border-white/10 rounded-xl px-6 py-4 flex-1 md:w-80 focus:outline-none focus:border-purple-500">
+          <button onclick="showToast('Newsletter starting soon')" class="bg-white text-black px-8 py-4 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-zinc-200 transition">Join</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="pb-20 px-6">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+        <div class="text-left">
+          <div class="flex items-center gap-2 mb-4">
+            <i data-lucide="skull" class="text-purple-600 w-5 h-5"></i>
+            <span class="text-xl font-black tracking-tighter text-purple-500">ODDITIES</span>
+          </div>
+          <p class="text-zinc-600 text-[10px] leading-relaxed">
+            © 2026 Odd Phoenix LLC. All rights reserved.<br>
+            Designed for private field testing phase 01.
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <div id="detail-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-sm">
       <div class="w-full max-w-3xl bg-[#1e1e28] rounded-[2.5rem] overflow-hidden border border-white/10 max-h-[90vh] overflow-y-auto shadow-2xl relative text-left">
@@ -111,7 +154,10 @@
         </div>
         <div id="modal-content" class="p-10"></div>
         <div class="sticky bottom-0 bg-[#1e1e28] p-8 border-t border-white/5 flex gap-4 z-10">
-          <a id="modal-map-link" href="#" target="_blank" class="flex-1 bg-purple-600 text-black py-4 rounded-2xl font-bold text-center flex items-center justify-center gap-3 transition hover:bg-purple-500">
+          <button onclick="showToast('Save feature coming soon')" class="p-4 bg-white/5 rounded-2xl border border-white/5 text-white hover:bg-white/10 transition">
+             <i data-lucide="bookmark" class="w-6 h-6"></i>
+          </button>
+          <a id="modal-map-link" href="#" target="_blank" class="flex-1 bg-purple-600 text-black py-4 rounded-2xl font-bold text-center flex items-center justify-center gap-3">
             <i data-lucide="navigation" class="w-5 h-5 fill-current"></i> Visit Location
           </a>
         </div>
@@ -120,19 +166,25 @@
   </div>
 
   <script>
-    // DATA
     const trips = [
       { id: 'eureka', title: 'Eureka Springs', state: 'AR', region: 'Carroll County, AR', category: 'historic', color: '#8a2be2', desc: 'A Victorian-era town built on healing springs and deep lore.', related: ['falk'] },
       { id: 'waverly', title: 'Waverly Hills Sanatorium', state: 'KY', region: 'Louisville, KY', category: 'haunted', color: '#4b0082', desc: 'A Tudor Gothic monument to a dark era of American medicine.' },
-      { id: 'san-luis', title: 'San Luis Valley', state: 'CO', region: 'South-Central CO', category: 'alien', color: '#006400', desc: 'North America\'s most active UFO and paranormal hotspot.' },
-      { id: 'falk', title: 'Fouke Monster Bog', state: 'AR', region: 'Fouke, AR', category: 'cryptid', color: '#1b3022', desc: 'Home to the aggressive, three-toed "Southern Sasquatch."' }
+      { id: 'san-luis', title: 'San Luis Valley', state: 'CO', region: 'South-Central CO', category: 'alien', color: '#006400', desc: 'North America\'s most active UFO and paranormal hotspot.', related: ['eureka'] },
+      { id: 'villisca', title: 'Axe Murder House', state: 'IA', region: 'Villisca, IA', category: 'cemetery', color: '#310000', desc: 'Site of one of the most brutal unsolved mass murders in American history.' },
+      { id: 'mothman', title: 'Mothman Site', state: 'WV', region: 'Point Pleasant, WV', category: 'cryptid', color: '#1a1a1a', desc: 'The epicenter of a 13-month reign of terror by a winged creature.' },
+      { id: 'mutter', title: 'Mütter Museum', state: 'PH', region: 'Philadelphia, PA', category: 'historic', color: '#5c4033', desc: 'A world-renowned collection of anatomical specimens and medical oddities.' },
+      { id: 'bachelors', title: 'Bachelor\'s Grove', state: 'IL', region: 'Midlothian, IL', category: 'cemetery', color: '#2d3b2d', desc: 'Widely considered the most haunted graveyard in America.' },
+      { id: 'falk', title: 'Fouke Monster Bog', state: 'AR', region: 'Fouke, AR', category: 'cryptid', color: '#1b3022', desc: 'Home to the aggressive, three-toed Southern Sasquatch.' },
+      { id: 'centralia', title: 'Centralia Mine Fire', state: 'PA', region: 'Centralia, PA', category: 'historic', color: '#444444', desc: 'A town burning from the inside out since a 1962 coal fire.' },
+      { id: 'winchester', title: 'Winchester House', state: 'CA', region: 'San Jose, CA', category: 'historic', color: '#3d2b1f', desc: 'A labyrinth of architectural madness built to confuse spirits.' }
     ];
 
     let currentCat = 'all';
     let currentState = 'all';
 
-    function showToast() {
+    function showToast(msg) {
       const toast = document.getElementById("toast");
+      toast.textContent = msg;
       toast.className = "show";
       setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 3000);
     }
@@ -151,9 +203,9 @@
                <span class="text-sm font-bold uppercase tracking-wider">${featured.region}</span>
             </div>
             <p class="text-zinc-400 text-lg mb-10 leading-relaxed">${featured.desc}</p>
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between border-t border-white/5 pt-8">
               <span class="text-[11px] font-black uppercase tracking-[0.2em] text-zinc-500">Tap to learn more</span>
-              <button onclick="event.stopPropagation(); showToast()" class="p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition border border-white/5">
+              <button onclick="event.stopPropagation(); showToast('Save feature coming soon')" class="p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition border border-white/5">
                 <i data-lucide="bookmark" class="w-5 h-5"></i>
               </button>
             </div>
@@ -180,7 +232,7 @@
           </div>
           <div class="text-left">
             <h3 class="text-2xl font-black text-white leading-tight">${item.title}</h3>
-            <div class="flex items-center gap-1.5 mt-1.5 mb-4 text-purple-500">
+            <div class="flex items-center gap-1.5 mt-2 mb-4 text-purple-500">
                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
                <span class="text-[11px] font-bold uppercase tracking-widest">${item.region}</span>
             </div>
@@ -196,7 +248,7 @@
     function openModal(id) {
       const item = trips.find(t => t.id === id);
       document.getElementById('modal-title').textContent = item.title;
-      document.getElementById('modal-map-link').href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.title + ' ' + item.region)}`;
+      document.getElementById('modal-map-link').href = `http://google.com/maps/search/${encodeURIComponent(item.title + ' ' + item.region)}`;
       
       let relatedHtml = '';
       if (item.related) {
@@ -226,10 +278,10 @@
             <i data-lucide="map-pin" class="w-5 h-5"></i>
             <span class="text-lg font-bold uppercase tracking-wider">${item.region}</span>
         </div>
-        <p class="text-zinc-300 text-xl leading-relaxed mb-10">${item.desc}</p>
+        <p class="text-zinc-300 text-xl leading-relaxed mb-6">${item.desc}</p>
+        <p class="text-zinc-500 text-sm leading-relaxed mb-10">Full history and lore data restoration in progress...</p>
         ${relatedHtml}
       `;
-      
       document.getElementById('detail-modal').classList.remove('hidden');
       lucide.createIcons();
     }
@@ -238,10 +290,8 @@
       renderFeatured();
       renderGrid();
       lucide.createIcons();
-
       document.getElementById('modal-close').onclick = () => document.getElementById('detail-modal').classList.add('hidden');
       
-      // Filter Category Logic
       document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.onclick = () => {
           document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -251,26 +301,33 @@
         };
       });
 
-      // State Filter Logic
       document.getElementById('state-filter').onchange = (e) => {
         currentState = e.target.value;
         renderGrid();
       };
 
-      // Search Logic
       document.getElementById('search-input').oninput = (e) => {
         const val = e.target.value.toLowerCase();
         const filtered = trips.filter(t => t.title.toLowerCase().includes(val) || t.region.toLowerCase().includes(val));
         const grid = document.getElementById('trip-grid');
         grid.innerHTML = '';
         filtered.forEach(item => {
-           // (Grid render logic same as renderGrid)
            const card = document.createElement('div');
            card.className = 'attraction-card rounded-[2.5rem] p-8 cursor-pointer relative';
-           card.innerHTML = `<h3 class="text-2xl font-black text-white">${item.title}</h3><p class="text-zinc-500 mt-2">${item.desc}</p>`;
+           card.innerHTML = `
+             <div class="h-48 rounded-2xl mb-6 flex items-center justify-center" style="background: linear-gradient(135deg, ${item.color}, #1e1e28)">
+               <span class="text-[10px] font-bold text-white/30 uppercase tracking-widest">Photo Coming Soon</span>
+             </div>
+             <h3 class="text-2xl font-black text-white leading-tight">${item.title}</h3>
+             <div class="flex items-center gap-1.5 mt-2 mb-4 text-purple-500">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                <span class="text-[11px] font-bold uppercase tracking-widest">${item.region}</span>
+             </div>
+           `;
            card.onclick = () => openModal(item.id);
            grid.appendChild(card);
         });
+        lucide.createIcons();
       };
     };
   </script>
