@@ -43,7 +43,7 @@
       </div>
     </nav>
 
-   <header class="relative py-18 px-6 overflow-hidden">
+    <header class="relative py-18 px-6 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-b from-[#1a0a2a] via-[#12121a] to-[#12121a] opacity-80"></div>
       <div class="relative z-10 max-w-6xl mx-auto text-left">
         <h1 class="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[0.9] text-[#f5f0e8]">Explore the Strange,<br>the Mysterious,<br>the Unforgettable</h1>
@@ -55,7 +55,7 @@
       </div>
     </header>
 
-<section class="max-w-6xl mx-auto px-6 mb-18">
+    <section class="max-w-6xl mx-auto px-6 mb-18">
       <div class="flex items-center gap-3 mb-8 text-left">
         <i data-lucide="skull" class="text-purple-600 w-10 h-10 skull-spin"></i>
         <div class="flex flex-col">
@@ -64,7 +64,7 @@
         </div>
       </div>
       <div id="featured-card" class="bg-[#1e1e28] rounded-[2.5rem] border border-purple-900/30 flex flex-col md:flex-row cursor-pointer transition-all hover:bg-[#252533] overflow-hidden">
-        </div>
+      </div>
     </section>
 
     <section id="grid-section" class="max-w-6xl mx-auto px-6 pb-40">
@@ -73,7 +73,7 @@
           <i data-lucide="skull" class="text-purple-600 w-10 h-10 skull-spin"></i>
           <div class="flex flex-col">
             <span class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">EXPLORE</span>
-            <h2 class="text-4xl font-black leading-none text-left">Discover Oddities</h2>
+            <h2 class="text-4xl font-black leading-none text-left tracking-tighter">Discover Oddities</h2>
           </div>
         </div>
 
@@ -95,7 +95,7 @@
       </div>
 
       <div id="trip-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-        </div>
+      </div>
     </section>
 
     <div id="detail-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-sm">
@@ -118,7 +118,6 @@
   </div>
 
   <script>
-    // DATA
     const trips = [
       { 
         id: 'eureka', 
@@ -242,15 +241,15 @@
         funFacts: ['Contains a "Seance Room" for receiving blueprints', 'The number 13 is repeated in windows and drains', 'Sarah Winchester never slept in the same room twice', 'Features 2,000 doors and 10,000 windows']
       }
     ];
+
     let likedTrips = new Set();
     let currentFilter = 'all';
 
-function toggleSave(id) {
-      // This alert stops the "Save" action and shows your message instead
+    function toggleSave(id) {
       alert("To create a Bucket List and save this oddity, please create an account.\n\n(Account creation is coming soon!)");
     }
     
-function renderFeatured() {
+    function renderFeatured() {
       const featured = trips[0];
       const isLiked = likedTrips.has(featured.id);
       
@@ -308,7 +307,7 @@ function renderFeatured() {
       lucide.createIcons();
     }
 
-function openModal(item) {
+    function openModal(item) {
       document.getElementById('modal-title').textContent = item.title;
       document.getElementById('modal-map-link').href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.title)}`;
       
@@ -328,10 +327,6 @@ function openModal(item) {
           <div class="flex items-center gap-2 text-[11px]">
             <i data-lucide="info" class="w-3.5 h-3.5 text-purple-600"></i>
             <span>${item.type || 'Oddity'}</span>
-          </div>
-          <div class="flex items-center gap-2 text-[11px]">
-            <i data-lucide="compass" class="w-3.5 h-3.5 text-purple-600"></i>
-            <span>Multiple Sites</span>
           </div>
         </div>
 
@@ -355,14 +350,6 @@ function openModal(item) {
             `).join('') : '<li class="text-zinc-600">Gathering more facts...</li>'}
           </ul>
         </div>
-
-        <div class="mt-12 border-t border-white/5 pt-8">
-          <h4 class="text-purple-500 font-bold uppercase text-xs mb-4 tracking-widest">Related Locations</h4>
-          <div class="bg-white/5 border border-white/10 rounded-3xl p-6">
-             <h5 class="font-bold text-white mb-1">The Devil's Promenade, Oklahoma/Texas</h5>
-             <p class="text-xs text-zinc-500">Border region</p>
-          </div>
-        </div>
       `;
       
       document.getElementById('detail-modal').classList.remove('hidden');
@@ -375,7 +362,7 @@ function openModal(item) {
       lucide.createIcons();
       document.getElementById('modal-close').onclick = () => document.getElementById('detail-modal').classList.add('hidden');
       
-document.getElementById('search-input').oninput = (e) => {
+      document.getElementById('search-input').oninput = (e) => {
         const val = e.target.value.toLowerCase();
         const filtered = trips.filter(t => 
           t.title.toLowerCase().includes(val) || 
