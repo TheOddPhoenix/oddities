@@ -149,9 +149,20 @@
         type: 'High-Altitude Anomaly',
         category: 'alien', 
         color: '#006400', 
-        desc: 'The San Luis Valley is one of North America\'s most active UFO hotspots. Located between the San Juan and Sangre de Cristo Mountains, this remote high-altitude valley has been the epicenter of unexplained phenomena for decades. Residents report mysterious aircraft with impossible flight characteristics and orbs of light moving silently through the scrubland.', 
-        history: 'Indigenous peoples reported "sky beings" here for centuries. UFO activity intensified in the 1950s, and the valley gained international attention in the 1970s for documented cattle mutilations with no conventional explanation. Some theorists suggest the valley sits on a major geomagnetic anomaly or a dimensional "portal" due to its unique geological layout.', 
-        funFacts: ['Hundreds of UFO sightings are reported here annually', 'The valley sits at a baseline of 7,500+ feet elevation', 'Features the UFO Watchtower, a local landmark for sky-watchers', 'Site of the first documented "Snippy the Horse" anomaly in 1967']
+        desc: 'The San Luis Valley is one of North America\'s most active UFO and paranormal hotspots. Located between the San Juan Mountains and the Sangre de Cristo Mountains, this remote high-altitude valley has been the epicenter of unexplained phenomena for decades. UFO sightings occur with remarkable frequency—some estimates suggest hundreds annually. Cryptid reports include the "Gunnison Creature," a large bipedal entity similar to Bigfoot but adapted to high altitude environments. Residents report mysterious aircraft with impossible flight characteristics, orbs of light moving silently through the sky, and encounters with humanoid entities of unknown origin. Cattle mutilations occur periodically throughout the valley with no conventional explanation. Paranormal investigators believe the valley sits at the intersection of multiple ley lines, potentially creating a portal or dimensional weak point. The landscape itself feels otherworldly—vast, isolated, and seemingly untouched by normal rules of physics.', 
+        history: 'The San Luis Valley has been a center of paranormal activity since pre-Columbian times. Indigenous peoples reported seeing "sky beings" and strange phenomena in the valley for centuries. Spanish explorers documented unusual occurrences. Modern UFO sightings increased dramatically in the 1950s. The valley gained international attention in the 1970s and 1980s when UFO researchers and paranormal investigators began documenting consistent phenomena. The valley\'s high altitude (7,500+ feet), isolation, and unique geography may contribute to the activity. Some theorists suggest the valley sits on a major geomagnetic anomaly or ley line junction.', 
+        funFacts: [
+          'Hundreds of UFO sightings reported annually', 
+          'The valley sits at 7,500+ feet elevation', 
+          'Cattle mutilations occur periodically throughout the valley', 
+          'The "Gunnison Creature" is reported as a regional cryptid', 
+          'Indigenous peoples reported "sky beings" for centuries', 
+          'Modern UFO activity intensified in the 1950s', 
+          'The valley may sit on major ley line junctions', 
+          'Paranormal investigators believe it\'s a dimensional weak point', 
+          'The landscape feels otherworldly and untouched', 
+          'The valley remains one of North America\'s most active paranormal zones'
+        ]
       },
       { 
         id: 'villisca', 
@@ -294,53 +305,35 @@ function openModal(item) {
       document.getElementById('modal-title').textContent = item.title;
       document.getElementById('modal-map-link').href = `http://googleusercontent.com/maps.google.com/search?q=${encodeURIComponent(item.title)}`;
       
-      document.getElementById('modal-content').innerHTML = `
-        <div class="w-full h-64 rounded-3xl mb-6 flex items-center justify-center shadow-inner" style="background: linear-gradient(135deg, ${item.color}, #1e1e28)">
-          <div class="flex flex-col items-center gap-2">
-            <i data-lucide="camera-off" class="w-12 h-12 text-white/10"></i>
-            <span class="text-[10px] font-bold text-white/20 uppercase tracking-widest">Photo Coming Soon</span>
-          </div>
+    document.getElementById('modal-content').innerHTML = `
+        <div class="w-full h-64 rounded-3xl mb-10 flex items-center justify-center" style="background: linear-gradient(135deg, ${item.color}, #1e1e28)">
+          <i data-lucide="camera-off" class="w-12 h-12 text-white/10"></i>
         </div>
 
-        <div class="flex flex-wrap gap-6 mb-8 text-zinc-500">
-          <div class="flex items-center gap-2 text-xs">
-            <i data-lucide="map-pin" class="w-4 h-4 text-purple-600"></i>
-            <span>${item.region}</span>
-          </div>
-          <div class="flex items-center gap-2 text-xs">
-            <i data-lucide="info" class="w-4 h-4 text-purple-600"></i>
-            <span>${item.type || 'Oddity'}</span>
-          </div>
-          <div class="flex items-center gap-2 text-xs">
-            <i data-lucide="compass" class="w-4 h-4 text-purple-600"></i>
-            <span>Multiple Sites</span>
-          </div>
-        </div>
-
-        <p class="text-zinc-300 text-lg leading-relaxed mb-10">${item.desc}</p>
+        <p class="text-zinc-300 text-sm mb-8 leading-relaxed">${item.desc}</p>
         
-        <div class="mb-10">
-          <h4 class="text-purple-500 font-bold uppercase text-sm mb-4 tracking-widest">History</h4>
-          <p class="text-zinc-400 text-sm leading-relaxed">${item.history}</p>
+        <div class="mb-8">
+          <h4 class="text-purple-500 font-bold uppercase text-xs mb-4 tracking-widest">History</h4>
+          <p class="text-zinc-300 text-sm leading-relaxed">${item.history}</p>
         </div>
 
-        <div class="mb-10">
-          <h4 class="text-purple-500 font-bold uppercase text-sm mb-6 tracking-widest">Key Facts</h4>
-          <ul class="space-y-4">
-            ${item.funFacts ? item.funFacts.map(fact => `
-              <li class="flex gap-4 items-start text-sm text-zinc-300">
-                <i data-lucide="star" class="w-5 h-5 text-purple-600 flex-shrink-0"></i>
-                <span>${fact}</span>
+        <div class="mb-8">
+          <h4 class="text-purple-500 font-bold uppercase text-xs mb-4 tracking-widest">Key Facts</h4>
+          <ul class="space-y-3 text-sm text-zinc-300">
+            ${item.funFacts ? item.funFacts.map(f => `
+              <li class="flex gap-3">
+                <i data-lucide="star" class="w-4 h-4 text-purple-600 flex-shrink-0"></i>
+                ${f}
               </li>
-            `).join('') : '<li class="italic text-zinc-600">Gathering more facts...</li>'}
+            `).join('') : '<li class="italic opacity-50">Facts coming soon...</li>'}
           </ul>
         </div>
 
-        <div class="mt-12">
-          <h4 class="text-purple-500 font-bold uppercase text-sm mb-4 tracking-widest">Related Locations</h4>
-          <div class="bg-white/5 border border-white/10 rounded-3xl p-6">
-             <h5 class="font-bold text-white mb-1">The Devil's Promenade, Oklahoma/Texas</h5>
-             <p class="text-xs text-zinc-500">Border region</p>
+        <div class="mt-12 pt-8 border-t border-white/5">
+          <h4 class="text-purple-500 font-bold uppercase text-xs mb-4 tracking-widest">Related Locations</h4>
+          <div class="bg-black/20 p-6 rounded-2xl border border-white/5">
+            <p class="text-white font-bold text-sm mb-1">The Devil's Promenade, Oklahoma/Texas</p>
+            <p class="text-zinc-500 text-xs uppercase font-black tracking-tighter">Border Region</p>
           </div>
         </div>
       `;
