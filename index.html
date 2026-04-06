@@ -66,7 +66,7 @@
       </div>
     </section>
 
-    <section id="grid-section" class="max-w-6xl mx-auto px-6 pb-20 mt-20">
+   <section id="grid-section" class="max-w-6xl mx-auto px-6 pb-20 mt-20">
       <div class="flex flex-col gap-8 mb-12">
         <div class="flex items-center gap-3 text-left">
           <i data-lucide="skull" class="text-purple-600 w-10 h-10 skull-spin"></i>
@@ -78,15 +78,28 @@
 
         <div class="flex flex-col lg:flex-row gap-4 items-center justify-between bg-white/5 p-4 rounded-[2.5rem] border border-white/5">
           <div class="flex gap-2 overflow-x-auto scroll-container w-full lg:w-auto p-1">
-            <button class="filter-btn active bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest whitespace-nowrap transition" data-filter="all">All</button>
-            <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest whitespace-nowrap transition" data-filter="haunted">Haunted</button>
-            <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest whitespace-nowrap transition" data-filter="cryptid">Cryptid</button>
-            <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest whitespace-nowrap transition" data-filter="historic">Historic</button>
-            <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest whitespace-nowrap transition" data-filter="cemetery">Cemetery</button>
+            <button class="filter-btn active bg-purple-600 text-white px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap transition" data-filter="all">
+              <i data-lucide="sparkles" class="w-4 h-4"></i> All
+            </button>
+            <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap transition hover:text-white" data-filter="cemetery">
+              <i data-lucide="cross" class="w-4 h-4"></i> Cemeteries
+            </button>
+            <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap transition hover:text-white" data-filter="historic">
+              <i data-lucide="landmark" class="w-4 h-4"></i> Historic
+            </button>
+            <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap transition hover:text-white" data-filter="haunted">
+              <i data-lucide="ghost" class="w-4 h-4"></i> Haunted
+            </button>
+            <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap transition hover:text-white" data-filter="cryptid">
+              <i data-lucide="footprints" class="w-4 h-4"></i> Cryptid
+            </button>
+            <button class="filter-btn bg-white/5 text-zinc-500 px-6 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 whitespace-nowrap transition hover:text-white" data-filter="alien">
+              <i data-lucide="rocket" class="w-4 h-4"></i> Aliens/UFO
+            </button>
           </div>
           
           <div class="flex gap-3 w-full lg:w-auto">
-            <select id="state-filter" class="bg-[#12121a] border border-white/10 rounded-full py-3 px-6 text-[10px] font-bold text-white uppercase tracking-widest focus:outline-none focus:border-purple-500 cursor-pointer">
+            <select id="state-filter" class="bg-[#12121a] border border-white/10 rounded-full py-3 px-6 text-[10px] font-bold text-white uppercase tracking-widest focus:outline-none focus:border-purple-500 cursor-pointer appearance-none">
                 <option value="all">All States</option>
                 <option value="AR">Arkansas</option>
                 <option value="CA">California</option>
@@ -95,7 +108,6 @@
                 <option value="IL">Illinois</option>
                 <option value="KY">Kentucky</option>
                 <option value="PA">Pennsylvania</option>
-                <option value="PH">Philadelphia</option>
                 <option value="WV">West Virginia</option>
             </select>
             <div class="relative flex-1 lg:w-64">
