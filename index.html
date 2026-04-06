@@ -25,9 +25,6 @@
     .dropdown-content { display: none; position: absolute; right: 0; top: 110%; background: #1e1e28; min-width: 220px; border: 1px solid rgba(255,255,255,0.1); border-radius: 1.5rem; z-index: 200; box-shadow: 0 20px 40px rgba(0,0,0,0.5); padding: 0.5rem; }
     .dropdown:hover .dropdown-content { display: block; }
 
-    #save-menu { display: none; position: absolute; inset: 0; z-index: 250; background: rgba(18, 18, 26, 0.95); backdrop-filter: blur(12px); padding: 2.5rem; flex-direction: column; justify-content: center; align-items: center; }
-    #save-menu.active { display: flex; }
-
     #toast { visibility: hidden; min-width: 280px; background-color: #8a2be2; color: #fff; text-align: center; border-radius: 16px; padding: 20px; position: fixed; z-index: 1000; right: 30px; bottom: 30px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); }
     #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
     @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
@@ -188,6 +185,18 @@
     </div>
   </div>
 
+  <div id="global-save-menu" class="hidden fixed inset-0 z-[300] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md">
+    <div class="w-full max-w-md bg-[#1e1e28] border border-white/10 rounded-[2.5rem] p-8 flex flex-col shadow-2xl relative">
+      <h3 class="text-3xl font-black uppercase tracking-tighter mb-8 text-white text-center">Save To List</h3>
+      <div id="global-collections-list" class="w-full space-y-3 mb-8 max-h-64 overflow-y-auto scroll-container pr-2"></div>
+      <div class="w-full flex gap-2">
+        <input id="global-new-list-name" type="text" placeholder="Name new list..." class="flex-1 bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:border-purple-500 placeholder-zinc-500">
+        <button onclick="createNewList()" class="bg-purple-600 text-black px-6 rounded-2xl font-bold uppercase text-[10px] tracking-widest hover:scale-105 transition">Create</button>
+      </div>
+      <button onclick="closeSaveMenu()" class="mt-8 text-zinc-500 font-bold uppercase text-[10px] tracking-widest hover:text-white transition text-center w-full">Cancel</button>
+    </div>
+  </div>
+
   <script>
     const categoryColors = {
       haunted: '#2e1a47',
@@ -246,9 +255,12 @@
           if(!item) return;
           const color = getCategoryColor(item.category);
           const card = document.createElement('div');
-          card.className = 'attraction-card rounded-[2.5rem] p-8 cursor-pointer relative';
+          card.className = 'attraction-card rounded-[2.5rem] p-8 cursor-pointer relative group';
           card.innerHTML = `
-            <div class="h-40 rounded-2xl mb-6 flex items-center justify-center overflow-hidden bg-zinc-900">
+            <div class="h-40 rounded-2xl mb-6 flex items-center justify-center overflow-hidden bg-zinc-900 relative">
+              <button onclick="event.stopPropagation(); openSaveMenu('${item.id}')" class="absolute top-4 right-4 z-10 p-3 bg-black/40 backdrop-blur-md rounded-xl border border-white/10 text-white hover:bg-purple-600 hover:text-white transition-all">
+                <i data-lucide="bookmark" class="w-4 h-4 text-white"></i>
+              </button>
               <img src="${getImagePath(item.id)}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='images/${item.id}.jpg'; this.addEventListener('error', function(){ this.style.display='none'; this.nextElementSibling.style.display='flex'; }, {once: true})">
               <div class="hidden w-full h-full items-center justify-center" style="background: linear-gradient(135deg, ${color}, #1e1e28)"><span class="text-[8px] font-bold opacity-30 uppercase tracking-widest">Photo Coming</span></div>
             </div>
@@ -268,15 +280,10 @@
 
     function openSaveMenu(id) {
       activeLocationId = id;
-      let menu = document.getElementById('save-menu');
-      if(!menu) {
-          const modal = document.querySelector('#detail-modal > div');
-          menu = document.createElement('div');
-          menu.id = 'save-menu';
-          modal.prepend(menu);
-      }
+      const menu = document.getElementById('global-save-menu');
+      const listContainer = document.getElementById('global-collections-list');
       
-      const listContainer = Object.keys(userCollections).map(name => {
+      listContainer.innerHTML = Object.keys(userCollections).map(name => {
           const isSaved = userCollections[name].includes(id);
           return `<button onclick="saveToSpecificList('${name}', '${id}')" class="w-full p-5 rounded-2xl border flex justify-between items-center transition ${isSaved ? 'bg-purple-600 border-purple-600 text-black' : 'bg-white/5 border-white/10 text-white hover:bg-white/10'}">
             <span class="font-bold uppercase text-xs">${name}</span>
@@ -284,22 +291,13 @@
           </button>`;
       }).join('');
 
-      menu.innerHTML = `
-        <h3 class="text-3xl font-black uppercase tracking-tighter mb-8 text-white">Save To List</h3>
-        <div class="w-full max-w-md space-y-3 mb-8 max-h-64 overflow-y-auto scroll-container pr-2">${listContainer}</div>
-        <div class="w-full max-w-md flex gap-2">
-          <input id="new-list-name" type="text" placeholder="Name new list..." class="flex-1 bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:border-purple-500 placeholder-zinc-500">
-          <button onclick="createNewList()" class="bg-purple-600 text-black px-6 rounded-2xl font-bold uppercase text-[10px] tracking-widest">Create</button>
-        </div>
-        <button onclick="closeSaveMenu()" class="mt-8 text-zinc-500 font-bold uppercase text-[10px] tracking-widest hover:text-white transition">Cancel</button>
-      `;
-      menu.classList.add('active');
+      document.getElementById('global-new-list-name').value = '';
+      menu.classList.remove('hidden');
       lucide.createIcons();
     }
 
     function closeSaveMenu() {
-        const menu = document.getElementById('save-menu');
-        if(menu) menu.classList.remove('active');
+        document.getElementById('global-save-menu').classList.add('hidden');
     }
 
     function saveToSpecificList(listName, id) {
@@ -316,16 +314,13 @@
       closeSaveMenu();
       updateBookmarkIcon(id);
       updateAccountDropdown();
-      if(!document.getElementById('collections-display-section').classList.contains('hidden')) {
-          viewCollection(document.getElementById('active-list-title').textContent);
-      }
       
       // Update quick save icons on grid if visible
       renderGrid(currentFilteredTrips.length > 0 ? currentFilteredTrips : null);
     }
 
     function createNewList() {
-      const name = document.getElementById('new-list-name').value.trim();
+      const name = document.getElementById('global-new-list-name').value.trim();
       if (!name || userCollections[name]) {
           showToast(userCollections[name] ? "List already exists" : "Please enter a name");
           return;
@@ -467,7 +462,6 @@
       const grid = document.getElementById('trip-grid');
       const loadMoreContainer = document.getElementById('load-more-container');
       
-      // Removed the state filter check here
       currentFilteredTrips = sourceData.filter(t => 
         (currentCat === 'all' || t.category === currentCat)
       );
@@ -548,7 +542,6 @@
           
           currentCat = btn.dataset.filter;
           
-          // Clear the search input when switching categories
           document.getElementById('search-input').value = '';
           
           resetPagination();
