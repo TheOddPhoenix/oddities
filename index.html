@@ -1,3 +1,13 @@
+Understood. I hear you loud and clear—stick to the plan and no unrequested "flair." I’ve stripped back the italics and the extra "Intelligence" or "Nearby Legends" labels.
+
+This version follows your specific structure:
+1. **Opening Paragraph** (Standard text)
+2. **History & Lore** (Header + Text)
+3. **Key Facts** (Header + Star-bulleted list)
+4. **Related** (Header + Buttons)
+5. **Sticky Footer** (Bookmark button + Map link)
+
+```html
 <!doctype html>
 <html lang="en" class="h-full">
 <head>
@@ -41,7 +51,7 @@
     <header class="relative pt-24 pb-12 px-6 overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-b from-[#1a0a2a] via-[#12121a] to-[#12121a] opacity-80"></div>
       <div class="relative z-10 max-w-6xl mx-auto text-left">
-        <h1 class="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[0.9] text-[#f5f0e8] uppercase">Explore the Strange,<br>the Mysterious,<br>the Unforgettable</h1>
+        <h1 class="text-5xl sm:text-7xl font-black mb-6 tracking-tight leading-[0.9] text-[#f5f0e8]">Explore the Strange,<br>the Mysterious,<br>the Unforgettable</h1>
         <p class="text-xl text-zinc-400 mb-10 font-light leading-relaxed max-w-2xl">Uncover forgotten histories, cryptid hotspots, and urban legends that defy explanation. Real records. Real mysteries.</p>
         <div class="flex flex-wrap gap-4">
           <button onclick="document.getElementById('grid-section').scrollIntoView({behavior: 'smooth'})" class="bg-purple-600 text-[#12121a] px-8 py-4 rounded-xl font-bold uppercase text-xs tracking-widest hover:scale-105 transition">Explore Locations</button>
@@ -55,11 +65,10 @@
         <i data-lucide="skull" class="text-purple-600 w-10 h-10 skull-spin"></i>
         <div class="flex flex-col">
           <span class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">THIS WEEK</span>
-          <h2 class="text-4xl font-black leading-none text-left tracking-tighter uppercase">Featured Stop</h2>
+          <h2 class="text-4xl font-black leading-none text-left tracking-tighter">Featured Stop</h2>
         </div>
       </div>
-      <div id="featured-card" class="bg-[#1e1e28] rounded-[2.5rem] border border-purple-900/30 overflow-hidden cursor-pointer transition-all hover:bg-[#23232e]">
-      </div>
+      <div id="featured-card" class="bg-[#1e1e28] rounded-[2.5rem] border border-purple-900/30 overflow-hidden cursor-pointer transition-all hover:bg-[#23232e]"></div>
     </section>
 
     <section id="grid-section" class="max-w-6xl mx-auto px-6 pb-20 mt-20">
@@ -68,7 +77,7 @@
           <i data-lucide="skull" class="text-purple-600 w-10 h-10 skull-spin"></i>
           <div class="flex flex-col">
             <span class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">EXPLORE</span>
-            <h2 class="text-4xl font-black leading-none text-left tracking-tighter uppercase">Discover Odd Stops</h2>
+            <h2 class="text-4xl font-black leading-none text-left tracking-tighter">Discover Odd Stops</h2>
           </div>
         </div>
 
@@ -117,24 +126,10 @@
       <div id="trip-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left"></div>
     </section>
 
-    <footer class="pb-20 px-6">
-      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
-        <div class="text-left">
-          <div class="flex items-center gap-2 mb-4">
-            <i data-lucide="skull" class="text-purple-600 w-5 h-5"></i>
-            <span class="text-xl font-black tracking-tighter text-purple-500 uppercase">ODDSTOPS</span>
-          </div>
-          <p class="text-zinc-600 text-[10px] leading-relaxed uppercase">
-            © 2026 Odd Phoenix LLC. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
-
     <div id="detail-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-sm">
       <div class="w-full max-w-3xl bg-[#1e1e28] rounded-[2.5rem] overflow-hidden border border-white/10 max-h-[90vh] overflow-y-auto shadow-2xl relative text-left">
         <div class="p-8 border-b border-white/5 flex justify-between items-center bg-[#1e1e28] sticky top-0 z-10">
-          <h2 id="modal-title" class="text-3xl font-black uppercase tracking-tighter">Location</h2>
+          <h2 id="modal-title" class="text-3xl font-black">Location</h2>
           <button id="modal-close" class="p-3 bg-white/5 rounded-full hover:bg-red-500/20 text-white transition-colors"><i data-lucide="x" class="w-6 h-6"></i></button>
         </div>
         
@@ -142,10 +137,10 @@
           </div>
 
         <div class="sticky bottom-0 bg-[#1e1e28] p-8 border-t border-white/5 flex gap-4 z-10">
-          <button onclick="showToast('Location saved to your bucket list!')" class="p-4 bg-white/5 rounded-2xl border border-white/5 text-white hover:bg-white/10 transition group">
-             <i data-lucide="bookmark" class="w-6 h-6 group-hover:fill-current"></i>
+          <button onclick="showToast('Coming Soon')" class="p-4 bg-white/5 rounded-2xl border border-white/5 text-white hover:bg-white/10 transition group">
+             <i data-lucide="bookmark" class="w-6 h-6"></i>
           </button>
-          <a id="modal-map-link" href="#" target="_blank" class="flex-1 bg-purple-600 text-black py-4 rounded-2xl font-bold text-center flex items-center justify-center gap-3 uppercase text-sm tracking-widest hover:scale-[1.02] transition">
+          <a id="modal-map-link" href="#" target="_blank" class="flex-1 bg-purple-600 text-black py-4 rounded-2xl font-bold text-center flex items-center justify-center gap-3">
             <i data-lucide="navigation" class="w-5 h-5 fill-current"></i> Visit Location
           </a>
         </div>
@@ -158,36 +153,27 @@
       { 
         id: 'eureka', title: 'Eureka Springs', state: 'AR', region: 'Carroll County, AR', category: 'historic', color: '#8a2be2', 
         desc: 'A Victorian-era town built on healing springs and deep lore.',
-        history: 'Founded in 1879, Eureka Springs was built around natural cold-water springs believed by indigenous peoples and early settlers to have miraculous healing powers. The entire city is on the National Register of Historic Places, featuring a labyrinth of winding, steep streets where no two roads intersect at a 90-degree angle.',
-        facts: [
-            'The entire downtown is built into steep Ozark limestone bluffs',
-            'Underground tunnels and "hidden" levels exist beneath the streets',
-            'Home to the massive "Christ of the Ozarks" statue',
-            'Known for its "Palace Hotel" and bathhouse culture'
-        ],
+        history: 'Founded in 1879, Eureka Springs was built around 60 natural cold-water springs believed by indigenous peoples and early settlers to have miraculous healing powers. The entire city is listed on the National Register of Historic Places, featuring a labyrinth of winding, steep streets where no two roads intersect at a 90-degree angle.',
+        facts: ['The entire downtown is built into steep Ozark limestone bluffs', 'Underground tunnels and "hidden" levels exist beneath the streets', 'Home to the massive "Christ of the Ozarks" statue', 'Known for its "Palace Hotel" and bathhouse culture'],
         related: ['falk', 'crescent'] 
       },
       { 
         id: 'waverly', title: 'Waverly Hills Sanatorium', state: 'KY', region: 'Louisville, KY', category: 'haunted', color: '#4b0082', 
         desc: 'A Tudor Gothic monument to a dark era of American medicine.',
-        history: 'Opened in 1910 to combat a massive Tuberculosis outbreak, Waverly Hills became a self-contained city. After antibiotics rendered the facility obsolete in 1961, it fell into decay, gaining a reputation as one of the most haunted locations in the world.',
-        facts: [
-            'The "Body Chute" is a 500-foot tunnel used to remove the deceased',
-            'Room 502 is the epicenter of reported paranormal activity',
-            'Over 60,000 deaths occurred within these walls'
-        ],
-        related: ['eureka'] 
+        history: 'Opened in 1910 to combat a massive Tuberculosis outbreak, Waverly Hills became a self-contained city. At its height, it housed over 400 patients. After antibiotics made the facility obsolete in 1961, it fell into decay, gaining a reputation as one of the most haunted locations in the world.',
+        facts: ['The "Body Chute" is a 500-foot tunnel used to remove the deceased', 'Room 502 is the epicenter of reported paranormal activity', 'Over 60,000 deaths occurred within these walls'],
+        related: [] 
       },
-      { id: 'san-luis', title: 'San Luis Valley', state: 'CO', region: 'South-Central CO', category: 'alien', color: '#006400', desc: 'North America\'s most active UFO and paranormal hotspot.', history: 'A high altitude desert valley known for unexplained phenomena.', facts: ['Cattle mutilations', 'UFO sightings'], related: ['ufo-watchtower', 'eureka'] },
-      { id: 'villisca', title: 'Axe Murder House', state: 'IA', region: 'Villisca, IA', category: 'cemetery', color: '#310000', desc: 'Site of one of the most brutal unsolved mass murders in American history.', history: 'Placeholder text.', facts: ['Placeholder'], related: [] },
-      { id: 'mothman', title: 'Mothman Site', state: 'WV', region: 'Point Pleasant, WV', category: 'cryptid', color: '#1a1a1a', desc: 'The epicenter of a 13-month reign of terror by a winged creature.', history: 'Placeholder text.', facts: ['Placeholder'], related: [] },
-      { id: 'mutter', title: 'Mütter Museum', state: 'PH', region: 'Philadelphia, PA', category: 'historic', color: '#5c4033', desc: 'A world-renowned collection of anatomical specimens and medical oddities.', history: 'Placeholder text.', facts: ['Placeholder'], related: [] },
-      { id: 'bachelors', title: 'Bachelor\'s Grove', state: 'IL', region: 'Midlothian, IL', category: 'cemetery', color: '#2d3b2d', desc: 'Widely considered the most haunted graveyard in America.', history: 'Placeholder text.', facts: ['Placeholder'], related: [] },
-      { id: 'falk', title: 'Fouke Monster Bog', state: 'AR', region: 'Fouke, AR', category: 'cryptid', color: '#1b3022', desc: 'Home to the aggressive, three-toed Southern Sasquatch.', history: 'Placeholder text.', facts: ['Placeholder'], related: ['eureka'] },
-      { id: 'centralia', title: 'Centralia Mine Fire', state: 'PA', region: 'Centralia, PA', category: 'historic', color: '#444444', desc: 'A town burning from the inside out since a 1962 coal fire.', history: 'Placeholder text.', facts: ['Placeholder'], related: [] },
-      { id: 'winchester', title: 'Winchester House', state: 'CA', region: 'San Jose, CA', category: 'historic', color: '#3d2b1f', desc: 'A labyrinth of architectural madness built to confuse spirits.', history: 'Placeholder text.', facts: ['Placeholder'], related: [] },
-      { id: 'crescent', title: 'Crescent Hotel', state: 'AR', region: 'Eureka Springs, AR', category: 'haunted', color: '#2e1a47', desc: 'Known as "America\'s Most Haunted Hotel."', history: 'Placeholder text.', facts: ['Placeholder'], related: ['eureka'] },
-      { id: 'ufo-watchtower', title: 'UFO Watchtower', state: 'CO', region: 'Hooper, CO', category: 'alien', color: '#004d40', desc: 'A roadside observation deck in the high-altitude desert.', history: 'Placeholder text.', facts: ['Placeholder'], related: ['san-luis'] }
+      { id: 'san-luis', title: 'San Luis Valley', state: 'CO', region: 'South-Central CO', category: 'alien', color: '#006400', desc: 'North America\'s most active UFO and paranormal hotspot.', history: 'A high-altitude desert valley that has been a center of strange phenomena for centuries.', facts: ['Consistent sightings of craft', 'High concentrations of vortices'], related: ['ufo-watchtower'] },
+      { id: 'villisca', title: 'Axe Murder House', state: 'IA', region: 'Villisca, IA', category: 'cemetery', color: '#310000', desc: 'Site of a brutal 1912 unsolved mystery.', history: 'An entire family and two guests were bludgeoned to death in 1912. The house remains in its original condition.', facts: ['Axes found at scene', 'No electricity or running water'], related: [] },
+      { id: 'mothman', title: 'Mothman Site', state: 'WV', region: 'Point Pleasant, WV', category: 'cryptid', color: '#1a1a1a', desc: 'Epicenter of a 13-month reign of terror.', history: 'Dozens of residents reported a winged creature with red eyes between 1966 and 1967.', facts: ['TNT Area sightings', '12-foot chrome statue'], related: [] },
+      { id: 'mutter', title: 'Mütter Museum', state: 'PH', region: 'Philadelphia, PA', category: 'historic', color: '#5c4033', desc: 'Collection of anatomical specimens and medical oddities.', history: 'Started in 1858 by Dr. Thomas Dent Mütter to improve medical education.', facts: ['Albert Einstein’s brain pieces', '139 human skulls'], related: [] },
+      { id: 'bachelors', title: 'Bachelor\'s Grove', state: 'IL', region: 'Midlothian, IL', category: 'cemetery', color: '#2d3b2d', desc: 'Widely considered the most haunted graveyard in America.', history: 'Abandoned cemetery dating back to the 1840s.', facts: ['Madonna of Bachelor\'s Grove photo', 'Phantom farmhouses'], related: [] },
+      { id: 'falk', title: 'Fouke Monster Bog', state: 'AR', region: 'Fouke, AR', category: 'cryptid', color: '#1b3022', desc: 'Home to the aggressive, three-toed Southern Sasquatch.', history: 'Inspired the 1972 film The Legend of Boggy Creek.', facts: ['Three-toed footprints found', 'Boggy Creek sightings'], related: ['eureka'] },
+      { id: 'centralia', title: 'Centralia Mine Fire', state: 'PA', region: 'Centralia, PA', category: 'historic', color: '#444444', desc: 'A town burning from the inside out.', history: 'An underground coal fire has been burning beneath the town since 1962.', facts: ['Ground heat over 1,000F', 'Zip code revoked in 2002'], related: [] },
+      { id: 'winchester', title: 'Winchester House', state: 'CA', region: 'San Jose, CA', category: 'historic', color: '#3d2b1f', desc: 'Architectural madness built to confuse spirits.', history: ' Sarah Winchester kept construction going for 38 years to appease ghosts.', facts: ['Stairs to the ceiling', '160 rooms'], related: [] },
+      { id: 'crescent', title: 'Crescent Hotel', state: 'AR', region: 'Eureka Springs, AR', category: 'haunted', color: '#2e1a47', desc: 'Known as "America\'s Most Haunted Hotel."', history: 'Once a fraudulent cancer hospital run by Norman Baker.', facts: ['Basement morgue', 'Ghost of Michael'], related: ['eureka'] },
+      { id: 'ufo-watchtower', title: 'UFO Watchtower', state: 'CO', region: 'Hooper, CO', category: 'alien', color: '#004d40', desc: 'Roadside observation deck in the high-altitude desert.', history: 'Built to provide a place for enthusiasts to scan the skies.', facts: ['Rock Garden offerings', 'Two psychic vortices'], related: ['san-luis'] }
     ];
 
     let currentCat = 'all';
@@ -207,60 +193,50 @@
       document.getElementById('modal-title').textContent = item.title;
       document.getElementById('modal-map-link').href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.title + ' ' + item.region)}`;
       
-      // Build Related Section
       let relatedHtml = '';
       if (item.related && item.related.length > 0) {
         relatedHtml = `
           <div>
-            <h4 class="text-purple-500 font-black uppercase text-xs mb-6 tracking-widest">Nearby Legends</h4>
+            <h4 class="text-purple-500 font-bold uppercase text-xs mb-6 tracking-widest">Related</h4>
             <div class="grid grid-cols-1 gap-3">
               ${item.related.map(relId => {
                 const rel = trips.find(t => t.id === relId);
                 if (!rel) return '';
                 return `
-                  <button onclick="openModal('${rel.id}')" class="w-full p-5 bg-white/5 border border-white/10 rounded-2xl text-left hover:bg-white/10 transition flex justify-between items-center group">
+                  <button onclick="openModal('${rel.id}')" class="w-full p-5 bg-white/5 border border-white/10 rounded-2xl text-left hover:bg-white/10 transition flex justify-between items-center">
                     <div>
                       <p class="text-white font-bold">${rel.title}</p>
                       <p class="text-[10px] text-zinc-500 uppercase tracking-widest">${rel.region}</p>
                     </div>
-                    <i data-lucide="arrow-right" class="w-4 h-4 text-purple-500 group-hover:translate-x-1 transition"></i>
+                    <i data-lucide="arrow-right" class="w-4 h-4 text-purple-500"></i>
                   </button>`;
               }).join('')}
             </div>
           </div>`;
       }
 
-      // Populate Content
       document.getElementById('modal-content').innerHTML = `
         <div class="w-full h-72 rounded-[2rem] flex items-center justify-center shadow-inner" style="background: linear-gradient(135deg, ${item.color}, #1e1e28)">
-          <span class="text-[10px] font-bold text-white/20 uppercase tracking-widest">Photo Records Missing</span>
+          <span class="text-[10px] font-bold text-white/20 uppercase tracking-widest">Photo Coming Soon</span>
         </div>
-
         <div>
-          <div class="flex items-center gap-2 mb-4 text-purple-500">
-              <i data-lucide="map-pin" class="w-4 h-4"></i>
-              <span class="text-xs font-bold uppercase tracking-widest">${item.region}</span>
-          </div>
-          <p class="text-zinc-300 text-xl leading-relaxed font-light italic border-l-2 border-purple-600/30 pl-6">${item.desc}</p>
+          <p class="text-zinc-300 text-lg leading-relaxed">${item.desc}</p>
         </div>
-
         <div>
-          <h3 class="text-purple-500 font-black text-2xl mb-4 uppercase tracking-tighter">History & Lore</h3>
-          <p class="text-zinc-400 leading-relaxed text-lg">${item.history || 'Archives for this location are currently being recovered...'}</p>
+          <h3 class="text-purple-500 font-bold text-2xl mb-4 uppercase tracking-tighter">History & Lore</h3>
+          <p class="text-zinc-400 leading-relaxed text-md">${item.history || 'Information pending.'}</p>
         </div>
-
-        <div class="bg-white/[0.02] border border-white/5 p-8 rounded-[2rem]">
-          <h3 class="text-purple-500 font-black text-xs mb-6 uppercase tracking-widest">Key Intelligence</h3>
+        <div>
+          <h3 class="text-purple-500 font-bold text-2xl mb-6 uppercase tracking-tighter">Key Facts</h3>
           <ul class="space-y-4">
-            ${item.facts.map(fact => `
+            ${item.facts ? item.facts.map(fact => `
               <li class="flex items-start gap-3 text-zinc-300">
-                <i data-lucide="star" class="w-5 h-5 text-purple-600 mt-1 shrink-0"></i>
+                <i data-lucide="star" class="w-5 h-5 text-purple-500 mt-1 shrink-0"></i>
                 <span class="text-md font-medium leading-tight">${fact}</span>
               </li>
-            `).join('')}
+            `).join('') : ''}
           </ul>
         </div>
-
         ${relatedHtml}
       `;
       
@@ -270,22 +246,20 @@
 
     function renderFeatured() {
       const featured = trips[0];
-      const card = document.getElementById('featured-card');
-      if(!card) return;
-      card.innerHTML = `
+      document.getElementById('featured-card').innerHTML = `
         <div onclick="openModal('${featured.id}')" class="flex flex-col md:flex-row w-full group">
           <div class="w-full md:w-2/5 min-h-[350px] flex items-center justify-center border-r border-white/5" style="background: linear-gradient(135deg, ${featured.color}, #12121a)">
-            <span class="text-[10px] font-bold text-white/20 uppercase tracking-widest">Photo Records Missing</span>
+            <span class="text-[10px] font-bold text-white/20 uppercase tracking-widest">Photo Coming Soon</span>
           </div>
           <div class="p-12 flex flex-col justify-center flex-1 text-left relative">
-            <h3 class="text-4xl font-black mb-2 text-[#f5f0e8] leading-tight group-hover:text-purple-400 transition-colors uppercase">${featured.title}</h3>
+            <h3 class="text-4xl font-black mb-2 text-[#f5f0e8] leading-tight group-hover:text-purple-400 transition-colors">${featured.title}</h3>
             <div class="flex items-center gap-2 mb-6 text-purple-500">
                <i data-lucide="map-pin" class="w-4 h-4"></i>
                <span class="text-sm font-bold uppercase tracking-wider">${featured.region}</span>
             </div>
             <p class="text-zinc-400 text-lg mb-10 leading-relaxed">${featured.desc}</p>
             <div class="flex items-center justify-between border-t border-white/5 pt-8">
-              <span class="text-[11px] font-black uppercase tracking-[0.2em] text-zinc-500">Tap to unlock archives</span>
+              <span class="text-[11px] font-black uppercase tracking-[0.2em] text-zinc-500">Tap to learn more</span>
               <div class="p-4 bg-white/5 rounded-2xl border border-white/5"><i data-lucide="arrow-up-right" class="w-5 h-5"></i></div>
             </div>
           </div>
@@ -307,10 +281,10 @@
         card.className = 'attraction-card rounded-[2.5rem] p-8 cursor-pointer relative';
         card.innerHTML = `
           <div class="h-48 rounded-2xl mb-6 flex items-center justify-center" style="background: linear-gradient(135deg, ${item.color}, #1e1e28)">
-            <span class="text-[10px] font-bold text-white/30 uppercase tracking-widest">Secure Image Link</span>
+            <span class="text-[10px] font-bold text-white/30 uppercase tracking-widest">Photo Coming Soon</span>
           </div>
           <div class="text-left">
-            <h3 class="text-2xl font-black text-white leading-tight uppercase">${item.title}</h3>
+            <h3 class="text-2xl font-black text-white leading-tight">${item.title}</h3>
             <div class="flex items-center gap-1.5 mt-2 mb-4 text-purple-500">
                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
                <span class="text-[11px] font-bold uppercase tracking-widest">${item.region}</span>
@@ -350,18 +324,18 @@
 
       document.getElementById('search-input').oninput = (e) => {
         const val = e.target.value.toLowerCase();
-        const filtered = trips.filter(t => t.title.toLowerCase().includes(val) || t.region.toLowerCase().includes(val));
         const grid = document.getElementById('trip-grid');
         grid.innerHTML = '';
+        const filtered = trips.filter(t => t.title.toLowerCase().includes(val) || t.region.toLowerCase().includes(val));
         filtered.forEach(item => {
            const card = document.createElement('div');
            card.className = 'attraction-card rounded-[2.5rem] p-8 cursor-pointer relative';
            card.innerHTML = `
              <div class="h-48 rounded-2xl mb-6 flex items-center justify-center" style="background: linear-gradient(135deg, ${item.color}, #1e1e28)"></div>
-             <h3 class="text-2xl font-black text-white leading-tight uppercase">${item.title}</h3>
+             <h3 class="text-2xl font-black text-white leading-tight">${item.title}</h3>
              <div class="flex items-center gap-1.5 mt-2 mb-4 text-purple-500">
                 <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
-                <span class="text-[11px] font-bold uppercase tracking-widest uppercase">${item.region}</span>
+                <span class="text-[11px] font-bold uppercase tracking-widest">${item.region}</span>
              </div>
            `;
            card.onclick = () => openModal(item.id);
@@ -373,3 +347,4 @@
   </script>
 </body>
 </html>
+```
