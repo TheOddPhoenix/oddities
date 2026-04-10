@@ -142,7 +142,7 @@
           </div>
           <h3 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tighter mb-3">Know a strange location?</h3>
           <p class="text-zinc-400 text-xs sm:text-sm mb-8 max-w-md mx-auto leading-relaxed">Help us map the macabre. Submit a dark history site, haunted hall, or bizarre roadside attraction to be featured on OddStops.</p>
-          <button onclick="showToast('Feature Coming Soon')" class="bg-purple-600 text-[#12121a] px-8 py-4 rounded-xl font-bold uppercase text-[10px] sm:text-xs tracking-widest hover:scale-105 transition">Suggest a Stop</button>
+          <button onclick="showToast('Feature Coming Soon')" class="bg-purple-600 text-[#12121a] px-6 py-3 rounded-xl font-bold uppercase text-[10px] sm:text-xs tracking-widest hover:scale-105 transition">Suggest a Stop</button>
         </div>
       </section>
 
@@ -232,16 +232,49 @@
       default: '#1e1e28'
     };
 
-    // --- NEW SMART BADGE MATCHER ---
-    function getIconForTag(rawTag) {
-      const tag = rawTag.toLowerCase().trim();
-      if (tag.includes('crime') || tag.includes('murder') || tag.includes('serial')) return 'fingerprint';
-      if (tag.includes('histor') || tag.includes('lore') || tag.includes('dark history')) return 'landmark';
-      if (tag.includes('alien') || tag.includes('ufo') || tag.includes('space')) return 'rocket';
-      if (tag.includes('cemetery') || tag.includes('graves') || tag.includes('tomb')) return 'cross';
-      if (tag.includes('haunt') || tag.includes('ghost') || tag.includes('paranormal') || tag.includes('spirit')) return 'ghost';
-      if (tag.includes('cryptid') || tag.includes('monster') || tag.includes('creature')) return 'footprints';
-      return 'compass'; 
+    // --- NEW SMART AUTO-SCANNER ---
+    function generateAutoBadges(item) {
+      const textToScan = [
+        item.category || '',
+        ...(item.tags || []),
+        item.title || '',
+        item.desc || '',
+        item.history || '',
+        ...(item.facts || [])
+      ].join(' ').toLowerCase();
+
+      const badges = new Map();
+
+      const explicitTags = item.tags || [item.category];
+      explicitTags.forEach(tag => {
+         if(!tag) return;
+         const t = tag.toLowerCase();
+         if (t.includes('crime') || t.includes('murder')) badges.set('fingerprint', 'True Crime');
+         else if (t.includes('histor') || t.includes('dark')) badges.set('landmark', 'Dark History');
+         else if (t.includes('alien') || t.includes('ufo')) badges.set('rocket', 'Alien/UFO');
+         else if (t.includes('cemetery') || t.includes('grave')) badges.set('cross', 'Cemetery');
+         else if (t.includes('haunt') || t.includes('ghost')) badges.set('ghost', 'Haunted');
+         else if (t.includes('cryptid') || t.includes('monster')) badges.set('footprints', 'Cryptid');
+      });
+
+      if (textToScan.match(/crime|murder|serial|mafia|mob|capone|prison|outlaw|killer|arrest/)) badges.set('fingerprint', 'True Crime');
+      if (textToScan.match(/haunt|ghost|paranormal|spirit|asylum|creepy|poltergeist/)) badges.set('ghost', 'Haunted');
+      if (textToScan.match(/histor|lore|massacre|tragedy|prohibition|fortress|war|battle/)) badges.set('landmark', 'Dark History');
+      if (textToScan.match(/alien|ufo|space|extraterrestrial|abduction/)) badges.set('rocket', 'Alien/UFO');
+      if (textToScan.match(/cemetery|graves|tomb|burial|mausoleum/)) badges.set('cross', 'Cemetery');
+      if (textToScan.match(/cryptid|monster|creature|bigfoot|sasquatch|chupacabra/)) badges.set('footprints', 'Cryptid');
+
+      if (badges.size === 0) badges.set('compass', 'OddStop');
+
+      let html = '';
+      badges.forEach((label, icon) => {
+        html += `
+          <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-purple-500/30 group-hover:bg-purple-500/10 transition-colors" title="${label}">
+            <i data-lucide="${icon}" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-500 group-hover:text-purple-400 transition-colors"></i>
+          </div>
+        `;
+      });
+      return html;
     }
     // -------------------------------
 
@@ -311,16 +344,8 @@
           const color = getCategoryColor(item.category);
           const isVisited = userVisited.includes(item.id);
 
-          const tagsArray = item.tags || [item.category];
           let badgesHtml = `<div class="flex flex-wrap gap-2 mt-3 pt-3 border-t border-white/5">`;
-          tagsArray.forEach(tag => {
-            const iconName = getIconForTag(tag);
-            badgesHtml += `
-              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-purple-500/30 group-hover:bg-purple-500/10 transition-colors" title="${tag}">
-                <i data-lucide="${iconName}" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-500 group-hover:text-purple-400 transition-colors"></i>
-              </div>
-            `;
-          });
+          badgesHtml += generateAutoBadges(item);
           badgesHtml += `</div>`;
           
           const card = document.createElement('div');
@@ -596,16 +621,8 @@
         const imagePath = getImagePath(item.id);
         const isSaved = Object.values(userCollections).some(l => l.includes(item.id));
         
-        const tagsArray = item.tags || [item.category];
         let badgesHtml = `<div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-white/5">`;
-        tagsArray.forEach(tag => {
-          const iconName = getIconForTag(tag);
-          badgesHtml += `
-            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-purple-500/30 group-hover:bg-purple-500/10 transition-colors" title="${tag}">
-              <i data-lucide="${iconName}" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-500 group-hover:text-purple-400 transition-colors"></i>
-            </div>
-          `;
-        });
+        badgesHtml += generateAutoBadges(item);
         badgesHtml += `</div>`;
 
         const card = document.createElement('div');
