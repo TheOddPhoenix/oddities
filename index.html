@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OddStops | The Odd Phoenix</title>
+  <title>Oddities | The Odd Phoenix</title>
   
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
@@ -40,7 +40,7 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6 flex items-center justify-between">
         <div class="flex items-center gap-2 text-left">
           <div class="skull-spin"><i data-lucide="skull" class="text-purple-600 w-6 h-6 sm:w-8 sm:h-8"></i></div>
-          <span class="text-lg sm:text-2xl font-black tracking-tighter uppercase">OddStops</span>
+          <span class="text-lg sm:text-2xl font-black tracking-tighter uppercase">Oddities</span>
         </div>
         
         <div class="relative dropdown">
@@ -88,7 +88,7 @@
             <i data-lucide="compass" class="text-purple-600 w-8 h-8 sm:w-10 sm:h-10"></i>
             <div class="flex flex-col">
               <span class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">EXPLORE</span>
-              <h2 class="text-3xl sm:text-4xl font-black leading-none text-left tracking-tighter uppercase">Discover OddStops</h2>
+              <h2 class="text-3xl sm:text-4xl font-black leading-none text-left tracking-tighter uppercase">Discover Oddities</h2>
             </div>
           </div>
 
@@ -141,7 +141,7 @@
             <i data-lucide="map-pin-question" class="w-8 h-8 sm:w-10 sm:h-10 text-purple-500"></i>
           </div>
           <h3 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tighter mb-3">Know a strange location?</h3>
-          <p class="text-zinc-400 text-xs sm:text-sm mb-8 max-w-md mx-auto leading-relaxed">Help us map the macabre. Submit a dark history site, haunted hall, or bizarre roadside attraction to be featured on OddStops.</p>
+          <p class="text-zinc-400 text-xs sm:text-sm mb-8 max-w-md mx-auto leading-relaxed">Help us map the macabre. Submit a dark history site, haunted hall, or bizarre roadside attraction to be featured on Oddities.</p>
           <button onclick="showToast('Feature Coming Soon')" class="bg-purple-600 text-[#12121a] px-6 py-3 rounded-xl font-bold uppercase text-[10px] sm:text-xs tracking-widest hover:scale-105 transition">Suggest a Stop</button>
         </div>
       </section>
@@ -171,7 +171,7 @@
         <div class="text-left">
           <div class="flex items-center gap-2 mb-3 sm:mb-4">
             <i data-lucide="skull" class="text-purple-600 w-4 h-4 sm:w-5 sm:h-5"></i>
-            <span class="text-lg sm:text-xl font-black tracking-tighter text-purple-500 uppercase">OddStops</span>
+            <span class="text-lg sm:text-xl font-black tracking-tighter text-white uppercase">Oddities</span>
           </div>
           <p class="text-zinc-600 text-[9px] sm:text-[10px] leading-relaxed uppercase">
             © 2026 Odd Phoenix LLC. All rights reserved.<br>
@@ -264,7 +264,7 @@
       if (textToScan.match(/cemetery|graves|tomb|burial|mausoleum/)) badges.set('cross', 'Cemetery');
       if (textToScan.match(/cryptid|monster|creature|bigfoot|sasquatch|chupacabra/)) badges.set('footprints', 'Cryptid');
 
-      if (badges.size === 0) badges.set('compass', 'OddStop');
+      if (badges.size === 0) badges.set('compass', 'Oddity');
 
       let html = '';
       badges.forEach((label, icon) => {
