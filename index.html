@@ -314,7 +314,6 @@
     }
 
     function getCategoryColor(cat) { return categoryColors[cat] || categoryColors.default; }
-    function getImagePath(id) { return `images/${id}.png`; }
 
     function updateAccountDropdown() {
       const container = document.getElementById('dropdown-lists-container');
@@ -378,7 +377,11 @@
                 <i data-lucide="check-circle" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
               </button>
               ${isVisited ? '<div class="absolute inset-0 bg-green-900/30 z-10 flex items-center justify-center backdrop-blur-[2px] pointer-events-none"><span class="text-green-400 font-black tracking-widest uppercase border-[2px] sm:border-[3px] border-green-400 px-3 sm:px-6 py-1 sm:py-2 rounded-lg sm:rounded-xl transform -rotate-12 text-sm sm:text-xl shadow-2xl">Visited</span></div>' : ''}
-              <img src="images/${item.id}.png" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='images/${item.id}.jpg'; this.parentElement.classList.add('bg-zinc-900');">
+              
+              <img src="images/${item.id}.png" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='images/${item.id}.jpg'; this.addEventListener('error', function(){ this.style.display='none'; this.nextElementSibling.style.display='flex'; }, {once: true})">
+              <div class="hidden w-full h-full items-center justify-center absolute inset-0" style="background: linear-gradient(135deg, ${color}, #1e1e28);">
+                 <span class="text-[8px] sm:text-[10px] font-bold opacity-30 uppercase tracking-widest text-white">Photo Coming</span>
+              </div>
             </div>
             <div class="flex flex-col flex-1 text-left">
               <h3 class="text-sm sm:text-xl font-black text-white uppercase line-clamp-2 ${isVisited ? 'line-through decoration-green-500/50 decoration-2' : ''}">${item.title}</h3>
@@ -504,10 +507,12 @@
 
       document.getElementById('modal-content').innerHTML = `
         <div class="w-full h-48 sm:h-72 rounded-2xl sm:rounded-[2rem] flex items-center justify-center shadow-inner overflow-hidden bg-zinc-900 relative">
-          <img src="images/${item.id}.png" alt="${item.title}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='images/${item.id}.jpg'; this.parentElement.classList.add('bg-zinc-900');">
-          <div class="hidden w-full h-full items-center justify-center absolute inset-0" style="background: linear-gradient(135deg, ${color}, #1e1e28); z-index: -1;">
+          
+          <img src="images/${item.id}.png" alt="${item.title}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='images/${item.id}.jpg'; this.addEventListener('error', function(){ this.style.display='none'; this.nextElementSibling.style.display='flex'; }, {once: true})">
+          <div class="hidden w-full h-full items-center justify-center absolute inset-0" style="background: linear-gradient(135deg, ${color}, #1e1e28);">
             <span class="text-[9px] sm:text-[10px] font-bold text-white/20 uppercase tracking-widest">Photo Coming Soon</span>
           </div>
+
         </div>
         ${metaHtml ? `<div class="flex flex-wrap gap-2 sm:gap-3">${metaHtml}</div>` : ''}
         <div>
@@ -532,7 +537,7 @@
 
     function renderFeatured() {
       if (typeof trips === 'undefined') return;
-      const featured = trips.find(t => t.id === 'eureka') || trips[0]; // fallback if eureka is missing
+      const featured = trips.find(t => t.id === 'eureka') || trips[0]; 
       if(!featured) return;
       
       const isSaved = Object.values(userCollections).some(l => l.includes(featured.id));
@@ -548,7 +553,12 @@
             <button onclick="event.stopPropagation(); openSaveMenu('${featured.id}')" class="absolute top-4 left-4 sm:top-6 sm:left-6 z-10 p-2 sm:p-3 bg-black/40 backdrop-blur-md rounded-lg sm:rounded-xl border border-white/10 text-white hover:bg-purple-600 transition-all">
               <i data-lucide="bookmark" class="w-4 h-4 sm:w-5 sm:h-5 ${isSaved ? 'fill-white text-white' : ''}"></i>
             </button>
-            <img src="images/${featured.id}.png" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='images/${featured.id}.jpg'; this.parentElement.classList.add('bg-zinc-900');">
+            
+            <img src="images/${featured.id}.png" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='images/${featured.id}.jpg'; this.addEventListener('error', function(){ this.style.display='none'; this.nextElementSibling.style.display='flex'; }, {once: true})">
+            <div class="hidden w-full h-full items-center justify-center absolute inset-0" style="background: linear-gradient(135deg, ${color}, #1e1e28);">
+                <span class="text-[10px] font-bold text-white/20 uppercase tracking-widest">Photo Coming Soon</span>
+            </div>
+
           </div>
           <div class="p-6 sm:p-12 flex flex-col justify-center flex-1 text-left relative">
             <h3 class="text-2xl sm:text-4xl font-black mb-2 text-[#f5f0e8] leading-tight group-hover:text-purple-400 transition-colors uppercase">${featured.title}</h3>
@@ -580,6 +590,7 @@
         let badgesHtml = `<div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-white/5">`;
         badgesHtml += generateAutoBadges(item);
         badgesHtml += `</div>`;
+        const color = getCategoryColor(item.category);
         const card = document.createElement('div');
         card.className = 'attraction-card rounded-[1.5rem] sm:rounded-[2.5rem] p-4 sm:p-8 cursor-pointer relative group flex flex-col h-full';
         card.onclick = () => openModal(item.id);
@@ -588,7 +599,12 @@
             <button onclick="event.stopPropagation(); openSaveMenu('${item.id}')" class="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 p-2 sm:p-3 bg-black/40 backdrop-blur-md rounded-lg sm:rounded-xl border border-white/10 text-white hover:bg-purple-600 transition-all">
               <i data-lucide="bookmark" class="w-3.5 h-3.5 sm:w-4 sm:h-4 ${Object.values(userCollections).some(l => l.includes(item.id)) ? 'fill-white text-white' : ''}"></i>
             </button>
-            <img src="images/${item.id}.png" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='images/${item.id}.jpg'; this.parentElement.classList.add('bg-zinc-900');">
+            
+            <img src="images/${item.id}.png" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='images/${item.id}.jpg'; this.addEventListener('error', function(){ this.style.display='none'; this.nextElementSibling.style.display='flex'; }, {once: true})">
+            <div class="hidden w-full h-full items-center justify-center absolute inset-0" style="background: linear-gradient(135deg, ${color}, #1e1e28);">
+              <span class="text-[8px] sm:text-[10px] font-bold text-white/30 uppercase tracking-widest px-2 text-center">Photo Coming</span>
+            </div>
+
           </div>
           <div class="text-left flex flex-col flex-1">
             <h3 class="text-sm sm:text-2xl font-black text-white leading-tight uppercase line-clamp-2">${item.title}</h3>
