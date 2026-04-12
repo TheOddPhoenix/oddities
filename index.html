@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OddStops | The Odd Phoenix</title>
+  <title>Oddities | The Odd Phoenix</title>
   
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
@@ -40,7 +40,7 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6 flex items-center justify-between">
         <div class="flex items-center gap-2 text-left">
           <div class="skull-spin"><i data-lucide="skull" class="text-purple-600 w-6 h-6 sm:w-8 sm:h-8"></i></div>
-          <span class="text-lg sm:text-2xl font-black tracking-tighter uppercase">OddStops</span>
+          <span class="text-lg sm:text-2xl font-black tracking-tighter uppercase text-white">Oddities</span>
         </div>
         
         <div class="relative dropdown">
@@ -49,7 +49,7 @@
           </button>
           <div id="account-dropdown" class="dropdown-content">
             <div class="px-4 py-3 border-b border-white/5 mb-2">
-              <p class="text-[10px] text-zinc-500 font-black uppercase tracking-widest">My Collections</p>
+              <p class="text-[10px] text-zinc-500 font-black uppercase tracking-widest">My Account</p>
             </div>
             <div id="dropdown-lists-container"></div>
             </div>
@@ -88,7 +88,7 @@
             <i data-lucide="compass" class="text-purple-600 w-8 h-8 sm:w-10 sm:h-10"></i>
             <div class="flex flex-col">
               <span class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.3em] mb-0.5">EXPLORE</span>
-              <h2 class="text-3xl sm:text-4xl font-black leading-none text-left tracking-tighter uppercase">Discover OddStops</h2>
+              <h2 class="text-3xl sm:text-4xl font-black leading-none text-left tracking-tighter uppercase">Discover Oddities</h2>
             </div>
           </div>
 
@@ -108,6 +108,9 @@
               </button>
               <button class="filter-btn bg-white/5 text-zinc-500 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest flex items-center gap-1.5 sm:gap-2 transition hover:text-white" data-filter="cemetery">
                 <i data-lucide="cross" class="w-3.5 h-3.5"></i> Cemeteries
+              </button>
+              <button class="filter-btn bg-white/5 text-zinc-500 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest flex items-center gap-1.5 sm:gap-2 transition hover:text-white" data-filter="missing">
+                <i data-lucide="help-circle" class="w-3.5 h-3.5"></i> Disappearances
               </button>
               <button class="filter-btn bg-white/5 text-zinc-500 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest flex items-center gap-1.5 sm:gap-2 transition hover:text-white" data-filter="cryptid">
                 <i data-lucide="footprints" class="w-3.5 h-3.5"></i> Cryptid
@@ -137,11 +140,28 @@
 
       <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
         <div class="p-8 sm:p-12 bg-purple-900/10 border border-purple-500/20 rounded-[1.5rem] sm:rounded-[2.5rem] flex flex-col items-center text-center">
-          <div class="p-4 bg-purple-600/20 rounded-full mb-4 sm:mb-6">
-            <i data-lucide="map-pin-question" class="w-8 h-8 sm:w-10 sm:h-10 text-purple-500"></i>
+          <div class="flex gap-6 sm:gap-10 mb-6 sm:mb-8">
+            <div class="flex flex-col items-center gap-2">
+               <div class="p-3 bg-purple-600/20 rounded-full border border-purple-500/30">
+                 <i data-lucide="landmark" class="w-5 h-5 sm:w-6 sm:h-6 text-purple-400"></i>
+               </div>
+               <span class="text-[8px] font-bold uppercase tracking-widest text-zinc-500">History</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+               <div class="p-3 bg-purple-600/20 rounded-full border border-purple-500/30">
+                 <i data-lucide="ghost" class="w-5 h-5 sm:w-6 sm:h-6 text-purple-400"></i>
+               </div>
+               <span class="text-[8px] font-bold uppercase tracking-widest text-zinc-500">Haunted</span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+               <div class="p-3 bg-purple-600/20 rounded-full border border-purple-500/30">
+                 <i data-lucide="sparkles" class="w-5 h-5 sm:w-6 sm:h-6 text-purple-400"></i>
+               </div>
+               <span class="text-[8px] font-bold uppercase tracking-widest text-zinc-500">Bizarre</span>
+            </div>
           </div>
           <h3 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tighter mb-3">Know a strange location?</h3>
-          <p class="text-zinc-400 text-xs sm:text-sm mb-8 max-w-md mx-auto leading-relaxed">Help us map the macabre. Submit a dark history site, haunted hall, or bizarre roadside attraction to be featured on OddStops.</p>
+          <p class="text-zinc-400 text-xs sm:text-sm mb-8 max-w-md mx-auto leading-relaxed">Help us map the macabre. Submit a dark history site, haunted hall, or bizarre roadside attraction to be featured on Oddities.</p>
           <button onclick="showToast('Feature Coming Soon')" class="bg-purple-600 text-[#12121a] px-6 py-3 rounded-xl font-bold uppercase text-[10px] sm:text-xs tracking-widest hover:scale-105 transition">Suggest a Stop</button>
         </div>
       </section>
@@ -171,7 +191,7 @@
         <div class="text-left">
           <div class="flex items-center gap-2 mb-3 sm:mb-4">
             <i data-lucide="skull" class="text-purple-600 w-4 h-4 sm:w-5 sm:h-5"></i>
-            <span class="text-lg sm:text-xl font-black tracking-tighter text-purple-500 uppercase">OddStops</span>
+            <span class="text-lg sm:text-xl font-black tracking-tighter text-white uppercase">Oddities</span>
           </div>
           <p class="text-zinc-600 text-[9px] sm:text-[10px] leading-relaxed uppercase">
             © 2026 Odd Phoenix LLC. All rights reserved.<br>
@@ -229,10 +249,10 @@
       cryptid: '#064e3b',
       cemetery: '#0c0a09',
       crime: '#450a0a',
+      missing: '#854d0e',
       default: '#1e1e28'
     };
 
-    // --- NEW SMART AUTO-SCANNER ---
     function generateAutoBadges(item) {
       const textToScan = [
         item.category || '',
@@ -244,8 +264,8 @@
       ].join(' ').toLowerCase();
 
       const badges = new Map();
-
       const explicitTags = item.tags || [item.category];
+      
       explicitTags.forEach(tag => {
          if(!tag) return;
          const t = tag.toLowerCase();
@@ -255,6 +275,7 @@
          else if (t.includes('cemetery') || t.includes('grave')) badges.set('cross', 'Cemetery');
          else if (t.includes('haunt') || t.includes('ghost')) badges.set('ghost', 'Haunted');
          else if (t.includes('cryptid') || t.includes('monster')) badges.set('footprints', 'Cryptid');
+         else if (t.includes('missing') || t.includes('disappear')) badges.set('help-circle', 'Disappearance');
       });
 
       if (textToScan.match(/crime|murder|serial|mafia|mob|capone|prison|outlaw|killer|arrest/)) badges.set('fingerprint', 'True Crime');
@@ -263,8 +284,9 @@
       if (textToScan.match(/alien|ufo|space|extraterrestrial|abduction/)) badges.set('rocket', 'Alien/UFO');
       if (textToScan.match(/cemetery|graves|tomb|burial|mausoleum/)) badges.set('cross', 'Cemetery');
       if (textToScan.match(/cryptid|monster|creature|bigfoot|sasquatch|chupacabra/)) badges.set('footprints', 'Cryptid');
+      if (textToScan.match(/missing|disappear|vanish|unsolved|hoffa/)) badges.set('help-circle', 'Disappearance');
 
-      if (badges.size === 0) badges.set('compass', 'OddStop');
+      if (badges.size === 0) badges.set('compass', 'Oddity');
 
       let html = '';
       badges.forEach((label, icon) => {
@@ -276,12 +298,10 @@
       });
       return html;
     }
-    // -------------------------------
 
     let userCollections = JSON.parse(localStorage.getItem('oddstops_collections')) || { "My Bucket List": [] };
     let userVisited = JSON.parse(localStorage.getItem('oddstops_visited')) || [];
     let activeLocationId = null;
-
     let visibleCount = 12;
     let currentFilteredTrips = [];
     let currentCat = 'all';
@@ -298,20 +318,27 @@
 
     function updateAccountDropdown() {
       const container = document.getElementById('dropdown-lists-container');
-      container.innerHTML = '';
+      
+      let htmlString = `
+        <button onclick="showToast('Account Settings Coming Soon')" class="w-full text-left px-4 py-3 text-[10px] sm:text-xs font-bold text-zinc-300 hover:bg-white/5 hover:text-purple-400 flex justify-between items-center transition border-b border-white/5 mb-1 group uppercase tracking-widest">
+            <span>My Account</span> <i data-lucide="settings" class="w-3.5 h-3.5 text-zinc-500 group-hover:text-purple-400 transition"></i>
+        </button>
+      `;
+
       Object.keys(userCollections).forEach(listName => {
-        const item = document.createElement('button');
-        item.className = "w-full text-left px-4 py-3 text-[10px] sm:text-xs font-medium text-zinc-300 hover:bg-white/5 hover:text-purple-400 flex justify-between items-center transition group";
-        item.innerHTML = `<span>${listName}</span> <span class="text-[9px] bg-white/5 px-2 py-1 rounded text-zinc-600 group-hover:bg-purple-600/20 group-hover:text-purple-400">${userCollections[listName].length}</span>`;
-        item.onclick = () => viewCollection(listName);
-        container.appendChild(item);
+        htmlString += `
+          <button onclick="viewCollection('${listName}')" class="w-full text-left px-4 py-3 text-[10px] sm:text-xs font-medium text-zinc-300 hover:bg-white/5 hover:text-purple-400 flex justify-between items-center transition group">
+            <span>${listName}</span> <span class="text-[9px] bg-white/5 px-2 py-1 rounded text-zinc-600 group-hover:bg-purple-600/20 group-hover:text-purple-400">${userCollections[listName].length}</span>
+          </button>
+        `;
       });
+      container.innerHTML = htmlString;
+      lucide.createIcons();
     }
 
     function toggleVisited(id, event) {
       if(event) event.stopPropagation();
       const idx = userVisited.indexOf(id);
-      
       if (idx > -1) {
           userVisited.splice(idx, 1);
           showToast("Removed from Visited");
@@ -319,19 +346,16 @@
           userVisited.push(id);
           showToast("Marked as Visited!");
       }
-      
       localStorage.setItem('oddstops_visited', JSON.stringify(userVisited));
       viewCollection(document.getElementById('active-list-title').textContent);
     }
 
     function viewCollection(listName) {
       document.getElementById('main-explore-view').classList.add('hidden');
-      
       const section = document.getElementById('collections-display-section');
       const grid = document.getElementById('collection-grid');
       document.getElementById('active-list-title').textContent = listName;
       grid.innerHTML = '';
-      
       const ids = userCollections[listName];
       if (!ids || ids.length === 0) {
         grid.innerHTML = `<div class="col-span-full py-20 text-center text-zinc-600 uppercase text-xs font-bold tracking-widest">This list is empty. Go save some oddities!</div>`;
@@ -340,29 +364,21 @@
           if (typeof trips === 'undefined') return;
           const item = trips.find(t => t.id === id);
           if(!item) return;
-          
           const color = getCategoryColor(item.category);
           const isVisited = userVisited.includes(item.id);
-
           let badgesHtml = `<div class="flex flex-wrap gap-2 mt-3 pt-3 border-t border-white/5">`;
           badgesHtml += generateAutoBadges(item);
           badgesHtml += `</div>`;
-          
           const card = document.createElement('div');
           card.className = `attraction-card rounded-[1.5rem] sm:rounded-[2.5rem] p-4 sm:p-8 cursor-pointer relative group flex flex-col h-full ${isVisited ? 'opacity-60 grayscale hover:grayscale-0 transition-all duration-500' : ''}`;
-          
           card.onclick = () => openModal(item.id);
           card.innerHTML = `
             <div class="h-32 sm:h-40 rounded-xl sm:rounded-2xl mb-4 sm:mb-6 flex items-center justify-center overflow-hidden bg-zinc-900 relative shrink-0">
-              
               <button onclick="toggleVisited('${item.id}', event)" class="absolute top-2 left-2 sm:top-4 sm:left-4 z-20 p-2 sm:p-3 rounded-lg sm:rounded-xl border border-white/10 transition-all ${isVisited ? 'bg-green-500 text-black border-green-400' : 'bg-black/40 backdrop-blur-md text-white hover:bg-green-500 hover:text-black'}">
                 <i data-lucide="check-circle" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
               </button>
-
               ${isVisited ? '<div class="absolute inset-0 bg-green-900/30 z-10 flex items-center justify-center backdrop-blur-[2px] pointer-events-none"><span class="text-green-400 font-black tracking-widest uppercase border-[2px] sm:border-[3px] border-green-400 px-3 sm:px-6 py-1 sm:py-2 rounded-lg sm:rounded-xl transform -rotate-12 text-sm sm:text-xl shadow-2xl">Visited</span></div>' : ''}
-              
-              <img src="${getImagePath(item.id)}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='images/${item.id}.jpg'; this.addEventListener('error', function(){ this.style.display='none'; this.nextElementSibling.style.display='flex'; }, {once: true})">
-              <div class="hidden w-full h-full items-center justify-center" style="background: linear-gradient(135deg, ${color}, #1e1e28)"><span class="text-[8px] sm:text-[10px] font-bold opacity-30 uppercase tracking-widest">Photo Coming</span></div>
+              <img src="images/${item.id}.png" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='images/${item.id}.jpg'; this.parentElement.classList.add('bg-zinc-900');">
             </div>
             <div class="flex flex-col flex-1 text-left">
               <h3 class="text-sm sm:text-xl font-black text-white uppercase line-clamp-2 ${isVisited ? 'line-through decoration-green-500/50 decoration-2' : ''}">${item.title}</h3>
@@ -373,7 +389,6 @@
           grid.appendChild(card);
         });
       }
-
       section.classList.remove('hidden');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       lucide.createIcons();
@@ -389,7 +404,6 @@
       activeLocationId = id;
       const menu = document.getElementById('global-save-menu');
       const listContainer = document.getElementById('global-collections-list');
-      
       listContainer.innerHTML = Object.keys(userCollections).map(name => {
           const isSaved = userCollections[name].includes(id);
           return `<button onclick="saveToSpecificList('${name}', '${id}')" class="w-full p-4 sm:p-5 rounded-xl sm:rounded-2xl border flex justify-between items-center transition ${isSaved ? 'bg-purple-600 border-purple-600 text-black' : 'bg-white/5 border-white/10 text-white hover:bg-white/10'}">
@@ -397,47 +411,33 @@
             <i data-lucide="${isSaved ? 'check-circle' : 'plus'}" class="w-4 h-4"></i>
           </button>`;
       }).join('');
-
       document.getElementById('global-new-list-name').value = '';
       menu.classList.remove('hidden');
       lucide.createIcons();
     }
 
-    function closeSaveMenu() {
-        document.getElementById('global-save-menu').classList.add('hidden');
-    }
+    function closeSaveMenu() { document.getElementById('global-save-menu').classList.add('hidden'); }
 
     function saveToSpecificList(listName, id) {
       const idx = userCollections[listName].indexOf(id);
-      if (idx > -1) {
-          userCollections[listName].splice(idx, 1);
-          showToast(`Removed from ${listName}`);
-      } else {
-          userCollections[listName].push(id);
-          showToast(`Saved to ${listName}!`);
-      }
-      
+      if (idx > -1) { userCollections[listName].splice(idx, 1); showToast(`Removed from ${listName}`); } 
+      else { userCollections[listName].push(id); showToast(`Saved to ${listName}!`); }
       localStorage.setItem('oddstops_collections', JSON.stringify(userCollections));
       closeSaveMenu();
       updateBookmarkIcon(id);
       updateAccountDropdown();
-      
       renderGrid(currentFilteredTrips.length > 0 ? currentFilteredTrips : null);
     }
 
     function createNewList() {
       const name = document.getElementById('global-new-list-name').value.trim();
-      if (!name || userCollections[name]) {
-          showToast(userCollections[name] ? "List already exists" : "Please enter a name");
-          return;
-      }
+      if (!name || userCollections[name]) { showToast(userCollections[name] ? "List already exists" : "Please enter a name"); return; }
       userCollections[name] = [activeLocationId];
       localStorage.setItem('oddstops_collections', JSON.stringify(userCollections));
       showToast(`Created & Saved to ${name}`);
       closeSaveMenu();
       updateBookmarkIcon(activeLocationId);
       updateAccountDropdown();
-      
       renderGrid(currentFilteredTrips.length > 0 ? currentFilteredTrips : null);
     }
 
@@ -454,11 +454,10 @@
       if (typeof trips === 'undefined') return;
       const item = trips.find(t => t.id === id);
       if(!item) return;
-      const color = getCategoryColor(item.category);
-
-      document.getElementById('modal-title').textContent = item.title;
       
-      document.getElementById('modal-map-link').href = `https://maps.google.com/?q=${encodeURIComponent(item.title + ' ' + item.region)}`;
+      const color = getCategoryColor(item.category);
+      document.getElementById('modal-title').textContent = item.title;
+      document.getElementById('modal-map-link').href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(item.title + ' ' + item.region);
       
       let metaHtml = '';
       if (item.safety_rating) {
@@ -474,31 +473,20 @@
           <span class="text-[9px] sm:text-[10px] font-bold uppercase text-purple-400 tracking-widest">${item.booking.type || 'Visit Site'}</span>
         </a>`;
       }
-      if (item.booking && item.booking.phone) {
-        metaHtml += `<a href="tel:${item.booking.phone}" class="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-zinc-500/10 border border-zinc-500/20 rounded-xl hover:bg-zinc-500/20 transition">
-          <i data-lucide="phone" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-400"></i>
-          <span class="text-[9px] sm:text-[10px] font-bold uppercase text-zinc-400 tracking-widest">${item.booking.phone}</span>
-        </a>`;
-      }
 
-      let disclaimersHtml = '';
-      if (item.disclaimers && item.disclaimers.length > 0) {
-        disclaimersHtml = `
-        <div class="mb-6 sm:mb-8 p-4 sm:p-6 bg-red-500/5 border border-red-500/20 rounded-xl sm:rounded-2xl">
-          <h4 class="text-red-500 font-black text-[10px] sm:text-xs uppercase tracking-widest mb-2 sm:mb-3 flex items-center gap-2"><i data-lucide="shield-alert" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i> Warnings & Rules</h4>
-          <ul class="space-y-1.5 sm:space-y-2">
-            ${item.disclaimers.map(d => `<li class="flex items-start gap-2 text-zinc-300 text-xs sm:text-sm"><span class="text-red-500 font-bold mt-0.5">•</span> ${d}</li>`).join('')}
-          </ul>
-        </div>`;
+      // Auto-populate related items if not explicitly listed in data.js
+      let relatedIds = item.related || [];
+      if (relatedIds.length === 0) {
+          relatedIds = trips.filter(t => t.id !== item.id && t.category === item.category).map(t => t.id).slice(0, 2);
       }
 
       let relatedHtml = '';
-      if (item.related && item.related.length > 0) {
+      if (relatedIds.length > 0) {
         relatedHtml = `
           <div>
-            <h4 class="text-purple-500 font-bold uppercase text-[10px] sm:text-xs mb-4 sm:mb-6 tracking-widest">Related</h4>
+            <h4 class="text-purple-500 font-bold uppercase text-[10px] sm:text-xs mb-4 sm:mb-6 tracking-widest">Related Oddities</h4>
             <div class="grid grid-cols-1 gap-2 sm:gap-3">
-              ${item.related.map(relId => {
+              ${relatedIds.map(relId => {
                 const rel = trips.find(t => t.id === relId);
                 if (!rel) return '';
                 return `
@@ -515,18 +503,13 @@
       }
 
       document.getElementById('modal-content').innerHTML = `
-        <div class="w-full h-48 sm:h-72 rounded-2xl sm:rounded-[2rem] flex items-center justify-center shadow-inner overflow-hidden bg-zinc-900">
-          <img src="${getImagePath(item.id)}" alt="${item.title}" class="w-full h-full object-cover" 
-               onerror="this.onerror=null; this.src='images/${item.id}.jpg'; this.addEventListener('error', function(){ this.style.display='none'; this.nextElementSibling.style.display='flex'; }, {once: true})">
-          <div class="hidden w-full h-full items-center justify-center" style="background: linear-gradient(135deg, ${color}, #1e1e28)">
+        <div class="w-full h-48 sm:h-72 rounded-2xl sm:rounded-[2rem] flex items-center justify-center shadow-inner overflow-hidden bg-zinc-900 relative">
+          <img src="images/${item.id}.png" alt="${item.title}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='images/${item.id}.jpg'; this.parentElement.classList.add('bg-zinc-900');">
+          <div class="hidden w-full h-full items-center justify-center absolute inset-0" style="background: linear-gradient(135deg, ${color}, #1e1e28); z-index: -1;">
             <span class="text-[9px] sm:text-[10px] font-bold text-white/20 uppercase tracking-widest">Photo Coming Soon</span>
           </div>
         </div>
-        
         ${metaHtml ? `<div class="flex flex-wrap gap-2 sm:gap-3">${metaHtml}</div>` : ''}
-
-        ${disclaimersHtml}
-
         <div>
           <div class="flex items-center gap-1.5 sm:gap-2 mb-3 sm:mb-4 text-purple-500">
               <i data-lucide="map-pin" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
@@ -534,57 +517,38 @@
           </div>
           <p class="text-zinc-300 text-sm sm:text-lg leading-relaxed border-l-2 border-purple-600/30 pl-4 sm:pl-6">${item.desc}</p>
         </div>
-        
-        ${item.parking_tip ? `
-        <div class="p-4 sm:p-6 bg-white/5 rounded-xl sm:rounded-2xl border border-white/10">
-          <h4 class="text-zinc-500 font-bold text-[9px] sm:text-[10px] uppercase tracking-widest mb-1.5 sm:mb-2 flex items-center gap-1.5 sm:gap-2"><i data-lucide="car" class="w-3 h-3 sm:w-3.5 sm:h-3.5"></i> Parking & Access</h4>
-          <p class="text-zinc-300 text-xs sm:text-sm leading-relaxed">${item.parking_tip}</p>
-        </div>` : ''}
-
         <div>
           <h3 class="text-purple-500 font-bold text-xl sm:text-2xl mb-3 sm:mb-4 uppercase tracking-tighter">Dark History & Lore</h3>
           <p class="text-zinc-400 leading-relaxed text-sm sm:text-md">${item.history || 'Detailed historical information is pending for this location.'}</p>
         </div>
-
-        ${item.facts && item.facts.length > 0 ? `
-        <div>
-          <h3 class="text-purple-500 font-bold text-xl sm:text-2xl mb-4 sm:mb-6 uppercase tracking-tighter">Key Facts</h3>
-          <ul class="space-y-3 sm:space-y-4">
-            ${item.facts.map(fact => `
-              <li class="flex items-start gap-2 sm:gap-3 text-zinc-300">
-                <i data-lucide="star" class="w-4 h-4 sm:w-5 sm:h-5 text-purple-500 mt-0.5 sm:mt-1 shrink-0"></i>
-                <span class="text-sm sm:text-md font-medium leading-tight">${fact}</span>
-              </li>
-            `).join('')}
-          </ul>
-        </div>` : ''}
-
         ${relatedHtml}
       `;
-      
       const bookmarkBtn = document.getElementById('bookmark-trigger');
       bookmarkBtn.onclick = () => openSaveMenu(item.id);
       updateBookmarkIcon(item.id);
-
       document.getElementById('detail-modal').classList.remove('hidden');
       lucide.createIcons();
     }
 
     function renderFeatured() {
       if (typeof trips === 'undefined') return;
-      const featured = trips.find(t => t.id === 'eureka');
+      const featured = trips.find(t => t.id === 'eureka') || trips[0]; // fallback if eureka is missing
       if(!featured) return;
+      
+      const isSaved = Object.values(userCollections).some(l => l.includes(featured.id));
       const color = getCategoryColor(featured.category);
-      const imagePath = getImagePath(featured.id);
+      
+      let badgesHtml = `<div class="flex flex-wrap gap-2 mt-4">`;
+      badgesHtml += generateAutoBadges(featured);
+      badgesHtml += `</div>`;
 
       document.getElementById('featured-card').innerHTML = `
         <div onclick="openModal('${featured.id}')" class="flex flex-col md:flex-row w-full group">
-          <div class="w-full md:w-2/5 h-48 sm:min-h-[350px] flex items-center justify-center border-b sm:border-b-0 sm:border-r border-white/5 overflow-hidden bg-zinc-900" style="background: linear-gradient(135deg, ${color}, #12121a)">
-            <img src="${imagePath}" class="w-full h-full object-cover" 
-                 onerror="this.onerror=null; this.src='images/${featured.id}.jpg'; this.addEventListener('error', function(){ this.style.display='none'; this.nextElementSibling.style.display='flex'; }, {once: true})">
-            <div class="hidden w-full h-full items-center justify-center">
-                <span class="text-[10px] font-bold text-white/20 uppercase tracking-widest">Photo Coming Soon</span>
-            </div>
+          <div class="w-full md:w-2/5 h-48 sm:min-h-[350px] flex items-center justify-center border-b sm:border-b-0 sm:border-r border-white/5 overflow-hidden bg-zinc-900 relative">
+            <button onclick="event.stopPropagation(); openSaveMenu('${featured.id}')" class="absolute top-4 left-4 sm:top-6 sm:left-6 z-10 p-2 sm:p-3 bg-black/40 backdrop-blur-md rounded-lg sm:rounded-xl border border-white/10 text-white hover:bg-purple-600 transition-all">
+              <i data-lucide="bookmark" class="w-4 h-4 sm:w-5 sm:h-5 ${isSaved ? 'fill-white text-white' : ''}"></i>
+            </button>
+            <img src="images/${featured.id}.png" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='images/${featured.id}.jpg'; this.parentElement.classList.add('bg-zinc-900');">
           </div>
           <div class="p-6 sm:p-12 flex flex-col justify-center flex-1 text-left relative">
             <h3 class="text-2xl sm:text-4xl font-black mb-2 text-[#f5f0e8] leading-tight group-hover:text-purple-400 transition-colors uppercase">${featured.title}</h3>
@@ -592,8 +556,9 @@
                <i data-lucide="map-pin" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
                <span class="text-xs sm:text-sm font-bold uppercase tracking-wider">${featured.region}</span>
             </div>
-            <p class="text-zinc-400 text-sm sm:text-lg mb-6 sm:mb-10 leading-relaxed">${featured.desc}</p>
-            <div class="flex items-center justify-between border-t border-white/5 pt-6 sm:pt-8">
+            <p class="text-zinc-400 text-sm sm:text-lg mb-4 leading-relaxed">${featured.desc}</p>
+            ${badgesHtml}
+            <div class="flex items-center justify-between border-t border-white/5 pt-6 sm:pt-8 mt-6">
               <span class="text-[9px] sm:text-[11px] font-black uppercase tracking-[0.2em] text-zinc-500">Tap to learn more</span>
               <div class="p-3 sm:p-4 bg-white/5 rounded-xl sm:rounded-2xl border border-white/5"><i data-lucide="arrow-up-right" class="w-4 h-4 sm:w-5 sm:h-5"></i></div>
             </div>
@@ -608,43 +573,27 @@
       const sourceData = data || trips;
       const grid = document.getElementById('trip-grid');
       const loadMoreContainer = document.getElementById('load-more-container');
-      
-      currentFilteredTrips = sourceData.filter(t => 
-        (currentCat === 'all' || t.category === currentCat)
-      );
-
+      currentFilteredTrips = sourceData.filter(t => (currentCat === 'all' || t.category === currentCat));
       grid.innerHTML = '';
       const itemsToShow = currentFilteredTrips.slice(0, visibleCount);
-
       itemsToShow.forEach(item => {
-        const color = getCategoryColor(item.category);
-        const imagePath = getImagePath(item.id);
-        const isSaved = Object.values(userCollections).some(l => l.includes(item.id));
-        
         let badgesHtml = `<div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-white/5">`;
         badgesHtml += generateAutoBadges(item);
         badgesHtml += `</div>`;
-
         const card = document.createElement('div');
         card.className = 'attraction-card rounded-[1.5rem] sm:rounded-[2.5rem] p-4 sm:p-8 cursor-pointer relative group flex flex-col h-full';
         card.onclick = () => openModal(item.id);
-        
         card.innerHTML = `
           <div class="h-32 sm:h-48 rounded-xl sm:rounded-2xl mb-4 sm:mb-6 flex items-center justify-center overflow-hidden bg-zinc-900 relative shrink-0">
             <button onclick="event.stopPropagation(); openSaveMenu('${item.id}')" class="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 p-2 sm:p-3 bg-black/40 backdrop-blur-md rounded-lg sm:rounded-xl border border-white/10 text-white hover:bg-purple-600 transition-all">
-              <i data-lucide="bookmark" class="w-3.5 h-3.5 sm:w-4 sm:h-4 ${isSaved ? 'fill-white text-white' : ''}"></i>
+              <i data-lucide="bookmark" class="w-3.5 h-3.5 sm:w-4 sm:h-4 ${Object.values(userCollections).some(l => l.includes(item.id)) ? 'fill-white text-white' : ''}"></i>
             </button>
-            <img src="${imagePath}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
-                 onerror="this.onerror=null; this.src='images/${item.id}.jpg'; this.addEventListener('error', function(){ this.style.display='none'; this.nextElementSibling.style.display='flex'; }, {once: true})">
-            <div class="hidden w-full h-full items-center justify-center" style="background: linear-gradient(135deg, ${color}, #1e1e28)">
-              <span class="text-[8px] sm:text-[10px] font-bold text-white/30 uppercase tracking-widest px-2 text-center">Photo Coming</span>
-            </div>
+            <img src="images/${item.id}.png" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='images/${item.id}.jpg'; this.parentElement.classList.add('bg-zinc-900');">
           </div>
           <div class="text-left flex flex-col flex-1">
             <h3 class="text-sm sm:text-2xl font-black text-white leading-tight uppercase line-clamp-2">${item.title}</h3>
-            <div class="flex items-center gap-1 sm:gap-1.5 mt-1.5 sm:mt-2 mb-2 sm:mb-4 text-purple-500">
-               <i data-lucide="map-pin" class="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0"></i>
-               <span class="text-[8px] sm:text-[11px] font-bold uppercase tracking-widest line-clamp-1">${item.region}</span>
+            <div class="flex items-center gap-1.5 mt-2 mb-4 text-purple-500 font-bold uppercase tracking-widest text-[8px] sm:text-[11px]">
+               <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> <span>${item.region}</span>
             </div>
             <p class="text-zinc-500 text-[10px] sm:text-sm line-clamp-2 leading-relaxed mb-auto">${item.desc}</p>
             ${badgesHtml}
@@ -652,95 +601,53 @@
         `;
         grid.appendChild(card);
       });
-
-      if (visibleCount >= currentFilteredTrips.length) {
-        loadMoreContainer.classList.add('hidden');
-      } else {
-        loadMoreContainer.classList.remove('hidden');
-      }
-
+      if (visibleCount >= currentFilteredTrips.length) loadMoreContainer.classList.add('hidden');
+      else loadMoreContainer.classList.remove('hidden');
       lucide.createIcons();
     }
 
-    function loadMore() {
-      visibleCount += 12;
-      renderGrid();
-    }
-
-    function resetPagination() {
-      visibleCount = 12;
-    }
-
-    const stateNames = {
-      "AL": "alabama", "AK": "alaska", "AZ": "arizona", "AR": "arkansas", "CA": "california",
-      "CO": "colorado", "CT": "connecticut", "DE": "delaware", "FL": "florida", "GA": "georgia",
-      "HI": "hawaii", "ID": "idaho", "IL": "illinois", "IN": "indiana", "IA": "iowa",
-      "KS": "kansas", "KY": "kentucky", "LA": "louisiana", "ME": "maine", "MD": "maryland",
-      "MA": "massachusetts", "MI": "michigan", "MN": "minnesota", "MS": "mississippi", "MO": "missouri",
-      "MT": "montana", "NE": "nebraska", "NV": "nevada", "NH": "new hampshire", "NJ": "new jersey",
-      "NM": "new mexico", "NY": "new york", "NC": "north carolina", "ND": "north dakota", "OH": "ohio",
-      "OK": "oklahoma", "OR": "oregon", "PA": "pennsylvania", "RI": "rhode island", "SC": "south carolina",
-      "SD": "south dakota", "TN": "tennessee", "TX": "texas", "UT": "utah", "VT": "vermont",
-      "VA": "virginia", "WA": "washington", "WV": "west virginia", "WI": "wisconsin", "WY": "wyoming"
-    };
+    function loadMore() { visibleCount += 12; renderGrid(); }
+    function resetPagination() { visibleCount = 12; }
 
     window.onload = () => {
       if (typeof trips !== 'undefined') {
         
-        // --- DATA CLEANUP LOOP ---
-        trips.forEach(t => {
-          if (t.region && t.state) {
-            if (!t.region.includes(',') && !t.region.includes(t.state)) {
-              t.region = `${t.region}, ${t.state}`;
-            }
-          }
-        });
-        // -------------------------
+        // Dynamically inject Jimmy Hoffa if it doesn't exist in data.js yet
+        if (!trips.find(t => t.id === 'hoffa')) {
+          trips.unshift({
+            id: 'hoffa', 
+            title: 'Machus Red Fox (Jimmy Hoffa Last Seen)', 
+            region: 'Bloomfield Township, MI', 
+            state: 'MI', 
+            category: 'missing',
+            desc: 'The former Machus Red Fox restaurant where powerful union leader Jimmy Hoffa was last seen alive on July 30, 1975, before vanishing without a trace.',
+            history: 'James Riddle Hoffa was scheduled to meet with two mob figures here at 2:00 PM. He was last seen making a phone call from a payphone behind the restaurant around 2:15 PM. His car was found unlocked in the parking lot, but Hoffa was never seen again. Theories about his disappearance range from being buried under Giants Stadium to being incinerated. He was legally declared dead in 1982.',
+            facts: ['The restaurant is now an Andiamo, but the parking lot remains largely the same.', 'The FBI has conducted dozens of excavations across multiple states looking for his remains over the decades.'],
+            tags: ['missing', 'crime']
+          });
+        }
 
-        renderFeatured();
+        trips.forEach(t => { if (t.region && t.state && !t.region.includes(',') && !t.region.includes(t.state)) t.region = `${t.region}, ${t.state}`; });
+        renderFeatured(); 
         renderGrid();
-      } else {
-        console.warn("data.js could not be loaded or 'trips' is undefined.");
       }
       
       updateAccountDropdown();
-      
-      document.getElementById('modal-close').onclick = () => { 
-          document.getElementById('detail-modal').classList.add('hidden'); 
-          closeSaveMenu(); 
-      };
+      document.getElementById('modal-close').onclick = () => { document.getElementById('detail-modal').classList.add('hidden'); closeSaveMenu(); };
       
       document.querySelectorAll('button.filter-btn').forEach(btn => {
         btn.onclick = () => {
-          document.querySelectorAll('button.filter-btn').forEach(b => {
-            b.classList.remove('active', 'bg-purple-600', 'text-white');
-            b.classList.add('bg-white/5', 'text-zinc-500');
-          });
-          btn.classList.add('active', 'bg-purple-600', 'text-white');
-          btn.classList.remove('bg-white/5', 'text-zinc-500');
-          
-          currentCat = btn.dataset.filter;
-          document.getElementById('search-input').value = '';
-          
-          resetPagination();
-          renderGrid();
+          document.querySelectorAll('button.filter-btn').forEach(b => { b.classList.remove('active', 'bg-purple-600', 'text-white'); b.classList.add('bg-white/5', 'text-zinc-500'); });
+          btn.classList.add('active', 'bg-purple-600', 'text-white'); btn.classList.remove('bg-white/5', 'text-zinc-500');
+          currentCat = btn.dataset.filter; document.getElementById('search-input').value = ''; resetPagination(); renderGrid();
         };
       });
-
+      
       document.getElementById('search-input').oninput = (e) => {
         if (typeof trips === 'undefined') return;
         const val = e.target.value.toLowerCase().trim();
-        
-        const filtered = trips.filter(t => {
-          const fullState = t.state ? (stateNames[t.state.toUpperCase()] || "") : "";
-          return t.title.toLowerCase().includes(val) || 
-                 t.region.toLowerCase().includes(val) ||
-                 (t.state && t.state.toLowerCase().includes(val)) ||
-                 fullState.includes(val);
-        });
-        
-        resetPagination();
-        renderGrid(filtered);
+        const filtered = trips.filter(t => t.title.toLowerCase().includes(val) || t.region.toLowerCase().includes(val));
+        resetPagination(); renderGrid(filtered);
       };
       
       lucide.createIcons();
