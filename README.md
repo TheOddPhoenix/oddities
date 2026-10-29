@@ -1,32 +1,50 @@
 # Oddities
 
-Static travel discovery site hosted on GitHub Pages.
+Dark-tourism discovery site for The Odd Phoenix, hosted on GitHub Pages.
 
-## Run locally
+## Local preview and checks
 
-Serve this directory with any static HTTP server, for example `python -m http.server 8765`.
+Serve the repository root with a static HTTP server. Run:
+
+```
+node --check app.js
+node --check data.js
+node --check map-data.js
+node tests/audit.spec.cjs
+```
+
+Also test map search, category filters, marker popups, related stops, account navigation, saved lists, keyboard dialogs, and narrow/wide layouts in a browser.
 
 ## Structure
 
-- `index.html`: accessible page structure and metadata
-- `styles.css`: responsive styling; no runtime CSS compiler or third-party font requests
-- Original Lucide 0.263.0 icon set loaded from the same CDN used by the original site
-- `app.js`: search, filters, native dialogs, shareable hash links, device-local lists
-- `data.js`: canonical catalog, explicit category tags, legacy ID aliases
-- `images/eureka.webp`: optimized original image; other cards use decorative CSS artwork
+- `data.js`: catalog stories, card pitches, explicit category tags, restrictions, and related-place suggestions.
+- `map-data.js`: sourced map references with `place` or `area` precision. Area pins are approximate context locations, not entrances, trailheads, private addresses, or navigation instructions.
+- `site-config.js`: public contact address and switchable tile-provider configuration. Never add credentials here.
+- `app.js`: discovery, saved lists, accessible dialogs, local backups, map view, and relationship ranking.
+- `styles.css`: original Outfit font, dark palette, skull/Lucide identity, and responsive layouts.
+- `vendor/leaflet.js` / `vendor/leaflet.css`: Leaflet 1.9.4, BSD-2-Clause; see `vendor/LEAFLET-LICENSE.txt`.
+- `content/IMAGE-WORKFLOW.md`: repeatable AI-illustration pipeline, prompts, manifest, approval and resizing tools.
 
-## Content policy
+## Map sources and provider
 
-Paranormal accounts are folklore, not verified scientific findings. Source-reviewed entries include sources and a review date. Other catalog summaries explicitly await full source review; do not treat them as checked travel instructions. Operator links are provided separately and do not imply a completed source review. No current hours, prices, safety guarantees, or precise map coordinates are invented. Private/restricted entries omit map calls to action. Check with the operator before travel.
+Place references come from Wikipedia/Wikidata; town and city area references are checked against the US Census Gazetteer. Matching ambiguities use area pins. The Marshall House is the Savannah location, not the similarly named Virginia house. Review every new map reference before publishing.
 
-The four initial source-reviewed entries are Sand Creek, Alcatraz, Winchester Mystery House, and Golden Gate Bridge (2026-10-29). Remaining entries still need individual historical and visitor-access research.
+Leaflet draws the map; OpenStreetMap supplies the tiles with visible attribution. Tiles load only when the user opens the map. Searches filter the local catalog and do not call a geocoder. No device geolocation is requested. Do not bulk-download, prefetch, or offer offline downloads from the public OSM tile service. Preserve normal browser caching and Referer headers. The tile URL is configurable so the site can move to a production tile provider as traffic grows. See https://operations.osmfoundation.org/policies/tiles/ .
 
-## Saved data
+## Editorial structure
 
-Existing `oddstops_collections` and `oddstops_visited` browser keys remain supported. Legacy IDs migrate to canonical records when loaded. Lists use text rendering and prototype-free objects; malformed storage is handled without stopping the app. Export/import provides a portable JSON backup. No backend account, tracking, or cross-device sync is implied.
+Cards explain why a place belongs in a dark-tourism guide. Practical guidance appears in Know Before You Visit. Detail sections use Dark History & Lore and Related Oddities. Explicit related stops are prioritized, followed by nearby places and shared themes; limited variation applies within similarly ranked candidates.
 
-## Publishing
+Reviewed entries include primary or identified sources. Historical review remains ongoing across the catalog; do not present every original entry as fully fact-checked. Paranormal stories are labeled as lore or reported experiences. Restricted sites do not offer Google directions.
 
-GitHub Pages serves the root of `main`. Before publishing, run `node --check app.js`, `node --check data.js`, and `node tests/audit.spec.cjs` for catalog/search/storage regression checks. Also test native dialogs, saved lists, and narrow/wide layouts in a browser.
+## Account and contact
 
+The Account presentation is restored. Saved lists and visited status still use local storage under the existing `oddstops_collections` and `oddstops_visited` keys. Online signup, authentication, and cross-device sync require a separate backend integration and are not simulated here.
 
+Set `siteConfig.contactEmail` to the owner's intended public address to activate mailto suggestions and contact. No address is inferred from a Git commit or personal account. The old GitHub-account notice has been removed.
+
+## Assets and scale
+
+Eureka Springs retains the owner's original AI illustration. Silver Plume has a newly generated, reviewed AI illustration in three WebP sizes, labeled in the detail pane. Other entries retain category artwork until their illustrations are approved. The image queue scales authoring; it does not automatically spend money, generate images, or publish unreviewed outputs.
+
+For thousands of images, use object storage/CDN and a server-side generation/review queue. For substantial visitor traffic, use a tile provider with suitable capacity. Browser-only saved data must migrate carefully when real accounts are introduced.

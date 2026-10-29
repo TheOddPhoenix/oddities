@@ -1,5 +1,5 @@
-/* Curated catalog. See README for review policy. */
-const locationAliases = {"the-last-resort-bar-wuornos":"last-resort","clutter-family-farm":"clutter-house","winchester-mystery-house":"winchester-mystery-house-hist","marfa-lights-viewing":"marfa-lights-main","hoffa":"jimmy-hoffa-red-fox","crescent":"crescent-hotel-eureka"};
+/* Oddities catalog; individual source reviews are recorded per entry. */
+const locationAliases = {"the-last-resort-bar-wuornos": "last-resort", "clutter-family-farm": "clutter-house", "winchester-mystery-house": "winchester-mystery-house-hist", "marfa-lights-viewing": "marfa-lights-main", "hoffa": "jimmy-hoffa-red-fox", "crescent": "crescent-hotel-eureka"};
 const trips = [
   {
     "id": "last-resort",
@@ -7,11 +7,15 @@ const trips = [
     "state": "FL",
     "region": "Port Orange, FL",
     "category": "crime",
-    "desc": "A Port Orange bar associated with the Aileen Wuornos case.",
+    "desc": "A Florida biker bar woven into the final chapter of the Aileen Wuornos murder case.",
     "related": [],
     "tags": [
       "crime"
-    ]
+    ],
+    "history": "The Last Resort Bar in Port Orange appears in accounts of Aileen Wuornos’s final days before her arrest. Its connection to the case has made it a point of interest for visitors following Florida’s true-crime history.",
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "clutter-house",
@@ -19,7 +23,7 @@ const trips = [
     "state": "KS",
     "region": "Holcomb, KS",
     "category": "crime",
-    "desc": "The private home associated with the 1959 Clutter family murders and Truman Capote’s In Cold Blood.",
+    "desc": "A quiet Kansas farmhouse at the center of the murders that inspired Truman Capote’s In Cold Blood.",
     "related": [],
     "tags": [
       "crime"
@@ -28,7 +32,16 @@ const trips = [
       "Private property. View from public road only.",
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
     ],
-    "restricted": true
+    "restricted": true,
+    "history": "The 1959 murders of the Clutter family changed the American psyche and led Truman Capote to write his masterpiece.",
+    "know_before": [
+      "Private property. View from public road only.",
+      "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
+    ],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ]
   },
   {
     "id": "sloss",
@@ -36,11 +49,15 @@ const trips = [
     "state": "AL",
     "region": "Birmingham, AL",
     "category": "haunted",
-    "desc": "A preserved industrial landmark with a history of iron production and local ghost stories.",
+    "desc": "A towering ironworks where the harsh realities of industrial labor mingle with tales of a haunted night shift.",
     "related": [],
     "tags": [
       "haunted"
-    ]
+    ],
+    "history": "Operating from 1882 to 1971, this industrial giant was known for brutal working conditions.",
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "eureka",
@@ -48,14 +65,36 @@ const trips = [
     "state": "AR",
     "region": "Carroll County, AR",
     "category": "historic",
-    "desc": "A hillside Arkansas town known for its springs, Victorian architecture, and local legends.",
+    "desc": "A Victorian mountain town of winding streets, haunted hotels, and the shadow of a notorious medical fraud.",
     "related": [
-      "crescent-hotel-eureka"
+      "crescent-hotel-eureka",
+      "basin-park-hotel",
+      "arlington-hotel-capone"
     ],
     "tags": [
-      "historic"
+      "historic",
+      "haunted",
+      "crime"
     ],
-    "image": "images/eureka.webp"
+    "image": "images/eureka.webp",
+    "history": "Eureka Springs grew around its springs in the late nineteenth century, attracting visitors in search of restoration and escape. Its grand hotels also hold darker stories: the Crescent became Norman Baker’s fraudulent cancer clinic in 1937, while the Basin Park Hotel has its own history and ghost-tour traditions. The town makes a natural starting point for exploring both hotels and the folklore woven through its winding streets.",
+    "know_before": [],
+    "image_kind": "AI-generated illustration",
+    "themes": [
+      "hotels",
+      "medical-history"
+    ],
+    "sources": [
+      {
+        "label": "Crescent Hotel: history",
+        "url": "https://crescent-hotel.com/about/history/"
+      },
+      {
+        "label": "Basin Park Hotel: history",
+        "url": "https://basinpark.com/about/history/"
+      }
+    ],
+    "reviewed": "2026-10-29"
   },
   {
     "id": "skunk-ape-headquarters",
@@ -63,10 +102,16 @@ const trips = [
     "state": "FL",
     "region": "Ochopee, FL",
     "category": "cryptid",
-    "desc": "An Everglades attraction dedicated to stories of Florida’s legendary Skunk Ape.",
+    "desc": "Deep in the Everglades, Florida’s foul-smelling answer to Bigfoot has a headquarters of its own.",
     "related": [],
     "tags": [
       "cryptid"
+    ],
+    "history": "Florida’s Skunk Ape is a creature of regional folklore, often described as a large, foul-smelling figure in the Everglades. The headquarters celebrates sightings and stories; they do not establish the creature’s existence.",
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cryptids"
     ]
   },
   {
@@ -75,11 +120,17 @@ const trips = [
     "state": "IL",
     "region": "Midlothian, IL",
     "category": "cemetery",
-    "desc": "A historic Illinois cemetery associated with local ghost stories.",
+    "desc": "A secluded graveyard where phantom figures and the famous “Madonna” photograph fuel enduring ghost stories.",
     "related": [],
     "tags": [
       "cemetery",
       "haunted"
+    ],
+    "history": "Bachelors Grove is a historic cemetery whose reputation has grown through stories of phantom vehicles, unexplained figures, and a widely circulated photograph known as the Madonna of Bachelors Grove. These accounts belong to the cemetery’s ghost lore; they do not establish supernatural activity.",
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cemeteries"
     ]
   },
   {
@@ -88,10 +139,16 @@ const trips = [
     "state": "WV",
     "region": "Point Pleasant, WV",
     "category": "cryptid",
-    "desc": "A statue and museum exploring Point Pleasant’s Mothman folklore.",
+    "desc": "A red-eyed winged creature became a town’s enduring legend—and inspired this unusual monument and museum.",
     "related": [],
     "tags": [
       "cryptid"
+    ],
+    "history": "Reports of a winged, red-eyed figure near Point Pleasant in the 1960s developed into the Mothman legend. The statue and museum explore that folklore and its place in the town’s identity. The nearby TNT area is another stop connected to the reported sightings.",
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cryptids"
     ]
   },
   {
@@ -100,10 +157,18 @@ const trips = [
     "state": "TX",
     "region": "Aurora, TX",
     "category": "alien",
-    "desc": "A cemetery associated with a local legend about an alleged 1897 airship crash.",
+    "desc": "An alleged 1897 airship crash left a Texas cemetery with a legend of an otherworldly burial.",
     "related": [],
     "tags": [
-      "alien"
+      "alien",
+      "cemetery"
+    ],
+    "history": "An 1897 newspaper story described an alleged airship crash in Aurora and a burial in the local cemetery. The account became a lasting piece of UFO folklore. The story is a legend, not proof of an extraterrestrial crash or burial.",
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cemeteries",
+      "ufo-lore"
     ]
   },
   {
@@ -112,7 +177,7 @@ const trips = [
     "state": "CA",
     "region": "San Jose, CA",
     "category": "historic",
-    "desc": "Sarah Winchester’s San Jose mansion, known for its unusual architecture and ghost lore.",
+    "desc": "A labyrinthine Victorian mansion where Sarah Winchester’s architectural legacy meets generations of ghost stories.",
     "related": [],
     "tags": [
       "historic",
@@ -129,7 +194,12 @@ const trips = [
       }
     ],
     "history": "The house offers tours exploring Sarah Winchester’s mansion and its unusual architecture. Ghost stories are part of its visitor storytelling; they are not evidence of supernatural activity.",
-    "reviewed": "2026-10-29"
+    "reviewed": "2026-10-29",
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ]
   },
   {
     "id": "marfa-lights-main",
@@ -137,10 +207,16 @@ const trips = [
     "state": "TX",
     "region": "Marfa, TX",
     "category": "alien",
-    "desc": "A public viewing area associated with reports of distant lights on the Texas horizon.",
+    "desc": "Elusive lights on a West Texas horizon have inspired explanations ranging from ordinary optics to the otherworldly.",
     "related": [],
     "tags": [
       "alien"
+    ],
+    "history": "Observers have long reported distant lights near Marfa, with stories describing glowing points that seem to shift or disappear. Interpretations range from ordinary optical effects to supernatural explanations. The viewing area allows visitors to experience the landscape behind the enduring legend.",
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "ufo-lore"
     ]
   },
   {
@@ -155,12 +231,22 @@ const trips = [
       "No public access to facility.",
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
     ],
-    "desc": "An active federal prison with no public visitor attraction. Do not approach the facility.",
+    "desc": "An imposing federal supermax prison whose extreme isolation has made it one of America’s most notorious institutions.",
     "restricted": true,
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Federal Property. No Trespassing.",
+      "No public access to facility.",
+      "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited.",
+      "Terrain or access warrants extra planning. Confirm conditions with the responsible operator or land manager."
+    ],
+    "image_kind": "Category artwork",
+    "themes": [
+      "prisons"
+    ]
   },
   {
     "id": "bonnie-clyde-joplin-hideout",
@@ -176,7 +262,10 @@ const trips = [
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "sand-creek-massacre-site",
@@ -184,7 +273,7 @@ const trips = [
     "state": "CO",
     "region": "Eads",
     "category": "historic",
-    "desc": "A place of remembrance for the Cheyenne and Arapaho people killed at Sand Creek in 1864.",
+    "desc": "A quiet Colorado prairie bears the memory of the Cheyenne and Arapaho people killed in the 1864 Sand Creek Massacre.",
     "tags": [
       "historic"
     ],
@@ -196,7 +285,12 @@ const trips = [
       }
     ],
     "history": "On November 29, 1864, Cheyenne and Arapaho people encamped along Big Sandy Creek were attacked. The National Historic Site preserves their memory and interprets the events and their lasting consequences.",
-    "reviewed": "2026-10-29"
+    "reviewed": "2026-10-29",
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "memorials"
+    ]
   },
   {
     "id": "bird-girl-bonaventure",
@@ -204,11 +298,18 @@ const trips = [
     "state": "GA",
     "region": "Savannah",
     "category": "historic",
-    "desc": "The cemetery associated with the famous Bird Girl photograph. The sculpture has been relocated; check its current exhibition location.",
+    "desc": "A cemetery photograph turned the Bird Girl sculpture into an icon of Savannah’s gothic mystique.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "The Bird Girl sculpture has been relocated from the cemetery. Check its current exhibition location before visiting."
+    ],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cemeteries"
+    ]
   },
   {
     "id": "wichita-state-crash-site",
@@ -227,7 +328,16 @@ const trips = [
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Extremely steep hike.",
+      "High altitude (10,800ft).",
+      "Treat wreckage as a cemetery.",
+      "Do not rely on informal routes. Confirm lawful trail access and current conditions with the land manager.",
+      "Terrain or access warrants extra planning. Confirm conditions with the responsible operator or land manager."
+    ],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "ludlow-massacre-site",
@@ -235,11 +345,16 @@ const trips = [
     "state": "CO",
     "region": "Ludlow",
     "category": "historic",
-    "desc": "A memorial to people killed during the 1914 Colorado labor conflict.",
+    "desc": "A memorial preserves the memory of the families caught in Colorado’s deadly 1914 labor conflict.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "memorials"
+    ]
   },
   {
     "id": "fort-robinson-outbreak",
@@ -251,11 +366,14 @@ const trips = [
       "url": "https://outdoornebraska.gov/fortrobinson/",
       "type": "State Park & History"
     },
-    "desc": "A Nebraska historic site connected to the 1879 Northern Cheyenne breakout and its tragic aftermath.",
+    "desc": "A former frontier post holds the painful history of the Northern Cheyenne’s 1879 breakout and its aftermath.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "kid-curry-grave-linwood",
@@ -263,11 +381,18 @@ const trips = [
     "state": "CO",
     "region": "Glenwood Springs",
     "category": "crime",
-    "desc": "A historic cemetery associated with the burial of outlaw Harvey Logan, known as Kid Curry.",
+    "desc": "An outlaw’s disputed legacy follows a mountain cemetery linked to Harvey Logan, better known as Kid Curry.",
     "tags": [
-      "crime"
+      "crime",
+      "cemetery"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cemeteries",
+      "outlaws"
+    ]
   },
   {
     "id": "jesse-james-home-museum",
@@ -275,11 +400,16 @@ const trips = [
     "state": "MO",
     "region": "St. Joseph",
     "category": "crime",
-    "desc": "A museum in the former home of Jesse James, interpreting his life and death.",
+    "desc": "The former home where Jesse James’s outlaw life ended with a gunshot in 1882.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "outlaws"
+    ]
   },
   {
     "id": "bonnie-clyde-ambush-site",
@@ -287,11 +417,16 @@ const trips = [
     "state": "LA",
     "region": "Gibsland",
     "category": "crime",
-    "desc": "A roadside marker associated with the 1934 ambush of Bonnie Parker and Clyde Barrow.",
+    "desc": "A rural Louisiana roadside marks the violent end of Bonnie Parker and Clyde Barrow’s crime spree.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "outlaws"
+    ]
   },
   {
     "id": "ambush-museum-gibsland",
@@ -303,7 +438,12 @@ const trips = [
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "outlaws"
+    ]
   },
   {
     "id": "crescent-hotel-eureka",
@@ -318,9 +458,29 @@ const trips = [
     },
     "desc": "A grand hotel that served as a fraudulent cancer hospital under Norman Baker in the 1930s.",
     "tags": [
-      "haunted"
+      "haunted",
+      "historic",
+      "crime"
     ],
-    "related": []
+    "related": [
+      "eureka",
+      "basin-park-hotel",
+      "stanley-hotel"
+    ],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels",
+      "medical-history"
+    ],
+    "history": "The Crescent opened in 1886 as a luxury hotel overlooking Eureka Springs. In 1937, Norman Baker converted it into a clinic that promoted an unproven cancer treatment. His mail-fraud conviction ended that chapter. Today, the restored hotel’s ghost tours mix its documented past with accounts of unexplained experiences.",
+    "sources": [
+      {
+        "label": "Crescent Hotel: history",
+        "url": "https://crescent-hotel.com/about/history/"
+      }
+    ],
+    "reviewed": "2026-10-29"
   },
   {
     "id": "basin-park-hotel",
@@ -333,11 +493,34 @@ const trips = [
       "phone": "877-456-9679",
       "type": "Hotel & Tours"
     },
-    "desc": "A historic hotel in downtown Eureka Springs, associated with local stories and legends.",
+    "desc": "A hillside hotel in the heart of Eureka Springs, where historic corridors are steeped in ghost lore.",
     "tags": [
-      "crime"
+      "crime",
+      "haunted",
+      "historic"
     ],
-    "related": []
+    "related": [
+      "eureka",
+      "crescent-hotel-eureka",
+      "stanley-hotel"
+    ],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ],
+    "history": "The Basin Park Hotel opened in 1905 beside Basin Spring Park in downtown Eureka Springs. Its steep hillside setting and long hospitality history form the backdrop to local ghost stories. The operator now offers paranormal-investigation experiences, presenting the hotel’s reported hauntings as part of its visitor storytelling.",
+    "sources": [
+      {
+        "label": "Basin Park Hotel: history",
+        "url": "https://basinpark.com/about/history/"
+      },
+      {
+        "label": "Basin Park Hotel: visitor experiences",
+        "url": "https://basinpark.com/"
+      }
+    ],
+    "reviewed": "2026-10-29"
   },
   {
     "id": "arlington-hotel-capone",
@@ -350,11 +533,16 @@ const trips = [
       "phone": "501-623-7771",
       "type": "Hotel"
     },
-    "desc": "A historic Hot Springs hotel associated with the city’s resort and organized-crime history.",
+    "desc": "A grand resort hotel recalls Hot Springs’ gambling heyday and its reputation as a gangster retreat.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ]
   },
   {
     "id": "ohio-club-hot-springs",
@@ -362,11 +550,14 @@ const trips = [
     "state": "AR",
     "region": "Hot Springs",
     "category": "crime",
-    "desc": "A historic Hot Springs bar associated with the city’s gambling era.",
+    "desc": "Behind a historic bar’s doors lies the memory of Hot Springs’ gambling dens and underworld visitors.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "gangster-museum-america",
@@ -374,11 +565,14 @@ const trips = [
     "state": "AR",
     "region": "Hot Springs",
     "category": "crime",
-    "desc": "A Hot Springs museum exploring the city’s gambling and organized-crime history.",
+    "desc": "Hot Springs’ hidden gambling empire and notorious visitors take center stage in this underworld history museum.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "greenwood-cemetery-madden",
@@ -386,11 +580,16 @@ const trips = [
     "state": "AR",
     "region": "Hot Springs",
     "category": "cemetery",
-    "desc": "A Hot Springs cemetery associated with the burial of Owney Madden.",
+    "desc": "A Hot Springs cemetery holds the final resting place of gangster Owney Madden.",
     "tags": [
       "cemetery"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cemeteries"
+    ]
   },
   {
     "id": "fordyce-bathhouse",
@@ -398,12 +597,18 @@ const trips = [
     "state": "AR",
     "region": "Hot Springs",
     "category": "historic",
-    "desc": "A historic Bathhouse Row building associated with Hot Springs’ bathing culture and local legends.",
+    "desc": "An ornate bathhouse preserves the medical promises and unusual rituals of America’s historic spa culture.",
     "tags": [
       "historic",
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels",
+      "medical-history"
+    ]
   },
   {
     "id": "malco-theatre-hot-springs",
@@ -415,7 +620,13 @@ const trips = [
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels",
+      "disappearances"
+    ]
   },
   {
     "id": "baker-institute-muscatine",
@@ -427,7 +638,12 @@ const trips = [
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "medical-history"
+    ]
   },
   {
     "id": "blue-angel-muscatine",
@@ -435,12 +651,17 @@ const trips = [
     "state": "IA",
     "region": "Muscatine",
     "category": "cemetery",
-    "desc": "A Greenwood Cemetery monument associated with Muscatine’s local ghost lore.",
+    "desc": "A weathered cemetery angel watches over Muscatine, surrounded by ominous local legends.",
     "tags": [
       "cemetery",
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cemeteries"
+    ]
   },
   {
     "id": "tipton-cow-war",
@@ -448,11 +669,14 @@ const trips = [
     "state": "IA",
     "region": "Tipton",
     "category": "crime",
-    "desc": "An area associated with the 1931 conflict over compulsory cattle tuberculosis testing.",
+    "desc": "A bitter 1931 battle over cattle testing turned rural Iowa into the setting for an extraordinary civil conflict.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "edinburgh-poor-farm",
@@ -460,11 +684,14 @@ const trips = [
     "state": "IA",
     "region": "Monticello",
     "category": "haunted",
-    "desc": "A former county poor farm associated with institutional history and local ghost stories.",
+    "desc": "The legacy of institutional life and unsettling local lore lingers around this former county poor farm.",
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "black-angel-iowa-city",
@@ -472,12 +699,17 @@ const trips = [
     "state": "IA",
     "region": "Iowa City",
     "category": "cemetery",
-    "desc": "A bronze cemetery monument associated with local supernatural legends.",
+    "desc": "A darkened bronze angel stands at the heart of Iowa City’s most persistent cemetery legends.",
     "tags": [
       "cemetery",
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cemeteries"
+    ]
   },
   {
     "id": "villisca-axe-house",
@@ -490,11 +722,16 @@ const trips = [
       "phone": "847-977-5601",
       "type": "Tours & Overnight"
     },
-    "desc": "The Iowa home associated with the unsolved 1912 murders of eight people.",
+    "desc": "An Iowa home still carries the mystery of the eight people murdered there in 1912.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ]
   },
   {
     "id": "gacy-house-site",
@@ -507,12 +744,21 @@ const trips = [
       "Private residence. View from public sidewalk only.",
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
     ],
-    "desc": "A private residential site associated with the John Wayne Gacy case. It is not a public attraction.",
+    "desc": "An ordinary residential lot marks the former home at the center of John Wayne Gacy’s crimes.",
     "restricted": true,
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Private residence. View from public sidewalk only.",
+      "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited.",
+      "Terrain or access warrants extra planning. Confirm conditions with the responsible operator or land manager."
+    ],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ]
   },
   {
     "id": "bobby-franks-kidnap-site",
@@ -520,11 +766,14 @@ const trips = [
     "state": "IL",
     "region": "Chicago",
     "category": "crime",
-    "desc": "A Chicago neighborhood associated with the 1924 abduction and murder of Bobby Franks.",
+    "desc": "A Chicago street recalls the 1924 kidnapping that led to the infamous Leopold and Loeb case.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "cherry-mine-disaster",
@@ -532,11 +781,16 @@ const trips = [
     "state": "IL",
     "region": "Cherry",
     "category": "historic",
-    "desc": "A place associated with the 1909 Cherry Mine disaster and remembrance of the miners who died.",
+    "desc": "A mining town remembers the devastating underground fire of 1909 and the lives lost in its aftermath.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "mining"
+    ]
   },
   {
     "id": "st-valentines-massacre",
@@ -544,11 +798,16 @@ const trips = [
     "state": "IL",
     "region": "Chicago",
     "category": "crime",
-    "desc": "The Chicago location associated with the 1929 St. Valentine’s Day Massacre.",
+    "desc": "A former Chicago garage site recalls the killings that became a defining image of the Prohibition-era underworld.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "memorials"
+    ]
   },
   {
     "id": "eastland-disaster-site",
@@ -556,11 +815,14 @@ const trips = [
     "state": "IL",
     "region": "Chicago",
     "category": "historic",
-    "desc": "A Chicago River location associated with the 1915 SS Eastland disaster and its victims.",
+    "desc": "Along the Chicago River lies the memory of the SS Eastland’s catastrophic 1915 capsizing.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "holmes-murder-castle",
@@ -568,11 +830,17 @@ const trips = [
     "state": "IL",
     "region": "Chicago",
     "category": "crime",
-    "desc": "The Chicago site associated with H.H. Holmes’s former hotel. Many popular accounts mix documented events with disputed stories.",
+    "desc": "The former site of H.H. Holmes’s hotel remains entangled in a mix of documented crime and sensational “Murder Castle” legends.",
     "tags": [
-      "crime"
+      "crime",
+      "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ]
   },
   {
     "id": "little-gracie-watson-grave",
@@ -580,11 +848,17 @@ const trips = [
     "state": "GA",
     "region": "Savannah",
     "category": "cemetery",
-    "desc": "A funerary monument in Savannah’s Bonaventure Cemetery, also associated with local folklore.",
+    "desc": "A lifelike statue of a young girl became one of Savannah’s best-known cemetery monuments and ghost stories.",
     "tags": [
       "cemetery"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cemeteries",
+      "memorials"
+    ]
   },
   {
     "id": "mercer-williams-house",
@@ -592,11 +866,16 @@ const trips = [
     "state": "GA",
     "region": "Savannah",
     "category": "crime",
-    "desc": "A historic Savannah house associated with architecture, preservation, and the Danny Hansford case.",
+    "desc": "An elegant Savannah house sits at the center of the Danny Hansford case and the story behind Midnight in the Garden of Good and Evil.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ]
   },
   {
     "id": "marshall-house-savannah",
@@ -604,11 +883,17 @@ const trips = [
     "state": "GA",
     "region": "Savannah",
     "category": "haunted",
-    "desc": "A Savannah hotel with Civil War history and local ghost stories.",
+    "desc": "Civil War hospital history and reports of restless spirits haunt the reputation of this Savannah hotel.",
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels",
+      "medical-history"
+    ]
   },
   {
     "id": "wright-square-hanging",
@@ -616,12 +901,15 @@ const trips = [
     "state": "GA",
     "region": "Savannah",
     "category": "historic",
-    "desc": "A historic Savannah square associated with early colonial history and local folklore.",
+    "desc": "A colonial Savannah square carries the memory of early executions and the folklore that grew around them.",
     "tags": [
       "historic",
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "moon-river-brewing",
@@ -629,11 +917,18 @@ const trips = [
     "state": "GA",
     "region": "Savannah",
     "category": "haunted",
-    "desc": "The former City Hotel building associated with Savannah ghost stories. Confirm current business operations before planning a visit.",
+    "desc": "The old City Hotel building has become a landmark of Savannah’s ghost lore and reported shadowy encounters.",
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "The listing refers to the former City Hotel building. Confirm current business operations and public access."
+    ],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ]
   },
   {
     "id": "colonial-park-cemetery",
@@ -641,11 +936,16 @@ const trips = [
     "state": "GA",
     "region": "Savannah",
     "category": "cemetery",
-    "desc": "A historic Savannah cemetery connected to the city’s early history and epidemic burials.",
+    "desc": "Weathered graves preserve the memory of early Savannah and the epidemics that shaped the city.",
     "tags": [
       "cemetery"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cemeteries"
+    ]
   },
   {
     "id": "snippy-horse-site",
@@ -653,7 +953,7 @@ const trips = [
     "state": "CO",
     "region": "Alamosa",
     "category": "alien",
-    "desc": "The Alamosa area associated with reports about a horse’s death in 1967 and later UFO speculation.",
+    "desc": "A horse’s mysterious death in 1967 helped turn the San Luis Valley into a focal point for UFO speculation.",
     "restricted": true,
     "disclaimers": [
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
@@ -661,7 +961,14 @@ const trips = [
     "tags": [
       "alien"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
+    ],
+    "image_kind": "Category artwork",
+    "themes": [
+      "ufo-lore"
+    ]
   },
   {
     "id": "crestone-ziggurat-vortex",
@@ -669,11 +976,14 @@ const trips = [
     "state": "CO",
     "region": "Crestone",
     "category": "alien",
-    "desc": "A stepped tower associated with local spiritual traditions and UFO folklore; supernatural claims are unverified.",
+    "desc": "A stepped tower rises from the San Luis Valley amid stories of spiritual energy and unexplained skies.",
     "tags": [
       "alien"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "san-luis-valley-lane-6",
@@ -681,11 +991,16 @@ const trips = [
     "state": "CO",
     "region": "Hooper",
     "category": "alien",
-    "desc": "A road associated with local reports of unusual lights. UFO interpretations are unverified.",
+    "desc": "A remote valley road has become part of Colorado’s folklore of unexplained lights and close encounters.",
     "tags": [
       "alien"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "ufo-lore"
+    ]
   },
   {
     "id": "the-t-road",
@@ -693,11 +1008,14 @@ const trips = [
     "state": "CO",
     "region": "Crestone",
     "category": "alien",
-    "desc": "A San Luis Valley road associated with local reports of unusual objects in the sky.",
+    "desc": "Long, open skies frame a San Luis Valley road where strange-object sightings have entered local lore.",
     "tags": [
       "alien"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "kristal-reisinger-site",
@@ -705,12 +1023,17 @@ const trips = [
     "state": "CO",
     "region": "Crestone",
     "category": "crime",
-    "desc": "The Colorado community associated with Kristal Reisinger’s 2016 disappearance. Respect residents and the search for answers.",
+    "desc": "Kristal Reisinger vanished from Crestone in 2016, leaving unanswered questions in a remote Colorado community.",
     "tags": [
       "crime",
       "missing"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "disappearances"
+    ]
   },
   {
     "id": "gold-camp-road-tunnels",
@@ -719,11 +1042,16 @@ const trips = [
     "region": "Colorado Springs",
     "category": "haunted",
     "safety_rating": "Caution",
-    "desc": "Historic Colorado tunnels associated with railway history and local ghost stories.",
+    "desc": "Old railway tunnels cut through the mountains, carrying a reputation for ghostly encounters and eerie echoes.",
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Terrain or access warrants extra planning. Confirm conditions with the responsible operator or land manager."
+    ],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "emma-crawford-mountain",
@@ -731,11 +1059,16 @@ const trips = [
     "state": "CO",
     "region": "Manitou Springs",
     "category": "haunted",
-    "desc": "The Manitou Springs peak associated with Emma Crawford’s burial and the story behind a local commemorative tradition.",
+    "desc": "A mountain burial and the story of a coffin’s descent became part of Manitou Springs’ enduring folklore.",
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cemeteries"
+    ]
   },
   {
     "id": "deadman-canyon-espinosa",
@@ -743,11 +1076,14 @@ const trips = [
     "state": "CO",
     "region": "Hwy 115",
     "category": "crime",
-    "desc": "A Colorado area associated with the Espinosa brothers’ nineteenth-century crimes.",
+    "desc": "A Colorado canyon carries the dark memory of the Espinosa brothers’ nineteenth-century killing spree.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "victor-hotel-morgue",
@@ -755,11 +1091,17 @@ const trips = [
     "state": "CO",
     "region": "Victor",
     "category": "haunted",
-    "desc": "A historic Colorado hotel associated with local ghost stories.",
+    "desc": "A mining-era hotel’s reputation blends the hardships of a gold-rush town with tales of lingering spirits.",
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels",
+      "mining"
+    ]
   },
   {
     "id": "riverview-cemetery-mine",
@@ -767,11 +1109,18 @@ const trips = [
     "state": "CO",
     "region": "Crested Butte",
     "category": "historic",
-    "desc": "A Crested Butte cemetery associated with victims of the 1884 mine disaster.",
+    "desc": "A mountain cemetery preserves the memory of miners lost in Crested Butte’s 1884 disaster.",
     "tags": [
-      "historic"
+      "historic",
+      "cemetery"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "mining",
+      "cemeteries"
+    ]
   },
   {
     "id": "sin-city-tunnels",
@@ -779,7 +1128,7 @@ const trips = [
     "state": "CO",
     "region": "Old Colorado City",
     "category": "crime",
-    "desc": "Stories of underground passages form part of Old Colorado City’s local history and folklore. Public access is not established.",
+    "desc": "Stories of hidden passageways recall Old Colorado City’s saloons, brothels, and Prohibition-era intrigue.",
     "restricted": true,
     "disclaimers": [
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
@@ -787,7 +1136,12 @@ const trips = [
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
+    ],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "colorado-state-pen-museum",
@@ -795,11 +1149,16 @@ const trips = [
     "state": "CO",
     "region": "Cañon City",
     "category": "historic",
-    "desc": "A museum in Cañon City exploring Colorado’s prison history.",
+    "desc": "Colorado’s prison history unfolds through artifacts, confinement, and the legacy of capital punishment.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "prisons"
+    ]
   },
   {
     "id": "rmnp-disappearances",
@@ -808,12 +1167,27 @@ const trips = [
     "region": "Estes Park",
     "category": "historic",
     "safety_rating": "Caution",
-    "desc": "A mountain park with extensive hiking terrain. Plan for weather, altitude, and official trail conditions.",
+    "desc": "Beyond the mountain scenery lie unresolved disappearances, including the 2019 vanishing of hiker James Pruitt.",
     "tags": [
       "historic",
       "missing"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Check current weather, altitude, trail closures, and official park conditions. Carry appropriate supplies and share your itinerary."
+    ],
+    "image_kind": "Category artwork",
+    "history": "Rocky Mountain National Park’s backcountry is the setting of unresolved missing-person cases. The National Park Service lists James Pruitt, who left Glacier Gorge on February 28, 2019, among its cold cases. Extensive searches have not resolved his disappearance.",
+    "sources": [
+      {
+        "label": "National Park Service: cold cases",
+        "url": "https://www.nps.gov/orgs/1563/cold-cases.htm"
+      }
+    ],
+    "reviewed": "2026-10-29",
+    "themes": [
+      "disappearances"
+    ]
   },
   {
     "id": "stanley-hotel",
@@ -821,11 +1195,28 @@ const trips = [
     "state": "CO",
     "region": "Estes Park",
     "category": "haunted",
-    "desc": "The historic, isolated resort that inspired Stephen King's 'The Shining'.",
+    "desc": "An isolated mountain hotel helped inspire The Shining and became a landmark of American ghost lore.",
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [
+      "crescent-hotel-eureka",
+      "basin-park-hotel",
+      "lemp-mansion"
+    ],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ],
+    "history": "The Stanley opened in 1909 in Estes Park. Its place in Stephen King’s The Shining mythology helped make it a landmark for dark-tourism travelers. Today the operator offers historical, ghost, and Shining-focused tours, bringing together the building’s history, literary connections, and reported paranormal experiences.",
+    "sources": [
+      {
+        "label": "The Stanley Hotel: tours",
+        "url": "https://www.stanleyhotel.com/tours/"
+      }
+    ],
+    "reviewed": "2026-10-29"
   },
   {
     "id": "missouri-state-pen-jeff-city",
@@ -837,11 +1228,16 @@ const trips = [
       "url": "https://missouripentours.com",
       "type": "Tours"
     },
-    "desc": "A former Jefferson City prison associated with Missouri incarceration history and the 1954 riot.",
+    "desc": "A former prison’s imposing walls hold the memory of harsh confinement and a devastating 1954 riot.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "prisons"
+    ]
   },
   {
     "id": "lemp-mansion",
@@ -849,11 +1245,16 @@ const trips = [
     "state": "MO",
     "region": "St. Louis",
     "category": "haunted",
-    "desc": "A historic St. Louis mansion associated with the Lemp brewing family and local ghost stories.",
+    "desc": "A brewing dynasty’s mansion carries a troubled family history and generations of ghost stories.",
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ]
   },
   {
     "id": "trans-allegheny-asylum",
@@ -865,11 +1266,16 @@ const trips = [
       "url": "https://trans-alleghenylunaticasylum.com",
       "type": "Tours"
     },
-    "desc": "A former psychiatric hospital interpreted through architectural, institutional, and medical history tours.",
+    "desc": "A vast former psychiatric hospital reveals the difficult history of institutional care beneath its haunted reputation.",
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "medical-history"
+    ]
   },
   {
     "id": "wv-pen-moundsville",
@@ -877,11 +1283,16 @@ const trips = [
     "state": "WV",
     "region": "Moundsville",
     "category": "haunted",
-    "desc": "A former prison offering historical interpretation and associated with local ghost lore.",
+    "desc": "A fortress-like former prison draws visitors into a history of confinement, violence, and enduring ghost lore.",
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "prisons"
+    ]
   },
   {
     "id": "point-pleasant-mothman",
@@ -889,11 +1300,16 @@ const trips = [
     "state": "WV",
     "region": "Point Pleasant",
     "category": "cryptid",
-    "desc": "The Point Pleasant TNT area associated with reported 1966 sightings that became part of Mothman folklore.",
+    "desc": "Abandoned wartime bunkers form the eerie landscape behind Point Pleasant’s legendary Mothman sightings.",
     "tags": [
       "cryptid"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cryptids"
+    ]
   },
   {
     "id": "waverly-hills-sanatorium",
@@ -905,11 +1321,16 @@ const trips = [
       "url": "https://www.therealwaverlyhills.com",
       "type": "Tours"
     },
-    "desc": "A former tuberculosis hospital known for its medical history and ghost-tour traditions.",
+    "desc": "A former tuberculosis hospital’s medical history lives alongside some of America’s best-known ghost-tour lore.",
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "medical-history"
+    ]
   },
   {
     "id": "ohio-state-reformatory",
@@ -921,11 +1342,16 @@ const trips = [
       "url": "https://www.mrps.org",
       "type": "Tours"
     },
-    "desc": "A historic prison and filming location for The Shawshank Redemption.",
+    "desc": "Towering cellblocks preserve a prison’s troubled history beneath its familiar role in The Shawshank Redemption.",
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "prisons"
+    ]
   },
   {
     "id": "brushy-mountain-pen",
@@ -933,11 +1359,16 @@ const trips = [
     "state": "TN",
     "region": "Petros",
     "category": "crime",
-    "desc": "A former Tennessee prison with a history tied to coal mining and incarceration.",
+    "desc": "A Tennessee prison’s stone walls hold the intertwined histories of coal labor, incarceration, and a notorious escape.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "prisons"
+    ]
   },
   {
     "id": "old-idaho-pen",
@@ -945,11 +1376,16 @@ const trips = [
     "state": "ID",
     "region": "Boise",
     "category": "historic",
-    "desc": "A former Idaho prison interpreting incarceration, daily life, and executions.",
+    "desc": "A former territorial prison preserves the stories of its inmates, punishment, and execution grounds.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "prisons"
+    ]
   },
   {
     "id": "eastern-state-pen",
@@ -957,11 +1393,16 @@ const trips = [
     "state": "PA",
     "region": "Philadelphia",
     "category": "historic",
-    "desc": "A historic Philadelphia prison associated with the development of solitary confinement.",
+    "desc": "High stone walls surround the Philadelphia prison that helped define—and expose the costs of—solitary confinement.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "prisons"
+    ]
   },
   {
     "id": "centralia-mine-fire",
@@ -970,11 +1411,18 @@ const trips = [
     "region": "Centralia",
     "category": "historic",
     "safety_rating": "Caution",
-    "desc": "A town abandoned due to an underground coal fire that has been burning since 1962.",
+    "desc": "An underground mine fire turned a Pennsylvania town into an enduring symbol of abandonment.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Terrain or access warrants extra planning. Confirm conditions with the responsible operator or land manager."
+    ],
+    "image_kind": "Category artwork",
+    "themes": [
+      "mining"
+    ]
   },
   {
     "id": "lizzie-borden-house",
@@ -986,11 +1434,16 @@ const trips = [
       "url": "https://lizzie-borden.com",
       "type": "Tours & Overnight"
     },
-    "desc": "The Fall River home associated with the 1892 murders of Andrew and Abby Borden.",
+    "desc": "A Fall River home remains at the center of the unsolved 1892 murders of Andrew and Abby Borden.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ]
   },
   {
     "id": "salem-witch-memorial",
@@ -998,11 +1451,16 @@ const trips = [
     "state": "MA",
     "region": "Salem",
     "category": "historic",
-    "desc": "A memorial honoring people executed during the 1692 witch trials. The memorial is distinct from the execution site.",
+    "desc": "Stone memorials honor the people executed during the Salem witch trials and the fear that condemned them.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "memorials"
+    ]
   },
   {
     "id": "danvers-state-hospital",
@@ -1010,7 +1468,7 @@ const trips = [
     "state": "MA",
     "region": "Danvers",
     "category": "haunted",
-    "desc": "A former psychiatric hospital site that has been redeveloped. Confirm public access and respect residents.",
+    "desc": "The remains of a once-vast psychiatric hospital recall the shadowed history of institutional treatment.",
     "restricted": true,
     "disclaimers": [
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
@@ -1018,7 +1476,14 @@ const trips = [
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
+    ],
+    "image_kind": "Category artwork",
+    "themes": [
+      "medical-history"
+    ]
   },
   {
     "id": "alcatraz-island",
@@ -1026,7 +1491,7 @@ const trips = [
     "state": "CA",
     "region": "San Francisco",
     "category": "crime",
-    "desc": "A former island prison with military, incarceration, and Native American civil-rights history.",
+    "desc": "An island fortress holds stories of notorious inmates, attempted escapes, and a defining Native American occupation.",
     "tags": [
       "crime"
     ],
@@ -1038,15 +1503,18 @@ const trips = [
       }
     ],
     "history": "Alcatraz served as a fort, military prison, and federal penitentiary. Its history also includes the 19-month occupation by Indians of All Tribes beginning in 1969.",
-    "reviewed": "2026-10-29"
+    "reviewed": "2026-10-29",
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "black-dahlia-dump-site",
-    "title": "Elizabeth Short Memorial Context",
+    "title": "Elizabeth Short Case: Norton Avenue",
     "state": "CA",
     "region": "Los Angeles",
     "category": "crime",
-    "desc": "The Los Angeles neighborhood associated with the 1947 discovery of Elizabeth Short’s remains. This is a residential area, not a visitor attraction.",
+    "desc": "A Los Angeles neighborhood marks the discovery site in the unsolved 1947 murder of Elizabeth Short.",
     "restricted": true,
     "disclaimers": [
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
@@ -1054,7 +1522,14 @@ const trips = [
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
+    ],
+    "image_kind": "Category artwork",
+    "themes": [
+      "memorials"
+    ]
   },
   {
     "id": "cecil-hotel",
@@ -1062,11 +1537,16 @@ const trips = [
     "state": "CA",
     "region": "Los Angeles",
     "category": "crime",
-    "desc": "A Los Angeles hotel associated with twentieth-century social history and widely publicized criminal cases.",
+    "desc": "A downtown Los Angeles hotel’s troubled history became the subject of notorious criminal cases and unsettling modern folklore.",
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ]
   },
   {
     "id": "cielo-drive-manson",
@@ -1079,12 +1559,19 @@ const trips = [
       "Private road. View from public streets only.",
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
     ],
-    "desc": "A private residential area associated with the 1969 Tate murders. It is not open for public visits.",
+    "desc": "A secluded residential area marks the former setting of the 1969 Tate murders.",
     "restricted": true,
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Private road. View from public streets only.",
+      "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited.",
+      "Terrain or access warrants extra planning. Confirm conditions with the responsible operator or land manager."
+    ],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "golden-gate-bridge",
@@ -1092,7 +1579,7 @@ const trips = [
     "state": "CA",
     "region": "San Francisco",
     "category": "historic",
-    "desc": "A San Francisco landmark with visitor exhibits exploring its engineering and history.",
+    "desc": "An iconic bridge carries a complex human history of loss, rescue, and remembrance alongside its engineering legacy.",
     "tags": [
       "historic"
     ],
@@ -1104,7 +1591,12 @@ const trips = [
       }
     ],
     "history": "The bridge’s visitor area includes exhibits about its construction, engineering, and history. Use the bridge authority’s current information when planning pedestrian or bicycle access.",
-    "reviewed": "2026-10-29"
+    "reviewed": "2026-10-29",
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "memorials"
+    ]
   },
   {
     "id": "donner-pass-campsite",
@@ -1112,11 +1604,14 @@ const trips = [
     "state": "CA",
     "region": "Truckee",
     "category": "historic",
-    "desc": "The Sierra Nevada area associated with the Donner Party’s 1846–47 winter survival ordeal.",
+    "desc": "A Sierra Nevada winter trapped the Donner Party in a survival ordeal that became part of American history.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "jonestown-memorial",
@@ -1124,11 +1619,18 @@ const trips = [
     "state": "CA",
     "region": "Oakland",
     "category": "historic",
-    "desc": "A place of remembrance for victims of the 1978 Jonestown tragedy.",
+    "desc": "A cemetery memorial remembers those who died in the 1978 Jonestown tragedy.",
     "tags": [
-      "historic"
+      "historic",
+      "cemetery"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cemeteries",
+      "memorials"
+    ]
   },
   {
     "id": "bodie-ghost-town",
@@ -1136,11 +1638,16 @@ const trips = [
     "state": "CA",
     "region": "Bridgeport",
     "category": "historic",
-    "desc": "A preserved California gold-rush town known for its surviving buildings and mining history.",
+    "desc": "Empty streets and weathered buildings preserve the harsh realities and lingering legends of a gold-rush town.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "mining"
+    ]
   },
   {
     "id": "mountain-meadows-massacre",
@@ -1148,11 +1655,16 @@ const trips = [
     "state": "UT",
     "region": "St. George",
     "category": "historic",
-    "desc": "A Utah memorial landscape associated with the 1857 massacre of members of an emigrant wagon train.",
+    "desc": "A remote Utah landscape holds the memory of emigrant families killed in the 1857 Mountain Meadows Massacre.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "memorials"
+    ]
   },
   {
     "id": "skinwalker-ranch-gate",
@@ -1165,12 +1677,19 @@ const trips = [
       "Heavily guarded private property. Do not cross the gate.",
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
     ],
-    "desc": "Private property associated with paranormal media and local lore. The gate is not a public attraction.",
+    "desc": "A secluded Utah ranch sits at the center of decades of paranormal claims, strange encounters, and speculation.",
     "restricted": true,
     "tags": [
       "alien"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Heavily guarded private property. Do not cross the gate.",
+      "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited.",
+      "Terrain or access warrants extra planning. Confirm conditions with the responsible operator or land manager."
+    ],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "wounded-knee-massacre",
@@ -1178,11 +1697,16 @@ const trips = [
     "state": "SD",
     "region": "Pine Ridge",
     "category": "historic",
-    "desc": "A place of remembrance for Lakota people killed by the U.S. Army at Wounded Knee in 1890.",
+    "desc": "A place of remembrance marks the killing of Lakota people at Wounded Knee in 1890.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "memorials"
+    ]
   },
   {
     "id": "bennington-triangle",
@@ -1190,12 +1714,17 @@ const trips = [
     "state": "VT",
     "region": "Glastenbury",
     "category": "historic",
-    "desc": "A Vermont area associated with disappearance accounts and later supernatural folklore.",
+    "desc": "A remote Vermont mountain landscape became the backdrop for a series of disappearances and later supernatural speculation.",
     "tags": [
       "historic",
       "missing"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "disappearances"
+    ]
   },
   {
     "id": "maura-murray-route-112",
@@ -1203,12 +1732,27 @@ const trips = [
     "state": "NH",
     "region": "Woodsville",
     "category": "crime",
-    "desc": "The New Hampshire area associated with Maura Murray’s 2004 disappearance. Respect local residents and the ongoing search for answers.",
+    "desc": "Maura Murray vanished after a car crash on Route 112 in 2004, leaving a mystery that remains unresolved.",
     "tags": [
       "crime",
       "missing"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Respect residents and private property. Do not stop where roadside parking is prohibited."
+    ],
+    "image_kind": "Category artwork",
+    "themes": [
+      "disappearances"
+    ],
+    "history": "On February 9, 2004, Maura Murray’s car left Route 112 in Haverhill, New Hampshire. When police arrived, she was no longer at the scene. The FBI continues to list her as missing. Her disappearance has inspired years of investigation and public interest, but her whereabouts remain unknown.",
+    "sources": [
+      {
+        "label": "FBI: Maura Murray",
+        "url": "https://www.fbi.gov/wanted/vicap/missing-persons/maura-murray---haverhill-new-hampshire"
+      }
+    ],
+    "reviewed": "2026-10-29"
   },
   {
     "id": "jimmy-hoffa-red-fox",
@@ -1216,12 +1760,17 @@ const trips = [
     "state": "MI",
     "region": "Bloomfield Township",
     "category": "crime",
-    "desc": "The former restaurant site associated with Jimmy Hoffa’s 1975 disappearance.",
+    "desc": "A former restaurant’s parking lot marks the last-known setting of Jimmy Hoffa’s 1975 disappearance.",
     "tags": [
       "crime",
       "missing"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "disappearances"
+    ]
   },
   {
     "id": "fox-hollow-farm",
@@ -1233,12 +1782,18 @@ const trips = [
       "Private Property.",
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
     ],
-    "desc": "Private property associated with the Herb Baumeister investigation and efforts to identify victims.",
+    "desc": "A secluded estate became the center of the Herb Baumeister investigation and a continuing effort to identify victims.",
     "restricted": true,
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Private Property.",
+      "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
+    ],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "wuornos-dump-site",
@@ -1246,7 +1801,7 @@ const trips = [
     "state": "FL",
     "region": "Volusia County",
     "category": "crime",
-    "desc": "The Volusia County area associated with the Richard Mallory murder case. This entry is historical context, not a recommended stop.",
+    "desc": "A Volusia County woodland became a key location in the Richard Mallory murder investigation.",
     "restricted": true,
     "disclaimers": [
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
@@ -1254,7 +1809,12 @@ const trips = [
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
+    ],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "st-augustine-lighthouse",
@@ -1267,11 +1827,16 @@ const trips = [
       "phone": "904-829-0745",
       "type": "Tours"
     },
-    "desc": "A historic lighthouse and museum associated with maritime history and local ghost stories.",
+    "desc": "A coastal lighthouse’s maritime history mingles with tales of children’s spirits and unexplained footsteps.",
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ]
   },
   {
     "id": "st-louis-cemetery-one",
@@ -1279,11 +1844,18 @@ const trips = [
     "state": "LA",
     "region": "New Orleans",
     "category": "cemetery",
-    "desc": "A historic New Orleans cemetery associated with the burial of Marie Laveau. Confirm guided-entry requirements with the operator.",
+    "desc": "Above-ground tombs and the legacy of Marie Laveau give this New Orleans cemetery its enduring mystique.",
     "tags": [
       "cemetery"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Confirm current guided-entry and reservation requirements with the cemetery operator."
+    ],
+    "image_kind": "Category artwork",
+    "themes": [
+      "cemeteries"
+    ]
   },
   {
     "id": "lalaurie-mansion",
@@ -1291,7 +1863,7 @@ const trips = [
     "state": "LA",
     "region": "New Orleans",
     "category": "haunted",
-    "desc": "A private New Orleans residence associated with the 1834 discovery of abuse of enslaved people. It is not open for public entry.",
+    "desc": "An imposing New Orleans mansion carries the memory of the abuse of enslaved people exposed by an 1834 fire.",
     "tags": [
       "haunted"
     ],
@@ -1299,6 +1871,13 @@ const trips = [
     "restricted": true,
     "disclaimers": [
       "Private residence. Do not enter or approach the property."
+    ],
+    "know_before": [
+      "Private residence. Do not enter or approach the property."
+    ],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
     ]
   },
   {
@@ -1312,11 +1891,14 @@ const trips = [
       "phone": "225-635-6277",
       "type": "Hotel"
     },
-    "desc": "A historic Louisiana property associated with plantation history and local ghost stories.",
+    "desc": "A Louisiana plantation’s difficult history is intertwined with generations of ghost stories and mirror lore.",
     "tags": [
       "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "seattle-underground",
@@ -1324,11 +1906,14 @@ const trips = [
     "state": "WA",
     "region": "Seattle",
     "category": "historic",
-    "desc": "A subterranean network of abandoned 19th-century storefronts buried after the Great Fire.",
+    "desc": "Buried storefronts preserve a shadowy layer of Seattle’s nineteenth-century streets and rebuilding history.",
     "tags": [
       "historic"
     ],
-    "related": []
+    "related": [],
+    "know_before": [],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "ted-bundy-issaquah",
@@ -1336,7 +1921,7 @@ const trips = [
     "state": "WA",
     "region": "Issaquah",
     "category": "crime",
-    "desc": "The Washington area associated with victims of Ted Bundy. Treat it as a place of remembrance, not a sightseeing stop.",
+    "desc": "A wooded Washington landscape became a key recovery area in the investigation into Ted Bundy’s victims.",
     "restricted": true,
     "disclaimers": [
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
@@ -1344,7 +1929,12 @@ const trips = [
     "tags": [
       "crime"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
+    ],
+    "image_kind": "Category artwork",
+    "themes": []
   },
   {
     "id": "amityville-horror-house",
@@ -1356,12 +1946,21 @@ const trips = [
       "Private Residence. View from the street only.",
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
     ],
-    "desc": "A private residence associated with the 1974 DeFeo murders and later disputed paranormal stories.",
+    "desc": "A waterfront home’s real 1974 murders gave rise to one of America’s most disputed haunting stories.",
     "restricted": true,
     "tags": [
-      "crime"
+      "crime",
+      "haunted"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Private Residence. View from the street only.",
+      "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
+    ],
+    "image_kind": "Category artwork",
+    "themes": [
+      "hotels"
+    ]
   },
   {
     "id": "lost-dutchman-mine",
@@ -1370,11 +1969,98 @@ const trips = [
     "region": "Apache Junction",
     "category": "historic",
     "safety_rating": "Caution",
-    "desc": "The Superstition Mountains are associated with lost-mine legends. Mountain travel requires careful planning.",
+    "desc": "A mysterious desert mountain range where a legendary lost gold mine and stories of vanished treasure seekers fuel enduring intrigue.",
     "tags": [
       "historic",
       "missing"
     ],
-    "related": []
+    "related": [],
+    "know_before": [
+      "Desert heat, limited water, and rugged terrain require planning. Use designated routes and check current land-manager guidance."
+    ],
+    "image_kind": "Category artwork",
+    "themes": [
+      "disappearances",
+      "mining"
+    ]
+  },
+  {
+    "id": "silver-plume-disappearances",
+    "title": "Silver Plume: The Disappearances",
+    "state": "CO",
+    "region": "Silver Plume",
+    "category": "missing",
+    "tags": [
+      "missing",
+      "historic"
+    ],
+    "desc": "A writer investigating another man’s disappearance vanished himself, leaving a Colorado mining town with a haunting unresolved mystery.",
+    "history": "Tom Young and his dog disappeared from Silver Plume in September 1987. Their remains were found in July 1988, and Young’s death was ruled a suicide. Keith Reinhard later rented the same shop and worked on a novel inspired by Young’s story. On August 7, 1988, Reinhard set out toward Pendleton Mountain and disappeared. His case remains unresolved; speculation that the cases were connected has not been established.",
+    "sources": [
+      {
+        "label": "Unsolved Mysteries: Keith Reinhard",
+        "url": "https://unsolved.com/gallery/keith-reinhard/"
+      },
+      {
+        "label": "The Charley Project: Keith R. Reinhard",
+        "url": "https://charleyproject.org/case/keith-r-reinhard"
+      }
+    ],
+    "reviewed": "2026-10-29",
+    "know_before": [
+      "The town is a historical context location, not a marked crime-scene tour. Respect private businesses and residents. Mountain terrain around Silver Plume can be steep and exposed; this entry is not a trail guide."
+    ],
+    "themes": [
+      "disappearances",
+      "mining"
+    ],
+    "related": [
+      "bennington-triangle",
+      "maura-murray-route-112",
+      "kristal-reisinger-site"
+    ],
+    "image_kind": "AI-generated illustration",
+    "image": "images/silver-plume-disappearances.webp",
+    "image_sizes": [
+      400,
+      800,
+      1200
+    ]
+  },
+  {
+    "id": "gilman-colorado",
+    "title": "Gilman: The Abandoned Mining Town",
+    "state": "CO",
+    "region": "Gilman",
+    "category": "historic",
+    "tags": [
+      "historic"
+    ],
+    "themes": [
+      "mining"
+    ],
+    "restricted": true,
+    "desc": "An abandoned mountainside company town preserves the shadow of Colorado’s mining boom and the environmental legacy it left behind.",
+    "history": "Gilman was a company town tied to the Eagle Mine. After the mine closed in 1984, the remaining workers left. The abandoned town became part of a federal cleanup site. The EPA removed the town’s operable unit from the National Priorities List in 2021, while access restrictions and other institutional controls remained in place.",
+    "know_before": [
+      "Restricted site. Do not enter the town, buildings, mine workings, or fenced areas.",
+      "Cleanup status does not grant public access. EPA controls include access restrictions and signage to deter trespassing."
+    ],
+    "disclaimers": [
+      "Restricted site. No public entry."
+    ],
+    "sources": [
+      {
+        "label": "EPA: Gilman cleanup and access controls",
+        "url": "https://www.epa.gov/newsreleases/epa-deletes-portion-eagle-mine-superfund-site-national-priorities-list"
+      }
+    ],
+    "reviewed": "2026-10-29",
+    "related": [
+      "centralia-mine-fire",
+      "bodie-ghost-town",
+      "silver-plume-disappearances"
+    ],
+    "image_kind": "Category artwork"
   }
 ];
