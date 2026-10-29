@@ -92,7 +92,7 @@ const trips = [
       "haunted",
       "crime"
     ],
-    "image": "images/eureka.webp",
+    "image": "images/eureka-woodcut-v1.webp",
     "history": "Eureka Springs grew around its springs in the late nineteenth century, attracting visitors in search of restoration and escape. Its grand hotels also hold darker stories: the Crescent became Norman Baker’s fraudulent cancer clinic in 1937, while the Basin Park Hotel has its own history and ghost-tour traditions. The town makes a natural starting point for exploring both hotels and the folklore woven through its winding streets.",
     "know_before": [
       "Eureka Springs is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
@@ -118,7 +118,12 @@ const trips = [
       "historic": "Dark History & Lore",
       "haunted": "Haunted Places",
       "crime": "Crime Locations"
-    }
+    },
+    "image_sizes": [
+      400,
+      800,
+      1200
+    ]
   },
   {
     "id": "skunk-ape-headquarters",
@@ -615,7 +620,7 @@ const trips = [
     "know_before": [
       "1886 Crescent Hotel & Spa is an operating hotel. Check its website for current reservations, tour schedules, accessibility, and visitor policies. Guest rooms and other private areas require permission or a reservation."
     ],
-    "image_kind": "Category artwork",
+    "image_kind": "AI-generated illustration",
     "themes": [
       "hotels",
       "medical-history"
@@ -645,7 +650,13 @@ const trips = [
       "haunted": "Haunted Hotels & Stays",
       "historic": "Medical Abuse",
       "crime": "Crime Locations"
-    }
+    },
+    "image": "images/crescent-hotel-eureka-woodcut-v1.webp",
+    "image_sizes": [
+      400,
+      800,
+      1200
+    ]
   },
   {
     "id": "basin-park-hotel",
@@ -672,7 +683,7 @@ const trips = [
     "know_before": [
       "The Basin Park Hotel is an operating hotel. Check its website for current reservations, tour schedules, accessibility, and visitor policies. Guest rooms and other private areas require permission or a reservation."
     ],
-    "image_kind": "Category artwork",
+    "image_kind": "AI-generated illustration",
     "themes": [
       "hotels"
     ],
@@ -705,7 +716,13 @@ const trips = [
       "crime": "Crime Locations",
       "haunted": "Haunted Hotels & Stays",
       "historic": "Dark History & Lore"
-    }
+    },
+    "image": "images/basin-park-hotel-woodcut-v1.webp",
+    "image_sizes": [
+      400,
+      800,
+      1200
+    ]
   },
   {
     "id": "arlington-hotel-capone",
@@ -726,7 +743,7 @@ const trips = [
     "know_before": [
       "The Arlington Resort Hotel is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
     ],
-    "image_kind": "Category artwork",
+    "image_kind": "AI-generated illustration",
     "themes": [
       "hotels"
     ],
@@ -740,6 +757,12 @@ const trips = [
         "label": "Visit Website",
         "url": "https://www.arlingtonhotel.com"
       }
+    ],
+    "image": "images/arlington-hotel-capone-woodcut-v1.webp",
+    "image_sizes": [
+      400,
+      800,
+      1200
     ]
   },
   {
@@ -1212,7 +1235,7 @@ const trips = [
     "know_before": [
       "The Marshall House is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
     ],
-    "image_kind": "Category artwork",
+    "image_kind": "AI-generated illustration",
     "themes": [
       "hotels",
       "medical-history"
@@ -1220,7 +1243,13 @@ const trips = [
     "place_type": "Hotel",
     "subcategories": {
       "haunted": "Haunted Hotels & Stays"
-    }
+    },
+    "image": "images/marshall-house-savannah-woodcut-v1.webp",
+    "image_sizes": [
+      400,
+      800,
+      1200
+    ]
   },
   {
     "id": "wright-square-hanging",
@@ -1488,7 +1517,7 @@ const trips = [
     "know_before": [
       "The Victor Hotel is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
     ],
-    "image_kind": "Category artwork",
+    "image_kind": "AI-generated illustration",
     "themes": [
       "hotels",
       "mining"
@@ -1496,7 +1525,13 @@ const trips = [
     "place_type": "Hotel",
     "subcategories": {
       "haunted": "Haunted Hotels & Stays"
-    }
+    },
+    "image": "images/victor-hotel-morgue-woodcut-v1.webp",
+    "image_sizes": [
+      400,
+      800,
+      1200
+    ]
   },
   {
     "id": "riverview-cemetery-mine",
@@ -1624,7 +1659,7 @@ const trips = [
     "know_before": [
       "The Stanley Hotel is an operating hotel. Check its website for current reservations, tour schedules, accessibility, and visitor policies. Guest rooms and other private areas require permission or a reservation."
     ],
-    "image_kind": "Category artwork",
+    "image_kind": "AI-generated illustration",
     "themes": [
       "hotels"
     ],
@@ -1651,7 +1686,13 @@ const trips = [
     ],
     "subcategories": {
       "haunted": "Haunted Hotels & Stays"
-    }
+    },
+    "image": "images/stanley-hotel-woodcut-v1.webp",
+    "image_sizes": [
+      400,
+      800,
+      1200
+    ]
   },
   {
     "id": "missouri-state-pen-jeff-city",
@@ -1701,14 +1742,20 @@ const trips = [
     "know_before": [
       "The Lemp Mansion is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
     ],
-    "image_kind": "Category artwork",
+    "image_kind": "AI-generated illustration",
     "themes": [
       "hotels"
     ],
     "place_type": "Historic House",
     "subcategories": {
       "haunted": "Haunted Places"
-    }
+    },
+    "image": "images/lemp-mansion-woodcut-v1.webp",
+    "image_sizes": [
+      400,
+      800,
+      1200
+    ]
   },
   {
     "id": "trans-allegheny-asylum",
@@ -1976,7 +2023,7 @@ const trips = [
     "know_before": [
       "Lizzie Borden House is an operating bed-and-breakfast and historic house attraction. Check its website for current reservations, tour schedules, accessibility, and visitor policies. Guest rooms and other private areas require permission or a reservation."
     ],
-    "image_kind": "Category artwork",
+    "image_kind": "AI-generated illustration",
     "themes": [
       "hotels"
     ],
@@ -1995,7 +2042,13 @@ const trips = [
     ],
     "subcategories": {
       "crime": "Crime Locations"
-    }
+    },
+    "image": "images/lizzie-borden-house-woodcut-v1.webp",
+    "image_sizes": [
+      400,
+      800,
+      1200
+    ]
   },
   {
     "id": "salem-witch-memorial",
@@ -2582,7 +2635,7 @@ const trips = [
     "know_before": [
       "The Myrtles Plantation is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
     ],
-    "image_kind": "Category artwork",
+    "image_kind": "AI-generated illustration",
     "themes": [],
     "place_type": "Historic House",
     "subcategories": {
@@ -2594,6 +2647,12 @@ const trips = [
         "label": "Visit Website",
         "url": "https://www.myrtlesplantation.com"
       }
+    ],
+    "image": "images/myrtles-plantation-hist-woodcut-v1.webp",
+    "image_sizes": [
+      400,
+      800,
+      1200
     ]
   },
   {
