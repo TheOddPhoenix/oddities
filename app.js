@@ -1,8 +1,9 @@
 'use strict';
 const $ = id => document.getElementById(id);
-const categories = {all:['All','sparkles'],crime:['True crime','fingerprint'],haunted:['Haunted','ghost'],historic:['Dark history','landmark'],cemetery:['Cemeteries','headstone'],missing:['Disappearances','help-circle'],cryptid:['Cryptids','footprints'],alien:['Aliens / UFOs','ufo']};
+const categories = {all:['All','sparkles'],crime:['True crime','fingerprint'],haunted:['Haunted','ghost'],historic:['Dark history','landmark'],cemetery:['Cemeteries','headstone'],missing:['Disappearances','help-circle'],cryptid:['Cryptids','bigfoot'],alien:['Aliens / UFOs','ufo']};
 function icon(name){
  const custom = {
+  bigfoot: '<path d="M8.5 10.5c-1.6-.7-3.5.1-4.1 1.8-.5 1.4.2 2.8.4 4 .2 1.6-.1 3.1 1.3 3.8 1.5.7 3.1-.3 3.4-1.8.2-1.1-.4-2.3-.1-3.4.4-1.6.7-3.6-.9-4.4Z"/><ellipse cx="4.2" cy="8.5" rx=".85" ry="1"/><ellipse cx="6.4" cy="7.7" rx="1" ry="1.2"/><ellipse cx="8.9" cy="7.9" rx="1.1" ry="1.4"/><path d="M17.7 7.5c-1.6-.7-3.5.1-4.1 1.8-.5 1.4.2 2.8.4 4 .2 1.6-.1 3.1 1.3 3.8 1.5.7 3.1-.3 3.4-1.8.2-1.1-.4-2.3-.1-3.4.4-1.6.7-3.6-.9-4.4Z"/><ellipse cx="13.4" cy="5.5" rx=".85" ry="1"/><ellipse cx="15.6" cy="4.7" rx="1" ry="1.2"/><ellipse cx="18.1" cy="4.9" rx="1.1" ry="1.4"/>',
   headstone: '<path d="M5 21V9a7 7 0 0 1 14 0v12"/><path d="M3 21h18M9 10h6M10 14h4"/>',
   ufo: '<path d="M7 10a5 5 0 0 1 10 0"/><ellipse cx="12" cy="12" rx="10" ry="3"/><path d="m8 18-1 3m5-3v3m4-3 1 3"/>'
  };
