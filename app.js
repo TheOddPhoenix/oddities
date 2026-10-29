@@ -1,7 +1,14 @@
 'use strict';
 const $ = id => document.getElementById(id);
-const categories = {all:['All','sparkles'],crime:['True crime','fingerprint'],haunted:['Haunted','ghost'],historic:['Dark history','landmark'],cemetery:['Cemeteries','cross'],missing:['Disappearances','help-circle'],cryptid:['Cryptids','footprints'],alien:['Aliens / UFOs','rocket']};
-function icon(name){return `<i data-lucide="${name}" class="icon" aria-hidden="true"></i>`;}
+const categories = {all:['All','sparkles'],crime:['True crime','fingerprint'],haunted:['Haunted','ghost'],historic:['Dark history','landmark'],cemetery:['Cemeteries','headstone'],missing:['Disappearances','help-circle'],cryptid:['Cryptids','footprints'],alien:['Aliens / UFOs','ufo']};
+function icon(name){
+ const custom = {
+  headstone: '<path d="M5 21V9a7 7 0 0 1 14 0v12"/><path d="M3 21h18M9 10h6M10 14h4"/>',
+  ufo: '<path d="M7 10a5 5 0 0 1 10 0"/><ellipse cx="12" cy="12" rx="10" ry="3"/><path d="m8 18-1 3m5-3v3m4-3 1 3"/>'
+ };
+ if(Object.hasOwn(custom,name))return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" data-icon="${name}" aria-hidden="true" focusable="false">${custom[name]}</svg>`;
+ return `<i data-lucide="${name}" class="icon" aria-hidden="true"></i>`;
+}
 function refreshIcons(){if(typeof lucide!=='undefined')lucide.createIcons({attrs:{'aria-hidden':'true',focusable:'false'}});}
 const states = {AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',CT:'Connecticut',DE:'Delaware',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming',DC:'District of Columbia'};
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
