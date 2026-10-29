@@ -3,3 +3,19 @@
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.featured-card{gap:20px}.featured-copy h3{font-size:32px}.search-row{flex-wrap:wrap}.search-field{flex-basis:50%}.state-field{flex:1}.search-row>button{width:100%}.footer{flex-direction:column}}
 @media(max-width:580px){.wrap{padding-left:20px;padding-right:20px}.nav{min-height:74px}.brand{font-size:21px}.hero{padding-top:54px;padding-bottom:55px}.intro{font-size:18px}.featured-card{grid-template-columns:1fr;padding:18px;gap:10px}.featured-card .media{height:210px;margin-bottom:0}.featured-copy{padding:12px 2px}.featured-copy h3{font-size:31px}.featured-section{padding-bottom:55px}.filters{padding:16px}.category-row{gap:8px}.category-row button{font-size:13px;padding:10px 12px;min-height:44px}.search-row{display:block}.state-field{width:auto;margin-top:16px}.search-row>button{margin-top:16px}.grid{grid-template-columns:1fr;gap:18px}.card{padding:20px}.media{height:195px}.card h3{font-size:25px}.card-desc{font-size:16px}dialog{padding:20px}dialog h2{font-size:26px}dialog .media{height:190px}.inline-form{flex-direction:column}.dialog-actions{flex-direction:column}.dialog-actions>*{width:100%}.manage-row{flex-wrap:wrap}.manage-row span{flex-basis:100%}.footer nav{gap:18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.card:hover{transform:none}}
+
+/* Original Oddities Lucide icon identity, with accessible text labels retained. */
+.icon{width:18px;height:18px;display:inline-block;flex-shrink:0;vertical-align:middle;stroke-width:2}
+.brand{display:inline-flex;align-items:center;gap:9px}.brand .brand-skull{width:32px;height:32px;color:#9333ea}
+.footer .brand .brand-skull{width:22px;height:22px}
+.section-heading{display:flex;align-items:center;gap:14px}.section-icon{width:40px;height:40px;color:#9333ea}
+.category-row button,.badge,.place,.card-actions button,.account>button,#back-explore,#save-options button,#list-links button{display:inline-flex;align-items:center;gap:8px}
+#save-options button,#list-links button{display:flex;width:100%}.badge .icon{width:14px;height:14px}
+.art-symbol .icon{width:64px;height:64px}.collection-icon{width:40px;height:40px;color:#c399ff;margin:15px 0}
+.search-input-wrap{position:relative}.search-input-wrap>.icon{position:absolute;left:15px;top:16px;color:#b8b5c5}.search-input-wrap input{padding-left:43px}
+.suggest-icons{display:flex;justify-content:center;gap:30px;margin-bottom:25px;color:#c399ff}.suggest-icons .icon{width:30px;height:30px}
+.icon-button{display:inline-flex;align-items:center;justify-content:center}
+.skull-spin{animation:skullBounce 3s ease-in-out infinite}
+@keyframes skullBounce{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-8px) rotate(5deg)}}
+@media(max-width:580px){.brand .brand-skull{width:24px;height:24px}.section-icon{width:32px;height:32px}}
+@media(prefers-reduced-motion:reduce){.skull-spin{animation:none!important}}

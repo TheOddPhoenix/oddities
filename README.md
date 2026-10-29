@@ -1,6 +1,6 @@
 # Oddities
 
-Static, dependency-free travel discovery site hosted on GitHub Pages.
+Static travel discovery site hosted on GitHub Pages.
 
 ## Run locally
 
@@ -10,6 +10,7 @@ Serve this directory with any static HTTP server, for example `python -m http.se
 
 - `index.html`: accessible page structure and metadata
 - `styles.css`: responsive styling; no runtime CSS compiler or third-party font requests
+- Original Lucide 0.263.0 icon set loaded from the same CDN used by the original site
 - `app.js`: search, filters, native dialogs, shareable hash links, device-local lists
 - `data.js`: canonical catalog, explicit category tags, legacy ID aliases
 - `images/eureka.webp`: optimized original image; other cards use decorative CSS artwork
@@ -27,3 +28,5 @@ Existing `oddstops_collections` and `oddstops_visited` browser keys remain suppo
 ## Publishing
 
 GitHub Pages serves the root of `main`. Before publishing, run `node --check app.js`, `node --check data.js`, and `node tests/audit.spec.cjs` for catalog/search/storage regression checks. Also test native dialogs, saved lists, and narrow/wide layouts in a browser.
+
+
