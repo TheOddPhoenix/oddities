@@ -65,10 +65,12 @@ function relatedStops(item){
   const sameCity=normalize(stop.region.split(',')[0])===normalize(item.region.split(',')[0])&&stop.state===item.state;
   const overlap=(stop.themes||[]).filter(theme=>(item.themes||[]).includes(theme)).length;
   const genre=tags(stop).filter(tag=>tags(item).includes(tag)).length;
+  const sameStory=Object.values(stop.subcategories||{}).some(story=>Object.values(item.subcategories||{}).includes(story));
+  const sameCategory=stop.category===item.category;
   const distance=distanceKm(item,stop);
   const nearby=distance<65;
   let hash=0;for(const ch of stop.id)hash=(hash*31+ch.charCodeAt(0))>>>0;
-  return {stop,eligible:sameCity||overlap>0||genre>0,score:(sameCity?100:0)+(nearby?35:0)+overlap*25+genre*8+((hash*seed)%7)};
+  return {stop,eligible:sameCity||overlap>0||genre>0,score:(sameCity?100:0)+(nearby?35:0)+overlap*25+(sameCategory?45:0)+(sameStory?20:0)+genre*8+((hash*seed)%7)};
  }).filter(x=>x.eligible).sort((x,y)=>y.score-x.score);
  return [...explicit,...pool.map(x=>x.stop)].slice(0,4);
 }

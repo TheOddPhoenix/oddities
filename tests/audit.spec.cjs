@@ -61,3 +61,5 @@ assert.ok(run("refineTrips(trips).every(t=>t.place_type==='Hotel' && t.actions.s
 assert.ok(run("refineTrips(trips).length>0"),'Combined filters return verified hotels');
 assert.ok(!app.includes('Copy link')&&!app.includes('Operator website'),'Redundant controls removed');
 console.log('Passed booking availability, combined filters, and card cleanup checks.');
+
+assert.ok(run("relatedStops(catalog.get('battle-of-los-angeles')).every(t=>tags(t).includes('alien'))"),'Aerial mystery recommends related UFO stories');
