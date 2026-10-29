@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /oddities/
+Sitemap: https://theoddphoenix.github.io/oddities/sitemap.xml
