@@ -48,3 +48,9 @@ Set `siteConfig.contactEmail` to the owner's intended public address to activate
 Eureka Springs retains the owner's original AI illustration. Silver Plume has a newly generated, reviewed AI illustration in three WebP sizes, labeled in the detail pane. Other entries retain category artwork until their illustrations are approved. The image queue scales authoring; it does not automatically spend money, generate images, or publish unreviewed outputs.
 
 For thousands of images, use object storage/CDN and a server-side generation/review queue. For substantial visitor traffic, use a tile provider with suitable capacity. Browser-only saved data must migrate carefully when real accounts are introduced.
+
+## Location details and discovery refinements
+
+The catalog now contains 103 locations. Category filters retain the original seven categories, with populated story subcategories and independent place-type and experience filters in both Explore and Map views. Booking actions use direct, non-affiliate links. Current verified hotel actions cover Crescent, Basin Park, Stanley, and Lizzie Borden; Joplin links to its existing Airbnb listing. The Conjuring House is included as restricted pending public tour availability. Battle of Los Angeles uses an approximate event-area reference.
+
+Expanded cards include an optional inline map, collapsed historical sources, access notes, and sourced inmate profiles where available. Close Details returns to the originating view; Back to Explore exits both map and card.

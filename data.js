@@ -13,9 +13,15 @@ const trips = [
       "crime"
     ],
     "history": "The Last Resort Bar in Port Orange appears in accounts of Aileen Wuornos’s final days before her arrest. Its connection to the case has made it a point of interest for visitors following Florida’s true-crime history.",
-    "know_before": [],
+    "know_before": [
+      "The Last Resort Bar is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "clutter-house",
@@ -41,7 +47,11 @@ const trips = [
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
-    ]
+    ],
+    "place_type": "Historic House",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "sloss",
@@ -55,9 +65,15 @@ const trips = [
       "haunted"
     ],
     "history": "Operating from 1882 to 1971, this industrial giant was known for brutal working conditions.",
-    "know_before": [],
+    "know_before": [
+      "Sloss Furnaces is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "eureka",
@@ -78,7 +94,9 @@ const trips = [
     ],
     "image": "images/eureka.webp",
     "history": "Eureka Springs grew around its springs in the late nineteenth century, attracting visitors in search of restoration and escape. Its grand hotels also hold darker stories: the Crescent became Norman Baker’s fraudulent cancer clinic in 1937, while the Basin Park Hotel has its own history and ghost-tour traditions. The town makes a natural starting point for exploring both hotels and the folklore woven through its winding streets.",
-    "know_before": [],
+    "know_before": [
+      "Eureka Springs is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "AI-generated illustration",
     "themes": [
       "hotels",
@@ -94,7 +112,13 @@ const trips = [
         "url": "https://basinpark.com/about/history/"
       }
     ],
-    "reviewed": "2026-10-29"
+    "reviewed": "2026-10-29",
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Dark History & Lore",
+      "haunted": "Haunted Places",
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "skunk-ape-headquarters",
@@ -108,11 +132,17 @@ const trips = [
       "cryptid"
     ],
     "history": "Florida’s Skunk Ape is a creature of regional folklore, often described as a large, foul-smelling figure in the Everglades. The headquarters celebrates sightings and stories; they do not establish the creature’s existence.",
-    "know_before": [],
+    "know_before": [
+      "Skunk Ape Research Headquarters is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "cryptids"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "cryptid": "Famous Encounter Sites"
+    }
   },
   {
     "id": "bachelor-grove",
@@ -127,11 +157,18 @@ const trips = [
       "haunted"
     ],
     "history": "Bachelors Grove is a historic cemetery whose reputation has grown through stories of phantom vehicles, unexplained figures, and a widely circulated photograph known as the Madonna of Bachelors Grove. These accounts belong to the cemetery’s ghost lore; they do not establish supernatural activity.",
-    "know_before": [],
+    "know_before": [
+      "Bachelors Grove Cemetery is a cemetery; respect burial areas and any services in progress. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "cemeteries"
-    ]
+    ],
+    "place_type": "Cemetery",
+    "subcategories": {
+      "cemetery": "Cemetery Lore",
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "point-pleasant-mothman-statue",
@@ -145,11 +182,17 @@ const trips = [
       "cryptid"
     ],
     "history": "Reports of a winged, red-eyed figure near Point Pleasant in the 1960s developed into the Mothman legend. The statue and museum explore that folklore and its place in the town’s identity. The nearby TNT area is another stop connected to the reported sightings.",
-    "know_before": [],
+    "know_before": [
+      "Mothman Statue & Museum is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "cryptids"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "cryptid": "Winged Creatures"
+    }
   },
   {
     "id": "aurora-ufo-grave",
@@ -164,12 +207,19 @@ const trips = [
       "cemetery"
     ],
     "history": "An 1897 newspaper story described an alleged airship crash in Aurora and a burial in the local cemetery. The account became a lasting piece of UFO folklore. The story is a legend, not proof of an extraterrestrial crash or burial.",
-    "know_before": [],
+    "know_before": [
+      "Aurora Cemetery UFO Legend is a cemetery; respect burial areas and any services in progress. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "cemeteries",
       "ufo-lore"
-    ]
+    ],
+    "place_type": "Cemetery",
+    "subcategories": {
+      "alien": "Alleged Crashes & Landings",
+      "cemetery": "Cemetery Lore"
+    }
   },
   {
     "id": "winchester-mystery-house-hist",
@@ -195,10 +245,24 @@ const trips = [
     ],
     "history": "The house offers tours exploring Sarah Winchester’s mansion and its unusual architecture. Ghost stories are part of its visitor storytelling; they are not evidence of supernatural activity.",
     "reviewed": "2026-10-29",
-    "know_before": [],
+    "know_before": [
+      "Winchester Mystery House is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
+    ],
+    "place_type": "Historic House",
+    "subcategories": {
+      "historic": "Dark History & Lore",
+      "haunted": "Haunted Places"
+    },
+    "actions": [
+      {
+        "kind": "website",
+        "label": "Visit Website",
+        "url": "https://www.winchestermysteryhouse.com"
+      }
     ]
   },
   {
@@ -213,11 +277,17 @@ const trips = [
       "alien"
     ],
     "history": "Observers have long reported distant lights near Marfa, with stories describing glowing points that seem to shift or disappear. Interpretations range from ordinary optical effects to supernatural explanations. The viewing area allows visitors to experience the landscape behind the enduring legend.",
-    "know_before": [],
+    "know_before": [
+      "Marfa Lights Viewing Area is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "ufo-lore"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "alien": "Famous Sightings"
+    }
   },
   {
     "id": "adx-florence-supermax",
@@ -246,7 +316,11 @@ const trips = [
     "image_kind": "Category artwork",
     "themes": [
       "prisons"
-    ]
+    ],
+    "place_type": "Prison",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "bonnie-clyde-joplin-hideout",
@@ -263,9 +337,22 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Joplin Hideout is a private vacation rental. Check the Airbnb listing for availability, booking terms, and guest rules. A location listing does not grant entry; do not disturb guests or enter without a reservation."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic House",
+    "subcategories": {
+      "crime": "Outlaws & Organized Crime"
+    },
+    "actions": [
+      {
+        "kind": "stay",
+        "label": "View Stay on Airbnb",
+        "url": "https://www.airbnb.com/rooms/855978867173917336"
+      }
+    ]
   },
   {
     "id": "sand-creek-massacre-site",
@@ -286,11 +373,17 @@ const trips = [
     ],
     "history": "On November 29, 1864, Cheyenne and Arapaho people encamped along Big Sandy Creek were attacked. The National Historic Site preserves their memory and interprets the events and their lasting consequences.",
     "reviewed": "2026-10-29",
-    "know_before": [],
+    "know_before": [
+      "Sand Creek Massacre National Historic Site is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "memorials"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Dark History & Lore"
+    }
   },
   {
     "id": "bird-girl-bonaventure",
@@ -309,7 +402,11 @@ const trips = [
     "image_kind": "Category artwork",
     "themes": [
       "cemeteries"
-    ]
+    ],
+    "place_type": "Cemetery",
+    "subcategories": {
+      "historic": "Dark History & Lore"
+    }
   },
   {
     "id": "wichita-state-crash-site",
@@ -337,7 +434,11 @@ const trips = [
       "Terrain or access warrants extra planning. Confirm conditions with the responsible operator or land manager."
     ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Disasters & Accidents"
+    }
   },
   {
     "id": "ludlow-massacre-site",
@@ -350,11 +451,17 @@ const trips = [
       "historic"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Ludlow Massacre Memorial is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "memorials"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Dark History & Lore"
+    }
   },
   {
     "id": "fort-robinson-outbreak",
@@ -371,9 +478,22 @@ const trips = [
       "historic"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Fort Robinson is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Dark History & Lore"
+    },
+    "actions": [
+      {
+        "kind": "website",
+        "label": "Visit Website",
+        "url": "https://outdoornebraska.gov/fortrobinson/"
+      }
+    ]
   },
   {
     "id": "kid-curry-grave-linwood",
@@ -387,12 +507,19 @@ const trips = [
       "cemetery"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Linwood Cemetery: Kid Curry is a cemetery; respect burial areas and any services in progress. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "cemeteries",
       "outlaws"
-    ]
+    ],
+    "place_type": "Cemetery",
+    "subcategories": {
+      "crime": "Crime Locations",
+      "cemetery": "Cemetery Lore"
+    }
   },
   {
     "id": "jesse-james-home-museum",
@@ -405,11 +532,17 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Jesse James Home is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "outlaws"
-    ]
+    ],
+    "place_type": "Historic House",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "bonnie-clyde-ambush-site",
@@ -422,11 +555,17 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Bonnie and Clyde Ambush Marker is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "outlaws"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Organized Crime"
+    }
   },
   {
     "id": "ambush-museum-gibsland",
@@ -439,11 +578,17 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Ambush Museum is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "outlaws"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "crescent-hotel-eureka",
@@ -467,7 +612,9 @@ const trips = [
       "basin-park-hotel",
       "stanley-hotel"
     ],
-    "know_before": [],
+    "know_before": [
+      "1886 Crescent Hotel & Spa is an operating hotel. Check its website for current reservations, tour schedules, accessibility, and visitor policies. Guest rooms and other private areas require permission or a reservation."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels",
@@ -480,7 +627,25 @@ const trips = [
         "url": "https://crescent-hotel.com/about/history/"
       }
     ],
-    "reviewed": "2026-10-29"
+    "reviewed": "2026-10-29",
+    "place_type": "Hotel",
+    "actions": [
+      {
+        "kind": "stay",
+        "label": "Book a Room",
+        "url": "https://crescent-hotel.com/"
+      },
+      {
+        "kind": "tour",
+        "label": "Book a Tour",
+        "url": "https://www.americasmosthauntedhotel.com/ghost-tours/tickets-tours/"
+      }
+    ],
+    "subcategories": {
+      "haunted": "Haunted Hotels & Stays",
+      "historic": "Medical Abuse",
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "basin-park-hotel",
@@ -504,7 +669,9 @@ const trips = [
       "crescent-hotel-eureka",
       "stanley-hotel"
     ],
-    "know_before": [],
+    "know_before": [
+      "The Basin Park Hotel is an operating hotel. Check its website for current reservations, tour schedules, accessibility, and visitor policies. Guest rooms and other private areas require permission or a reservation."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
@@ -520,7 +687,25 @@ const trips = [
         "url": "https://basinpark.com/"
       }
     ],
-    "reviewed": "2026-10-29"
+    "reviewed": "2026-10-29",
+    "place_type": "Hotel",
+    "actions": [
+      {
+        "kind": "stay",
+        "label": "Book a Room",
+        "url": "https://basinpark.com/"
+      },
+      {
+        "kind": "investigation",
+        "label": "Book an Investigation",
+        "url": "https://basinpark.com/things-to-do/paranormal-investigation/"
+      }
+    ],
+    "subcategories": {
+      "crime": "Crime Locations",
+      "haunted": "Haunted Hotels & Stays",
+      "historic": "Dark History & Lore"
+    }
   },
   {
     "id": "arlington-hotel-capone",
@@ -538,10 +723,23 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Arlington Resort Hotel is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
+    ],
+    "place_type": "Hotel",
+    "subcategories": {
+      "crime": "Outlaws & Organized Crime"
+    },
+    "actions": [
+      {
+        "kind": "website",
+        "label": "Visit Website",
+        "url": "https://www.arlingtonhotel.com"
+      }
     ]
   },
   {
@@ -555,9 +753,15 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Ohio Club is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "gangster-museum-america",
@@ -570,9 +774,15 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Gangster Museum of America is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "greenwood-cemetery-madden",
@@ -585,11 +795,17 @@ const trips = [
       "cemetery"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Greenwood Cemetery (Owney Madden) is a cemetery; respect burial areas and any services in progress. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "cemeteries"
-    ]
+    ],
+    "place_type": "Cemetery",
+    "subcategories": {
+      "cemetery": "Cemetery Lore"
+    }
   },
   {
     "id": "fordyce-bathhouse",
@@ -603,12 +819,19 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Fordyce Bathhouse is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels",
       "medical-history"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Dark History & Lore",
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "malco-theatre-hot-springs",
@@ -621,12 +844,18 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Malco Theatre is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels",
       "disappearances"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "baker-institute-muscatine",
@@ -639,11 +868,17 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Baker Institute Site is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "medical-history"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Medical Fraud"
+    }
   },
   {
     "id": "blue-angel-muscatine",
@@ -657,11 +892,18 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Blue Angel of Greenwood is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "cemeteries"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "cemetery": "Cemetery Lore",
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "tipton-cow-war",
@@ -674,9 +916,15 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Iowa Cow War History is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "edinburgh-poor-farm",
@@ -689,9 +937,15 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Edinburgh 'Poor Farm' is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "black-angel-iowa-city",
@@ -705,11 +959,18 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Black Angel of Oakland Cemetery is a cemetery; respect burial areas and any services in progress. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "cemeteries"
-    ]
+    ],
+    "place_type": "Cemetery",
+    "subcategories": {
+      "cemetery": "Cemetery Lore",
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "villisca-axe-house",
@@ -727,10 +988,23 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Villisca Axe Murder House is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
+    ],
+    "place_type": "Historic House",
+    "subcategories": {
+      "crime": "Crime Locations"
+    },
+    "actions": [
+      {
+        "kind": "website",
+        "label": "Visit Website",
+        "url": "https://www.villiscaiowa.com"
+      }
     ]
   },
   {
@@ -758,7 +1032,11 @@ const trips = [
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
-    ]
+    ],
+    "place_type": "Historic House",
+    "subcategories": {
+      "crime": "Serial Crime"
+    }
   },
   {
     "id": "bobby-franks-kidnap-site",
@@ -771,9 +1049,15 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Bobby Franks Kidnap Site is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Kidnappings"
+    }
   },
   {
     "id": "cherry-mine-disaster",
@@ -786,11 +1070,17 @@ const trips = [
       "historic"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Cherry Mine Disaster Site is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "mining"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Disasters & Accidents"
+    }
   },
   {
     "id": "st-valentines-massacre",
@@ -803,11 +1093,17 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "St. Valentine's Day Massacre Site is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "memorials"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Outlaws & Organized Crime"
+    }
   },
   {
     "id": "eastland-disaster-site",
@@ -820,9 +1116,15 @@ const trips = [
       "historic"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "SS Eastland Disaster Site is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Disasters & Accidents"
+    }
   },
   {
     "id": "holmes-murder-castle",
@@ -836,11 +1138,18 @@ const trips = [
       "historic"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "H.H. Holmes Hotel Site is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Crime Locations",
+      "historic": "Dark History & Lore"
+    }
   },
   {
     "id": "little-gracie-watson-grave",
@@ -853,12 +1162,18 @@ const trips = [
       "cemetery"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Little Gracie Watson Memorial is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "cemeteries",
       "memorials"
-    ]
+    ],
+    "place_type": "Cemetery",
+    "subcategories": {
+      "cemetery": "Cemetery Lore"
+    }
   },
   {
     "id": "mercer-williams-house",
@@ -871,11 +1186,17 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Mercer-Williams House is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
-    ]
+    ],
+    "place_type": "Historic House",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "marshall-house-savannah",
@@ -888,12 +1209,18 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Marshall House is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels",
       "medical-history"
-    ]
+    ],
+    "place_type": "Hotel",
+    "subcategories": {
+      "haunted": "Haunted Hotels & Stays"
+    }
   },
   {
     "id": "wright-square-hanging",
@@ -907,9 +1234,16 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Wright Square (The Hanging Square) is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Dark History & Lore",
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "moon-river-brewing",
@@ -928,7 +1262,11 @@ const trips = [
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "colonial-park-cemetery",
@@ -941,11 +1279,17 @@ const trips = [
       "cemetery"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Colonial Park Cemetery is a cemetery; respect burial areas and any services in progress. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "cemeteries"
-    ]
+    ],
+    "place_type": "Cemetery",
+    "subcategories": {
+      "cemetery": "Cemetery Lore"
+    }
   },
   {
     "id": "snippy-horse-site",
@@ -968,7 +1312,11 @@ const trips = [
     "image_kind": "Category artwork",
     "themes": [
       "ufo-lore"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "alien": "Famous Sightings"
+    }
   },
   {
     "id": "crestone-ziggurat-vortex",
@@ -981,9 +1329,15 @@ const trips = [
       "alien"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Crestone Ziggurat is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "alien": "Famous Sightings"
+    }
   },
   {
     "id": "san-luis-valley-lane-6",
@@ -996,11 +1350,17 @@ const trips = [
       "alien"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Lane 6: San Luis Valley UFO Lore is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "ufo-lore"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "alien": "Famous Sightings"
+    }
   },
   {
     "id": "the-t-road",
@@ -1013,9 +1373,15 @@ const trips = [
       "alien"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "County Road T is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "alien": "Famous Sightings"
+    }
   },
   {
     "id": "kristal-reisinger-site",
@@ -1029,11 +1395,18 @@ const trips = [
       "missing"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Kristal Reisinger Disappearance Area is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "disappearances"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Crime Locations",
+      "missing": "Unresolved Disappearances"
+    }
   },
   {
     "id": "gold-camp-road-tunnels",
@@ -1051,7 +1424,11 @@ const trips = [
       "Terrain or access warrants extra planning. Confirm conditions with the responsible operator or land manager."
     ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "emma-crawford-mountain",
@@ -1064,11 +1441,17 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Emma Crawford's Red Mountain is an outdoor location; confirm public access, seasonal closures, and the appropriate entrance before setting out. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "cemeteries"
-    ]
+    ],
+    "place_type": "Outdoor Location",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "deadman-canyon-espinosa",
@@ -1081,9 +1464,15 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Deadman Canyon is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "victor-hotel-morgue",
@@ -1096,12 +1485,18 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Victor Hotel is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels",
       "mining"
-    ]
+    ],
+    "place_type": "Hotel",
+    "subcategories": {
+      "haunted": "Haunted Hotels & Stays"
+    }
   },
   {
     "id": "riverview-cemetery-mine",
@@ -1115,12 +1510,19 @@ const trips = [
       "cemetery"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Riverview Cemetery is a cemetery; respect burial areas and any services in progress. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "mining",
       "cemeteries"
-    ]
+    ],
+    "place_type": "Cemetery",
+    "subcategories": {
+      "historic": "Dark History & Lore",
+      "cemetery": "Cemetery Lore"
+    }
   },
   {
     "id": "sin-city-tunnels",
@@ -1141,7 +1543,11 @@ const trips = [
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
     ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "colorado-state-pen-museum",
@@ -1154,11 +1560,17 @@ const trips = [
       "historic"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Museum of Colorado Prisons is a historic prison site; public access depends on the site’s current visitor arrangements. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "prisons"
-    ]
+    ],
+    "place_type": "Prison",
+    "subcategories": {
+      "historic": "Prison History"
+    }
   },
   {
     "id": "rmnp-disappearances",
@@ -1187,7 +1599,12 @@ const trips = [
     "reviewed": "2026-10-29",
     "themes": [
       "disappearances"
-    ]
+    ],
+    "place_type": "Outdoor Location",
+    "subcategories": {
+      "historic": "Dark History & Lore",
+      "missing": "Unresolved Disappearances"
+    }
   },
   {
     "id": "stanley-hotel",
@@ -1204,7 +1621,9 @@ const trips = [
       "basin-park-hotel",
       "lemp-mansion"
     ],
-    "know_before": [],
+    "know_before": [
+      "The Stanley Hotel is an operating hotel. Check its website for current reservations, tour schedules, accessibility, and visitor policies. Guest rooms and other private areas require permission or a reservation."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
@@ -1216,7 +1635,23 @@ const trips = [
         "url": "https://www.stanleyhotel.com/tours/"
       }
     ],
-    "reviewed": "2026-10-29"
+    "reviewed": "2026-10-29",
+    "place_type": "Hotel",
+    "actions": [
+      {
+        "kind": "stay",
+        "label": "Book a Room",
+        "url": "https://www.stanleyhotel.com/"
+      },
+      {
+        "kind": "tour",
+        "label": "Book a Tour",
+        "url": "https://www.stanleyhotel.com/tours/"
+      }
+    ],
+    "subcategories": {
+      "haunted": "Haunted Hotels & Stays"
+    }
   },
   {
     "id": "missouri-state-pen-jeff-city",
@@ -1233,10 +1668,23 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Missouri State Penitentiary is a historic prison site; public access depends on the site’s current visitor arrangements. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "prisons"
+    ],
+    "place_type": "Prison",
+    "subcategories": {
+      "crime": "Crime Locations"
+    },
+    "actions": [
+      {
+        "kind": "website",
+        "label": "Visit Website",
+        "url": "https://missouripentours.com"
+      }
     ]
   },
   {
@@ -1250,11 +1698,17 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Lemp Mansion is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
-    ]
+    ],
+    "place_type": "Historic House",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "trans-allegheny-asylum",
@@ -1271,10 +1725,23 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Trans-Allegheny Lunatic Asylum is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "medical-history"
+    ],
+    "place_type": "Hospital & Institution",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    },
+    "actions": [
+      {
+        "kind": "website",
+        "label": "Visit Website",
+        "url": "https://trans-alleghenylunaticasylum.com"
+      }
     ]
   },
   {
@@ -1288,11 +1755,17 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "West Virginia Penitentiary is a historic prison site; public access depends on the site’s current visitor arrangements. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "prisons"
-    ]
+    ],
+    "place_type": "Prison",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "point-pleasant-mothman",
@@ -1305,11 +1778,17 @@ const trips = [
       "cryptid"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Point Pleasant Mothman Site is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "cryptids"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "cryptid": "Winged Creatures"
+    }
   },
   {
     "id": "waverly-hills-sanatorium",
@@ -1326,10 +1805,23 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Waverly Hills Sanatorium is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "medical-history"
+    ],
+    "place_type": "Hospital & Institution",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    },
+    "actions": [
+      {
+        "kind": "website",
+        "label": "Visit Website",
+        "url": "https://www.therealwaverlyhills.com"
+      }
     ]
   },
   {
@@ -1347,10 +1839,23 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Ohio State Reformatory is a historic prison site; public access depends on the site’s current visitor arrangements. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "prisons"
+    ],
+    "place_type": "Prison",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    },
+    "actions": [
+      {
+        "kind": "website",
+        "label": "Visit Website",
+        "url": "https://www.mrps.org"
+      }
     ]
   },
   {
@@ -1364,11 +1869,17 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Brushy Mountain State Penitentiary is a historic prison site; public access depends on the site’s current visitor arrangements. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "prisons"
-    ]
+    ],
+    "place_type": "Prison",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "old-idaho-pen",
@@ -1381,11 +1892,17 @@ const trips = [
       "historic"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Old Idaho Penitentiary is a historic prison site; public access depends on the site’s current visitor arrangements. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "prisons"
-    ]
+    ],
+    "place_type": "Prison",
+    "subcategories": {
+      "historic": "Prison History"
+    }
   },
   {
     "id": "eastern-state-pen",
@@ -1398,10 +1915,23 @@ const trips = [
       "historic"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Eastern State Penitentiary is a historic prison site; public access depends on the site’s current visitor arrangements. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "prisons"
+    ],
+    "place_type": "Prison",
+    "subcategories": {
+      "historic": "Prison History"
+    },
+    "notorious_inmates": [
+      {
+        "name": "Al Capone",
+        "context": "Capone was imprisoned at Eastern State; the historic site discusses his confinement in its audio tour.",
+        "url": "https://easternstate.org/uploads/media/ESP_English_Audio_Tour_Transcript_HTML2.htm"
+      }
     ]
   },
   {
@@ -1422,7 +1952,11 @@ const trips = [
     "image_kind": "Category artwork",
     "themes": [
       "mining"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Disasters & Accidents"
+    }
   },
   {
     "id": "lizzie-borden-house",
@@ -1439,11 +1973,29 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Lizzie Borden House is an operating bed-and-breakfast and historic house attraction. Check its website for current reservations, tour schedules, accessibility, and visitor policies. Guest rooms and other private areas require permission or a reservation."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
-    ]
+    ],
+    "place_type": "Historic House & B&B",
+    "actions": [
+      {
+        "kind": "stay",
+        "label": "Book a Room",
+        "url": "https://lizzie-borden.com/"
+      },
+      {
+        "kind": "tour",
+        "label": "Book a Tour",
+        "url": "https://lizzie-borden.com/hello/"
+      }
+    ],
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "salem-witch-memorial",
@@ -1456,11 +2008,17 @@ const trips = [
       "historic"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Salem Witch Trials Memorial is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "memorials"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Witch Trials"
+    }
   },
   {
     "id": "danvers-state-hospital",
@@ -1483,7 +2041,11 @@ const trips = [
     "image_kind": "Category artwork",
     "themes": [
       "medical-history"
-    ]
+    ],
+    "place_type": "Hospital & Institution",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "alcatraz-island",
@@ -1504,9 +2066,27 @@ const trips = [
     ],
     "history": "Alcatraz served as a fort, military prison, and federal penitentiary. Its history also includes the 19-month occupation by Indians of All Tribes beginning in 1969.",
     "reviewed": "2026-10-29",
-    "know_before": [],
+    "know_before": [
+      "Alcatraz Island is a historic prison site; public access depends on the site’s current visitor arrangements. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Prison",
+    "subcategories": {
+      "crime": "Crime Locations"
+    },
+    "notorious_inmates": [
+      {
+        "name": "Al Capone",
+        "context": "The Chicago organized-crime figure served time at Alcatraz.",
+        "url": "https://www.nps.gov/alca/learn/historyculture/people.htm"
+      },
+      {
+        "name": "Robert Stroud",
+        "context": "Known as the “Birdman of Alcatraz,” Stroud was held in the island’s cellhouse and hospital.",
+        "url": "https://www.nps.gov/places/000/alcatraz-cellhouse.htm"
+      }
+    ]
   },
   {
     "id": "black-dahlia-dump-site",
@@ -1529,7 +2109,11 @@ const trips = [
     "image_kind": "Category artwork",
     "themes": [
       "memorials"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "cecil-hotel",
@@ -1542,11 +2126,17 @@ const trips = [
       "crime"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Cecil Hotel is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
-    ]
+    ],
+    "place_type": "Hotel",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "cielo-drive-manson",
@@ -1571,7 +2161,11 @@ const trips = [
       "Terrain or access warrants extra planning. Confirm conditions with the responsible operator or land manager."
     ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Crime Locations"
+    }
   },
   {
     "id": "golden-gate-bridge",
@@ -1592,11 +2186,17 @@ const trips = [
     ],
     "history": "The bridge’s visitor area includes exhibits about its construction, engineering, and history. Use the bridge authority’s current information when planning pedestrian or bicycle access.",
     "reviewed": "2026-10-29",
-    "know_before": [],
+    "know_before": [
+      "Golden Gate Bridge is an outdoor location; confirm public access, seasonal closures, and the appropriate entrance before setting out. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "memorials"
-    ]
+    ],
+    "place_type": "Outdoor Location",
+    "subcategories": {
+      "historic": "Dark History & Lore"
+    }
   },
   {
     "id": "donner-pass-campsite",
@@ -1609,9 +2209,15 @@ const trips = [
       "historic"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Donner Pass Survival Camp is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Dark History & Lore"
+    }
   },
   {
     "id": "jonestown-memorial",
@@ -1625,12 +2231,19 @@ const trips = [
       "cemetery"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Jonestown Memorial at Evergreen Cemetery is a cemetery; respect burial areas and any services in progress. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "cemeteries",
       "memorials"
-    ]
+    ],
+    "place_type": "Cemetery",
+    "subcategories": {
+      "historic": "Dark History & Lore",
+      "cemetery": "Cemetery Lore"
+    }
   },
   {
     "id": "bodie-ghost-town",
@@ -1643,11 +2256,17 @@ const trips = [
       "historic"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Bodie Ghost Town is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "mining"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Dark History & Lore"
+    }
   },
   {
     "id": "mountain-meadows-massacre",
@@ -1660,11 +2279,17 @@ const trips = [
       "historic"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Mountain Meadows Massacre is an outdoor location; confirm public access, seasonal closures, and the appropriate entrance before setting out. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "memorials"
-    ]
+    ],
+    "place_type": "Outdoor Location",
+    "subcategories": {
+      "historic": "Dark History & Lore"
+    }
   },
   {
     "id": "skinwalker-ranch-gate",
@@ -1689,7 +2314,11 @@ const trips = [
       "Terrain or access warrants extra planning. Confirm conditions with the responsible operator or land manager."
     ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "alien": "Famous Sightings"
+    }
   },
   {
     "id": "wounded-knee-massacre",
@@ -1702,11 +2331,17 @@ const trips = [
       "historic"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Wounded Knee Massacre Site is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "memorials"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Dark History & Lore"
+    }
   },
   {
     "id": "bennington-triangle",
@@ -1720,11 +2355,18 @@ const trips = [
       "missing"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Glastenbury: Bennington Triangle Lore is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "disappearances"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Dark History & Lore",
+      "missing": "Unresolved Disappearances"
+    }
   },
   {
     "id": "maura-murray-route-112",
@@ -1752,7 +2394,12 @@ const trips = [
         "url": "https://www.fbi.gov/wanted/vicap/missing-persons/maura-murray---haverhill-new-hampshire"
       }
     ],
-    "reviewed": "2026-10-29"
+    "reviewed": "2026-10-29",
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Crime Locations",
+      "missing": "Unresolved Disappearances"
+    }
   },
   {
     "id": "jimmy-hoffa-red-fox",
@@ -1766,11 +2413,18 @@ const trips = [
       "missing"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "Machus Red Fox Site: Jimmy Hoffa is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "disappearances"
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Organized Crime",
+      "missing": "Unresolved Disappearances"
+    }
   },
   {
     "id": "fox-hollow-farm",
@@ -1793,7 +2447,11 @@ const trips = [
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
     ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Serial Crime"
+    }
   },
   {
     "id": "wuornos-dump-site",
@@ -1814,7 +2472,11 @@ const trips = [
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
     ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "crime": "Serial Crime"
+    }
   },
   {
     "id": "st-augustine-lighthouse",
@@ -1832,10 +2494,23 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "St. Augustine Lighthouse is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    },
+    "actions": [
+      {
+        "kind": "website",
+        "label": "Visit Website",
+        "url": "https://www.staugustinelighthouse.org"
+      }
     ]
   },
   {
@@ -1855,7 +2530,11 @@ const trips = [
     "image_kind": "Category artwork",
     "themes": [
       "cemeteries"
-    ]
+    ],
+    "place_type": "Cemetery",
+    "subcategories": {
+      "cemetery": "Cemetery Lore"
+    }
   },
   {
     "id": "lalaurie-mansion",
@@ -1878,7 +2557,11 @@ const trips = [
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
-    ]
+    ],
+    "place_type": "Historic House",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "myrtles-plantation-hist",
@@ -1896,9 +2579,22 @@ const trips = [
       "haunted"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Myrtles Plantation is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic House",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    },
+    "actions": [
+      {
+        "kind": "website",
+        "label": "Visit Website",
+        "url": "https://www.myrtlesplantation.com"
+      }
+    ]
   },
   {
     "id": "seattle-underground",
@@ -1911,9 +2607,15 @@ const trips = [
       "historic"
     ],
     "related": [],
-    "know_before": [],
+    "know_before": [
+      "The Seattle Underground is a historic location; confirm which areas are open to visitors before arriving. Check local access rules, hours, accessibility, and any admission or reservation requirements."
+    ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Dark History & Lore"
+    }
   },
   {
     "id": "ted-bundy-issaquah",
@@ -1934,7 +2636,11 @@ const trips = [
       "Public entry is not established. Do not enter private or restricted land, approach residences, or stop where parking is prohibited."
     ],
     "image_kind": "Category artwork",
-    "themes": []
+    "themes": [],
+    "place_type": "Outdoor Location",
+    "subcategories": {
+      "crime": "Serial Crime"
+    }
   },
   {
     "id": "amityville-horror-house",
@@ -1960,7 +2666,12 @@ const trips = [
     "image_kind": "Category artwork",
     "themes": [
       "hotels"
-    ]
+    ],
+    "place_type": "Historic House",
+    "subcategories": {
+      "crime": "Crime Locations",
+      "haunted": "Haunted Places"
+    }
   },
   {
     "id": "lost-dutchman-mine",
@@ -1982,7 +2693,12 @@ const trips = [
     "themes": [
       "disappearances",
       "mining"
-    ]
+    ],
+    "place_type": "Outdoor Location",
+    "subcategories": {
+      "historic": "Dark History & Lore",
+      "missing": "Unresolved Disappearances"
+    }
   },
   {
     "id": "silver-plume-disappearances",
@@ -2025,7 +2741,12 @@ const trips = [
       400,
       800,
       1200
-    ]
+    ],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "missing": "Unresolved Disappearances",
+      "historic": "Dark History & Lore"
+    }
   },
   {
     "id": "gilman-colorado",
@@ -2061,6 +2782,74 @@ const trips = [
       "bodie-ghost-town",
       "silver-plume-disappearances"
     ],
-    "image_kind": "Category artwork"
+    "image_kind": "Category artwork",
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "historic": "Dark History & Lore"
+    }
+  },
+  {
+    "id": "battle-of-los-angeles",
+    "title": "The Battle of Los Angeles",
+    "state": "CA",
+    "region": "Los Angeles area, CA",
+    "category": "alien",
+    "tags": [
+      "alien",
+      "historic"
+    ],
+    "desc": "A wartime sky filled with searchlights and anti-aircraft fire became one of America’s most debated aerial mysteries.",
+    "history": "On the night of February 24–25, 1942, Los Angeles defenses fired an anti-aircraft barrage in response to a suspected attack. The Navy’s historical account describes fire directed at Japanese aircraft that were not there. The event later entered UFO lore; the documented barrage does not establish an extraterrestrial encounter. This entry represents the wider Los Angeles event area, rather than a single offshore crash or landing site.",
+    "know_before": [
+      "This was an event over a broad urban area, not a single attraction or confirmed UFO site. Choose public historical sites and verify their visitor hours separately."
+    ],
+    "sources": [
+      {
+        "label": "US Naval History and Heritage Command — attacks on the mainland",
+        "url": "https://www.history.navy.mil/content/history/nhhc/about-us/leadership/director/directors-corner/h-grams/h-gram-010/h-010-6.html"
+      }
+    ],
+    "reviewed": "2026-10-29",
+    "related": [],
+    "themes": [],
+    "place_type": "Historic Site & Area",
+    "subcategories": {
+      "alien": "Military Encounters",
+      "historic": "Wartime History"
+    }
+  },
+  {
+    "id": "conjuring-house",
+    "title": "The Conjuring House",
+    "state": "RI",
+    "region": "Harrisville, Burrillville, RI",
+    "category": "haunted",
+    "tags": [
+      "haunted"
+    ],
+    "desc": "A Rhode Island farmhouse where the Perron family’s reported experiences inspired The Conjuring.",
+    "history": "The Old Arnold Estate became widely known through the Perron family’s accounts of unexplained experiences during the 1970s and the film inspired by those accounts. Its current preservation website describes restoration work and plans for future guided tours. The family’s paranormal accounts belong to the house’s reported history; the film is a dramatization.",
+    "know_before": [
+      "Private property under restoration. The property’s website currently describes tours as planned, rather than open for booking. Do not arrive expecting admission, enter the grounds, or disturb residents. Check official updates before planning a visit."
+    ],
+    "disclaimers": [
+      "Private property; public admission and reservations are not currently confirmed."
+    ],
+    "restricted": true,
+    "sources": [
+      {
+        "label": "The Conjuring House — preservation and visitor updates",
+        "url": "https://www.conjuringhouseofficial.com/"
+      }
+    ],
+    "reviewed": "2026-10-29",
+    "related": [
+      "lizzie-borden-house"
+    ],
+    "themes": [],
+    "place_type": "Historic House",
+    "subcategories": {
+      "haunted": "Haunted Places"
+    }
   }
 ];

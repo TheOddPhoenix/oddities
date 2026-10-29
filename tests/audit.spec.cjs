@@ -34,7 +34,7 @@ assert.ok(!fs.readFileSync(path.join(root,'index.html'),'utf8').includes('cdn.ta
 console.log('Passed 22 catalog, search, pagination, escaping, migration, and asset checks.');
 
 
-assert.equal(run('trips.length'),101,'Silver Plume and Gilman are present without duplicating the crash');
+assert.equal(run('trips.length'),103,'Silver Plume and Gilman are present without duplicating the crash');
 assert.equal(run('Object.keys(mapLocations).length'),run('trips.length'),'Every entry has a map reference');
 assert.ok(run('trips.every(t=>mapLocations[t.id] && Number.isFinite(mapLocations[t.id].lat) && Number.isFinite(mapLocations[t.id].lng))'),'Finite geographic references');
 assert.ok(run("trips.filter(t=>t.restricted).every(t=>mapLocations[t.id].precision==='area')"),'Restricted sites are context markers');
@@ -51,3 +51,13 @@ assert.equal(run("trips.filter(t=>t.id==='wichita-state-crash-site').length"),1,
 assert.ok(run("catalog.get('rmnp-disappearances').desc.includes('James Pruitt')"),'Park card tells its dark-tourism story');
 assert.ok(run("catalog.get('maura-murray-route-112').sources[0].url.startsWith('https://www.fbi.gov/')"),'Murray case has primary source');
 console.log('Passed 16 additional map, related-stop, editorial and branding checks.');
+
+assert.equal(run("categories.alien[0]"),'Aliens & UFOs');
+assert.ok(run("bookingActions(catalog.get('crescent-hotel-eureka')).some(a=>a.kind==='stay')"),'Hotel offers a room booking');
+assert.equal(run("bookingActions(catalog.get('conjuring-house')).length"),0,'Unconfirmed access has no booking action');
+assert.equal(run("catalog.get('alcatraz-island').notorious_inmates.length"),2,'Sourced inmate section');
+run("$('subcategory').value='all';$('place-type').value='Hotel';$('experience').value='stay'");
+assert.ok(run("refineTrips(trips).every(t=>t.place_type==='Hotel' && t.actions.some(a=>a.kind==='stay'))"),'Combined place and experience filters');
+assert.ok(run("refineTrips(trips).length>0"),'Combined filters return verified hotels');
+assert.ok(!app.includes('Copy link')&&!app.includes('Operator website'),'Redundant controls removed');
+console.log('Passed booking availability, combined filters, and card cleanup checks.');

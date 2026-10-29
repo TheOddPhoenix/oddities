@@ -807,5 +807,21 @@ const mapLocations = {
     "source": "https://en.wikipedia.org/wiki/Gilman,_Colorado",
     "label": "Gilman, Colorado",
     "reviewed": "2026-10-29"
+  },
+  "battle-of-los-angeles": {
+    "lat": 34.05,
+    "lng": -118.25,
+    "precision": "area",
+    "source": "https://en.wikipedia.org/wiki/Los_Angeles",
+    "label": "Los Angeles event area",
+    "reviewed": "2026-10-29"
+  },
+  "conjuring-house": {
+    "lat": 41.97,
+    "lng": -71.68,
+    "precision": "area",
+    "source": "https://en.wikipedia.org/wiki/Burrillville,_Rhode_Island",
+    "label": "Burrillville area \u2014 private property",
+    "reviewed": "2026-10-29"
   }
 };

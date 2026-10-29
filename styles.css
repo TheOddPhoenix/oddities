@@ -31,3 +31,10 @@ body{font-family:'Outfit',sans-serif}.hero-actions{display:flex;flex-wrap:wrap;g
 
 .leaflet-tile-pane{filter:brightness(.73) saturate(.6)}
 .featured-badges{margin:18px 0}
+
+/* Give headings breathing room while preserving the original wordmark. */
+h1,h2,h3,dialog h2,.map-sidebar h2{letter-spacing:.015em}.dialog-head{position:sticky;top:-26px;background:var(--panel);z-index:3;padding:16px 0;margin-top:-10px}.dialog-head .icon-button{display:flex;align-items:center;gap:8px;font-size:13px}.detail-navigation{margin-bottom:18px}.detail-map,.story-sources{border:1px solid var(--border);border-radius:12px;padding:15px;margin:18px 0}summary{cursor:pointer;font-weight:700;color:var(--purple)}#detail-mini-map{height:280px;margin-top:15px;isolation:isolate}.dialog-actions{border-top:1px solid var(--border);padding-top:20px}.dialog-actions>*{flex:1 1 160px}.notice h3{margin-top:0}@media(max-width:580px){.dialog-head{gap:10px}.dialog-head h2{font-size:24px}.dialog-head .icon-button{max-width:110px;flex-wrap:wrap;justify-content:center}.dialog-actions>*{flex-basis:100%}}
+
+.refinement-row{display:flex;flex-wrap:wrap;gap:16px;margin:18px 0}.refinement-row label{flex:1 1 180px;font-size:14px}.refinement-row select{margin-top:7px}
+
+.detail-head-actions{display:flex;gap:8px;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end;max-width:48%}.detail-head-actions button{font-size:13px;padding:8px 10px}.detail-head-actions .icon-button{max-width:none}.dialog-head{align-items:center}@media(max-width:580px){.detail-head-actions{flex-direction:column;max-width:45%}.detail-head-actions button{min-height:42px}.dialog-head .icon-button{flex-wrap:nowrap}}

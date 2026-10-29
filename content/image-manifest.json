@@ -917,6 +917,24 @@
       "prompt": "Create an Oddities destination-card illustration for Gilman: The Abandoned Mining Town, Gilman, CO. Story context: An abandoned mountainside company town preserves the shadow of Colorado’s mining boom and the environmental legacy it left behind. Depict the place or its surrounding landscape, not the event itself. For recognizable architecture, consult approved visual references; otherwise use an atmospheric interpretation of the setting. Use the existing Eureka Springs illustration as a STYLE REFERENCE ONLY: near-black desaturated teal-gray palette, cinematic overcast dusk, weathered architectural detail or rugged natural landscape, restrained fog, fine film grain. Keep details legible at card size. Wide 3:2 composition with a crop-safe center. No text, logos, watermarks, people, bodies, staged crime evidence, ghosts, or invented supernatural events. This is an interpretive AI illustration, not documentary photography.",
       "reference": "images/eureka.webp",
       "imageKind": "AI-generated illustration"
+    },
+    "battle-of-los-angeles": {
+      "status": "queued",
+      "locationId": "battle-of-los-angeles",
+      "title": "The Battle of Los Angeles",
+      "promptVersion": 1,
+      "prompt": "Create an Oddities destination-card illustration for The Battle of Los Angeles, Los Angeles area, CA, CA. Story context: A wartime sky filled with searchlights and anti-aircraft fire became one of America’s most debated aerial mysteries. Depict the place or its surrounding landscape, not the event itself. For recognizable architecture, consult approved visual references; otherwise use an atmospheric interpretation of the setting. Use the existing Eureka Springs illustration as a STYLE REFERENCE ONLY: near-black desaturated teal-gray palette, cinematic overcast dusk, weathered architectural detail or rugged natural landscape, restrained fog, fine film grain. Keep details legible at card size. Wide 3:2 composition with a crop-safe center. No text, logos, watermarks, people, bodies, staged crime evidence, ghosts, or invented supernatural events. This is an interpretive AI illustration, not documentary photography.",
+      "reference": "images/eureka.webp",
+      "imageKind": "AI-generated illustration"
+    },
+    "conjuring-house": {
+      "status": "queued",
+      "locationId": "conjuring-house",
+      "title": "The Conjuring House",
+      "promptVersion": 1,
+      "prompt": "Create an Oddities destination-card illustration for The Conjuring House, Harrisville, Burrillville, RI, RI. Story context: A Rhode Island farmhouse where the Perron family’s reported experiences inspired The Conjuring. Depict the place or its surrounding landscape, not the event itself. For recognizable architecture, consult approved visual references; otherwise use an atmospheric interpretation of the setting. Use the existing Eureka Springs illustration as a STYLE REFERENCE ONLY: near-black desaturated teal-gray palette, cinematic overcast dusk, weathered architectural detail or rugged natural landscape, restrained fog, fine film grain. Keep details legible at card size. Wide 3:2 composition with a crop-safe center. No text, logos, watermarks, people, bodies, staged crime evidence, ghosts, or invented supernatural events. This is an interpretive AI illustration, not documentary photography.",
+      "reference": "images/eureka.webp",
+      "imageKind": "AI-generated illustration"
     }
   }
 }

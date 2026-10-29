@@ -1,6 +1,6 @@
 'use strict';
 const $ = id => document.getElementById(id);
-const categories = {all:['All','sparkles'],alien:['Aliens / UFOs','ufo'],cemetery:['Cemeteries','headstone'],cryptid:['Cryptids','bigfoot'],historic:['Dark history','landmark'],missing:['Disappearances','help-circle'],haunted:['Haunted','ghost'],crime:['True crime','fingerprint']};
+const categories = {all:['All','sparkles'],alien:['Aliens & UFOs','ufo'],cemetery:['Cemeteries','headstone'],cryptid:['Cryptids','bigfoot'],historic:['Dark history','landmark'],missing:['Disappearances','help-circle'],haunted:['Haunted','ghost'],crime:['True crime','fingerprint']};
 function icon(name){
  const custom = {
   bigfoot: '<g><path d="M8 11c-1.5-1-3.2-.3-3.6 1.3-.4 1.6.7 2.7.7 4.1 0 1.6-.2 3 1.2 3.5 1.5.5 2.8-.5 2.8-2 .1-1.3-.5-2.2-.2-3.5.3-1.4.6-2.9-.9-3.9Z"/><g stroke-width="1.4"><ellipse cx="3.1" cy="9" rx=".55" ry=".7"/><ellipse cx="4.3" cy="7.7" rx=".6" ry=".8"/><ellipse cx="5.8" cy="7" rx=".65" ry=".9"/><ellipse cx="7.5" cy="7.1" rx=".75" ry="1"/><ellipse cx="9.3" cy="8.2" rx=".9" ry="1.3"/></g></g><g transform="translate(24 -3) scale(-1 1)"><path d="M8 11c-1.5-1-3.2-.3-3.6 1.3-.4 1.6.7 2.7.7 4.1 0 1.6-.2 3 1.2 3.5 1.5.5 2.8-.5 2.8-2 .1-1.3-.5-2.2-.2-3.5.3-1.4.6-2.9-.9-3.9Z"/><g stroke-width="1.4"><ellipse cx="3.1" cy="9" rx=".55" ry=".7"/><ellipse cx="4.3" cy="7.7" rx=".6" ry=".8"/><ellipse cx="5.8" cy="7" rx=".65" ry=".9"/><ellipse cx="7.5" cy="7.1" rx=".75" ry="1"/><ellipse cx="9.3" cy="8.2" rx=".9" ry="1.3"/></g></g>',
@@ -38,8 +38,18 @@ function searchTrips(query='',selectedCategory='all',selectedState='all'){
  const value=normalize(query);
  return trips.filter(item=>(selectedCategory==='all'||tags(item).includes(selectedCategory))&&(selectedState==='all'||item.state===selectedState)&&(!value||normalize([item.title,item.region,item.state,states[item.state],...tags(item).map(tag=>categories[tag][0])].join(' ')).includes(value)));
 }
-function filteredTrips(){return searchTrips($('search').value,category,$('state').value);}
-function renderGrid(){const filtered=filteredTrips();$('grid').innerHTML=filtered.slice(0,visibleCount).map(item=>card(item)).join('')||'<div class="empty"><h3>No locations found</h3><p>Try a different name, city, or state, or clear your filters.</p><button data-reset class="secondary">Clear filters</button></div>';$('results-count').textContent=`Showing ${Math.min(visibleCount,filtered.length)} of ${filtered.length} locations`;$('load-more').hidden=visibleCount>=filtered.length;refreshIcons();}
+function refineTrips(items,prefix=''){
+ const story=$(prefix+'subcategory')?.value||'all',place=$(prefix+'place-type')?.value||'all',experience=$(prefix+'experience')?.value||'all';
+ return items.filter(item=>(story==='all'||Object.values(item.subcategories||{}).includes(story))&&(place==='all'||item.place_type===place)&&(experience==='all'||bookingActions(item).some(action=>action.kind===experience)));
+}
+function renderRefinements(prefix='',parent=category){
+ const items=searchTrips('',parent),select=$(prefix+'subcategory');
+ const previous=select.value;const options=[...new Set(items.map(item=>item.subcategories?.[parent]).filter(Boolean))].sort();
+ select.innerHTML='<option value="all">All stories</option>'+options.map(value=>`<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`).join('');select.value=options.includes(previous)?previous:'all';select.closest('label').hidden=parent==='all';
+ const places=$(prefix+'place-type');const oldPlace=places.value;const types=[...new Set(items.map(item=>item.place_type).filter(Boolean))].sort();places.innerHTML='<option value="all">All place types</option>'+types.map(value=>`<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`).join('');places.value=types.includes(oldPlace)?oldPlace:'all';
+}
+function filteredTrips(){return refineTrips(searchTrips($('search').value,category,$('state').value));}
+function renderGrid(){if($('subcategory')?.closest)renderRefinements();const filtered=filteredTrips();$('grid').innerHTML=filtered.slice(0,visibleCount).map(item=>card(item)).join('')||'<div class="empty"><h3>No locations found</h3><p>Try a different name, city, or state, or clear your filters.</p><button data-reset class="secondary">Clear filters</button></div>';$('results-count').textContent=`Showing ${Math.min(visibleCount,filtered.length)} of ${filtered.length} locations`;$('load-more').hidden=visibleCount>=filtered.length;refreshIcons();}
 function renderFeatured(){const item=catalog.get('eureka');$('featured').innerHTML=`<article class="featured-card">${media(item,true)}<div class="featured-copy"><p class="eyebrow">Arkansas · Architecture & lore</p><h3><a class="card-link" href="#location/eureka">${escapeHtml(item.title)}</a></h3><p>${escapeHtml(item.desc)}</p><div class="badges featured-badges">${badges(item)}</div><a class="primary" href="#location/eureka">Discover Eureka Springs ${icon('arrow-up-right')}</a></div></article>`;refreshIcons();}
 function renderMenu(){$('list-links').replaceChildren();for(const name of Object.keys(collections)){const button=document.createElement('button');button.innerHTML=icon('folder-heart');button.append(document.createTextNode(`${name} (${collections[name].length})`));button.addEventListener('click',()=>{setMenu(false);location.hash='list/'+encodeURIComponent(name);});$('list-links').append(button);}refreshIcons();}
 function setMenu(open){$('lists-menu').hidden=!open;$('lists-toggle').setAttribute('aria-expanded',String(open));}
@@ -63,20 +73,24 @@ function relatedStops(item){
  return [...explicit,...pool.map(x=>x.stop)].slice(0,4);
 }
 function relatedMarkup(item){const stops=relatedStops(item);if(!stops.length)return '';return `<section aria-labelledby="related-title"><h3 id="related-title">Related Oddities</h3><div class="related-grid">${stops.map(stop=>{const near=distanceKm(item,stop)<65;return `<a class="related-stop" href="#location/${encodeURIComponent(stop.id)}"><strong>${escapeHtml(stop.title)}</strong><span class="fine">${escapeHtml(locationText(stop))}</span><span class="badge">${icon(near?'map-pin':'compass')}${near?'Nearby stop':'Similar story'}</span></a>`;}).join('')}</div></section>`;}
+let detailMap=null;
+function disposeDetailMap(){if(detailMap){detailMap.remove();detailMap=null;}}
+function bookingActions(item){return item.restricted?[]:(item.actions||[]);}
 function openLocation(id){
  const item=catalog.get(canonicalId(id));if(!item){notify('That location is no longer in the catalog.');return;}
+ disposeDetailMap();
  if(!$('detail').open){detailReturnFocus=document.activeElement;detailOrigin=activeView==='map'?'#map':activeList?'#list/'+encodeURIComponent(activeList):'#explore';}
  $('detail-title').textContent=item.title;
- const lore=tags(item).some(tag=>['haunted','cryptid','alien'].includes(tag));
- const warnings=[...(item.know_before||item.disclaimers||[])];
- if(item.restricted&&!warnings.length)warnings.push('Restricted or private property. No public entry is established.');
+ $('detail-back-explore').hidden=detailOrigin!=='#map';
+ const warnings=item.know_before?.length?item.know_before:item.disclaimers||[];
  const point=mapLocations[item.id];
- $('detail-content').innerHTML=`${media(item)}${item.image?'<p class="image-credit">AI-generated illustration · atmospheric artwork, not a documentary photograph</p>':''}<p class="place">${icon('map-pin')}${escapeHtml(locationText(item))}</p><div class="badges">${badges(item)}</div><h3>Dark History &amp; Lore</h3><p>${escapeHtml(item.history||item.desc)}</p>${lore?'<p class="detail-kicker">Haunting, UFO, and cryptid accounts are reported experiences and local lore.</p>':''}${item.sources?`<h3>Explore the story</h3><ul class="source-list">${item.sources.map(source=>`<li><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)} ↗</a></li>`).join('')}</ul>`:''}<section class="notice" aria-labelledby="access-title"><h3 id="access-title">Know Before You Visit</h3>${warnings.length?`<ul>${warnings.map(w=>`<li>${escapeHtml(w)}</li>`).join('')}</ul>`:'<p>Check current opening hours, admission, reservations, accessibility, and posted restrictions with the operator before visiting.</p>'}${point?`<p class="fine">${point.precision==='area'?'The map marks the general area, not the exact event site.':'The map marks a location reference, not a confirmed public entrance.'} <a href="${escapeHtml(point.source)}" target="_blank" rel="noopener noreferrer">Map reference ↗</a></p>`:''}${item.booking?.url?`<a class="secondary" href="${escapeHtml(item.booking.url)}" target="_blank" rel="noopener noreferrer">${icon('external-link')} Operator website</a>`:''}</section>${relatedMarkup(item)}${!item.reviewed?'<p class="fine">Historical details and local lore are subject to continuing source review.</p>':''}`;
+ const sources=[...(item.sources||[]),...(item.notorious_inmates||[]).map(person=>({label:person.name+' — historical source',url:person.url}))];
+ $('detail-content').innerHTML=`${media(item)}${item.image?'<p class="image-credit">AI-generated illustration · atmospheric artwork, not a documentary photograph</p>':''}<p class="place">${icon('map-pin')}${escapeHtml(locationText(item))}</p><div class="badges">${badges(item)}<span class="badge">${escapeHtml(item.place_type||'Historic Site')}</span></div><h3>Dark History &amp; Lore</h3><p>${escapeHtml(item.history||item.desc)}</p>${item.notorious_inmates?.length?`<section><h3>Notorious Inmates</h3><ul>${item.notorious_inmates.map(person=>`<li><strong>${escapeHtml(person.name)}</strong> — ${escapeHtml(person.context)}</li>`).join('')}</ul></section>`:''}<section class="notice" aria-labelledby="access-title"><h3 id="access-title">Know Before You Visit</h3><ul>${warnings.map(w=>`<li>${escapeHtml(w)}</li>`).join('')}</ul></section>${point?'<details id="detail-map-toggle" class="detail-map"><summary>View Location Map</summary><div id="detail-mini-map" role="region" aria-label="Location map"></div></details>':''}${sources.length?`<details class="story-sources"><summary>Historical Sources</summary><ul class="source-list">${sources.map(source=>`<li><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)} ↗</a></li>`).join('')}</ul></details>`:''}${relatedMarkup(item)}`;
  $('detail-actions').replaceChildren();
- const save=document.createElement('button');save.className='primary';save.innerHTML=icon('bookmark')+(isSaved(item.id)?'Manage saved lists':'Save to a list');save.addEventListener('click',()=>openSave(item.id));$('detail-actions').append(save);
- const showMap=document.createElement('a');showMap.className='secondary';showMap.href='#map';showMap.innerHTML=icon('map')+'View on map';showMap.addEventListener('click',()=>{mapCategory='all';$('map-search').value=item.title;$('map-state').value='all';});$('detail-actions').append(showMap);
- const share=document.createElement('button');share.className='secondary';share.innerHTML=icon('link')+'Copy link';share.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(new URL('#location/'+item.id,location.href).href);notify('Location link copied.');}catch{notify('Copy the link from your browser’s address bar.');}});$('detail-actions').append(share);
- if(!item.restricted){const map=document.createElement('a');map.className='secondary';map.target='_blank';map.rel='noopener noreferrer';map.innerHTML=icon('navigation')+'Google Maps';map.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(item.title+' '+locationText(item)+' USA');$('detail-actions').append(map);}
+ for(const action of bookingActions(item)){const link=document.createElement('a');link.className='primary';link.href=action.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=action.label;$('detail-actions').append(link);}
+ if(!item.restricted){const map=document.createElement('a');map.className='secondary';map.target='_blank';map.rel='noopener noreferrer';map.innerHTML=icon('navigation')+'Get Directions';map.href='https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(item.title+' '+locationText(item)+' USA');$('detail-actions').append(map);}
+ const save=document.createElement('button');save.className='secondary';save.innerHTML=icon('bookmark')+(isSaved(item.id)?'Manage saved lists':'Save to a list');save.addEventListener('click',()=>openSave(item.id));$('detail-actions').append(save);
+ $('detail-map-toggle')?.addEventListener('toggle',event=>{if(!event.target.open)return;if(typeof L==='undefined'){$('detail-mini-map').textContent='The map could not load. Please try again later.';return;}if(!detailMap){detailMap=L.map('detail-mini-map',{scrollWheelZoom:false}).setView([point.lat,point.lng],point.precision==='area'?11:15);L.tileLayer(siteConfig.mapTileUrl,{attribution:siteConfig.mapAttribution,maxZoom:18}).addTo(detailMap);L.marker([point.lat,point.lng],{title:item.title,icon:L.divIcon({className:'map-marker',html:'<span class="map-marker-dot">'+icon(categories[item.category][1])+'</span>',iconSize:[30,30],iconAnchor:[15,15]})}).addTo(detailMap);refreshIcons();}detailMap.invalidateSize();});
  showDialog($('detail'));$('detail').scrollTop=0;$('detail-title').focus();document.title=item.title+' | Oddities';refreshIcons();
 }
 function openSave(id){activeSaveId=id;renderSaveOptions();$('list-name').value='';showDialog($('save-dialog'));}
@@ -90,7 +104,7 @@ const info={
 function route(){
  let hash;try{hash=decodeURIComponent(location.hash.slice(1));}catch{hash='';}
  const isLocation=hash.startsWith('location/'),isList=hash.startsWith('list/'),isMap=hash==='map',infoPage=info[hash];
- if(!isLocation&&$('detail').open)$('detail').close();
+ if(!isLocation&&$('detail').open){disposeDetailMap();$('detail').close();}
  if(!infoPage&&$('info-dialog').open)$('info-dialog').close();
  if(isLocation){openLocation(hash.slice(9));return;}
  if(infoPage){$('info-title').textContent=infoPage[0];$('info-content').innerHTML=infoPage[1];showDialog($('info-dialog'));refreshIcons();return;}
@@ -99,7 +113,7 @@ function route(){
  else if(isList){const name=hash.slice(5);if(Object.hasOwn(collections,name)){activeView='collection';activeList=name;renderCollection();$('collection-title').focus();document.title=name+' | Oddities';}else location.hash='explore';}
  else{activeView='explore';activeList=null;document.title='Oddities | The Odd Phoenix';if(hash==='explore')$('explore').scrollIntoView({behavior:'instant'});}
 }
-function closeRoutedDialog(dialog){dialog.close();if(dialog===$('detail')||dialog===$('info-dialog')){history.replaceState(null,'',dialog===$('detail')?detailOrigin:activeView==='map'?'#map':activeList?'#list/'+encodeURIComponent(activeList):'#explore');document.title=activeView==='map'?'Map | Oddities':'Oddities | The Odd Phoenix';if(dialog===$('detail')&&detailReturnFocus?.isConnected)detailReturnFocus.focus();}}
+function closeRoutedDialog(dialog){if(dialog===$('detail'))disposeDetailMap();dialog.close();if(dialog===$('detail')||dialog===$('info-dialog')){history.replaceState(null,'',dialog===$('detail')?detailOrigin:activeView==='map'?'#map':activeList?'#list/'+encodeURIComponent(activeList):'#explore');document.title=activeView==='map'?'Map | Oddities':'Oddities | The Odd Phoenix';if(dialog===$('detail')&&detailReturnFocus?.isConnected)detailReturnFocus.focus();}}
 function renderMap(){
  if(typeof L==='undefined'){$('map-canvas').innerHTML='<p class="notice">The map could not load. You can still browse every location in the list.</p>';renderMapResults();return;}
  if(!mapInstance){
@@ -110,7 +124,7 @@ function renderMap(){
  mapInstance.invalidateSize();renderMapResults();
 }
 function renderMapResults(){
- const items=searchTrips($('map-search').value,mapCategory,$('map-state').value);
+ renderRefinements('map-',mapCategory);const items=refineTrips(searchTrips($('map-search').value,mapCategory,$('map-state').value),'map-');
  $('map-count').textContent=`${items.length} ${items.length===1?'location':'locations'} found`;
  $('map-results').innerHTML=items.map(item=>`<article class="map-result"><h3><a href="#location/${encodeURIComponent(item.id)}">${escapeHtml(item.title)}</a></h3><p class="place">${escapeHtml(locationText(item))}</p><p>${escapeHtml(item.desc)}</p><div class="badges">${badges(item)}</div><div class="map-result-actions"><button data-map-focus="${escapeHtml(item.id)}">Show marker</button><a href="#location/${encodeURIComponent(item.id)}">Read the story</a></div></article>`).join('')||'<p>No locations match. Try another name, state, or category.</p>';
  $('map-categories').querySelectorAll('[data-map-category]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.mapCategory===mapCategory)));
@@ -137,8 +151,9 @@ function renderCategoryExtras(){
 }
 function renderManage(){$('manage-options').replaceChildren();for(const name of Object.keys(collections)){const row=document.createElement('form');row.className='manage-row';const label=document.createElement('label');label.textContent=`List name (${collections[name].length} saved)`;const input=document.createElement('input');input.value=name;input.maxLength=80;input.required=true;label.append(input);row.append(label);const rename=document.createElement('button');rename.type='submit';rename.textContent='Rename';row.append(rename);row.addEventListener('submit',event=>{event.preventDefault();const next=input.value.trim();if(!next||next===name)return;if(Object.hasOwn(collections,next)){notify('That list name already exists.');return;}collections[next]=collections[name];delete collections[name];if(activeList===name){activeList=next;history.replaceState(null,'','#list/'+encodeURIComponent(next));}const ok=persist();refreshSavedUI();renderManage();if(ok)notify('List renamed.');});const remove=document.createElement('button');remove.type='button';remove.className='danger';remove.textContent='Delete list';remove.addEventListener('click',()=>{if(!confirm('Delete “'+name+'” from this browser? Export a backup first if you need it.'))return;delete collections[name];if(activeList===name){activeList=null;location.hash='explore';}if(!Object.keys(collections).length)collections['My Bucket List']=[];const ok=persist();renderManage();refreshSavedUI();if(ok)notify('List deleted.');});row.append(remove);$('manage-options').append(row);}refreshIcons();}
 $('categories').innerHTML=Object.entries(categories).map(([key,[label,symbol]])=>`<button data-category="${key}" aria-pressed="${key==='all'}">${icon(symbol)} ${label}</button>`).join('');
+$('detail-back-explore').addEventListener('click',()=>{disposeDetailMap();$('detail').close();location.hash='explore';});
 for(const code of [...new Set(trips.map(item=>item.state))].sort((a,b)=>states[a].localeCompare(states[b]))){const option=document.createElement('option');option.value=code;option.textContent=states[code];$('state').append(option);}
-function resetFilters(){category='all';visibleCount=12;$('search').value='';$('state').value='all';document.querySelectorAll('[data-category]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.category==='all')));renderGrid();}
+function resetFilters(){for(const id of ['subcategory','place-type','experience'])$(id).value='all';category='all';visibleCount=12;$('search').value='';$('state').value='all';document.querySelectorAll('[data-category]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.category==='all')));renderGrid();}
 $('reset').addEventListener('click',resetFilters);
 $('search').addEventListener('input',()=>{visibleCount=12;renderGrid();});$('state').addEventListener('change',()=>{visibleCount=12;renderGrid();});
 $('load-more').addEventListener('click',()=>{const previous=visibleCount;visibleCount+=12;renderGrid();const next=$('grid').querySelectorAll('.card-link')[previous];next?.focus();});
@@ -157,7 +172,7 @@ $('account-overview').addEventListener('click',()=>{setMenu(false);$('info-title
 $('suggest-icons').addEventListener('click',event=>{const link=event.target.closest('[data-browse-category]');if(!link)return;category=link.dataset.browseCategory;visibleCount=12;document.querySelectorAll('#categories [data-category]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.category===category)));renderGrid();});
 $('map-categories').addEventListener('click',event=>{const button=event.target.closest('[data-map-category]');if(!button)return;mapCategory=button.dataset.mapCategory;renderMapResults();});
 $('map-search').addEventListener('input',renderMapResults);$('map-state').addEventListener('change',renderMapResults);
-$('map-reset').addEventListener('click',()=>{mapCategory='all';$('map-search').value='';$('map-state').value='all';renderMapResults();});
+$('map-reset').addEventListener('click',()=>{mapCategory='all';for(const id of ['map-subcategory','map-place-type','map-experience'])$(id).value='all';$('map-search').value='';$('map-state').value='all';renderMapResults();});
 $('map-results').addEventListener('click',event=>{const button=event.target.closest('[data-map-focus]');if(!button||!mapLayer)return;const point=mapLocations[button.dataset.mapFocus];if(!point)return;mapInstance.setView([point.lat,point.lng],point.precision==='area'?11:15);mapLayer.eachLayer(marker=>{if(marker._odditiesIds?.includes(button.dataset.mapFocus))marker.openPopup();});$('map-canvas').scrollIntoView({behavior:'instant',block:'center'});});
 function applyContact(){
  const email=siteConfig.contactEmail;
@@ -165,7 +180,8 @@ function applyContact(){
  const href='mailto:'+email+'?subject='+encodeURIComponent('Oddities: Suggest a Stop');$('suggest-stop').href=href;
  info.contact=['Contact & location suggestions',`<p>Share a location, a correction, or a reliable historical source.</p><p><a class="primary" href="${escapeHtml(href)}">${icon('mail')} Email a suggestion</a></p><p><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p><p>Please include the location name, city and state, its story, any public-access details, and links to sources.</p>`];
 }
-renderCategoryExtras();applyContact();
+for(const prefix of ['', 'map-'])for(const id of ['subcategory','place-type','experience'])$(prefix+id).addEventListener('change',()=>{visibleCount=12;prefix?renderMapResults():renderGrid();});
+renderCategoryExtras();renderRefinements();renderRefinements('map-',mapCategory);applyContact();
 window.addEventListener('hashchange',route);renderFeatured();renderMenu();renderGrid();route();if(!storageAvailable)notify('Saved data could not be loaded. Export a backup after making changes.');
 
 
