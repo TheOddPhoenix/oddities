@@ -1,0 +1,4525 @@
+{
+  "date": "2026-10-29",
+  "originalRecords": 103,
+  "records": 109,
+  "checklistItems": 110,
+  "recordsAudit": [
+    {
+      "id": "last-resort",
+      "previousTitle": "The Last Resort Bar",
+      "title": "The Last Resort Bar",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "5812 S Ridgewood Avenue, Port Orange, FL 32127",
+        "kind": "business",
+        "notes": "Address verified in corporate record; current opening arrangements unconfirmed.",
+        "source": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=domp-p93000010413-48636f6f-bfd5-4b61-9969-b6458b7809f3&directionType=ForwardList&inquirytype=EntityName&listNameOrder=LASTRESORTBAR+G249340&searchNameOrder=LASTRESORTBAR+P930000104130&searchTerm=LAS+TRADEMARK%2C+LLC",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=domp-p93000010413-48636f6f-bfd5-4b61-9969-b6458b7809f3&directionType=ForwardList&inquirytype=EntityName&listNameOrder=LASTRESORTBAR+G249340&searchNameOrder=LASTRESORTBAR+P930000104130&searchTerm=LAS+TRADEMARK%2C+LLC",
+          "checked": "Florida corporate record confirms active corporation and5812SRidgewoodaddress; does not verify opening hours.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "An independent official visitor website and current public opening arrangements were not established."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "clutter-house",
+      "previousTitle": "The Clutter Family Home",
+      "title": "Clutter Family Home",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Holcomb, KS, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "Private residence. Do not enter its driveway or grounds. A lawful stopping point with a view of the house has not been established."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.visitgck.com/things-to-do/true-crime/",
+          "checked": "Destinationtourismconfirms1959CluttermurdersandFinneyCountymuseumexhibit;notverificationofprivatehomeaccess.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Safe legal exterior viewpoint not verified; use Holcomb as an explicitly approximate community reference rather than routing into the private driveway."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "sloss",
+      "previousTitle": "Sloss Furnaces",
+      "title": "Sloss Furnaces",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://www.birminghamal.gov/government/city-departments/sloss-furnaces-museum",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Industrial history visits",
+          "description": "Explore the preserved ironworks on a self-guided visit; guided programming is also offered.",
+          "url": "https://www.birminghamal.gov/government/city-departments/sloss-furnaces-museum",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Sloss Furnaces, 20 32nd Street North, Birmingham, AL 35222",
+        "kind": "visitor-entrance",
+        "notes": "",
+        "source": "https://www.birminghamal.gov/government/city-departments/sloss-furnaces-museum",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.birminghamal.gov/government/city-departments/sloss-furnaces-museum",
+          "checked": "City operator page confirms public self-guided visits, guided tours, address, museum function.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "eureka",
+      "previousTitle": "Eureka Springs",
+      "title": "Eureka Springs, Arkansas",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Carroll County, AR, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [],
+      "evidence": [],
+      "unresolved": [
+        "Town-wide visitor link was not independently fetched; individual hotel booking and experience pages were checked.",
+        "Description revised from existing catalog context; a complete independent historical-source review remains outstanding."
+      ],
+      "related": [
+        "crescent-hotel-eureka",
+        "basin-park-hotel",
+        "arlington-hotel-capone"
+      ],
+      "parent": null
+    },
+    {
+      "id": "skunk-ape-headquarters",
+      "previousTitle": "Skunk Ape Research Headquarters",
+      "title": "Skunk Ape Research Headquarters",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://www.skunkape.info/",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Headquarters and animal exhibits",
+          "description": "Visit the roadside headquarters, shop, and animal exhibit; separate area tours are listed by the operator.",
+          "url": "https://www.skunkape.info/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Skunk Ape Research Headquarters, 40904 Tamiami Trail East, Ochopee, FL",
+        "kind": "visitor-entrance",
+        "notes": "",
+        "source": "https://www.skunkape.info/",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.skunkape.info/",
+          "checked": "Official site confirms Ochopee location, folklore framing, exhibits and tour menu.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "bachelor-grove",
+      "previousTitle": "Bachelors Grove Cemetery",
+      "title": "Bachelor’s Grove Cemetery",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://fpdcc.com/places/locations/rubio-woods/",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [],
+      "navigation": {
+        "destination": "Rubio Woods parking, W Midlothian Turnpike east of S Ridgeland Avenue, Midlothian, IL",
+        "kind": "public-parking",
+        "notes": "Parking reference; crossing/approach details should be checked on posted maps.",
+        "source": "https://fpdcc.com/places/locations/rubio-woods/",
+        "verified": true
+      },
+      "warnings": [
+        "Plan a daylight visit. Rubio Woods provides official parking nearby; the cemetery approach involves walking and a busy road crossing. Respect posted access restrictions and cemetery monuments."
+      ],
+      "evidence": [
+        {
+          "url": "https://fpdcc.com/places/locations/rubio-woods/",
+          "checked": "Forest Preserve page confirms Rubio Woods entrance, parking, trail access, sunrise-to-sunset operation.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.thepathtobachelorsgrove.com/directions-.html",
+          "checked": "Cemetery research project documents walking approach from Rubio Woods and busy crossing.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "point-pleasant-mothman-statue",
+      "previousTitle": "Mothman Statue & Museum",
+      "title": "Mothman Statue & Museum",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://www.mothmanmuseum.com/mothman-museum.html",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Museum and statue",
+          "description": "Museum exhibits explore eyewitness reports, the Mothman legacy, and related local history; the statue stands nearby.",
+          "url": "https://www.mothmanmuseum.com/mothman-museum.html",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Mothman Museum, 400 Main Street, Point Pleasant, WV 25550",
+        "kind": "museum-entrance",
+        "notes": "",
+        "source": "https://www.mothmanmuseum.com/mothman-museum.html",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.mothmanmuseum.com/mothman-museum.html",
+          "checked": "Museum operator confirms exhibits, adjacent statue, museum admission and400MainStreet address.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [
+        "point-pleasant-mothman"
+      ],
+      "parent": null
+    },
+    {
+      "id": "aurora-ufo-grave",
+      "previousTitle": "Aurora Cemetery UFO Legend",
+      "title": "Aurora Cemetery",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "label": "Visit Website",
+          "url": "https://www.auroratexas.gov/community/history/",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [],
+      "navigation": {
+        "destination": "Aurora Cemetery, Aurora, TX",
+        "kind": "cemetery-reference",
+        "notes": "Cemetery reference, not a confirmed alien burial location.",
+        "source": "https://www.auroratexas.gov/community/history/",
+        "verified": true
+      },
+      "warnings": [
+        "An active burial ground, not a confirmed extraterrestrial crash site. Do not disturb graves or attempt excavation."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.hmdb.org/m.asp?m=183377",
+          "checked": "Published transcription of Texas Historical Commission marker explicitly calls spaceship burial a legend.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.auroratexas.gov/community/history/",
+          "checked": "City itself frames the1897accountasastory/tall tale and identifiesAuroraCemetery; newspaperreproductionincluded.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Exact alleged burial point, current cemetery entrance rules, and any dedicated cemetery-operator website were not verified."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "winchester-mystery-house-hist",
+      "previousTitle": "Winchester Mystery House",
+      "title": "Winchester Mystery House",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "tour",
+          "url": "https://winchestermysteryhouse.com/",
+          "label": "Explore Experiences",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Mansion tours and events",
+          "description": "The operator offers mansion visits and scheduled special experiences; options vary by date.",
+          "url": "https://winchestermysteryhouse.com/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "San Jose, CA, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://winchestermysteryhouse.com/",
+          "checked": "Official current house attraction and tour website fetched.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "marfa-lights-main",
+      "previousTitle": "Marfa Lights Viewing Area",
+      "title": "Marfa Lights Viewing Area",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://visitmarfa.com/mystery",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Public viewing area",
+          "description": "Observe the landscape and horizon from the designated roadside viewing area; sightings are not guaranteed.",
+          "url": "https://visitmarfa.com/mystery",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Marfa Lights Viewing Area, US Highway 90, Marfa, TX",
+        "kind": "public-viewing-area",
+        "notes": "",
+        "source": "https://visitmarfa.com/mystery",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://visitmarfa.com/mystery",
+          "checked": "Official tourism page explicitly identifies public viewing area9mi eastofMarfa onUS90towardAlpine.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "adx-florence-supermax",
+      "previousTitle": "ADX Florence",
+      "title": "ADX Florence",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Florence, CO, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "Operating federal prison. No public tourist entrance or verified visitor overlook is established; do not enter secured roads or grounds."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.bop.gov/business/bop_directory.jsp?device=mobile",
+          "checked": "BOP directory confirms Florence ADMAX facility identity and address; does not establish tourist access.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "No safe legal public viewpoint verified. Use Florence only as an approximate community reference, not the institutional driveway."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "bonnie-clyde-joplin-hideout",
+      "previousTitle": "The Historic Joplin Hideout",
+      "title": "Historic Joplin Hideout",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "stay",
+          "label": "View Stay on Airbnb",
+          "url": "https://www.airbnb.com/rooms/855978867173917336",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Private vacation rental",
+          "description": "The historic garage apartment is offered as a private Airbnb stay; admission requires an accepted booking.",
+          "url": "https://www.airbnb.com/rooms/855978867173917336",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "34th Street and Oak Ridge Drive, Joplin, MO",
+        "kind": "public-street-reference",
+        "notes": "Public street reference, not permission to enter or park on the private property.",
+        "source": "https://www.visitjoplinmo.com/directory/bonnie-clyde-hideout-history/",
+        "verified": true
+      },
+      "warnings": [
+        "Private accommodation in a residential neighborhood. Enter only with a reservation; exterior observation must remain on public streets without blocking drives or disturbing guests."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.airbnb.com/rooms/855978867173917336",
+          "checked": "Airbnb listing fetched and identifies actual historicJoplinhideout, entirehome anddatebasedbooking.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.visitjoplinmo.com/directory/bonnie-clyde-hideout-history/",
+          "checked": "Official tourism confirms1933raid,privatepropertyand3347½OakRidgeaddress.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "sand-creek-massacre-site",
+      "previousTitle": "Sand Creek Massacre National Historic Site",
+      "title": "Sand Creek Massacre National Historic Site",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://www.nps.gov/sand/",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Memorial landscape and interpretation",
+          "description": "Visit the designated historic-site visitor area and interpretive walking route.",
+          "url": "https://home.nps.gov/sand/planyourvisit/basicinfo.htm",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Sand Creek Massacre National Historic Site entrance, County Road W, Chivington, CO",
+        "kind": "visitor-entrance",
+        "notes": "",
+        "source": "https://home.nps.gov/sand/planyourvisit/basicinfo.htm",
+        "verified": true
+      },
+      "warnings": [
+        "Reaching the historic site requires at least eight miles on unpaved county roads. Storms can affect road conditions; this is remote prairie country with services available at the site rather than along the route."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.nps.gov/sand/planyourvisit/conditions.htm",
+          "checked": "NPS alert confirms at least8milesofunpavedroads and weather-sensitive access; visitor services atsite.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://home.nps.gov/sand/planyourvisit/basicinfo.htm",
+          "checked": "NPS describes actualparkentrance alongCountyRoadW,notEadsresearchoffice.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "bird-girl-bonaventure",
+      "previousTitle": "Bonaventure Cemetery: Bird Girl History",
+      "title": "Bird Girl Statue",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://www.telfair.org/visit/telfair-academy/",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Art museum admission",
+          "description": "See Bird Girl inside Telfair Academy as part of a museum visit.",
+          "url": "https://www.telfair.org/visit/telfair-academy/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Telfair Academy, 121 Barnard Street, Savannah, GA 31401",
+        "kind": "museum-entrance",
+        "notes": "",
+        "source": "https://www.telfair.org/visit/telfair-academy/",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.telfair.org/visit/telfair-academy/",
+          "checked": "Telfair explicitly says BirdGirl currentlyinsideAcademy,121BarnardStreet.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [
+        "bonaventure-cemetery"
+      ],
+      "parent": null
+    },
+    {
+      "id": "wichita-state-crash-site",
+      "previousTitle": "Wichita State Plane Wreckage",
+      "title": "Wichita State Plane Crash Site",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Dry Gulch Trailhead, I-70 Exit 216, Colorado",
+        "kind": "trailhead",
+        "verified": true,
+        "source": "https://www.cmc.org/education-adventure/trips/routes-places/dry-gulch-trailhead",
+        "notes": "Directions lead toward hiking access near Exit216, not the wreckage. The Colorado Mountain Club describes frontage-road access to the gate; confirm current parking and Forest Service conditions before travel."
+      },
+      "warnings": [
+        "Reaching the wreckage involves a steep, rugged mountain hike on an unofficial route. Snow, altitude, navigation, and changing weather require preparation. Leave wreckage and memorial objects undisturbed.",
+        "A separate roadside memorial offers an alternative to the hike, but its precise safe pull-off has not been independently confirmed in this audit; do not stop on an interstate shoulder."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.cmc.org/education-adventure/trips/routes-places/dry-gulch-trailhead",
+          "checked": "Exit216 and frontage-road gate approach; no exact entrance coordinates asserted."
+        }
+      ],
+      "unresolved": [
+        "Main agent is separately verifying Dry Gulch hiking access and memorial alternative; do not reuse a highway centroid as a trailhead.",
+        "Description revised from existing catalog context; a complete independent historical-source review remains outstanding."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "ludlow-massacre-site",
+      "previousTitle": "Ludlow Massacre Memorial",
+      "title": "Ludlow Massacre Monument",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://canyonsandplains.org/attractions/ludlow-massacre-monument/",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Memorial and interpretation",
+          "description": "Visit the monument and interpretive panels documenting the tent colony and labor conflict.",
+          "url": "https://canyonsandplains.org/attractions/ludlow-massacre-monument/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Ludlow Massacre Monument, Ludlow, CO",
+        "kind": "memorial-entrance",
+        "notes": "",
+        "source": "https://canyonsandplains.org/attractions/ludlow-massacre-monument/",
+        "verified": true
+      },
+      "warnings": [
+        "No restrooms or drinking water are provided at the monument."
+      ],
+      "evidence": [
+        {
+          "url": "https://canyonsandplains.org/attractions/ludlow-massacre-monument/",
+          "checked": "Officialregionaltourismconfirmsmemorial,selfguidedinterpretivepanels,norestroomsorwater.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "fort-robinson-outbreak",
+      "previousTitle": "Fort Robinson",
+      "title": "Fort Robinson",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://outdoornebraska.gov/location/fort-robinson/",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Historic post and museums",
+          "description": "Explore the fort’s historical interpretation and museums; historical tours depend on current seasonal operation.",
+          "url": "https://outdoornebraska.gov/location/fort-robinson/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Fort Robinson State Park office, Crawford, NE",
+        "kind": "visitor-center",
+        "notes": "",
+        "source": "https://outdoornebraska.gov/location/fort-robinson/",
+        "verified": true
+      },
+      "warnings": [
+        "Some areas and activities have been affected by the South Fork Fire. Check the park’s current closures before arrival; stagecoach rides remain suspended on the operator page."
+      ],
+      "evidence": [
+        {
+          "url": "https://outdoornebraska.gov/location/fort-robinson/",
+          "checked": "NebraskaGame&Parks confirms history,museums,lodging,historicaltours;stagecoachridescurrentlyclosedfollowingfire.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "kid-curry-grave-linwood",
+      "previousTitle": "Linwood Cemetery: Kid Curry",
+      "title": "Kid Curry Memorial",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Doc Holliday Grave Trailhead, 12th Street and Bennett Avenue, Glenwood Springs, CO",
+        "kind": "public-trailhead",
+        "notes": "",
+        "source": "https://visitglenwood.com/things-to-do/doc-holliday/",
+        "verified": true
+      },
+      "warnings": [
+        "The cemetery is reached on foot by a short, moderately steep hillside trail. Use the signed trailhead near 12th Street and Bennett Avenue; respect residential parking rules."
+      ],
+      "evidence": [
+        {
+          "url": "https://visitglenwood.com/things-to-do/doc-holliday/",
+          "checked": "Officialtourism confirms KidCurrymarkerandpublictrailhead12th/Bennett,moderate.7miroundtrip.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [
+        "linwood-cemetery"
+      ],
+      "parent": "linwood-cemetery"
+    },
+    {
+      "id": "jesse-james-home-museum",
+      "previousTitle": "Jesse James Home",
+      "title": "Jesse James Home",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://www.stjosephmo.gov/362/Jesse-James-Home",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "House museum",
+          "description": "Museum exhibits interpret Jesse James’s life and death; the house has been relocated from its original site.",
+          "url": "https://www.stjosephmo.gov/362/Jesse-James-Home",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Patee House Museum and Jesse James Home, 1202 Penn Street, St Joseph, MO 64503",
+        "kind": "museum-entrance",
+        "notes": "",
+        "source": "https://www.nps.gov/places/patee-house-museum.htm",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.stjosephmo.gov/362/Jesse-James-Home",
+          "checked": "City confirms history,currentmuseumandhousemovedfromoriginalsite.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.nps.gov/places/patee-house-museum.htm",
+          "checked": "NPS confirms current house onPateeHousegrounds1202PennStreet.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "bonnie-clyde-ambush-site",
+      "previousTitle": "Bonnie and Clyde Ambush Marker",
+      "title": "Bonnie and Clyde Ambush Marker",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Bonnie and Clyde Ambush Site, Louisiana Highway 154, south of Gibsland, LA",
+        "kind": "roadside-marker",
+        "notes": "Use the designated marker stopping area only if current signs and traffic conditions permit.",
+        "source": "https://www.explorelouisiana.com/blog/bonnie-and-clyde-louisiana",
+        "verified": true
+      },
+      "warnings": [
+        "The memorial is beside a rural highway. Use only a lawful stopping area and do not stand in the traffic lane."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.explorelouisiana.com/blog/bonnie-and-clyde-louisiana",
+          "checked": "Officialstatetourism describes two roadside interpretive markersonLA154eightmiSouthofGibsland.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [
+        "ambush-museum-gibsland"
+      ],
+      "parent": null
+    },
+    {
+      "id": "ambush-museum-gibsland",
+      "previousTitle": "The Ambush Museum",
+      "title": "Bonnie and Clyde Ambush Museum",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [
+        {
+          "title": "Museum exhibits",
+          "description": "Historical artifacts and interpretation focus on the outlaws and the nearby ambush.",
+          "url": "https://www.explorelouisiana.com/blog/bonnie-and-clyde-louisiana",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Bonnie and Clyde Ambush Museum, 2419 Main Street, Gibsland, LA 71028",
+        "kind": "museum-entrance",
+        "notes": "",
+        "source": "https://heartoflouisiana.com/bonnie-and-clyde/",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.explorelouisiana.com/blog/bonnie-and-clyde-louisiana",
+          "checked": "StatetourismconfirmsmuseuminformerMaCanfieldcafé.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://heartoflouisiana.com/bonnie-and-clyde/",
+          "checked": "Publishedonsitereportconfirmingmuseum2419MainSt,addressmatchesexistingrecord.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "A current direct operator website and ticket page were not independently verified."
+      ],
+      "related": [
+        "bonnie-clyde-ambush-site"
+      ],
+      "parent": null
+    },
+    {
+      "id": "crescent-hotel-eureka",
+      "previousTitle": "1886 Crescent Hotel & Spa",
+      "title": "1886 Crescent Hotel & Spa",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "stay",
+          "url": "https://reservations.crescent-hotel.com/servlet/WebresShowAvailable?hotelid=1379",
+          "label": "Book a Stay",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        },
+        {
+          "kind": "tour",
+          "url": "https://www.americasmosthauntedhotel.com/ghost-tours/tickets-tours/",
+          "label": "Explore Experiences",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Hotel accommodation",
+          "description": "Overnight rooms are offered through the hotel’s own reservation system.",
+          "url": "https://reservations.crescent-hotel.com/servlet/WebresShowAvailable?hotelid=1379",
+          "kind": "tour"
+        },
+        {
+          "title": "Ghost tours and paranormal experiences",
+          "description": "The hotel presents its history and reported hauntings through scheduled guided experiences.",
+          "url": "https://www.americasmosthauntedhotel.com/ghost-tours/tickets-tours/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "1886 Crescent Hotel & Spa, 75 Prospect Avenue, Eureka Springs, AR",
+        "kind": "hotel-entrance",
+        "notes": "",
+        "source": "https://crescent-hotel.com/",
+        "verified": true
+      },
+      "warnings": [
+        "An operating hotel. Guest rooms and private areas require a reservation or permission; separately ticketed experiences have their own admission arrangements."
+      ],
+      "evidence": [
+        {
+          "url": "https://crescent-hotel.com/",
+          "checked": "Currentofficialhotelhomepageconfirmspropertyidentity,address,lodgingandownedBookNowlink.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://reservations.crescent-hotel.com/servlet/WebresShowAvailable?hotelid=1379",
+          "checked": "FollowedBookNowfromofficialhotelpageandcheckedreservationdestination.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.americasmosthauntedhotel.com/ghost-tours/tickets-tours/",
+          "checked": "Hotel-ownedcurrentghosttoursandparanormalexperiencespagefetched.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [
+        "eureka",
+        "basin-park-hotel",
+        "stanley-hotel"
+      ],
+      "parent": null
+    },
+    {
+      "id": "basin-park-hotel",
+      "previousTitle": "The Basin Park Hotel",
+      "title": "The Basin Park Hotel",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "stay",
+          "url": "https://us2.cloudbeds.com/en/reservation/pa5xIE",
+          "label": "Book a Stay",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        },
+        {
+          "kind": "investigation",
+          "url": "https://basinpark.com/things-to-do/paranormal-investigation/",
+          "label": "Explore Experiences",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Hotel accommodation",
+          "description": "Overnight rooms are offered through the hotel’s own reservation system.",
+          "url": "https://us2.cloudbeds.com/en/reservation/pa5xIE",
+          "kind": "tour"
+        },
+        {
+          "title": "Paranormal investigation",
+          "description": "The hotel offers guided investigations focused on its reported hauntings.",
+          "url": "https://basinpark.com/things-to-do/paranormal-investigation/",
+          "kind": "investigation"
+        }
+      ],
+      "navigation": {
+        "destination": "Basin Park Hotel, 12 Spring Street, Eureka Springs, AR",
+        "kind": "hotel-entrance",
+        "notes": "",
+        "source": "https://basinpark.com/",
+        "verified": true
+      },
+      "warnings": [
+        "An operating hotel. Guest rooms and private areas require a reservation or permission; separately ticketed experiences have their own admission arrangements."
+      ],
+      "evidence": [
+        {
+          "url": "https://basinpark.com/",
+          "checked": "Currentofficialhotelhomepageconfirmspropertyidentity,address,lodgingandownedBookNowlink.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://us2.cloudbeds.com/en/reservation/pa5xIE",
+          "checked": "FollowedBookNowfromofficialhotelpageandcheckedreservationdestination.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://basinpark.com/things-to-do/paranormal-investigation/",
+          "checked": "Currentofficialparanormalinvestigationpagefetched.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "No source found here supporting a distinct true-crime classification for Basin Park."
+      ],
+      "related": [
+        "eureka",
+        "crescent-hotel-eureka",
+        "stanley-hotel"
+      ],
+      "parent": null
+    },
+    {
+      "id": "arlington-hotel-capone",
+      "previousTitle": "The Arlington Resort Hotel",
+      "title": "Arlington Resort Hotel & Spa",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "stay",
+          "url": "https://www.arlingtonhotel.com/book/dates-of-stay",
+          "label": "Book a Stay",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Hotel accommodation",
+          "description": "Overnight rooms are offered through the hotel’s own reservation system.",
+          "url": "https://www.arlingtonhotel.com/book/dates-of-stay",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Arlington Resort Hotel & Spa, 239 Central Avenue, Hot Springs, AR",
+        "kind": "hotel-entrance",
+        "notes": "",
+        "source": "https://www.arlingtonhotel.com/",
+        "verified": true
+      },
+      "warnings": [
+        "An operating hotel. Guest rooms and private areas require a reservation or permission; separately ticketed experiences have their own admission arrangements."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.arlingtonhotel.com/",
+          "checked": "Currentofficialhotelhomepageconfirmspropertyidentity,address,lodgingandownedBookNowlink.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.arlingtonhotel.com/book/dates-of-stay",
+          "checked": "FollowedBookNowfromofficialhotelpageandcheckedreservationdestination.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "ohio-club-hot-springs",
+      "previousTitle": "The Ohio Club",
+      "title": "The Ohio Club",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://www.theohioclub.com/",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Historic bar and live music",
+          "description": "The operating bar presents live entertainment; see its own calendar for current events.",
+          "url": "https://www.theohioclub.com/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "The Ohio Club, 336 Central Avenue, Hot Springs, AR 71901",
+        "kind": "business-entrance",
+        "source": "https://www.theohioclub.com/",
+        "verified": true,
+        "notes": ""
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.theohioclub.com/",
+          "checked": "Currentofficialrestaurant/barwebsitefetched; nohistoricaltourbookingverified.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "gangster-museum-america",
+      "previousTitle": "The Gangster Museum of America",
+      "title": "The Gangster Museum of America",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://www.tgmoa.com/",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Museum exhibits and interpretation",
+          "description": "Seven galleries and audiovisual interpretation explore Hot Springs’ criminal and gambling history.",
+          "url": "https://www.tgmoa.com/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "The Gangster Museum of America, 510 Central Avenue, Hot Springs, AR",
+        "kind": "museum-entrance",
+        "notes": "",
+        "source": "https://www.tgmoa.com/",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.tgmoa.com/",
+          "checked": "Operator confirmssevenexhibitgalleries,museumtheaterand510CentralAve.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "greenwood-cemetery-madden",
+      "previousTitle": "Greenwood Cemetery (Owney Madden)",
+      "title": "Owney Madden Grave",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Greenwood Cemetery, 701 Greenwood Avenue, Hot Springs, AR",
+        "kind": "cemetery-entrance",
+        "notes": "",
+        "source": "https://www.hotsprings.org/blog/top-10-adventures-off-the-beaten-path-hot-springs-national-park-arkansas/",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.hotsprings.org/blog/top-10-adventures-off-the-beaten-path-hot-springs-national-park-arkansas/",
+          "checked": "OfficialtourismconfirmstheMaddengravewithwifeAgnesandcemetery701GreenwoodAvenue.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [
+        "greenwood-cemetery-hot-springs"
+      ],
+      "parent": "greenwood-cemetery-hot-springs"
+    },
+    {
+      "id": "fordyce-bathhouse",
+      "previousTitle": "Fordyce Bathhouse",
+      "title": "Fordyce Bathhouse",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://www.nps.gov/hosp/planyourvisit/fordyce-bathhouse.htm",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Historic bathhouse museum",
+          "description": "A self-guided visit explores preserved bathing rooms, medical equipment, exhibits, and the building’s history.",
+          "url": "https://www.nps.gov/hosp/planyourvisit/fordyce-bathhouse.htm",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Fordyce Bathhouse Visitor Center, 369 Central Avenue, Hot Springs, AR",
+        "kind": "visitor-center",
+        "notes": "",
+        "source": "https://www.nps.gov/hosp/planyourvisit/index.htm",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.nps.gov/hosp/planyourvisit/fordyce-bathhouse.htm",
+          "checked": "NPS confirmsfreepublicselfguidedtoursandmuseuminterpretation;notoperatingbathhouse.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "malco-theatre-hot-springs",
+      "previousTitle": "The Malco Theatre",
+      "title": "Historic Malco Theatre",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "tour",
+          "url": "https://www.historicmalcotheatre.com/",
+          "label": "Explore Experiences",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Live performances and events",
+          "description": "The current venue lists resident illusion performances and other ticketed events.",
+          "url": "https://www.historicmalcotheatre.com/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Historic Malco Theatre, 817 Central Avenue, Hot Springs, AR",
+        "kind": "theatre-entrance",
+        "notes": "",
+        "source": "https://www.historicmalcotheatre.com/services",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.historicmalcotheatre.com/",
+          "checked": "CurrentoperatorpageshowsJonathanErlandsonillusionistandliveevents;currentvenueidentityconfirmed.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "The previously claimed1880sdisappearancewasnotverified; removed as factual description."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "baker-institute-muscatine",
+      "previousTitle": "The Baker Institute Site",
+      "title": "The Baker Institute Site",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://musserpubliclibrary.org/about-us/",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [],
+      "navigation": {
+        "destination": "Musser Public Library, 408 East 2nd Street, Muscatine, IA 52761",
+        "kind": "public-building",
+        "notes": "Surviving Baker Hospital No.2, not the demolished original405EastFrontStreetbuilding.",
+        "source": "https://musserpubliclibrary.org/about-us/",
+        "verified": true
+      },
+      "warnings": [
+        "The original Baker Institute building no longer exists. Directions lead to the surviving Hospital No.2 building, now Musser Public Library; this is a working library, not an operating hospital or dedicated Baker museum."
+      ],
+      "evidence": [
+        {
+          "url": "https://musserpubliclibrary.org/about-us/",
+          "checked": "Library confirms408East2ndis survivingBakerHospital#2andcurrentpubliclibrary.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.umvphotoarchive.org/digital/collection/muspl/id/716/",
+          "checked": "ArchivalphotographrecordidentifiesoriginalBakerInstitute405EastFrontStreet.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "blue-angel-muscatine",
+      "previousTitle": "The Blue Angel of Greenwood",
+      "title": "Blue Angel of Greenwood Cemetery",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://muscatineiowa.gov/170/Greenwood-Cemetery",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [],
+      "navigation": {
+        "destination": "Greenwood Cemetery entrance, 1814 Lucas Street, Muscatine, IA",
+        "kind": "cemetery-entrance",
+        "notes": "Cemetery entrance reference, not a verified precise mausoleum pin.",
+        "source": "https://muscatineiowa.gov/170/Greenwood-Cemetery",
+        "verified": true
+      },
+      "warnings": [
+        "View cemetery memorials without entering locked mausoleums or disturbing burials. Directions lead to the cemetery entrance; the exact mausoleum map pin has not been independently verified."
+      ],
+      "evidence": [
+        {
+          "url": "https://muscatineiowa.gov/170/Greenwood-Cemetery",
+          "checked": "MunicipaloperatorconfirmsMuscatinecemetery1814LucasStreetandpublichistoricalprogramming.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.atlasobscura.com/places/the-blue-angel-of-greenwood-cemetery",
+          "checked": "Secondaryon-sitephotoaccountidentifiesHuttigmausoleumBlueAngelinMuscatine;primaryoperatornotmonument-specific.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "PreciseHuttigmausoleumpinunverified; evidenceformonumentidentityissecondary,municipaladdressverified."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "tipton-cow-war",
+      "previousTitle": "Iowa Cow War History",
+      "title": "Iowa Cow War History",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Tipton, IA, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://history.iowa.gov/sites/default/files/history-education-pss-protest-teachingguide.pdf",
+          "checked": "Statehistoricalprimarysourceteachingguideconfirms1931CowWararoundTipton;notColdWar.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "UserchecklistColdWarappearsamismatchwithauthoritativeexistingCowWarrecord; preserved1931CowWar. Exact historicalfarm/site notverified.",
+        "Checklist says Iowa Cold War History, but the existing record concerns the1931IowaCowWar. No separate ColdWar destination was invented."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "edinburgh-poor-farm",
+      "previousTitle": "Edinburgh 'Poor Farm'",
+      "title": "Edinburgh Manor",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "tour",
+          "url": "https://edinburghmanor.wixsite.com/edinburgh",
+          "label": "Explore Experiences",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Reserved daytime and overnight visits",
+          "description": "The operator arranges day tours and overnight access to the former institution.",
+          "url": "https://edinburghmanor.wixsite.com/edinburgh",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Edinburgh Manor, 13241 County Home Road E23, Scotch Grove, IA",
+        "kind": "reserved-entrance",
+        "notes": "",
+        "source": "https://edinburghmanor.wixsite.com/edinburgh",
+        "verified": true
+      },
+      "warnings": [
+        "Daytime and overnight entry is by advance reservation only. Do not approach the building expecting walk-in admission."
+      ],
+      "evidence": [
+        {
+          "url": "https://edinburghmanor.wixsite.com/edinburgh",
+          "checked": "Officialoperatorconfirms13241CoHomeRdE23,JonesCounty,daytoursandreservedovernightvisits.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "black-angel-iowa-city",
+      "previousTitle": "The Black Angel of Oakland Cemetery",
+      "title": "The Black Angel of Oakland Cemetery",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "url": "https://www.icgov.org/government/departments-and-divisions/parks-and-recreation/oakland-cemetery",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [],
+      "navigation": {
+        "destination": "Oakland Cemetery, 1000 Brown Street, Iowa City, IA",
+        "kind": "cemetery-entrance",
+        "notes": "",
+        "source": "https://www.iowa-city.org/WebLink/ElectronicFile.aspx?dbid=0&docid=1481292",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.icgov.org/government/departments-and-divisions/parks-and-recreation/oakland-cemetery",
+          "checked": "MunicipaloperatorconfirmssculptureFeldevertmemorialandoxidation,notcurse.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "villisca-axe-house",
+      "previousTitle": "Villisca Axe Murder House",
+      "title": "Villisca Axe Murder House",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "tour",
+          "url": "https://murderhouse.com/visit/",
+          "label": "Explore Experiences",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        },
+        {
+          "kind": "stay",
+          "url": "https://murderhouse.com/",
+          "label": "Book a Stay",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Daytime house visits",
+          "description": "Self-guided and privately guided house tours are listed by the current operator.",
+          "url": "https://murderhouse.com/visit/",
+          "kind": "tour"
+        },
+        {
+          "title": "Overnight stays and investigations",
+          "description": "Rooms, whole-house stays, and private paranormal options are listed; confirm arrangements through the operator.",
+          "url": "https://murderhouse.com/visit/",
+          "kind": "investigation"
+        }
+      ],
+      "navigation": {
+        "destination": "Villisca Axe Murder House, 508 East 2nd Street, Villisca, IA 50864",
+        "kind": "visitor-entrance",
+        "notes": "",
+        "source": "https://murderhouse.com/contact/",
+        "verified": true
+      },
+      "warnings": [
+        "The historic house does not have conventional plumbing; restrooms are in the adjacent visitor building. Check the operator’s accessibility and reservation information before arranging a stay."
+      ],
+      "evidence": [
+        {
+          "url": "https://murderhouse.com/",
+          "checked": "Currentpropertysiteconfirmshouseidentity,daytoursandstays.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.villiscaiowa.com/",
+          "checked": "OldURLredirectstoUSGhostAdventurespropertypage;newpropertysiteandoperatoridentitychecked.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "gacy-house-site",
+      "previousTitle": "Former Gacy House Site",
+      "title": "Former John Wayne Gacy House Site",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Norwood Park, IL, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "Occupied private residential property; the original house no longer exists. Do not approach residents, enter the lot, or assume stopping is permitted."
+      ],
+      "evidence": [
+        {
+          "url": "https://cookcountysheriffil.gov/departments/c-c-s-p-d/unidentified-victims-john-wayne-gacy/",
+          "checked": "Official investigation/victim-identification page found. No safe viewing or parking location established.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Exact visitor destination and current operating/access status were not independently verified during this research pass."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "bobby-franks-kidnap-site",
+      "previousTitle": "Bobby Franks Kidnap Site",
+      "title": "Bobby Franks Kidnapping Site",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "East 49th Street & South Ellis Avenue, Chicago, IL",
+        "kind": "public-street",
+        "notes": "Approximate historical street reference; observe local parking rules and residential privacy.",
+        "source": "https://chicagology.com/notorious-chicago/leopoldloeb/",
+        "verified": true,
+        "verification_scope": "Destination named by source; route not driven; local parking/traffic conditions not field-verified."
+      },
+      "warnings": [
+        "The listing marks a residential street associated with the case, not a staffed attraction. No dedicated viewing or parking area was verified."
+      ],
+      "evidence": [
+        {
+          "url": "https://chicagology.com/notorious-chicago/leopoldloeb/",
+          "checked": "Indexed historical newspaper transcription places disappearance at49thStreet/EllisAvenue.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "No official marker or dedicated public parking verified; intersection derived from a historical newspaper account."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "cherry-mine-disaster",
+      "previousTitle": "The Cherry Mine Disaster Site",
+      "title": "Cherry Mine Disaster Memorials",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://mythicmississippi.illinois.edu/cherry/",
+          "kind": "website",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Self-guided memorial visit",
+          "description": "The town and cemetery contain memorials to those killed in the 1909 mine fire.",
+          "url": "https://mythicmississippi.illinois.edu/cherry/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Cherry, IL, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The historical mine and its memorials are separate places. Visit established memorials rather than entering old mine land."
+      ],
+      "evidence": [
+        {
+          "url": "https://mythicmississippi.illinois.edu/cherry/",
+          "checked": "University memorial survey confirms259victims and multiplememorials.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Exact preferred memorial parking/entrance not independently mapped."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "st-valentines-massacre",
+      "previousTitle": "St. Valentine's Day Massacre Site",
+      "title": "St. Valentine's Day Massacre Site",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "2122 North Clark Street, Chicago, IL",
+        "kind": "public-street",
+        "notes": "Former garage site; historical address, not a public attraction entrance.",
+        "source": "https://www.encyclopedia.chicagohistory.org/pages/1191.html",
+        "verified": true,
+        "verification_scope": "Destination named by source; route not driven; local parking/traffic conditions not field-verified."
+      },
+      "warnings": [
+        "The garage was demolished. There is no surviving interior to tour; observe from lawful public space without entering adjoining property."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.encyclopedia.chicagohistory.org/pages/1191.html",
+          "checked": "Historical site address2122NClark and demolition1967confirmed.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "No dedicated visitor parking or guaranteed stopping point verified."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "eastland-disaster-site",
+      "previousTitle": "SS Eastland Disaster Site",
+      "title": "SS Eastland Disaster Site",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Chicago, IL, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The disaster occurred on the river, not at a surviving ship attraction. The exact preferred public memorial approach needs confirmation."
+      ],
+      "evidence": [
+        {
+          "url": "https://eastlanddisaster.org/",
+          "checked": "Society history page opened but currentpage contains unrelatedpharmacyspam links. Do not use it as a recommended visitor action.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "eastlanddisaster.org currently has unrelatedpharmacylinks; omit visitor action pending operatorwebsite cleanup.",
+        "Preferred riverwalk memorial approach not independently confirmed."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "holmes-murder-castle",
+      "previousTitle": "H.H. Holmes Hotel Site",
+      "title": "H. H. Holmes Murder Castle Site",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Chicago, IL, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The original building is gone. Many elaborate “Murder Castle” stories are disputed; no surviving murder-hotel interior is open to visitors."
+      ],
+      "evidence": [
+        {
+          "url": "https://chicagology.com/notorious-chicago/mudgett/",
+          "checked": "Historical Englewood63rdStreet propertyidentity checked; exactmodernaddress notconfirmed.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Match modern611W63rdStreet to historical701-70363rdStreet before changing precise pin; noverifiedvisitorentrance."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "little-gracie-watson-grave",
+      "previousTitle": "Little Gracie Watson Memorial",
+      "title": "Little Gracie Watson Memorial",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://www.savannahga.gov/864/Bonaventure-Cemetery",
+          "kind": "website",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [],
+      "navigation": {
+        "destination": "Bonaventure Cemetery entrance, 330 Bonaventure Road, Savannah, GA",
+        "kind": "cemetery-entrance",
+        "notes": "",
+        "source": "https://www.savannahga.gov/864/Bonaventure-Cemetery",
+        "verified": true,
+        "verification_scope": "Destination named by source; route not driven; local parking/traffic conditions not field-verified."
+      },
+      "warnings": [
+        "Use the public cemetery entrance and remain outside any fencing around the monument. This is a burial place; avoid leaving objects or disturbing graves."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.savannahga.gov/864/Bonaventure-Cemetery",
+          "checked": "City confirms publiccemeteryentrance330BonaventureRoad andpublicvisitinformation.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Exact monument-position verification remains separate from entrance verification."
+      ],
+      "related": [
+        "bonaventure-cemetery"
+      ],
+      "parent": "bonaventure-cemetery"
+    },
+    {
+      "id": "mercer-williams-house",
+      "previousTitle": "Mercer-Williams House",
+      "title": "Mercer Williams House Museum",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://mercerhouse.com/",
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Guided museum tours",
+          "description": "The museum offers tours of the historic house; check its current visitor page for scope and reservations.",
+          "url": "https://mercerhouse.com/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Mercer Williams House Museum entrance, 430 Whitaker Street, Savannah, GA",
+        "kind": "museum-entrance",
+        "notes": "",
+        "source": "https://mercerhouse.com/",
+        "verified": true,
+        "verification_scope": "Destination named by source; route not driven; local parking/traffic conditions not field-verified."
+      },
+      "warnings": [
+        "Visitor entrance is behind the house on Whitaker Street. The house museum is not an unrestricted self-guided crime-scene visit."
+      ],
+      "evidence": [
+        {
+          "url": "https://mercerhouse.com/",
+          "checked": "Currentmuseum guidedvisits andentrancebehindhouse at430Whitaker verified.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "marshall-house-savannah",
+      "previousTitle": "The Marshall House",
+      "title": "The Marshall House",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://marshallhouse.com/",
+          "kind": "stay",
+          "label": "Book a Stay",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Historic hotel stay",
+          "description": "Guest rooms and suites are offered through the hotel’s reservation pages.",
+          "url": "https://marshallhouse.com/",
+          "kind": "stay"
+        }
+      ],
+      "navigation": {
+        "destination": "The Marshall House, 123 East Broughton Street, Savannah, GA",
+        "kind": "hotel-entrance",
+        "notes": "",
+        "source": "https://marshallhouse.com/",
+        "verified": true,
+        "verification_scope": "Destination named by source; route not driven; local parking/traffic conditions not field-verified."
+      },
+      "warnings": [
+        "An operating hotel, with occupied guest rooms and private areas. Access beyond public hotel spaces depends on a reservation or staff permission."
+      ],
+      "evidence": [
+        {
+          "url": "https://marshallhouse.com/",
+          "checked": "Official hotelidentity,roomreservationlinks and123EBroughtonaddress verified.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "wright-square-hanging",
+      "previousTitle": "Wright Square (The Hanging Square)",
+      "title": "Wright Square (The Hanging Square)",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Savannah, GA, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.savannahga.gov/",
+          "checked": "Municipalidentity known, but specificexecutionhistory andpublicsquarepage notindependentlyretrieved.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Do not create duplicate Wright Square/Hanging Square records. Specific primary-sourceexecutionhistory andpreferredpublicapproach requirefurther verification."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "moon-river-brewing",
+      "previousTitle": "Former Moon River Brewing / City Hotel",
+      "title": "Former Moon River Brewing Company / City Hotel",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Savannah, GA, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The listing follows the former City Hotel building. Current business operations and admission have not been verified; do not expect brewery tours or unrestricted entry."
+      ],
+      "evidence": [],
+      "unresolved": [
+        "Current business at21WestBayStreet and anypublicentryneedchecking; no commercialaction added.",
+        "Description revised from existing catalog context; a complete independent historical-source review remains outstanding."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "colonial-park-cemetery",
+      "previousTitle": "Colonial Park Cemetery",
+      "title": "Colonial Park Cemetery",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://exploregeorgia.org/savannah/general/historic-sites-trails-tours/colonial-park-cemetery",
+          "kind": "website",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Self-guided cemetery visit",
+          "description": "Explore the historic burial ground and memorial arch during public opening hours.",
+          "url": "https://www.dar.org/national-society/historic-sites-and-properties/colonial-park-cemetery",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Colonial Park Cemetery, Abercorn Street & East Oglethorpe Avenue, Savannah, GA",
+        "kind": "public-park-entrance",
+        "notes": "",
+        "source": "https://www.dar.org/national-society/historic-sites-and-properties/colonial-park-cemetery",
+        "verified": true,
+        "verification_scope": "Destination named by source; route not driven; local parking/traffic conditions not field-verified."
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.dar.org/national-society/historic-sites-and-properties/colonial-park-cemetery",
+          "checked": "Historicarchand201Abercornaddresschecked inDARrecord.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "CityCemeterydetailURL didnotload; currentopeninghoursshouldbechecked locally."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "snippy-horse-site",
+      "previousTitle": "Snippy the Horse Case Area",
+      "title": "Snippy the Horse Case Area",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Hooper, CO, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Hooper is an approximate regional reference for the valley’s UFO lore, not a verified location of the horse’s death. Do not follow directions onto ranchland."
+      },
+      "warnings": [
+        "Approximate regional reference only; the precise incident site is unverified. Do not enter ranchland or treat an area marker as a visitor entrance."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.openminds.tv/pdf/apro/apro_sep_1967.pdf",
+          "checked": "Contemporary1967 UFO-investigator account found; not proof of an extraterrestrial cause.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "The precise ranch and incident coordinates remain unverified. The Hooper association in the brief was not independently established; use the wider San Luis Valley as the geographic reference.",
+        "No exact event coordinate or legal viewing point was verified.",
+        "Hooper provides a requested regional reference; the precise incident site and closest historical community remain unverified."
+      ],
+      "related": [
+        "san-luis-valley-colorado"
+      ],
+      "parent": "san-luis-valley-colorado"
+    },
+    {
+      "id": "crestone-ziggurat-vortex",
+      "previousTitle": "The Crestone Ziggurat",
+      "title": "Crestone Ziggurat",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://karmapastupa.org/ziggurat/",
+          "kind": "website",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Self-guided landmark visit",
+          "description": "The operator welcomes public visits to the ziggurat for views and quiet contemplation.",
+          "url": "https://karmapastupa.org/ziggurat/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Crestone Ziggurat, Crestone, CO",
+        "kind": "operator-route",
+        "url": "https://www.google.com/maps/dir/37.9827507,-105.6923168/37.9299298,-105.6612891/37.9225501,-105.6697005/",
+        "notes": "The site is open to the public. Confirm the approach and parking with the site before arriving; the exact visitor entrance has not been independently verified.",
+        "source": "https://karmapastupa.org/ziggurat/",
+        "verified": false,
+        "verification_scope": "The operator’s published multipoint route was opened. The precise ziggurat parking waypoint was not independently identified; do not treat the final stupa waypoint as the ziggurat entrance."
+      },
+      "warnings": [
+        "A sandy hill and spiral ramp lead to the viewpoint. Respect the site’s contemplative purpose; this is an unusual spiritual landmark, not a verified UFO event site."
+      ],
+      "evidence": [
+        {
+          "url": "https://karmapastupa.org/ziggurat/",
+          "checked": "Operator saysfree/openpublic; sandyhillclimb andspiralramp; operatorGoogleMapsrouteopened.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Useoperatorlinkbutconfirm whichmultipointwaypoint isZigguratparking beforeextractingnavcoordinates."
+      ],
+      "related": [
+        "san-luis-valley-colorado"
+      ],
+      "parent": "san-luis-valley-colorado"
+    },
+    {
+      "id": "san-luis-valley-lane-6",
+      "previousTitle": "Lane 6: San Luis Valley UFO Lore",
+      "title": "County Lane 6 North — San Luis Valley UFO Lore",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Hooper, CO, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "A scenic road corridor rather than a single attraction. Pull fully into lawful parking or designated turnouts; do not stop in the travel lane to watch the sky."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.alamosa.org/listing/san-luis-lakes-state-park/",
+          "checked": "TourismboardconfirmsLane6Naddress; highway17intersectionnotindependentlymapped.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Highway17/Lane6Nintersection specifiedbybrief stillrequiresmapverification; no exact encounterpoint established."
+      ],
+      "related": [
+        "san-luis-valley-colorado"
+      ],
+      "parent": "san-luis-valley-colorado"
+    },
+    {
+      "id": "the-t-road",
+      "previousTitle": "County Road T",
+      "title": "County Road T — Crestone Route",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Crestone, CO, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The listing is a road corridor, not a staffed attraction or verified sighting point. Use designated lawful parking rather than stopping on narrow shoulders."
+      ],
+      "evidence": [
+        {
+          "url": "https://karmapastupa.org/directions-to-stupa/",
+          "checked": "Operator directionsconfirmCountyRoadTapproach towardCrestone; Highway17intersectionnotindependentlymapped.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Highway17/CountyRoadTintersectionnearMoffat mustbefinal-mapchecked beforetaggingverified."
+      ],
+      "related": [
+        "san-luis-valley-colorado"
+      ],
+      "parent": "san-luis-valley-colorado"
+    },
+    {
+      "id": "kristal-reisinger-site",
+      "previousTitle": "Kristal Reisinger Disappearance Area",
+      "title": "Kristal Reisinger Disappearance Area",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Crestone, CO, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The marker represents the Crestone community, not a verified last-seen or search location. Respect residents and avoid amateur searches on private land."
+      ],
+      "evidence": [
+        {
+          "url": "https://krdo.com/news/2025/08/08/k-9-units-search-for-clues-in-2016-disappearance-of-colorado-mother/",
+          "checked": "Report quotingCBIconfirms spellingKristalReisinger, CrestoneJuly2016disappearance, targeted2025search; noeventsiteexactcoordinatespublished.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Exactlast-seenvisitorpointnotverified; donotchange correctKristalReisinger spelling tobrief’sCrystalRisinger."
+      ],
+      "related": [
+        "san-luis-valley-colorado"
+      ],
+      "parent": "san-luis-valley-colorado"
+    },
+    {
+      "id": "gold-camp-road-tunnels",
+      "previousTitle": "The Tunnels of Gold Camp",
+      "title": "Gold Camp Road Tunnels",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Colorado Springs, CO, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "Mountain road sections can be narrow and unpaved, with exposed drop-offs, limited passing space, and single-lane tunnels. Conditions differ by segment; do not assume the whole road requires four-wheel drive.",
+        "Check City of Colorado Springs and Forest Service closures before selecting a route. A collapsed tunnel and closed sections must not be entered or bypassed."
+      ],
+      "evidence": [
+        {
+          "url": "https://coloradosprings.gov/news/preliminary-road-repairs-begin-north-cheyenne-canon",
+          "checked": "June2025washoutclosure checked; laterdistributedCityJuly2026pressreleasereportsvehicleaccessreturned. Neitherestablishesallsegmentscurrentlyopen.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        },
+        {
+          "url": "https://ebs.publicnow.com/view/BB8ED7C4BF418A6C198B17A8E42074D9FE32D066",
+          "checked": "Distributed City of Colorado Springs release datedJuly1,2026 saysvehicleaccessandGoldCampwithinparkreopenThursday. Mirrorofprimarypressrelease; originalcitypageblocked.",
+          "checked_on": "2026-10-29"
+        },
+        {
+          "url": "https://krdo.com/news/2026/07/01/gold-camp-road-in-north-cheyenne-canon-park-reopens/",
+          "checked": "Report quoting Colorado Springs Parks says park Gold Camp Road reopened July2,2026; later maintenance can still affect access.",
+          "checked_on": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Exacttunnelgroup/publicparkingaccessstillrequirescurrentmapandclosurecheck. June2025closuremustnotbereportedcurrentwithoutcheckingJuly2026reopening.",
+        "Specificdropoff/gravel/singlelanewarningsareconservative routecharacterization frombrief; primaryroadengineeringdetailnotindependentlyretrieved."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "emma-crawford-mountain",
+      "previousTitle": "Emma Crawford's Red Mountain",
+      "title": "Emma Crawford's Red Mountain",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://manitousprings.org/where-to-play/red-mountain-hike/",
+          "kind": "website",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Red Mountain hike",
+          "description": "The localvisitorbureau describes anout-and-backhike ofabout2.5miles with944feet ofelevationgain.",
+          "url": "https://manitousprings.org/where-to-play/red-mountain-hike/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Manitou Springs, CO, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "Reaching Red Mountain involves a mountain hike with substantial elevation gain; bring water and suitable footwear. The legend does not establish a surviving summit gravesite."
+      ],
+      "evidence": [
+        {
+          "url": "https://manitouspringsheritagecenter.org/who-was-emma-crawford/",
+          "checked": "Localmuseumhistoricalbiography/legenddistinctionchecked.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Exactauthorizedtrailheadparkingnotindependentlyverified."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "deadman-canyon-espinosa",
+      "previousTitle": "Deadman Canyon",
+      "title": "Dead Man’s Canyon — Highway 115 Lore",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Highway 115 south of Colorado Springs, CO, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "This is a historical road corridor with an uncertain event location, not a designated attraction. Do not enter private roads, restricted land, or stop on highway shoulders."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.abebooks.com/9781609494674/Ghosts-Colorado-Springs-Pikes-Peak-1609494679/plp",
+          "checked": "PublishedfolklorebookexcerptreferencesEspinosaGangandDeadManCanyon; noexactintersectionorpublicviewpointverified.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "CalledeFuentes/Highway115correlationandlawfulpublicstartingpointnotverified. Avoidfakeexactpin."
+      ],
+      "related": [
+        "highway-115-colorado"
+      ],
+      "parent": "highway-115-colorado"
+    },
+    {
+      "id": "victor-hotel-morgue",
+      "previousTitle": "The Victor Hotel",
+      "title": "Victor Hotel",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://victorhotelcolorado.com/hotel/results.cfm",
+          "kind": "stay",
+          "label": "Book a Stay",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Historic hotel stay",
+          "description": "The Victor Hotel & Restaurant offersguestrooms through itsownhotelbookingengine.",
+          "url": "https://www.victorhotelcolorado.com/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Victor, CO, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "Operating hotel; occupied rooms and private areas are for guests or authorized visitors. This listing is for Victor Hotel & Restaurant, not the Black Monarch Hotel."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.victorhotelcolorado.com/",
+          "checked": "CurrentVictorlodgingidentity, birdcageelevator andbookingengineconfirmed; BookNowlinkresolves/hotel/results.cfm.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Hotelstreetentranceaddressnotshowninretrievedpage; useverifiedpropertynameuntiladdresschecked."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "riverview-cemetery-mine",
+      "previousTitle": "Riverview Cemetery",
+      "title": "Crested Butte Cemetery — Jokerville Memorial",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://www.crestedbutte-co.gov/vertical/Sites/%7B6058FFBB-CB06-4864-B42F-B476F794BE07%7D/uploads/Map_-_July_2024.pdf",
+          "kind": "website",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Self-guided cemetery visit",
+          "description": "The town map identifies the common grave of victims of the 1884 Jokerville Mine explosion.",
+          "url": "https://www.crestedbutte-co.gov/vertical/Sites/%7B6058FFBB-CB06-4864-B42F-B476F794BE07%7D/uploads/Map_-_July_2024.pdf",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Crested Butte Cemetery, Crested Butte, CO",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions identify the cemetery; the precise entrance and memorial parking point have not been independently verified."
+      },
+      "warnings": [
+        "Use the town’s cemetery map to find the Jokerville memorial, and remain on paths around graves."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.crestedbutte-co.gov/vertical/Sites/%7B6058FFBB-CB06-4864-B42F-B476F794BE07%7D/uploads/Map_-_July_2024.pdf",
+          "checked": "MapexplicitlynamesCrestedButteCemetery andcommonJokervillegrave1884; existingRiverviewtitleis inconsistentwithrecorddescription.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "OriginalRiverviewlabelnotverified; correctedbyexistingCrestedButte/Jokervillecontext. Exactentrancecoordinatesstillneedchecking."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "sin-city-tunnels",
+      "previousTitle": "Old Colorado City Tunnel Lore",
+      "title": "Old Colorado City Tunnel Lore",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://occhs.org/",
+          "kind": "website",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Local history research",
+          "description": "The historical society provides research and publications on Old Colorado City’s tunnel stories.",
+          "url": "https://occhs.org/bookstore",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Old Colorado City Historical Society, 1 South 24th Street, Colorado Springs, CO",
+        "kind": "public-museum-reference",
+        "notes": "Public history destination, not an underground entrance.",
+        "source": "https://occhs.org/bookstore",
+        "verified": true,
+        "verification_scope": "Destination named by source; route not driven; local parking/traffic conditions not field-verified."
+      },
+      "warnings": [
+        "No authorized public underground route was verified. The directions lead to the historical society as a public research starting point, not to private basements."
+      ],
+      "evidence": [
+        {
+          "url": "https://occhs.org/bookstore",
+          "checked": "HistoricalSocietysellsTunnelTales ofOldColoradoCitybasedonbasementresearch; museumaddress1S24thStreetpublished.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "No commercial/publictunneltourorundergroundentranceverified."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "colorado-state-pen-museum",
+      "previousTitle": "Museum of Colorado Prisons",
+      "title": "Museum of Colorado Prisons",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Cañon City, CO, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "A museum listing does not grant access to the adjacent working correctional facilities. Current museum admission and the correct operator website need reconfirmation."
+      ],
+      "evidence": [
+        {
+          "url": "https://prisonmuseum.org/",
+          "checked": "DomainopenedbutonlygenericPrisonMuseumlandingpage displayed; Coloradooperatoridentity/admissionnotconfirmed.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "prisonmuseum.orgdisplayedgenericlandingpagewithnospecificColoradomuseumdetails; do notclaimverifiedofficialaction.",
+        "Currentmuseumadmissionand201N1stStreetvisitorentranceawaitdirectoperatorconfirmation."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "rmnp-disappearances",
+      "previousTitle": "Rocky Mountain National Park",
+      "title": "Rocky Mountain National Park",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://www.nps.gov/romo/",
+          "kind": "website",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [],
+      "navigation": {
+        "destination": "Estes Park, CO, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "High altitude, rapidly changing weather, snow, and difficult backcountry terrain require preparation. Mountain roads and trails may close seasonally or for hazards.",
+        "Check the park’s current road/trail conditions and reservation requirements before choosing a hike; no single route represents every disappearance."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.nps.gov/romo/planyourvisit/conditions.htm",
+          "checked": "Currentofficialpageprovidesroads/trails/wildlife/firelinks; safety.htmreturnedpage-in-progress.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Specificnavigationdestinationshouldbevisitorcenterortrailheadchosenforscope; no universalentrancechecked."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "stanley-hotel",
+      "previousTitle": "The Stanley Hotel",
+      "title": "The Stanley Hotel",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://www.stanleyhotel.com/",
+          "kind": "stay",
+          "label": "Book a Stay",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        },
+        {
+          "url": "https://www.stanleyhotel.com/tours/",
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Historic hotel tours",
+          "description": "Guided interpretation explores the hotel’s history and architecture.",
+          "url": "https://www.stanleyhotel.com/tours/",
+          "kind": "tour"
+        },
+        {
+          "title": "Ghost tours",
+          "description": "Guided programs explore reported hauntings and hotel folklore.",
+          "url": "https://www.stanleyhotel.com/tours/",
+          "kind": "tour"
+        },
+        {
+          "title": "The Shining tour",
+          "description": "The hotel offers programs devoted to its literary and film connections.",
+          "url": "https://www.stanleyhotel.com/tours/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Estes Park, CO, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "An operating hotel; some areas require a room reservation or tour ticket. Tour products and seasonal programs have separate availability."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.stanleyhotel.com/tours/",
+          "checked": "Officialpageconfirmshistoric,ghost,Shining,seasonalHalloweenandothertours;hotelhomepagebookingcontrolsverified.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Individualcheckoutinventoriesnotqueried; bookthroughofficialcalendar."
+      ],
+      "related": [
+        "crescent-hotel-eureka",
+        "basin-park-hotel",
+        "lemp-mansion"
+      ],
+      "parent": null
+    },
+    {
+      "id": "missouri-state-pen-jeff-city",
+      "previousTitle": "Missouri State Penitentiary",
+      "title": "Missouri State Penitentiary",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://missouripentours.com/",
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Guided history tours",
+          "description": "Guided visits explore prison housing units and the history of riots, confinement, and escapes.",
+          "url": "https://missouripentours.com/",
+          "kind": "tour"
+        },
+        {
+          "title": "Ghost and paranormal tours",
+          "description": "Separate ghost tours and paranormal programs appear in the operator’s catalog.",
+          "url": "https://missouripentours.com/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Missouri State Penitentiary tours, 115 Lafayette Street, Jefferson City, MO",
+        "kind": "tour-entrance",
+        "notes": "",
+        "source": "https://missouripentours.com/",
+        "verified": true,
+        "verification_scope": "Destination named by source; route not driven; local parking/traffic conditions not field-verified."
+      },
+      "warnings": [
+        "Admission is through the authorized tour operation. Program age restrictions and physical-access requirements vary; check the chosen tour."
+      ],
+      "evidence": [
+        {
+          "url": "https://missouripentours.com/",
+          "checked": "Officialoperatoridentity,history/ghost/paranormaltoursand115Lafayetteaddressconfirmed.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "lemp-mansion",
+      "previousTitle": "The Lemp Mansion",
+      "title": "Lemp Mansion",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://www.lempmansion.com/inn.htm",
+          "kind": "stay",
+          "label": "Book a Stay",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        },
+        {
+          "url": "https://www.lempmansion.com/lempexperience.htm",
+          "kind": "investigation",
+          "label": "Explore Experiences",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Historic bed-and-breakfast stay",
+          "description": "Guest rooms are available through the official inn page and its linked online reservation service.",
+          "url": "https://www.lempmansion.com/inn.htm",
+          "kind": "stay"
+        },
+        {
+          "title": "Lemp Experience",
+          "description": "A reserved paranormal program introduces ghost-hunting equipment and guided exploration of the mansion.",
+          "url": "https://www.lempmansion.com/lempexperience.htm",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Lemp Mansion, 3322 DeMenil Place, St. Louis, MO",
+        "kind": "lodging-entrance",
+        "notes": "",
+        "source": "https://www.lempmansion.com/",
+        "verified": true,
+        "verification_scope": "Destination named by source; route not driven; local parking/traffic conditions not field-verified."
+      },
+      "warnings": [
+        "Historic lodging and experiences involve stairs. Check reservation terms and the specified check-in time, which may be later on event nights."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.lempmansion.com/",
+          "checked": "CorrectStLouispropertyaddress3322DeMenil; officialinnpageandparanormalexperienceopened.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "trans-allegheny-asylum",
+      "previousTitle": "Trans-Allegheny Lunatic Asylum",
+      "title": "Trans-Allegheny Lunatic Asylum",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://trans-alleghenylunaticasylum.com/",
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Heritage and history tours",
+          "description": "Guided programs interpret the former hospital’s history.",
+          "url": "https://trans-alleghenylunaticasylum.com/",
+          "kind": "tour"
+        },
+        {
+          "title": "Ghost tours and investigations",
+          "description": "The operator lists separate ghost tours and paranormal investigations.",
+          "url": "https://trans-alleghenylunaticasylum.com/",
+          "kind": "investigation"
+        }
+      ],
+      "navigation": {
+        "destination": "Weston, WV, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The large historic building is not climate-controlled throughout; the operator advises dressing for indoor heat or cold. Access is through authorized programs."
+      ],
+      "evidence": [
+        {
+          "url": "https://trans-alleghenylunaticasylum.com/",
+          "checked": "Officialsiteconfirmsheritage/history,ghosttours,yearroundghosthuntsandseasonalprograms.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Exactpublicentranceaddressnotindependentlyretrieved; individualcheckoutcalendarsnotqueried."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "wv-pen-moundsville",
+      "previousTitle": "West Virginia Penitentiary",
+      "title": "West Virginia Penitentiary",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://wvpentours.com/",
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Guided day tours",
+          "description": "Guided visits focus on the former prison’s history and main level.",
+          "url": "https://wvpentours.com/",
+          "kind": "tour"
+        },
+        {
+          "title": "Paranormal programs",
+          "description": "Public ghost hunts and private investigations have their own age and reservation requirements.",
+          "url": "https://wvpentours.com/",
+          "kind": "investigation"
+        },
+        {
+          "title": "Seasonal and escape experiences",
+          "description": "Twilight tours, escape games, and seasonal attractions are listed separately.",
+          "url": "https://wvpentours.com/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "West Virginia Penitentiary, 818 Jefferson Avenue, Moundsville, WV",
+        "kind": "tour-entrance",
+        "notes": "",
+        "source": "https://wvpentours.com/",
+        "verified": true,
+        "verification_scope": "Destination named by source; route not driven; local parking/traffic conditions not field-verified."
+      },
+      "warnings": [
+        "Choose an authorized program; after-hours access is not included in ordinary admission. Age requirements and accessibility differ among activities."
+      ],
+      "evidence": [
+        {
+          "url": "https://wvpentours.com/",
+          "checked": "Operatorconfirmsguideddaytour,twilight,ghosthunts,privateinvestigations,escapegamesand818Jeffersonaddress.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "point-pleasant-mothman",
+      "previousTitle": "Point Pleasant Mothman Site",
+      "title": "Point Pleasant Mothman Encounter Area",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Point Pleasant, WV, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The bunker-area story is separate from the downtown statue and museum. Do not enter closed bunkers, fenced sites, or restricted wildlife-management areas."
+      ],
+      "evidence": [],
+      "unresolved": [
+        "Noexactwartimebunker/encountersiteorcurrentlegalpublicentranceverified; retainapproximatePointPleasantreferenceandlinkdowntownmuseumseparately.",
+        "Description revised from existing catalog context; a complete independent historical-source review remains outstanding."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "waverly-hills-sanatorium",
+      "previousTitle": "Waverly Hills Sanatorium",
+      "title": "Waverly Hills Sanatorium",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://thewaverlyhillssanatorium.com/",
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Historical tours",
+          "description": "Daytime history tours appear on the operator’s calendar, subject to the tour season.",
+          "url": "https://thewaverlyhillssanatorium.com/",
+          "kind": "tour"
+        },
+        {
+          "title": "Paranormal tours and investigations",
+          "description": "Night tours, public investigations, and private investigations have separate availability; check the off-season calendar.",
+          "url": "https://thewaverlyhillssanatorium.com/",
+          "kind": "investigation"
+        }
+      ],
+      "navigation": {
+        "destination": "Waverly Hills Gate A, 4301 East Pages Lane, Louisville, KY 40272",
+        "kind": "tour-entrance",
+        "notes": "The operator specifies Gate A for hospital tours and recommends Waze. Gate B at 8501 Standing Oak Drive is for the seasonal haunted house, not ordinary hospital tours.",
+        "source": "https://thewaverlyhillssanatorium.com/",
+        "verified": true,
+        "verification_scope": "Destination named by source; route not driven; local parking/traffic conditions not field-verified."
+      },
+      "warnings": [
+        "Use the entrance specified on your ticket: hospital tours use Gate A on East Pages Lane; the seasonal haunted house uses a different gate.",
+        "The published 2026 regular tour season ends in August; off-season programs depend on the event calendar and weather. Do not arrive without confirming the booked program."
+      ],
+      "evidence": [
+        {
+          "url": "https://thewaverlyhillssanatorium.com/",
+          "checked": "Oldtherealwaverlyhills.comredirectsto thissite; hospitaltourGateAaddress4301EPagesLn; GateBStandingOakforhauntedhouseonly;2026regularseasonMarch-August.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "Currentoffseasonticketinventorynotqueried; no guaranteealltourtypesbookabletoday."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "ohio-state-reformatory",
+      "previousTitle": "Ohio State Reformatory",
+      "title": "Ohio State Reformatory",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "url": "https://www.mrps.org/",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Historical and film tours",
+          "description": "Historical, film-focused, and self-guided routes explore different parts of the prison; the available routes change seasonally.",
+          "url": "https://www.mrps.org/tours/",
+          "kind": "tour"
+        },
+        {
+          "title": "Shawshank interpretation",
+          "description": "On-site interpretation includes filming locations and the Shawshank Museum. Confirm any bus-tour availability separately.",
+          "url": "https://www.mrps.org/tours/",
+          "kind": "tour"
+        },
+        {
+          "title": "Paranormal programs",
+          "description": "Ghost walks, public hunts, and private investigations are distinct programs with separate rules.",
+          "url": "https://www.mrps.org/paranormal-programs/",
+          "kind": "investigation"
+        }
+      ],
+      "navigation": {
+        "destination": "Ohio State Reformatory visitor entrance, 100 Reformatory Road, Mansfield, OH 44905",
+        "kind": "tour-entrance",
+        "notes": "",
+        "source": "https://www.mrps.org/",
+        "verified": true,
+        "verification_scope": "Destination named by source; route not driven; local parking/traffic conditions not field-verified."
+      },
+      "warnings": [
+        "Tour routes change from late summer through mid-November for Blood Prison setup, restricting some cellblock areas and affecting wheelchair access.",
+        "Certain guided routes involve extensive stairs; choose the program that matches your mobility needs. Ghost-hunting equipment is not permitted during ordinary daytime visits."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.mrps.org/",
+          "checked": "Correctoperatoridentity;currenttour/paranormalpagesand100ReformatoryRoadaddresschecked.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [
+        "ShawshankBusTourpagecontainspast2025suspensiontext; do notpromise2026busavailabilitywithoutcalendarconfirmation."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "brushy-mountain-pen",
+      "previousTitle": "Brushy Mountain State Penitentiary",
+      "title": "Brushy Mountain State Penitentiary",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://tourbrushy.com/",
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Audio-visual prison history tour",
+          "description": "A self-paced route uses 22 interpretive stations. The operator says ordinary tour tickets are available on site.",
+          "url": "https://tourbrushy.com/",
+          "kind": "tour"
+        },
+        {
+          "title": "Paranormal tours",
+          "description": "Reserved paranormal programs are linked from the operator’s visitor pages.",
+          "url": "https://tourbrushy.com/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Historic Brushy Mountain State Penitentiary, 9182 Highway 116, Petros, TN 37845",
+        "kind": "tour-entrance",
+        "notes": "",
+        "source": "https://tourbrushy.com/",
+        "verified": true,
+        "verification_scope": "Destination named by source; route not driven; local parking/traffic conditions not field-verified."
+      },
+      "warnings": [
+        "Daytime prison visits are seasonal; the published 2026 schedule closes for winter after November. Paranormal programs have separate bookings."
+      ],
+      "evidence": [
+        {
+          "url": "https://tourbrushy.com/",
+          "checked": "2026season,22stationaudio-visualtour,onsitetickets,paranormalbookingand9182Hwy116addressverified.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "old-idaho-pen",
+      "previousTitle": "Old Idaho Penitentiary",
+      "title": "Old Idaho Penitentiary",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "url": "https://history.idaho.gov/oldpen/",
+          "kind": "website",
+          "label": "Visit Website",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Historic prison admission",
+          "description": "Explore the former prison’s cellhouses and exhibits through the state historic site’s visitor programs.",
+          "url": "https://history.idaho.gov/oldpen/",
+          "kind": "tour"
+        },
+        {
+          "title": "Special events and night tours",
+          "description": "The official calendar lists special admission events and night tours; availability varies.",
+          "url": "https://history.idaho.gov/oldpen/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Old Idaho Penitentiary, 2445 Old Penitentiary Road, Boise, ID 83712",
+        "kind": "museum-entrance",
+        "notes": "",
+        "source": "https://history.idaho.gov/oldpen/",
+        "verified": true,
+        "verification_scope": "Destination named by source; route not driven; local parking/traffic conditions not field-verified."
+      },
+      "warnings": [
+        "Special events and night tours use their own ticket rules and may limit access to parts of the site. Check the official calendar before visiting."
+      ],
+      "evidence": [
+        {
+          "url": "https://history.idaho.gov/oldpen/",
+          "checked": "Officialhistoricsiteidentity,visitorprogramsand2445OldPenitentiaryRoadaddressverified.",
+          "checked_on": "2026-10-29",
+          "method": "web page opened or indexed primary-source extract inspected; no checkout transaction"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "eastern-state-pen",
+      "previousTitle": "Eastern State Penitentiary",
+      "title": "Eastern State Penitentiary",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "url": "https://easternstate.org/historic-site",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Prison history tours and exhibits",
+          "description": "Audio, guide-led, and self-guided visits explore prison history and the justice system.",
+          "url": "https://easternstate.org/historic-site",
+          "kind": "tour"
+        },
+        {
+          "title": "Seasonal Halloween Nights",
+          "description": "A separately ticketed theatrical Halloween festival, distinct from historical daytime admission and not a paranormal investigation.",
+          "url": "https://easternstate.org/events/details/halloween-nights",
+          "kind": "investigation"
+        }
+      ],
+      "navigation": {
+        "destination": "2027 Fairmount Avenue, Philadelphia, PA 19130",
+        "kind": "visitor-entrance",
+        "notes": "Official historic-site entrance.",
+        "source": "https://easternstate.org/historic-site/know-before-you-go",
+        "verified": true
+      },
+      "warnings": [
+        "The historic complex has uneven surfaces and lacks climate control; dress for outdoor temperatures and stay within marked public areas. Paranormal investigations and unauthorized investigation equipment are not permitted."
+      ],
+      "evidence": [
+        {
+          "url": "https://easternstate.org/historic-site",
+          "checked": "Official historic site offers audio, guide-led, and self-guided visits with admission.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://easternstate.org/historic-site/know-before-you-go",
+          "checked": "Official entrance 2027 Fairmount Avenue; uneven semi-ruin and no climate control; paranormal investigations explicitly NOT permitted.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://easternstate.org/events/details/halloween-nights",
+          "checked": "Official 2026 event page confirms separately ticketed theatrical Halloween festival. Do not make a permanently available schedule claim.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "centralia-mine-fire",
+      "previousTitle": "Centralia Mine Fire",
+      "title": "Centralia Mine Fire",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "label": "Visit Website",
+          "url": "https://www.pa.gov/agencies/dep/programs-and-services/mining/abandoned-mine-reclamation/aml-program-information/centralia-mine-fire-resources",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [],
+      "navigation": {
+        "destination": "Centralia, PA, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "Pennsylvania DEP strongly discourages walking or driving in the immediate mine-fire area: dangerous gases and sudden ground collapse can cause serious injury or death. This is historical context, not a recommended mine-fire walk or abandoned-road route."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.pa.gov/agencies/dep/programs-and-services/mining/abandoned-mine-reclamation/aml-program-information/centralia-mine-fire-resources",
+          "checked": "Official source dates fire to May 1962 and warns dangerous gases and sudden ground collapse; strongly discourages immediate-area visits.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "No safe official viewing point verified. Do not navigate to vents, abandoned roads, or a supposed fire entrance."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "lizzie-borden-house",
+      "previousTitle": "Lizzie Borden House",
+      "title": "Lizzie Borden House",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "stay",
+          "label": "Book a Stay",
+          "url": "https://lizzie-borden.com/stay/",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        },
+        {
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "url": "https://lizzie-borden.com/tours/",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Historic house tour",
+          "description": "Interior interpretation of the Borden household and the 1892 case.",
+          "url": "https://lizzie-borden.com/tours/",
+          "kind": "tour"
+        },
+        {
+          "title": "Evening and paranormal experiences",
+          "description": "The operator lists night tours, ghost hunts, and overnight basement investigations, distinct from a guest-room reservation.",
+          "url": "https://lizzie-borden.com/tours/",
+          "kind": "investigation"
+        }
+      ],
+      "navigation": {
+        "destination": "Fall River, MA, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "This is an operating inn and ticketed house attraction. Reserve the appropriate room or experience; guest rooms and other private areas are not general public spaces."
+      ],
+      "evidence": [
+        {
+          "url": "https://lizzie-borden.com/tours/",
+          "checked": "Official operator currently lists house tours, ghost hunts, night tours, cemetery walks, and overnight basement investigations.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://lizzie-borden.com/stay/",
+          "checked": "Official accommodation page reached through its Book a Room link.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "salem-witch-memorial",
+      "previousTitle": "Salem Witch Trials Memorial",
+      "title": "Salem Witch Trials Memorial",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "label": "Visit Website",
+          "url": "https://www.charterstreetcemetery.com/witchtrialsmemorial",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Self-guided memorial visit",
+          "description": "A quiet outdoor memorial honoring those executed in the 1692 trials.",
+          "url": "https://www.charterstreetcemetery.com/witchtrialsmemorial",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Salem Witch Trials Memorial, 24 Liberty Street, Salem, Massachusetts",
+        "kind": "public-memorial",
+        "notes": "Memorial location, not the execution site.",
+        "source": "https://salemwitchmuseum.com/locations/witch-trials-memorial/",
+        "verified": true
+      },
+      "warnings": [
+        "Remain on paths and keep the memorial quiet. Do not climb or stand on benches or walls; follow posted guidance for remembrance offerings."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.charterstreetcemetery.com/witchtrialsmemorial",
+          "checked": "Maintaining organizations and memorial visiting guidelines checked.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://salemwitchmuseum.com/locations/witch-trials-memorial/",
+          "checked": "Twenty executed victims and memorial address 24 Liberty Street confirmed.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "danvers-state-hospital",
+      "previousTitle": "Former Danvers State Hospital",
+      "title": "Former Danvers State Hospital",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Danvers, MA, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The former campus includes occupied housing; do not treat it as an abandoned asylum to explore. No public interior tour or dedicated visitor entrance was verified."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.mass.gov/files/documents/2016/07/rb/danvers.pdf",
+          "checked": "State housing profile confirms former hospital campus was redeveloped with Avalon Danvers housing.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Current public heritage paths and memorial-cemetery entry require local verification."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "alcatraz-island",
+      "previousTitle": "Alcatraz Island",
+      "title": "Alcatraz Island",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "url": "https://alcatrazcitycruises.com/",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Ferry and cellhouse audio tour",
+          "description": "Authorized ferry tickets include island transportation and cellhouse audio interpretation; review day, night, and behind-the-scenes options.",
+          "url": "https://alcatrazcitycruises.com/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Pier 33 Alcatraz Landing, The Embarcadero, San Francisco, California",
+        "kind": "ferry-terminal",
+        "notes": "Mainland departure, not an impossible driving destination on the island.",
+        "source": "https://www.nps.gov/alca/planyourvisit/directions.htm",
+        "verified": true
+      },
+      "warnings": [
+        "A ferry ticket is required; reserve with the NPS-authorized carrier. Get Directions leads to Pier 33 on the mainland. There is no parking at the terminal; allow time to reach the departure point."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.nps.gov/alca/planyourvisit/directions.htm",
+          "checked": "National Park Service confirms Pier 33 Alcatraz Landing ferry departure near Bay Street on Embarcadero and no parking at Pier 33.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.nps.gov/alca/planyourvisit/fees.htm",
+          "checked": "NPS identifies Alcatraz City Cruises as sole authorized carrier and describes day/night/behind-the-scenes ticket types.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://alcatrazcitycruises.com/faq",
+          "checked": "Carrier confirms authorized booking identity and ferry/audio tour inclusions.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "black-dahlia-dump-site",
+      "previousTitle": "Elizabeth Short Case: Norton Avenue",
+      "title": "Elizabeth Short (Black Dahlia) Case Site",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Los Angeles, CA, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The discovery area is now residential, with no public museum or marked attraction verified. Observe only from lawful public areas without entering property or blocking residents; no dedicated viewing or parking point has been established."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.fbi.gov/history/cases-and-criminals/black-dahlia",
+          "checked": "FBI confirms 1947 discovery and unsolved murder; body-discovery area is not established as the murder location.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Exact historical coordinates and legal stopping/viewing point not checked against primary source."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "cecil-hotel",
+      "previousTitle": "The Cecil Hotel",
+      "title": "Cecil Hotel",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Los Angeles, CA, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "No current public hotel booking or interior-tour option was verified. Respect occupied areas and residents; do not assume the historic hotel operates as a visitor hotel because older travel pages advertise it."
+      ],
+      "evidence": [
+        {
+          "url": "https://cityclerk.lacity.org/lacityclerkconnect/index.cfm?cfnumber=22-0794&fa=vcfi.dsp_CFMS_Report&rptid=99",
+          "checked": "Official council file concerns Cecil Hotel housing; the report was generated in 2026 but action history is 2022, not proof of current tourist operation.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Current operator, occupancy arrangements, interior access, and commercial booking remain unverified."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "cielo-drive-manson",
+      "previousTitle": "Cielo Drive Historical Site",
+      "title": "Cielo Drive Historical Site",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Los Angeles, CA, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "No public interior access or dedicated visitor parking has been verified. Respect current residents and landowners, use only lawful public areas, and do not enter property, cross barriers, or stop where parking is prohibited."
+      ],
+      "evidence": [],
+      "unresolved": [
+        "Legal exterior viewing/parking and precise visitor route unverified. Historical summary revised conservatively from existing record; further primary-source review needed.",
+        "Description revised from existing catalog context; a complete independent historical-source review remains outstanding."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "golden-gate-bridge",
+      "previousTitle": "Golden Gate Bridge",
+      "title": "Golden Gate Bridge",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "label": "Visit Website",
+          "url": "https://www.goldengate.org/bridge/visiting-the-bridge/",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Bridge exhibits and public viewpoints",
+          "description": "The bridge authority provides current visitor-area and pedestrian/bicycle information.",
+          "url": "https://www.goldengate.org/bridge/visiting-the-bridge/",
+          "kind": "tour"
+        },
+        {
+          "title": "Public history walking tours",
+          "description": "The bridge authority directs visitors to San Francisco City Guides for free history walks; check the current schedule.",
+          "url": "https://www.sfcityguides.org/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Golden Gate Bridge Welcome Center, San Francisco, California",
+        "kind": "visitor-center",
+        "notes": "Visitor-area query rather than driving onto the bridge traffic lanes.",
+        "source": "https://www.goldengate.org/bridge/visiting-the-bridge/",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.goldengate.org/bridge/visiting-the-bridge/",
+          "checked": "Official bridge-authority visitor page retrieved; public visitor facilities are distinct from driving traffic lanes.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.goldengate.org/bridge/visiting-the-bridge/",
+          "checked": "Official bridge page explicitly identifies Welcome Center, exhibits, and City Guides history walks. Linked City Guides homepage also retrieved.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Current pedestrian/bicycle hours and closure notices should be checked immediately before travel."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "donner-pass-campsite",
+      "previousTitle": "Donner Pass Survival Camp",
+      "title": "Donner Party Survival Camp",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "label": "Visit Website",
+          "url": "https://www.parks.ca.gov/?page_id=503",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Visitor center and memorial landscape",
+          "description": "Exhibits and memorials interpret the Donner Party and other Sierra emigrants, with public trails along Donner Lake.",
+          "url": "https://www.parks.ca.gov/?page_id=503",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Donner Memorial State Park Visitor Center, Truckee, California",
+        "kind": "visitor-center",
+        "notes": "Public destination at Donner Lake, not Donner Pass; not a claim of one exact camp coordinate.",
+        "source": "https://www.parks.ca.gov/?page_id=503",
+        "verified": true
+      },
+      "warnings": [
+        "This entry concerns the Donner Lake encampment landscape, not Donner Pass. Begin at the state park visitor center; seasonal snow and park restrictions can affect outdoor trails."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.parks.ca.gov/?page_id=503",
+          "checked": "Official Donner Memorial State Park page confirms lakeside park, historic monument, visitor center, and exhibits.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "jonestown-memorial",
+      "previousTitle": "Jonestown Memorial at Evergreen Cemetery",
+      "title": "Jonestown Memorial at Evergreen Cemetery",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Oakland, CA, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The memorial stands within Evergreen Cemetery; respect burials, services, and other mourners. Confirm the cemetery’s current entrance and visiting hours."
+      ],
+      "evidence": [
+        {
+          "url": "https://jonestown.sdsu.edu/?page_id=29498",
+          "checked": "First-party memorial fund confirms Evergreen Cemetery Oakland identity and relationship to Jonestown memorial.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://jonestown.sdsu.edu/?page_id=29502",
+          "checked": "2011 dedication release gives 6450 Camden Avenue; contemporary listings use Camden Street. Current operator entrance still needs checking.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Current operator website, visiting hours, and precise entrance require verification."
+      ],
+      "related": [
+        "evergreen-cemetery-oakland"
+      ],
+      "parent": "evergreen-cemetery-oakland"
+    },
+    {
+      "id": "bodie-ghost-town",
+      "previousTitle": "Bodie Ghost Town",
+      "title": "Bodie State Historic Park",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "label": "Visit Website",
+          "url": "https://www.parks.ca.gov/?page_id=509",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Preserved ghost town and interpretation",
+          "description": "Self-guided exploration and seasonal museum visits, history talks, and tours are described by California State Parks.",
+          "url": "https://parks.ca.gov/?page_id=31546",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Bodie State Historic Park entrance via State Route 270, California",
+        "kind": "park-entrance",
+        "notes": "Official preferred route; a maps app cannot establish current road conditions.",
+        "source": "https://parks.ca.gov/?page_id=31546",
+        "verified": true
+      },
+      "warnings": [
+        "Use the official US 395–State Route 270 approach; its final three miles are unpaved. Snow closes the main road in winter, while mud and storms can make alternate dirt approaches impassable. Check park and road notices rather than assuming a GPS shortcut is open."
+      ],
+      "evidence": [
+        {
+          "url": "https://parks.ca.gov/?page_id=31546",
+          "checked": "Official California State Parks planning page confirms seasonal interpretation, remote services, and road issues.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.parks.ca.gov/?page_id=31549",
+          "checked": "Official FAQ recommends US 395 to SR 270; 10 paved miles plus 3 dirt miles. Alternative approaches can require high clearance depending on conditions.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://parks.ca.gov/?page_id=31521",
+          "checked": "Official winter page warns Highway 270 closes in winter; alternate GPS dirt routes may be impassable.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "mountain-meadows-massacre",
+      "previousTitle": "Mountain Meadows Massacre",
+      "title": "Mountain Meadows Massacre Site",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [
+        {
+          "title": "Memorial landscape",
+          "description": "Designated memorials honor the massacre’s victims; stay within signed visitor areas.",
+          "url": "https://www.mtn-meadows-assoc.com/Direc_Maps/directio.htm",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Mountain Meadows Massacre Monument, Dan Sill Hill, Utah",
+        "kind": "memorial-parking",
+        "notes": "Documented main parking for the 1990 monument; follow the signed Utah Route 18 approach.",
+        "source": "https://www.mtn-meadows-assoc.com/Direc_Maps/directio.htm",
+        "verified": true
+      },
+      "warnings": [
+        "Use signed memorial approaches and designated parking off Utah Route 18. Stay within memorial areas; do not cross fences, gates, or neighboring land. Some approaches can be affected by wet conditions."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.mtn-meadows-assoc.com/Direc_Maps/directio.htm",
+          "checked": "Descendants’ association visitor directions identify signed Route 18 turnoff, Dan Sill Hill main parking, and separate memorial approaches.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "The historical association directions domain failed DNS validation; its active website action was removed. Memorial parking requires reconfirmation."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "skinwalker-ranch-gate",
+      "previousTitle": "Skinwalker Ranch",
+      "title": "Skinwalker Ranch",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "label": "Visit Website",
+          "url": "https://skinwalker-ranch.com/",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [],
+      "navigation": {
+        "destination": "Ballard, UT, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The ranch is a secured private site. Online camera/Insider access is not permission to visit physically; no public ranch admission or authorized stopping point was verified."
+      ],
+      "evidence": [
+        {
+          "url": "https://skinwalker-ranch.com/",
+          "checked": "Official ranch identity and secured research-site description checked. Digital Insider access is advertised; physical public admission is not verified. Promotional paranormal assertions were not accepted as established fact.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Physical tours, public viewpoint, and legal roadside parking not verified. Adjacent commercial operators are not the ranch."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "wounded-knee-massacre",
+      "previousTitle": "Wounded Knee Massacre Site",
+      "title": "Wounded Knee Massacre Site",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Pine Ridge, SD, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "This is a sacred place of remembrance, not an entertainment attraction. Follow tribal/local guidance, respect ceremonies, and seek permission before photographing people or entering areas not clearly open."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.doi.gov/ocl/s-2088",
+          "checked": "Interior Department testimony identifies sacred remembrance, tribal ownership, and descendant consultation as central to the site.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Current visitor permission, parking, and local protocols need tribal/local confirmation."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "bennington-triangle",
+      "previousTitle": "Glastenbury: Bennington Triangle Lore",
+      "title": "Glastenbury / Bennington Triangle",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "label": "Visit Website",
+          "url": "https://www.benningtongmc.org/uploads/1/2/9/9/129930871/listing_of_all_trails_.pdf",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [],
+      "navigation": {
+        "destination": "Appalachian Trail Long Trail parking, Vermont Route 9, Woodford, Vermont",
+        "kind": "public-trailhead",
+        "notes": "Parking identified by local Green Mountain Club guide; not a precise disappearance site.",
+        "source": "https://www.benningtongmc.org/uploads/1/2/9/9/129930871/listing_of_all_trails_.pdf",
+        "verified": true
+      },
+      "warnings": [
+        "Reaching Glastenbury involves remote, strenuous mountain hiking; carry a map, supplies, and a realistic turnaround plan. The U.S. Forest Service currently closes the structurally unsafe summit firetower even though surrounding trails remain open."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.benningtongmc.org/uploads/1/2/9/9/129930871/listing_of_all_trails_.pdf",
+          "checked": "Local Green Mountain Club guide describes difficult 22.4-mile Glastenbury round trip and remote 21.8-mile loop, with Route 9 trailhead parking.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.outerspatial.com/communities/usfs/alerts/1347",
+          "checked": "Current U.S. Forest Service alert says summit firetower is structurally unsafe and closed; surrounding trails remain open.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "The “triangle” is folklore rather than a defined attraction. Precise sites and current status of individual disappearances were not re-established in this pass."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "maura-murray-route-112",
+      "previousTitle": "Maura Murray Case: Route 112 Area",
+      "title": "Maura Murray Disappearance Site",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Woodsville, NH, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "Route 112 is a working road through a residential area, not an established visitor attraction. Respect residents and do not stop where parking is prohibited; no dedicated public viewing point was verified."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.fbi.gov/wanted/vicap/missing-persons/maura-murray---haverhill-new-hampshire",
+          "checked": "Current FBI alert confirms February 9, 2004 Route 112 Haverhill crash and unresolved disappearance.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Safe legal roadside parking/public viewing point not verified."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "jimmy-hoffa-red-fox",
+      "previousTitle": "Machus Red Fox Site: Jimmy Hoffa",
+      "title": "Jimmy Hoffa Disappearance Site (Former Machus Red Fox Restaurant)",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Bloomfield Township, MI, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The former restaurant is historical context, not a verified Hoffa museum or visitor attraction. Follow current business and property rules and use only lawful public access."
+      ],
+      "evidence": [
+        {
+          "url": "https://archives.wayne.edu/repositories/2/resources/786",
+          "checked": "University archive describes disappearance from former Machus Red Fox in Bloomfield Township in 1975; archival collection consists of FBI files.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Current business identity, parking, and precise visitor route not verified. Hoffa/Machus labels describe one historical subject and should remain one stable record."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "fox-hollow-farm",
+      "previousTitle": "Fox Hollow Farm",
+      "title": "Fox Hollow Farm",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Westfield, IN, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The estate is private property and part of a continuing victim-identification history. A safe legal public viewing or stopping point has not been established; do not enter grounds, approach homes, or obstruct local roads."
+      ],
+      "evidence": [
+        {
+          "url": "https://promega.foleon.com/theishireport/the-ishi-report-may-2026/fox-hollow-murders-victim-identification-effort",
+          "checked": "First-party article by Indiana State Police CODIS administrator confirms Westfield location, 1996 recovery, and renewed forensic identification work.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Public visibility and safe legal stopping point remain unverified; media attention does not establish visitor access."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "wuornos-dump-site",
+      "previousTitle": "Richard Mallory Case Area",
+      "title": "Richard Mallory Case Area",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Volusia County, FL, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "No public interior access or dedicated visitor parking has been verified. Respect current residents and landowners, use only lawful public areas, and do not enter property, cross barriers, or stop where parking is prohibited."
+      ],
+      "evidence": [],
+      "unresolved": [
+        "Legal exterior viewing/parking and precise visitor route unverified. Historical summary revised conservatively from existing record; further primary-source review needed.",
+        "Description revised from existing catalog context; a complete independent historical-source review remains outstanding."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "st-augustine-lighthouse",
+      "previousTitle": "St. Augustine Lighthouse",
+      "title": "St. Augustine Lighthouse & Maritime Museum",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "label": "Visit Website",
+          "url": "https://www.staugustinelighthouse.org/",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Lighthouse and maritime museum",
+          "description": "The historic site offers maritime exhibits and visitor programs; review the museum’s climbing guidance.",
+          "url": "https://www.staugustinelighthouse.org/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "100 Red Cox Drive, St Augustine, Florida 32080",
+        "kind": "visitor-entrance",
+        "notes": "Official GPS address; mailing address on Lighthouse Avenue differs.",
+        "source": "https://www.staugustinelighthouse.org/",
+        "verified": true
+      },
+      "warnings": [
+        "Use the Red Cox Drive GPS entrance rather than the Lighthouse Avenue mailing address. Review “Before You Climb” information for lighthouse access."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.staugustinelighthouse.org/",
+          "checked": "Museum identity, exhibits, visitor programs, and explicit GPS address 100 Red Cox Drive checked.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Specific current paranormal-tour reservation page and schedule were not independently checked; omit an unverified paranormal booking link."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "st-louis-cemetery-one",
+      "previousTitle": "St. Louis Cemetery No. 1",
+      "title": "St. Louis Cemetery No. 1",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "url": "https://cemeterytourneworleans.com/",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Guided cemetery visits",
+          "description": "The authorized operator offers daytime and selected after-dark visits; entry is by ticketed guided tour.",
+          "url": "https://cemeterytourneworleans.com/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Basin St Station, 501 Basin Street, New Orleans, Louisiana",
+        "kind": "tour-check-in",
+        "notes": "Check in at the authorized tour desk, rather than arriving unguided at cemetery gates.",
+        "source": "https://cemeterytourneworleans.com/",
+        "verified": true
+      },
+      "warnings": [
+        "General visitor entry is by an authorized guided tour with a ticket. Check in at Basin St. Station, 501 Basin Street, before proceeding to the cemetery gates."
+      ],
+      "evidence": [
+        {
+          "url": "https://cemeterytourneworleans.com/",
+          "checked": "Official operator partnership with New Orleans Catholic Cemeteries, guided-only entry, day/after-dark tours, and 501 Basin Street check-in verified.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "lalaurie-mansion",
+      "previousTitle": "LaLaurie Mansion",
+      "title": "LaLaurie Mansion",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "New Orleans, LA, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The mansion is private property; no public interior tour was verified. Exterior observation must stay in lawful public space without blocking doors or disturbing residents."
+      ],
+      "evidence": [
+        {
+          "url": "https://prcno.org/what-really-happened-at-the-lalaurie-house/",
+          "checked": "Local preservation organization research distinguishes documented history from embellished stories.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Current ownership, interior-tour status, and dedicated public viewing point not independently confirmed."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "myrtles-plantation-hist",
+      "previousTitle": "The Myrtles Plantation",
+      "title": "The Myrtles Plantation",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "stay",
+          "label": "Book a Stay",
+          "url": "https://resnexus.com/resnexus/reservations/book/A0B43F8B-AC68-414B-AAEA-196935367D56",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        },
+        {
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "url": "https://themyrtles.com/pages/tours",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Historic lodging",
+          "description": "Rooms in the historic house, garden accommodations, and cabins are listed by the property.",
+          "url": "https://themyrtles.com/",
+          "kind": "stay"
+        },
+        {
+          "title": "House and mystery tours",
+          "description": "Historical and evening mystery experiences are listed on the operator’s current tour page.",
+          "url": "https://themyrtles.com/pages/tours",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "The Myrtles, 7747 US Highway 61, St Francisville, Louisiana",
+        "kind": "visitor-entrance",
+        "notes": "Operating property address, not a speculative paranormal location.",
+        "source": "https://themyrtles.com/",
+        "verified": true
+      },
+      "warnings": [
+        "The Myrtles is an operating lodging property and ticketed historic-house attraction. Check the chosen tour or accommodation’s access and reservation details before arriving."
+      ],
+      "evidence": [
+        {
+          "url": "https://themyrtles.com/",
+          "checked": "Official property identity, lodging, tours and 7747 U.S. Highway 61 address checked.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://resnexus.com/resnexus/reservations/book/A0B43F8B-AC68-414B-AAEA-196935367D56",
+          "checked": "Booking engine reached from official Book a Stay link and identifies correct St. Francisville property.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://themyrtles.com/pages/tours",
+          "checked": "Official tour-information page opened successfully.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "seattle-underground",
+      "previousTitle": "The Seattle Underground",
+      "title": "Seattle Underground",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "url": "https://undergroundtour.com/",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Guided underground walking tour",
+          "description": "Explore buried storefronts and sidewalks beneath Pioneer Square with Bill Speidel’s Underground Tour.",
+          "url": "https://undergroundtour.com/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "614 1st Avenue, Seattle, Washington",
+        "kind": "tour-check-in",
+        "notes": "Bill Speidel’s counter/start location; different operators use different meeting points.",
+        "source": "https://undergroundtour.com/",
+        "verified": true
+      },
+      "warnings": [
+        "Underground spaces are accessed through authorized tours rather than open street entrances. Confirm the meeting point printed on your ticket."
+      ],
+      "evidence": [
+        {
+          "url": "https://undergroundtour.com/",
+          "checked": "Official Bill Speidel operator offers guided underground walking tour and gives counter/start address 614 First Avenue, Pioneer Square.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "ted-bundy-issaquah",
+      "previousTitle": "Taylor Mountain Case Area",
+      "title": "Taylor Mountain Case Area",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Issaquah, WA, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "No public interior access or dedicated visitor parking has been verified. Respect current residents and landowners, use only lawful public areas, and do not enter property, cross barriers, or stop where parking is prohibited."
+      ],
+      "evidence": [],
+      "unresolved": [
+        "Legal exterior viewing/parking and precise visitor route unverified. Historical summary revised conservatively from existing record; further primary-source review needed.",
+        "Description revised from existing catalog context; a complete independent historical-source review remains outstanding."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "amityville-horror-house",
+      "previousTitle": "Amityville House",
+      "title": "Amityville House",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Amityville, NY, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "No public interior access or dedicated visitor parking has been verified. Respect current residents and landowners, use only lawful public areas, and do not enter property, cross barriers, or stop where parking is prohibited."
+      ],
+      "evidence": [],
+      "unresolved": [
+        "Legal exterior viewing/parking and precise visitor route unverified. Historical summary revised conservatively from existing record; further primary-source review needed.",
+        "Description revised from existing catalog context; a complete independent historical-source review remains outstanding."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "lost-dutchman-mine",
+      "previousTitle": "Superstition Mountains (Lost Dutchman)",
+      "title": "Superstition Mountains / Lost Dutchman’s Gold Mine Legend",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Apache Junction, AZ, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "Desert heat, limited water, steep and rugged trails, and difficult navigation make preparation essential. Carry adequate water and use designated routes; no verified public trail leads to a confirmed Lost Dutchman mine."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/stelprdb5163317.pdf",
+          "checked": "Forest Service recreation guide supports designated hiking access and adequate-water planning.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Official Arizona State Parks page https://azstateparks.com/lost-dutchman/ returned 403 in this review. Current closures and entrance details require recheck; no precise lost-mine coordinates verified."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "silver-plume-disappearances",
+      "previousTitle": "Silver Plume: The Disappearances",
+      "title": "Silver Plume Disappearances",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Silver Plume, CO, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "Silver Plume is the contextual town location, not a marked crime-scene tour. Do not use this listing as a Pendleton Mountain route guide; surrounding terrain can be strenuous, exposed, and unmarked."
+      ],
+      "evidence": [
+        {
+          "url": "https://charleyproject.org/case/keith-r-reinhard",
+          "checked": "Specialist profile confirms August 7, 1988 disappearance toward Pendleton Mountain; Young death ruled suicide, no corroborated criminal connection. Profile is not a fresh law-enforcement update.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "No dedicated case visitor point or verified mountain-trail navigation."
+      ],
+      "related": [
+        "bennington-triangle",
+        "maura-murray-route-112",
+        "kristal-reisinger-site"
+      ],
+      "parent": null
+    },
+    {
+      "id": "gilman-colorado",
+      "previousTitle": "Gilman: The Abandoned Mining Town",
+      "title": "Gilman Ghost Town",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Minturn, CO, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to nearby Minturn, not into Gilman. A safe legal Highway24 overlook has not been verified.",
+        "source": "https://www.minturn.org/historic-preservation/page/timelines"
+      },
+      "warnings": [
+        "Do not enter the abandoned town, mine workings, buildings, fenced areas, or private access roads. Gilman can be seen from the Highway 24 corridor, but a specific safe legal stopping point has not been verified; do not stop on narrow shoulders or where signs prohibit it."
+      ],
+      "evidence": [
+        {
+          "url": "https://cumulis.epa.gov/supercpad/SiteProfiles/index.cfm?fuseaction=second.cleanup&id=0800159",
+          "checked": "Current EPA profile confirms institutional access controls at Gilman OU2. Cleanup-unit deletion did not grant public access.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.uncovercolorado.com/ghost-towns/gilman/",
+          "checked": "Secondary travel guide describes Highway 24 viewability and pull-offs but does not identify or establish a legally safe specific viewpoint.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Exact legal public overlook/parking remains unverified. Do not advertise town entrances or highway shoulders as visitor parking."
+      ],
+      "related": [
+        "centralia-mine-fire",
+        "bodie-ghost-town",
+        "silver-plume-disappearances"
+      ],
+      "parent": null
+    },
+    {
+      "id": "battle-of-los-angeles",
+      "previousTitle": "The Battle of Los Angeles",
+      "title": "Battle of Los Angeles (1942)",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Los Angeles area, CA, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "The 1942 barrage occurred over a broad urban area; this is not a single confirmed UFO landing or crash site. General Los Angeles directions are contextual only."
+      ],
+      "evidence": [],
+      "unresolved": [
+        "No single exact event point applies. Naval History source retained from existing previously checked record; not reopened this pass.",
+        "Description revised from existing catalog context; a complete independent historical-source review remains outstanding."
+      ],
+      "related": [],
+      "parent": null
+    },
+    {
+      "id": "conjuring-house",
+      "previousTitle": "The Conjuring House",
+      "title": "The Conjuring House",
+      "added": false,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "label": "Visit Website",
+          "url": "https://www.conjuringhouseofficial.com/",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [],
+      "navigation": {
+        "destination": "Harrisville, Burrillville, RI, USA",
+        "kind": "approximate-area",
+        "verified": false,
+        "notes": "Directions lead to the community or general area. A specific visitor entrance or lawful stopping point has not been verified."
+      },
+      "warnings": [
+        "Private property undergoing restoration. The official website describes public tours as planned rather than open for booking; do not enter the grounds without authorization."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.conjuringhouseofficial.com/",
+          "checked": "Current official page says guided tours are planned after restoration, with get-notified links rather than public booking.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Opening date, future ticket availability, and a public viewing/stopping point are unconfirmed."
+      ],
+      "related": [
+        "lizzie-borden-house"
+      ],
+      "parent": null
+    },
+    {
+      "id": "bonaventure-cemetery",
+      "previousTitle": null,
+      "title": "Bonaventure Cemetery",
+      "added": true,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "label": "Visit Website",
+          "url": "https://www.savannahga.gov/864/Bonaventure-Cemetery",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        },
+        {
+          "kind": "tour",
+          "label": "Explore Experiences",
+          "url": "https://www.bonaventurehistorical.org/visit/",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Self-guided visits and historical walks",
+          "description": "The historical society provides maps and scheduled volunteer-led tours; consult its current visit information.",
+          "url": "https://www.bonaventurehistorical.org/visit/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Bonaventure Cemetery, 330 Bonaventure Road, Savannah, GA 31404",
+        "kind": "cemetery-entrance",
+        "notes": "Official municipal entrance address.",
+        "source": "https://www.savannahga.gov/864/Bonaventure-Cemetery",
+        "verified": true
+      },
+      "warnings": [
+        "Enter through the cemetery gates during posted visiting hours. Funerals and cemetery business take priority; do not enter after hours."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.savannahga.gov/864/Bonaventure-Cemetery",
+          "checked": "City confirms cemetery history, public entrance330BonaventureRoad and visiting access.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://www.bonaventurehistorical.org/visit/",
+          "checked": "Historical society confirms selfguidedmapsandvolunteertours.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [
+        "bird-girl-bonaventure",
+        "little-gracie-watson-grave"
+      ],
+      "parent": null
+    },
+    {
+      "id": "linwood-cemetery",
+      "previousTitle": null,
+      "title": "Linwood Cemetery",
+      "added": true,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "label": "Visit Website",
+          "url": "https://www.glenwoodrec.com/Facilities/Facility/Details/Linwood-Cemetery-24",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [
+        {
+          "title": "Cemetery trail and memorials",
+          "description": "Walk the signed hillside trail to the cemetery and its historical markers.",
+          "url": "https://visitglenwood.com/things-to-do/doc-holliday/",
+          "kind": "tour"
+        }
+      ],
+      "navigation": {
+        "destination": "Doc Holliday Grave Trailhead, 12th Street and Bennett Avenue, Glenwood Springs, CO",
+        "kind": "public-trailhead",
+        "source": "https://visitglenwood.com/things-to-do/doc-holliday/",
+        "notes": "Trailhead rather than a vehicle route into the cemetery.",
+        "verified": true
+      },
+      "warnings": [
+        "The cemetery requires a moderately steep walk from the public trailhead; it is not a drive-up attraction. Respect nearby residential parking restrictions."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.glenwoodrec.com/Facilities/Facility/Details/Linwood-Cemetery-24",
+          "checked": "City confirms Pioneer Cemetery identity and KidCurry/DocHollidaygravesitehistory.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://visitglenwood.com/things-to-do/doc-holliday/",
+          "checked": "Official tourism confirms public trailhead and Hollidayexactburialunknown.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [],
+      "related": [
+        "kid-curry-grave-linwood"
+      ],
+      "parent": null
+    },
+    {
+      "id": "greenwood-cemetery-hot-springs",
+      "previousTitle": null,
+      "title": "Greenwood Cemetery",
+      "added": true,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Greenwood Cemetery, 701 Greenwood Avenue, Hot Springs, AR",
+        "kind": "cemetery-entrance",
+        "source": "https://www.hotsprings.org/blog/top-10-adventures-off-the-beaten-path-hot-springs-national-park-arkansas/",
+        "notes": "Cemetery address verified by official destination tourism; precise entrance coordinates were not independently checked.",
+        "verified": true
+      },
+      "warnings": [],
+      "evidence": [
+        {
+          "url": "https://www.hotsprings.org/blog/top-10-adventures-off-the-beaten-path-hot-springs-national-park-arkansas/",
+          "checked": "Official tourism confirms name,address701GreenwoodAve,andMadden/Agnesburials.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "A current direct cemetery-operator website and exact entrance coordinates were not verified."
+      ],
+      "related": [
+        "greenwood-cemetery-madden"
+      ],
+      "parent": null
+    },
+    {
+      "id": "highway-115-colorado",
+      "previousTitle": null,
+      "title": "Highway 115 — Dead Man’s Canyon Corridor",
+      "added": true,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "label": "Visit Website",
+          "url": "https://www.codot.gov/projects/archives/co115-colorado-springs-to-penrose",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [],
+      "navigation": {
+        "destination": "Colorado Springs, CO",
+        "kind": "approximate-area",
+        "notes": "General public geographic reference only; no verified Dead Man’s Canyon trailhead, roadside pull-off, or exact incident point.",
+        "verified": false,
+        "source": "https://www.codot.gov/projects/archives/co115-colorado-springs-to-penrose"
+      },
+      "warnings": [
+        "This is a highway corridor, not a single attraction. Do not stop in travel lanes, enter private roads, or assume that highway shoulders are legal parking. The event and viewpoint locations remain unverified."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.codot.gov/projects/archives/co115-colorado-springs-to-penrose",
+          "checked": "CDOT project page identifies the Highway115ColoradoSprings–Penrosecorridor and milepoints27–39.",
+          "checked_on": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "No verified public route starting point at Calle de Fuentes Road, legal viewing point, or exact event coordinate was established. Use Colorado Springs only as an explicitly approximate area reference."
+      ],
+      "related": [
+        "deadman-canyon-espinosa"
+      ],
+      "parent": null
+    },
+    {
+      "id": "evergreen-cemetery-oakland",
+      "previousTitle": null,
+      "title": "Evergreen Cemetery",
+      "added": true,
+      "descriptionChanged": true,
+      "actions": [],
+      "experiences": [],
+      "navigation": {
+        "destination": "Evergreen Cemetery, Oakland, California",
+        "kind": "approximate-public-reference",
+        "notes": "Cemetery identity checked, precise visitor entrance not verified. General query is not a verified entrance.",
+        "verified": false
+      },
+      "warnings": [
+        "This is an active burial ground; respect mourners and services. Confirm current visiting hours and the correct entrance before arrival."
+      ],
+      "evidence": [
+        {
+          "url": "https://jonestown.sdsu.edu/?page_id=29498",
+          "checked": "First-party memorial fund confirms Evergreen Cemetery Oakland identity and relationship to Jonestown memorial.",
+          "date": "2026-10-29"
+        },
+        {
+          "url": "https://jonestown.sdsu.edu/?page_id=29502",
+          "checked": "2011 dedication release gives 6450 Camden Avenue; contemporary listings use Camden Street. Current operator entrance still needs checking.",
+          "date": "2026-10-29"
+        }
+      ],
+      "unresolved": [
+        "Current official operator website, hours, and entrance not verified. Historic release says Camden Avenue while modern listings say Camden Street."
+      ],
+      "related": [
+        "jonestown-memorial"
+      ],
+      "parent": null
+    },
+    {
+      "id": "san-luis-valley-colorado",
+      "previousTitle": null,
+      "title": "San Luis Valley, Colorado",
+      "added": true,
+      "descriptionChanged": true,
+      "actions": [
+        {
+          "kind": "website",
+          "label": "Visit Website",
+          "url": "https://www.alamosa.org/about-us/welcome-center/",
+          "verified": true,
+          "reviewed": "2026-10-29"
+        }
+      ],
+      "experiences": [],
+      "navigation": {
+        "destination": "Colorado Welcome Center, 610 State Avenue, Alamosa, CO 81101",
+        "kind": "regional-visitor-center",
+        "verified": true,
+        "source": "https://www.alamosa.org/about-us/welcome-center/",
+        "notes": "Directions lead to a regional visitor-information center, not to any alleged incident site."
+      },
+      "warnings": [
+        "The region covers a large high-altitude valley; access arrangements differ at each linked stop. Do not enter ranches, spiritual centers, or private roads without permission."
+      ],
+      "evidence": [
+        {
+          "url": "https://www.alamosa.org/listing/ufo-watchtower-cosmic-curious-attraction/",
+          "checked": "Regional UFO tradition and visitor-attraction setting checked; paranormal assertions are not treated as established facts."
+        },
+        {
+          "url": "https://www.alamosa.org/about-us/welcome-center/",
+          "checked": "Regional visitor center confirmed at610StateAve."
+        }
+      ],
+      "unresolved": [],
+      "related": [
+        "snippy-horse-site",
+        "san-luis-valley-lane-6",
+        "crestone-ziggurat-vortex",
+        "the-t-road",
+        "kristal-reisinger-site"
+      ],
+      "parent": null
+    }
+  ]
+}

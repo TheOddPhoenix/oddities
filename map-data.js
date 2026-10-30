@@ -105,11 +105,11 @@ const mapLocations = {
     "reviewed": "2026-10-29"
   },
   "bird-girl-bonaventure": {
-    "lat": 32.043889,
-    "lng": -81.045556,
+    "lat": 32.07889,
+    "lng": -81.09528,
     "precision": "place",
-    "source": "https://en.wikipedia.org/wiki/Bonaventure_Cemetery",
-    "label": "Bonaventure Cemetery",
+    "source": "https://en.wikipedia.org/wiki/Telfair_Academy",
+    "label": "Telfair Academy — current Bird Girl museum location",
     "reviewed": "2026-10-29"
   },
   "wichita-state-crash-site": {
@@ -821,7 +821,55 @@ const mapLocations = {
     "lng": -71.68,
     "precision": "area",
     "source": "https://en.wikipedia.org/wiki/Burrillville,_Rhode_Island",
-    "label": "Burrillville area \u2014 private property",
+    "label": "Burrillville area — private property",
+    "reviewed": "2026-10-29"
+  },
+  "bonaventure-cemetery": {
+    "lat": 32.043889,
+    "lng": -81.045556,
+    "precision": "place",
+    "source": "https://en.wikipedia.org/wiki/Bonaventure_Cemetery",
+    "label": "Bonaventure Cemetery — geographic reference",
+    "reviewed": "2026-10-29"
+  },
+  "linwood-cemetery": {
+    "lat": 39.547132,
+    "lng": -107.342556,
+    "precision": "area",
+    "source": "https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html",
+    "label": "Linwood Cemetery — geographic reference",
+    "reviewed": "2026-10-29"
+  },
+  "greenwood-cemetery-hot-springs": {
+    "lat": 34.489442,
+    "lng": -93.050254,
+    "precision": "area",
+    "source": "https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html",
+    "label": "Greenwood Cemetery — geographic reference",
+    "reviewed": "2026-10-29"
+  },
+  "evergreen-cemetery-oakland": {
+    "lat": 37.771944,
+    "lng": -122.179444,
+    "precision": "place",
+    "source": "https://en.wikipedia.org/wiki/Evergreen_Cemetery_%28Oakland%2C_California%29",
+    "label": "Evergreen Cemetery — geographic reference",
+    "reviewed": "2026-10-29"
+  },
+  "highway-115-colorado": {
+    "lat": 38.84,
+    "lng": -104.52,
+    "precision": "area",
+    "source": "https://en.wikipedia.org/wiki/El_Paso_County%2C_Colorado",
+    "label": "Highway 115 — Dead Man’s Canyon Corridor — geographic reference",
+    "reviewed": "2026-10-29"
+  },
+  "san-luis-valley-colorado": {
+    "lat": 37.745976,
+    "lng": -105.877735,
+    "precision": "area",
+    "source": "https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html",
+    "label": "San Luis Valley, Colorado — geographic reference",
     "reviewed": "2026-10-29"
   }
 };

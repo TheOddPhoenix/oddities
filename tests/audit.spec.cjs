@@ -18,9 +18,9 @@ assert.equal(run("Object.getPrototypeOf(cleanCollections({'a':[]}))"),null,'List
 assert.equal(run("Object.keys(cleanCollections(JSON.parse('{\"__proto__\":[\"eureka\"]}')))[0]"),'__proto__','Prototype-named lists are plain data');
 assert.equal(run("cleanCollections({\"Leigh’s <Trip>\":[\"eureka\",\"missing-id\",\"eureka\"]})[\"Leigh’s <Trip>\"].length"),1,'Safe names, duplicate and stale IDs');
 assert.equal(run("escapeHtml(\"Leigh's <Trip>\")"),'Leigh&#39;s &lt;Trip&gt;','Escaped markup');
-run("$('search').value='Colorado';renderGrid()");assert.equal(run('filteredTrips().length'),21,'Full state name search');
-assert.equal(run("$('results-count').textContent"),'Showing 12 of 21 locations');
-run('visibleCount+=12;renderGrid()');assert.equal(run("$('results-count').textContent"),'Showing 21 of 21 locations','Search survives pagination');
+run("$('search').value='Colorado';renderGrid()");assert.equal(run('filteredTrips().length'),24,'Full state name search');
+assert.equal(run("$('results-count').textContent"),'Showing 12 of 24 locations');
+run('visibleCount+=12;renderGrid()');assert.equal(run("$('results-count').textContent"),'Showing 24 of 24 locations','Search survives pagination');
 assert.equal(run("$('search').value"),'Colorado');assert.ok(run("filteredTrips().every(t=>t.state==='CO')"));
 run("$('search').value='California';visibleCount=12;renderGrid()");assert.ok(run('filteredTrips().length>0'),'California matches');
 run("$('search').value='no-location-with-this-name';renderGrid()");assert.ok(run("$('grid').innerHTML.includes('No locations found')"),'Empty state');
@@ -34,7 +34,7 @@ assert.ok(!fs.readFileSync(path.join(root,'index.html'),'utf8').includes('cdn.ta
 console.log('Passed 22 catalog, search, pagination, escaping, migration, and asset checks.');
 
 
-assert.equal(run('trips.length'),103,'Silver Plume and Gilman are present without duplicating the crash');
+assert.equal(run('trips.length'),109,'Silver Plume and Gilman are present without duplicating the crash');
 assert.equal(run('Object.keys(mapLocations).length'),run('trips.length'),'Every entry has a map reference');
 assert.ok(run('trips.every(t=>mapLocations[t.id] && Number.isFinite(mapLocations[t.id].lat) && Number.isFinite(mapLocations[t.id].lng))'),'Finite geographic references');
 assert.ok(run("trips.filter(t=>t.restricted).every(t=>mapLocations[t.id].precision==='area')"),'Restricted sites are context markers');
@@ -48,13 +48,13 @@ assert.ok(run("relatedStops(catalog.get('eureka')).some(t=>t.id==='basin-park-ho
 assert.ok(run("trips.every(t=>!relatedStops(t).some(x=>x.id===t.id))"),'No self recommendations');
 assert.ok(run("trips.every(t=>new Set(relatedStops(t).map(x=>x.id)).size===relatedStops(t).length)"),'No duplicate recommendations');
 assert.equal(run("trips.filter(t=>t.id==='wichita-state-crash-site').length"),1,'Existing crash remains a single entry');
-assert.ok(run("catalog.get('rmnp-disappearances').desc.includes('James Pruitt')"),'Park card tells its dark-tourism story');
+assert.ok(run("catalog.get('rmnp-disappearances').desc.toLowerCase().includes('disappear')"),'Park card tells its dark-tourism story');
 assert.ok(run("catalog.get('maura-murray-route-112').sources[0].url.startsWith('https://www.fbi.gov/')"),'Murray case has primary source');
 console.log('Passed 16 additional map, related-stop, editorial and branding checks.');
 
 assert.equal(run("categories.alien[0]"),'Aliens & UFOs');
 assert.ok(run("bookingActions(catalog.get('crescent-hotel-eureka')).some(a=>a.kind==='stay')"),'Hotel offers a room booking');
-assert.equal(run("bookingActions(catalog.get('conjuring-house')).length"),0,'Unconfirmed access has no booking action');
+assert.ok(run("bookingActions(catalog.get('conjuring-house')).every(a=>a.kind==='website')"),'No Conjuring booking or tour action during restoration');
 assert.equal(run("catalog.get('alcatraz-island').notorious_inmates.length"),2,'Sourced inmate section');
 run("$('subcategory').value='all';$('place-type').value='Hotel';$('experience').value='stay'");
 assert.ok(run("refineTrips(trips).every(t=>t.place_type==='Hotel' && t.actions.some(a=>a.kind==='stay'))"),'Combined place and experience filters');
@@ -63,3 +63,23 @@ assert.ok(!app.includes('Copy link')&&!app.includes('Operator website'),'Redunda
 console.log('Passed booking availability, combined filters, and card cleanup checks.');
 
 assert.ok(run("relatedStops(catalog.get('battle-of-los-angeles')).every(t=>tags(t).includes('alien'))"),'Aerial mystery recommends related UFO stories');
+
+// Visitor destination is independent of the historical discovery anchor.
+assert.ok(run("trips.every(t=>t.navigation && t.navigation.destination.trim())"),'Every card has a direction target');
+assert.ok(run("trips.every(t=>new URL(directionsUrl(t)).searchParams.get('destination')===t.navigation.destination)"),'Directions encode all targets safely');
+assert.ok(run("navigationFor(catalog.get('alcatraz-island')).destination.includes('Pier 33')"),'Alcatraz drives to ferry departure');
+assert.ok(!run("navigationFor(catalog.get('gilman-colorado')).destination.includes('Gilman')"),'Gilman fallback does not route into abandoned town');
+assert.equal(run("catalog.get('crestone-ziggurat-vortex').restricted"),false,'Public Ziggurat remains accessible');
+assert.equal(run("catalog.get('kristal-reisinger-site').parent_id"),'san-luis-valley-colorado','Regional links retain individual listings');
+assert.ok(run("catalog.get('lemp-mansion').actions.some(a=>a.label==='Book a Stay')"),'Lemp lodging action');
+assert.ok(run("catalog.get('myrtles-plantation-hist').actions.some(a=>a.url.includes('resnexus'))"),'Myrtles current booking engine');
+assert.ok(run("trips.every(t=>!detailMarkup(t).includes('Historical Sources') && !detailMarkup(t).includes('View Location Map'))"),'Hidden sources retained in data only');
+assert.ok(run("trips.filter(t=>!t.know_before.length && !t.navigation.notes).every(t=>!detailMarkup(t).includes('Before You Go'))"),'No empty visitor sections');
+assert.ok(run("trips.every(t=>t.sources && t.editorial_review)"),'Every record retains research state');
+assert.equal(run("safeExternalUrl('javascript:alert(1)')"),null,'External actions reject script URLs');
+assert.equal(run("categoryColors.crime"),'#450a0a','Recovered original crime color');
+assert.equal(run("categoryColors.alien"),'#064e3b','Recovered original UFO color');
+assert.ok(run("catalog.get('bird-girl-bonaventure').historical_map_reference"),'Original Bird Girl historical anchor preserved');
+assert.ok(run("catalog.get('eastern-state-pen').know_before.join(' ').toLowerCase().includes('paranormal')"),'Eastern State forbids investigations');
+assert.ok(run("trips.every(t=>!bookingActions(t).some(a=>a.url.includes('eastlanddisaster.org')))"),'Compromised website not offered');
+console.log('Passed visitor-destination, access, source-retention, category, and link-policy checks.');

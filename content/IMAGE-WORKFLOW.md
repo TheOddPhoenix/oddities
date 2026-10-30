@@ -1,6 +1,6 @@
-# Oddities illustration workflow
+# Oddites illustration workflow
 
-The existing Eureka Springs AI illustration is the visual reference. Preserve its muted teal-gray palette, low-key cinematic dusk, fine grain, and weathered detail. Do not change the skull logo or category icon system as part of image work.
+The approved vintage woodcut reference is images/eureka-woodcut-v1.webp. Preserve dusty lavender, cream, charcoal hatching and restrained amber accents, with shadows readable at card size. Do not change the skull logo or category icon system as part of image work.
 
 ## Repeatable authoring
 

@@ -1,4 +1,4 @@
-# Oddities
+# Oddites
 
 Dark-tourism discovery site for The Odd Phoenix, hosted on GitHub Pages.
 
@@ -33,9 +33,9 @@ Leaflet draws the map; OpenStreetMap supplies the tiles with visible attribution
 
 ## Editorial structure
 
-Cards explain why a place belongs in a dark-tourism guide. Practical guidance appears in Know Before You Visit. Detail sections use Dark History & Lore and Related Oddities. Explicit related stops are prioritized, followed by nearby places and shared themes; limited variation applies within similarly ranked candidates.
+Cards explain why a place belongs in a dark-tourism guide. Practical guidance appears in Before You Go. Detail sections use Dark History & Lore and Related Oddites. Explicit related stops are prioritized, followed by nearby places and shared themes; limited variation applies within similarly ranked candidates.
 
-Reviewed entries include primary or identified sources. Historical review remains ongoing across the catalog; do not present every original entry as fully fact-checked. Paranormal stories are labeled as lore or reported experiences. Restricted sites do not offer Google directions.
+Reviewed entries include primary or identified sources. Historical review remains ongoing across the catalog; do not present every original entry as fully fact-checked. Paranormal stories are labeled as lore or reported experiences. Every detail card offers directions to a checked visitor target or an explicitly approximate public geographic reference.
 
 ## Account and contact
 
@@ -51,6 +51,10 @@ For thousands of images, use object storage/CDN and a server-side generation/rev
 
 ## Location details and discovery refinements
 
-The catalog now contains 103 locations. Category filters retain the original seven categories, with populated story subcategories and independent place-type and experience filters in both Explore and Map views. Booking actions use direct, non-affiliate links. Current verified hotel actions cover Crescent, Basin Park, Stanley, and Lizzie Borden; Joplin links to its existing Airbnb listing. The Conjuring House is included as restricted pending public tour availability. Battle of Los Angeles uses an approximate event-area reference.
+The catalog now contains 109 locations. Category filters retain the original seven categories, with populated story subcategories and independent place-type and experience filters in both Explore and Map views. Booking actions use direct, non-affiliate links. Current verified hotel actions cover Crescent, Basin Park, Stanley, and Lizzie Borden; Joplin links to its existing Airbnb listing. The Conjuring House is included as restricted pending public tour availability. Battle of Los Angeles uses an approximate event-area reference.
 
-Expanded cards include an optional inline map, collapsed historical sources, access notes, and sourced inmate profiles where available. Close Details returns to the originating view; Back to Explore exits both map and card.
+Expanded cards keep historical sources internally and show activities, concise access notes, related records, visitor actions and one final Get Directions link. Close Details returns to the originating view; Back to Explore exits both map and card.
+
+## Visitor editorial audit
+
+All110 checklist items map to108 distinct records plus the SanLuisValley regionalparent:109 catalogentries. `content/visitor-audit.json` records evidence and open questions. `navigation` holds visitor destination strings separately from `map-data.js` historical/discovery anchors. `navigation.verified` means the published destination was checked, not that a route was driven or parking field-verified. Only actions explicitly checked by editorial review render. Category fill tokens were recovered from the original pre-audit history.

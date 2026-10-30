@@ -38,3 +38,16 @@ h1,h2,h3,dialog h2,.map-sidebar h2{letter-spacing:.015em}.dialog-head{position:s
 .refinement-row{display:flex;flex-wrap:wrap;gap:16px;margin:18px 0}.refinement-row label{flex:1 1 180px;font-size:14px}.refinement-row select{margin-top:7px}
 
 .detail-head-actions{display:flex;gap:8px;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end;max-width:48%}.detail-head-actions button{font-size:13px;padding:8px 10px}.detail-head-actions .icon-button{max-width:none}.dialog-head{align-items:center}@media(max-width:580px){.detail-head-actions{flex-direction:column;max-width:45%}.detail-head-actions button{min-height:42px}.dialog-head .icon-button{flex-wrap:nowrap}}
+
+/* Restored historical category hues; off-white foregrounds maintain contrast. */
+.category-badge{background:var(--category-color);color:#f5f0e8;border:1px solid color-mix(in srgb,var(--category-color) 65%,#f5f0e8)}
+.category-row button:not([aria-pressed=true]){border-color:color-mix(in srgb,var(--category-color) 70%,#aaa)}
+.category-row button[aria-pressed=true]{background:var(--category-color);color:#f5f0e8;border-color:#e8d5ff;box-shadow:0 0 0 1px #e8d5ff}
+.category-row button .icon{color:color-mix(in srgb,var(--category-color) 25%,#f5f0e8)}
+.card{border-top:4px solid color-mix(in srgb,var(--category-color) 65%,#d6c9e6)}
+.card .art{background:linear-gradient(135deg,var(--category-color),#171522)}
+.map-marker-dot,.map-marker-dot.area,.map-marker-dot.restricted{background:var(--category-color,#302a3a);color:#fff}
+.map-marker-dot.restricted{border-style:double;border-width:4px}.suggest-category{background:var(--category-color);color:#f5f0e8}
+#detail .visitor-notice{background:#292136;border-color:#68507c;color:#eee4f6}.visitor-notice p{color:inherit}.navigation-note{font-size:14px}
+#detail-content>.badges{margin:12px 0 20px}#detail-content .media{margin-bottom:8px}.experiences li+li{margin-top:10px}
+.dialog-actions .directions-action{flex-basis:100%;width:100%;gap:8px;border-color:#b28bd5}.dialog-actions .directions-action:hover{background:#483253}
