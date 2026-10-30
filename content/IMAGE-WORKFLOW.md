@@ -1,4 +1,4 @@
-# Oddites illustration workflow
+# Oddities illustration workflow
 
 The approved vintage woodcut reference is images/eureka-woodcut-v1.webp. Preserve dusty lavender, cream, charcoal hatching and restrained amber accents, with shadows readable at card size. Do not change the skull logo or category icon system as part of image work.
 

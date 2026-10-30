@@ -1,4 +1,4 @@
-# Oddites
+# Oddities
 
 Dark-tourism discovery site for The Odd Phoenix, hosted on GitHub Pages.
 
@@ -33,7 +33,7 @@ Leaflet draws the map; OpenStreetMap supplies the tiles with visible attribution
 
 ## Editorial structure
 
-Cards explain why a place belongs in a dark-tourism guide. Practical guidance appears in Before You Go. Detail sections use Dark History & Lore and Related Oddites. Explicit related stops are prioritized, followed by nearby places and shared themes; limited variation applies within similarly ranked candidates.
+Cards explain why a place belongs in a dark-tourism guide. Practical guidance appears in Before You Go. Detail sections use Dark History & Lore and Related Oddities. Explicit related stops are prioritized, followed by nearby places and shared themes; limited variation applies within similarly ranked candidates.
 
 Reviewed entries include primary or identified sources. Historical review remains ongoing across the catalog; do not present every original entry as fully fact-checked. Paranormal stories are labeled as lore or reported experiences. Every detail card offers directions to a checked visitor target or an explicitly approximate public geographic reference.
 

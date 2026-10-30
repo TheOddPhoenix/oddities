@@ -1,4 +1,4 @@
-# Oddites — manual verification register
+# Oddities — manual verification register
 
 Reviewed 2026-10-29. An unresolved item is not a claim that a venue is closed or inaccessible. A verified published destination is not a field inspection, a parking-permission check, or a driven route.
 

@@ -1,4 +1,4 @@
-# Oddites — comprehensive visitor and editorial update
+# Oddities — comprehensive visitor and editorial update
 
 Review date: 2026-10-29. Repository: TheOddPhoenix/oddities. Publication follows the existing GitHub Pages workflow.
 
@@ -7,7 +7,7 @@ Review date: 2026-10-29. Repository: TheOddPhoenix/oddities. Publication follows
 - `data.js`: revised descriptions, titles, operator actions, activities, warnings, relationships and backward-compatible `navigation` metadata. Historical research remains in `sources`, `editorial_review`, and `editorial_previous_history`.
 - `app.js`: shared card renderer, verified-action filtering, encoded Google Maps directions, original category colors, map-marker consistency, product spelling and dialog behavior.
 - `styles.css`: category tokens, coordinated purple visitor panel, accessible contrasts, responsive final directions action.
-- `index.html`: Oddites product copy, cache version, social image, global Explore Map labels.
+- `index.html`: Oddities product copy, cache version, social image, global Explore Map labels.
 - `map-data.js`: sourced parent references; Bird Girl now uses Telfair Academy, with original historical anchor preserved separately.
 - `content/visitor-audit.json`, `content/image-manifest.json`, `content/image-queue.jsonl`: audit trail and catalog/image queue reconciliation.
 - `README.md`, `content/IMAGE-WORKFLOW.md`, `tests/audit.spec.cjs`: maintained documentation and checks.

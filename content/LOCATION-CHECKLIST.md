@@ -1,4 +1,4 @@
-# Oddites — 110-item checklist reconciliation
+# Oddities — 110-item checklist reconciliation
 
 | Item | Requested listing | Stable record |
 |---|---|---|
